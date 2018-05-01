@@ -17,8 +17,19 @@ navigation:
    url: /
  - title: CV
    url: /cv/
+ - title: Contact
+   url: /contact
+ - title: Blog
+   url: /blog/
+ - title: Interests
+   url: /interests/
  - title: Projects
    url: /projects/
+
+details:
+   location: Meanwood
+   company: Sky Betting & Gaming
+   role: Solutions Architect
 
 social:
    github:    cmbuckley
