@@ -1,5 +1,5 @@
 ---
-title: 'Lake District & Leeds Festival'
+title: Lake District & Leeds Festival
 layout: post
 categories:
   - Pictures

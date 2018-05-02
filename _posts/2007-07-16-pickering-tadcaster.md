@@ -1,5 +1,5 @@
 ---
-title: 'Pickering & Tadcaster'
+title: Pickering & Tadcaster
 layout: post
 categories:
   - Climbing

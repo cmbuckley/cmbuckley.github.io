@@ -1,5 +1,5 @@
 ---
-title: 'Clubs & Socs Formal & Summerhill'
+title: Clubs & Socs Formal & Summerhill
 layout: post
 categories:
   - Climbing

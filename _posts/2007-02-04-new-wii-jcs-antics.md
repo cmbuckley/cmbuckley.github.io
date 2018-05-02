@@ -1,5 +1,5 @@
 ---
-title: 'New Wii & JC’s Antics'
+title: New Wii & JC’s Antics
 layout: post
 categories:
   - Nights Out

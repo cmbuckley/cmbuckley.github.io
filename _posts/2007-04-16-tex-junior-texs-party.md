@@ -1,5 +1,5 @@
 ---
-title: 'Tex & Junior Tex’s Party'
+title: Tex & Junior Tex’s Party
 layout: post
 categories:
   - Nights Out

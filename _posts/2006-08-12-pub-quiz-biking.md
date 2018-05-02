@@ -1,5 +1,5 @@
 ---
-title: 'Pub Quiz & Biking'
+title: Pub Quiz & Biking
 layout: post
 categories:
   - Biking

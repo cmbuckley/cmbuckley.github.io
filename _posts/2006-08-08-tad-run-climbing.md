@@ -1,5 +1,5 @@
 ---
-title: 'Tad Run & Climbing'
+title: Tad Run & Climbing
 layout: post
 categories:
   - Climbing

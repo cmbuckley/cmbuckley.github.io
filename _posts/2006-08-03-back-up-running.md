@@ -1,5 +1,5 @@
 ---
-title: 'Back Up & Running'
+title: Back Up & Running
 layout: post
 categories:
   - Computing

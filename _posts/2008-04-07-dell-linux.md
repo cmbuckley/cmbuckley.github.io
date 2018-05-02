@@ -1,5 +1,5 @@
 ---
-title: 'Dell & Linux'
+title: Dell & Linux
 layout: post
 categories:
   - Computing

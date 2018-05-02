@@ -1,5 +1,5 @@
 ---
-title: 'Durham & Planet of Sound'
+title: Durham & Planet of Sound
 layout: post
 categories:
   - Nights Out
