@@ -18,4 +18,4 @@ We all relaxed after lunch, mostly to let all the food go down, and then a quick
 
 And to finish off the evening, I went up the Bailey to find a few of the old Gables crew in 24's! A great day, and a salute to the best college!
 
-You can also view [the pictures](http://pictures.scholesmafia.co.uk/index.php/2007/05/05.05.07-college-day/).
+You can also view [the pictures](https://pictures.scholesmafia.co.uk/index.php/2007/05/05.05.07-college-day/).

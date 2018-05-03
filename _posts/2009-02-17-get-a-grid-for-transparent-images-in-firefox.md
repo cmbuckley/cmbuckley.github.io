@@ -12,10 +12,10 @@ Here’s a useful bit of [Firefox](http://getfirefox.com/) hackery for you all. 
 
 ```css
 /*
- * Image from http://commons.wikimedia.org/wiki/File:Checker-16x16.png?oldid=19631383
+ * Image from https://commons.wikimedia.org/wiki/File:Checker-16x16.png?oldid=19631383
  */
 html > body > img:only-child {
-	background: url('http://starsquare.co.uk/images/checkerboard') repeat;
+	background: url('https://starsquare.co.uk/images/checkerboard') repeat;
 }
 
 html > body > img:only-child:hover {
@@ -27,13 +27,13 @@ html > body > img:only-child:hover {
 
 ```css
 /*
- * Image from http://commons.wikimedia.org/wiki/File:Checker-16x16.png?oldid=19631383
+ * Image from https://commons.wikimedia.org/wiki/File:Checker-16x16.png?oldid=19631383
  */
 html > body > img:only-child:hover {
-	background: url('http://starsquare.co.uk/images/checkerboard') repeat;
+	background: url('https://starsquare.co.uk/images/checkerboard') repeat;
 }
 ```
 
   4. Save the file. If you had Firefox open, you should restart your browser. If not, simply start it up.
-  5. Find an image that contains transparency and open it in your browser; a good example is [this image](http://starsquare.co.uk/images/transparent).
+  5. Find an image that contains transparency and open it in your browser; a good example is [this image](https://starsquare.co.uk/images/transparent).
   6. Pretend you’re in your favourite image editor!

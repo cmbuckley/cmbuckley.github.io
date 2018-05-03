@@ -14,19 +14,19 @@ However, my mood improved greatly when I found the button I had been looking for
 <div id='gallery-1' class='gallery galleryid-81 gallery-columns-3 gallery-size-thumbnail'>
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='http://cmbuckley.co.uk/blog/2006/11/03/faith-restored-in-wlm/wlm-1/'><img width="150" height="150" src="https://cmbuckley.co.uk/files/2006/11/wlm-1-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://cmbuckley.co.uk/files/2006/11/wlm-1-150x150.png 150w, https://cmbuckley.co.uk/files/2006/11/wlm-1-75x75.png 75w, https://cmbuckley.co.uk/files/2006/11/wlm-1-100x100.png 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+      <a href='https://cmbuckley.co.uk/blog/2006/11/03/faith-restored-in-wlm/wlm-1/'><img width="150" height="150" src="https://cmbuckley.co.uk/files/2006/11/wlm-1-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://cmbuckley.co.uk/files/2006/11/wlm-1-150x150.png 150w, https://cmbuckley.co.uk/files/2006/11/wlm-1-75x75.png 75w, https://cmbuckley.co.uk/files/2006/11/wlm-1-100x100.png 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='http://cmbuckley.co.uk/blog/2006/11/03/faith-restored-in-wlm/wlm-2/'><img width="150" height="150" src="https://cmbuckley.co.uk/files/2006/11/wlm-2-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://cmbuckley.co.uk/files/2006/11/wlm-2-150x150.png 150w, https://cmbuckley.co.uk/files/2006/11/wlm-2-75x75.png 75w, https://cmbuckley.co.uk/files/2006/11/wlm-2-100x100.png 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+      <a href='https://cmbuckley.co.uk/blog/2006/11/03/faith-restored-in-wlm/wlm-2/'><img width="150" height="150" src="https://cmbuckley.co.uk/files/2006/11/wlm-2-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://cmbuckley.co.uk/files/2006/11/wlm-2-150x150.png 150w, https://cmbuckley.co.uk/files/2006/11/wlm-2-75x75.png 75w, https://cmbuckley.co.uk/files/2006/11/wlm-2-100x100.png 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
     </dt>
   </dl>
   
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='http://cmbuckley.co.uk/blog/2006/11/03/faith-restored-in-wlm/wlm-3/'><img width="150" height="150" src="https://cmbuckley.co.uk/files/2006/11/wlm-3-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://cmbuckley.co.uk/files/2006/11/wlm-3-150x150.png 150w, https://cmbuckley.co.uk/files/2006/11/wlm-3-75x75.png 75w, https://cmbuckley.co.uk/files/2006/11/wlm-3-100x100.png 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+      <a href='https://cmbuckley.co.uk/blog/2006/11/03/faith-restored-in-wlm/wlm-3/'><img width="150" height="150" src="https://cmbuckley.co.uk/files/2006/11/wlm-3-150x150.png" class="attachment-thumbnail size-thumbnail" alt="" srcset="https://cmbuckley.co.uk/files/2006/11/wlm-3-150x150.png 150w, https://cmbuckley.co.uk/files/2006/11/wlm-3-75x75.png 75w, https://cmbuckley.co.uk/files/2006/11/wlm-3-100x100.png 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
     </dt>
   </dl>
   

@@ -7,7 +7,7 @@ categories:
 ---
 I'm still tired even a whole day after getting back, but I though it was worth it to mention how good the festival was, yet again!
 
-I didn't get a ticket immediately after [last year](http://blog.cmbuckley.co.uk/2007/08/27/leeds-festival-2007/), but [waited until March](http://blog.cmbuckley.co.uk/2008/03/31/leeds-festival-line-up/). With hindsight, I reckon an early bird ticket might be required from now on, as it was even busier than last year! I even missed out on the brie and crackers...
+I didn't get a ticket immediately after [last year](https://blog.cmbuckley.co.uk/2007/08/27/leeds-festival-2007/), but [waited until March](https://blog.cmbuckley.co.uk/2008/03/31/leeds-festival-line-up/). With hindsight, I reckon an early bird ticket might be required from now on, as it was even busier than last year! I even missed out on the brie and crackers...
 
 Again, my list of bands includes a couple of bands for whom we only saw the odd song:
 
@@ -43,4 +43,4 @@ Again, my list of bands includes a couple of bands for whom we only saw the odd 
 
 Again, I felt like I missed a load, but with so many on at the same time it's impossible to get it all in! Thanks go out to [Rob Marshall](http://rdmsoft.com/) for his [clash finder](http://bugs.rdmsoft.com/leeds/), which helped out greatly!
 
-[View pictures of the festival](http://pictures.scholesmafia.co.uk/index.php/2008/08/22.08.08_24.08.08-leeds-festival/)
+[View pictures of the festival](https://pictures.scholesmafia.co.uk/index.php/2008/08/22.08.08_24.08.08-leeds-festival/)

@@ -4,7 +4,7 @@ layout: post
 categories:
   - Computing
 ---
-[<acronym title="First normal form">1NF</acronym>](http://en.wikipedia.org/wiki/First_normal_form) teaches us that we should not store repeating groups in fields. Given that we have a table satisfying 1NF containing values as such:
+[<acronym title="First normal form">1NF</acronym>](https://en.wikipedia.org/wiki/First_normal_form) teaches us that we should not store repeating groups in fields. Given that we have a table satisfying 1NF containing values as such:
 
  `person_id` | `transaction_id`
 -------------|-----------------

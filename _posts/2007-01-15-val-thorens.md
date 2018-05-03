@@ -11,4 +11,4 @@ The reason that I missed out on a day was that we found an amazing closed red ru
 
 Apart for one minor injury, the holiday was brilliant, the après-ski was great if a little expensive, and the accommodation was indeed very accommodating!
 
-View [pictures of the trip](http://pictures.scholesmafia.co.uk/index.php/2007/01/05.01.07_13.01.07-val-thorens/)
+View [pictures of the trip](https://pictures.scholesmafia.co.uk/index.php/2007/01/05.01.07_13.01.07-val-thorens/)

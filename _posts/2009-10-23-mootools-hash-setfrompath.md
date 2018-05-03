@@ -4,7 +4,7 @@ layout: post
 categories:
   - Computing
 ---
-[MooTools More](http://mootools.net/docs/more) implements a [`getFromPath` method in `Hash.Extras`](http://mootools.net/docs/more/Native/Hash.Extras#Hash:getFromPath), but doesn’t provide a corresponding setter. Here’s an implementation:
+[MooTools More](https://mootools.net/docs/more) implements a [`getFromPath` method in `Hash.Extras`](https://mootools.net/docs/more/Native/Hash.Extras#Hash:getFromPath), but doesn’t provide a corresponding setter. Here’s an implementation:
 
 ```js
 Hash.implement({

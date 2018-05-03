@@ -4,7 +4,7 @@ layout: post
 categories:
   - Uncategorized
 ---
-My _[Oblivion](http://www.imdb.com/title/tt1483013/)_ DVD came with a digital download copy from UltraViolet. I headed over to the UltraViolet Web site to download it. My experience went something like this:
+My _[Oblivion](https://www.imdb.com/title/tt1483013/)_ DVD came with a digital download copy from UltraViolet. I headed over to the UltraViolet Web site to download it. My experience went something like this:
 
   * [The site](http://www.ultravioletuniversal.com/) looks like the result of a "my first ASP.NET Web page" tutorial.
   * I entered the code into the site and was redirected to Flixster.
@@ -19,4 +19,4 @@ My _[Oblivion](http://www.imdb.com/title/tt1483013/)_ DVD came with a digital 
   * Yep, the film is listed in my collection now.
   * "Please download Flixster Desktop to watch your movie."
 
-Is it any wonder that people pirate films and TV? [Here's what xkcd have to say on the matter](http://xkcd.com/488/). The whole experience felt like [this infographic](http://lifehacker.com/5475113/remains-of-the-day-why-piracy-works-edition) --- and I haven't even started watching the film yet!
+Is it any wonder that people pirate films and TV? [Here's what xkcd have to say on the matter](https://xkcd.com/488/). The whole experience felt like [this infographic](http://lifehacker.com/5475113/remains-of-the-day-why-piracy-works-edition) --- and I haven't even started watching the film yet!
