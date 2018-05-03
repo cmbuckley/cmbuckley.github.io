@@ -44,10 +44,10 @@ There are a few noticeable differences:
 
   * The lettering and images are faded
   * The images have less fine detail
-  * They may not pass the “spin test” (although mine did) — the obverse image is not in the same orientation as the reverse image
+  * They may not pass the "spin test" (although mine did) --- the obverse image is not in the same orientation as the reverse image
   * The lettering on the side is incomplete or off-centre
   * The side inscription and obverse or reverse image may not match the [supposed year of print](http://www.royalmint.gov.uk/Corporate/facts/coins/OnePoundCoin.aspx) (although, again, this one did)
-  * The material of the coin may feel different — this one felt less dense than the real one; gold paint may also flake off
+  * The material of the coin may feel different --- this one felt less dense than the real one; gold paint may also flake off
   * A vending machine will probably not accept it
 
 There are other things that you can do beyond just looking at it, such as weighing it on some very accurate scales, or testing the resistivity.

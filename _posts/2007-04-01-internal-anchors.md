@@ -14,7 +14,7 @@ Before this error page is shown, I check a number of options to see if the link 
 
 I soon realised that this was because the URL contained a hash, meaning it was pointing to an internal anchor (for example, `/path/to/page-with'apostrophe` actually went to `/path/to/page-with&` and tried to find an anchor called `039;apostrophe`. So I needed to get the name of the anchor requested as well.
 
-Not possible with PHP. After seeing the explanation in [one forum topic](http://webmasterworld.com/forum92/528.htm), and seeing it clarified in [another](http://webmasterworld.com/forum88/2665.htm), I find that the anchor request never actually leaves the browser — it makes the page request, then searches in the result for the anchor. This means that no server-side scripting is going to work.
+Not possible with PHP. After seeing the explanation in [one forum topic](http://webmasterworld.com/forum92/528.htm), and seeing it clarified in [another](http://webmasterworld.com/forum88/2665.htm), I find that the anchor request never actually leaves the browser --- it makes the page request, then searches in the result for the anchor. This means that no server-side scripting is going to work.
 
 JavaScript it is, then. Here’s the workaround:
 

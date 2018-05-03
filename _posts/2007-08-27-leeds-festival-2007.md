@@ -11,35 +11,19 @@ If it ain't broke, don't fix it. We stayed in the same place as the last few yea
 
 This is who I managed to see during the weekend. Most I saw all the way through, but for some we only caught a couple of songs.
 
-<table class="noborder">
-  <tr>
-    <th>
-      Friday
-    </th>
-    
-    <th>
-      Saturday
-    </th>
-    
-    <th>
-      Sunday
-    </th>
-  </tr>
-  
-  <tr>
-    <td>
-      The Smashing Pumpkins<br /> Lostprophets<br /> Fall Out Boy<br /> Funeral For A Friend<br /> Wes Packer (<em>comedy tent</em>)<br /> The Used<br /> Billy Talent<br /> hellogoodbye<br /> Pull Tiger Tail<br /> Late Of The Pier
-    </td>
-    
-    <td>
-      Ash<br /> The Living End<br /> Kings Of Leon<br /> Mad Caddies<br /> Enter Shikari<br /> Capdown<br /> Maxïmo Park<br /> Jimmy Eat World<br /> The Enemy<br /> Plain White T's<br /> Gossip
-    </td>
-    
-    <td>
-      Red Hot Chili Peppers<br /> Arcade Fire<br /> Bloc Party<br /> Dinosaur Jr<br /> The Pigeon Detectives<br /> Angels & Airwaves<br /> Nine Black Alps<br /> Good Shoes<br /> Eagles Of Death Metal
-    </td>
-  </tr>
-</table>
+Friday                     | Saturday          | Sunday
+---------------------------|-------------------|--------------------
+The Smashing Pumpkins      | Ash               | Red Hot Chili Peppers
+Lostprophets               | The Living End    | Arcade Fire
+Fall Out Boy               | Kings Of Leon     | Bloc Party
+Funeral For A Friend       | Mad Caddies       | Dinosaur Jr
+Wes Packer (_comedy tent_) | Enter Shikari     | The Pigeon Detectives
+The Used                   | Capdown           | Angels & Airwaves
+Billy Talent               | Maxïmo Park       | Nine Black Alps
+hellogoodbye               | Jimmy Eat World   | Good Shoes
+Pull Tiger Tail            | The Enemy         | Eagles Of Death Metal
+Late Of The Pier           | Plain White T's   |
+                           | Gossip            |
 
 I missed a few that I wanted to see, including a secret appearance from the Kaiser Chiefs on Saturday, but I saw enough to make up for the misses!
 

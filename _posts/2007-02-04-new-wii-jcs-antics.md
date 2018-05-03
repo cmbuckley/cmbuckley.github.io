@@ -5,7 +5,7 @@ categories:
   - Nights Out
   - Play
 ---
-[Andy](http://pictures.scholesmafia.co.uk/index.php/?profile=30) got a [Wii](http://wii.com/) the other day. A complete impulse buy — but a good one, I might add! It came with [Wii Sports](http://wii.nintendo.com/software_wiisports.jsp), a game that demonstrates the revolutionary controller known as the [Wii remote](http://wii.nintendo.com/controller.jsp):
+[Andy](http://pictures.scholesmafia.co.uk/index.php/?profile=30) got a [Wii](http://wii.com/) the other day. A complete impulse buy --- but a good one, I might add! It came with [Wii Sports](http://wii.nintendo.com/software_wiisports.jsp), a game that demonstrates the revolutionary controller known as the [Wii remote](http://wii.nintendo.com/controller.jsp):
 
 [<img class="alignnone size-medium wp-image-265" src="http://cmbuckley.co.uk/files/2007/02/wii_remote-300x228.jpg" alt="" width="300" height="228" srcset="https://cmbuckley.co.uk/files/2007/02/wii_remote-300x228.jpg 300w, https://cmbuckley.co.uk/files/2007/02/wii_remote-393x300.jpg 393w, https://cmbuckley.co.uk/files/2007/02/wii_remote.jpg 550w" sizes="(max-width: 300px) 100vw, 300px" />](http://cmbuckley.co.uk/files/2007/02/wii_remote.jpg)
   

@@ -19,4 +19,4 @@ Here's the scenario: you use Apache Ant for some of your automated build process
 </project>
 ```
 
-Now you can have Ant targets in `ant.xml`, and Phing targets in `phing.xml`! No doubt there are some repercussions with this approach — I've no idea how well `antcall`/`phingcall` tasks will fare using this — but it worked for us!
+Now you can have Ant targets in `ant.xml`, and Phing targets in `phing.xml`! No doubt there are some repercussions with this approach --- I've no idea how well `antcall`/`phingcall` tasks will fare using this --- but it worked for us!

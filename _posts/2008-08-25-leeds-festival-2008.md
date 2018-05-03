@@ -16,25 +16,25 @@ Again, my list of bands includes a couple of bands for whom we only saw the odd 
     <th>
       Friday
     </th>
-    
+
     <th>
       Saturday
     </th>
-    
+
     <th>
       Sunday
     </th>
   </tr>
-  
+
   <tr>
     <td>
       Metallica<br /> Pendulum<br /> Avenged Sevenfold<br /> Dropkick Murphys<br /> Plain White T's<br /> Alexisonfire<br /> Mindless Self Indulgence<br /> Eureka Machines
     </td>
-    
+
     <td>
       Babyshambles<br /> Rage Against The Machine<br /> Vampire Weekend<br /> Goldfinger<br /> Friendly Fires<br /> Biffy Clyro<br /> Serj Tankian<br /> Dizzee Rascal<br /> Taking Back Sunday
     </td>
-    
+
     <td>
       The Killers<br /> Bloc Party<br /> You Me At Six<br /> The Raconteurs<br /> Seasick Steve<br /> Hifi Handgrenades<br /> The Automatic<br /> Random Hand
     </td>

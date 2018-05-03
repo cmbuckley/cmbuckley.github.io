@@ -7,10 +7,8 @@ categories:
 Damn server down-time. Here's the reason:
 
 > It wasn't me downloading too much stuff such that all the disk space was used up, STOP SPREADING LIES!
-> 
-> <p class="cite">
->   <cite><a href="http://jpowell.co.uk">Jon Powell</a></cite>
-> </p>
+>
+> --- <cite>[Jon Powell](http://jpowell.co.uk)</cite>
 
 Hehe.
 

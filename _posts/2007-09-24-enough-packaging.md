@@ -4,7 +4,7 @@ layout: post
 categories:
   - Computing
 ---
-After some trouble with our Belkin router recently, we managed to get it replaced under the lifetime warranty — a very satisfying result! The router arrived today, and the packaging that brought it can only be described as overkill:
+After some trouble with our Belkin router recently, we managed to get it replaced under the lifetime warranty --- a very satisfying result! The router arrived today, and the packaging that brought it can only be described as overkill:
 
 [<img class="alignnone size-medium wp-image-237" src="http://cmbuckley.co.uk/files/2007/09/router-300x212.jpg" alt="Router and packaging" width="300" height="212" srcset="https://cmbuckley.co.uk/files/2007/09/router-300x212.jpg 300w, https://cmbuckley.co.uk/files/2007/09/router-423x300.jpg 423w, https://cmbuckley.co.uk/files/2007/09/router.jpg 600w" sizes="(max-width: 300px) 100vw, 300px" />](http://cmbuckley.co.uk/files/2007/09/router.jpg)
 

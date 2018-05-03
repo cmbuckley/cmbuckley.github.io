@@ -19,7 +19,7 @@ Each face can move in 2 directions: clockwise and anti-clockwise. Clockwise is a
 
 ## Step 1: The Cross
 
-I choose white as the starting colour. My recommendation is to figure out the first layer (steps 1–2) without using the instructions, but I've created some basic ones just in case. The key is to match the colours relative to the other centre pieces. In all these isometric views below, the left-hand face of the diagram is the _**F**_ face, making the right-hand face the _**R**_ face.
+I choose white as the starting colour. My recommendation is to figure out the first layer (steps 1--2) without using the instructions, but I've created some basic ones just in case. The key is to match the colours relative to the other centre pieces. In all these isometric views below, the left-hand face of the diagram is the _**F**_ face, making the right-hand face the _**R**_ face.
 
 <div id="attachment_641" style="max-width: 160px" class="wp-caption alignnone">
   <img class="size-full wp-image-641   " alt="The starting position. (Green is F.)" src="http://cmbuckley.co.uk/files/2015/05/1-centres.png" width="150" height="150" />
@@ -125,7 +125,7 @@ If you have an edge in its correct position but the wrong orientation, you can e
 
 ## Step 4: Corner Permutations
 
-You should now have the first two layers, with the final layer unsolved. The last layer is the reverse of the first layer — solve the corner cubes first and then the cross — but in each case, you need to sort out the permutations of the pieces separately from the orientations.
+You should now have the first two layers, with the final layer unsolved. The last layer is the reverse of the first layer --- solve the corner cubes first and then the cross --- but in each case, you need to sort out the permutations of the pieces separately from the orientations.
 
 At this point, I flip the cube over again so the white face is on top, but I'll often be glancing at the bottom face to see what stage it's at. All the diagrams in the next steps assume you're looking at the cube as follows:
 
