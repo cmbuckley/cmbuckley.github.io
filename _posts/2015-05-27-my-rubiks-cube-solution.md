@@ -13,9 +13,7 @@ A Rubik's cube is made up of a number of different pieces, or cubies. There are 
 
 Each of the faces has a name, depending on how the cube is being held: The _**F**_ (front) and _**B**_ (back) faces, where _**F**_ faces the solver. The _**L**_ (left) and _**R**_ (right) faces are clear, and the _**U**_ (up) and _**D**_ (down) faces are top and bottom of the cube respectively.
 
-Each face can move in 2 directions: clockwise and anti-clockwise. Clockwise is always relative to looking at the face, not from the view of the solver. A clockwise move is denoted by the face letter, so _**F**_ rotates the front face clockwise. An anti-clockwise move is the letter followed by a prime symbol, such as _**F**_**′******. A double turn (i.e. 180°) is denoted by a letter followed by the number 2, such as _**F2**_.**
-
-**
+Each face can move in 2 directions: clockwise and anti-clockwise. Clockwise is always relative to looking at the face, not from the view of the solver. A clockwise move is denoted by the face letter, so _**F**_ rotates the front face clockwise. An anti-clockwise move is the letter followed by a prime symbol, such as _**F**_′. A double turn (i.e. 180°) is denoted by a letter followed by the number 2, such as _**F2**_.
 
 ## Step 1: The Cross
 
