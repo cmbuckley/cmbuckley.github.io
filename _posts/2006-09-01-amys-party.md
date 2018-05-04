@@ -1,5 +1,5 @@
 ---
-title: Amy’s Party
+title: Amy's Party
 layout: post
 categories:
   - Nights Out

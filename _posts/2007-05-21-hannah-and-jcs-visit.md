@@ -1,5 +1,5 @@
 ---
-title: Hannah and JC’s Visit
+title: Hannah and JC's Visit
 layout: post
 categories:
   - Nights Out

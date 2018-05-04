@@ -1,5 +1,5 @@
 ---
-title: '<em>Casino Royale</em> & Planet of Sound'
+title: '*Casino Royale* & Planet of Sound'
 layout: post
 categories:
   - Film

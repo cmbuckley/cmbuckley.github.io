@@ -1,5 +1,5 @@
 ---
-title: Jess’s Party
+title: Jess's Party
 layout: post
 categories:
   - Nights Out

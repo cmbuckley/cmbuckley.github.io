@@ -1,5 +1,5 @@
 ---
-title: My Rubik’s Cube Solution
+title: My Rubik's Cube Solution
 layout: post
 categories:
   - Academic

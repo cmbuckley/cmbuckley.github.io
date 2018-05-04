@@ -1,5 +1,5 @@
 ---
-title: '<em>Pirates of the Caribbean: At World’s End</em>'
+title: '*Pirates of the Caribbean: At World’s End*'
 layout: post
 categories:
   - Film

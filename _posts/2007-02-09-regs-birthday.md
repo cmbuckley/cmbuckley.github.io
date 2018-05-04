@@ -1,5 +1,5 @@
 ---
-title: Reg’s Birthday
+title: Reg's Birthday
 layout: post
 categories:
   - Nights Out

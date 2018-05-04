@@ -1,5 +1,5 @@
 ---
-title: '<em>Delicatessen</em> & Digressions'
+title: '*Delicatessen* & Digressions'
 layout: post
 categories:
   - Film

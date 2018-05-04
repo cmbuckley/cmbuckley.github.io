@@ -1,5 +1,5 @@
 ---
-title: Jay’s New Memory Card
+title: Jay's New Memory Card
 layout: post
 categories:
   - Play

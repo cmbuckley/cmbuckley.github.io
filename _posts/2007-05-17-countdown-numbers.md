@@ -1,5 +1,5 @@
 ---
-title: '<em>Countdown</em> Numbers'
+title: '*Countdown* Numbers'
 layout: post
 categories:
   - Video

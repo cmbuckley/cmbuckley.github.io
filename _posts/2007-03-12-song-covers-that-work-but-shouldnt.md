@@ -1,5 +1,5 @@
 ---
-title: Song Covers That Work, But Shouldn’t
+title: Song Covers That Work, But Shouldn't
 layout: post
 categories:
   - Music
