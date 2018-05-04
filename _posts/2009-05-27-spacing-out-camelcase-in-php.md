@@ -4,7 +4,7 @@ layout: post
 categories:
   - Computing
 ---
-Here’s a nifty function to put spaces in your CamelCased words:
+Here's a nifty function to put spaces in your CamelCased words:
 
 ```php
 function spacify($camel, $glue = ' ') {
@@ -15,4 +15,4 @@ function spacify($camel, $glue = ' ') {
 echo spacify('CamelCaseWords'); // 'Camel Case Words'
 ```
 
-I added in the `$glue` parameter to be even more nifty, but a bit of thinking made it clear that it wouldn’t work when the first letter was lower-case. Should be fine now!
+I added in the `$glue` parameter to be even more nifty, but a bit of thinking made it clear that it wouldn't work when the first letter was lower-case. Should be fine now!

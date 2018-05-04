@@ -4,7 +4,7 @@ layout: post
 categories:
   - Computing
 ---
-[MooTools More](https://mootools.net/docs/more) implements a [`getFromPath` method in `Hash.Extras`](https://mootools.net/docs/more/Native/Hash.Extras#Hash:getFromPath), but doesn’t provide a corresponding setter. Here’s an implementation:
+[MooTools More](https://mootools.net/docs/more) implements a [`getFromPath` method in `Hash.Extras`](https://mootools.net/docs/more/Native/Hash.Extras#Hash:getFromPath), but doesn't provide a corresponding setter. Here's an implementation:
 
 ```js
 Hash.implement({
@@ -28,4 +28,4 @@ Hash.implement({
 });
 ```
 
-Just to explain the `lastSource` part, it’s a fudge to maintain object references throughout.
+Just to explain the `lastSource` part, it's a fudge to maintain object references throughout.

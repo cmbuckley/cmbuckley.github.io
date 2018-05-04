@@ -4,7 +4,7 @@ layout: post
 categories:
   - Computing
 ---
-Well, it was an interesting hour that resulted in this…
+Well, it was an interesting hour that resulted in this...
 
 [Facebook](https://www.facebook.com) notes employ a redirect script for any links found in the note. There is a problem, however, when the link in question contains an apostrophe. The apostrophe is then matched out to its numerical code `&#036;`.
 
@@ -16,7 +16,7 @@ I soon realised that this was because the URL contained a hash, meaning it was p
 
 Not possible with PHP. After seeing the explanation in [one forum topic](https://www.webmasterworld.com/forum92/528.htm), and seeing it clarified in [another](https://www.webmasterworld.com/forum88/2665.htm), I find that the anchor request never actually leaves the browser --- it makes the page request, then searches in the result for the anchor. This means that no server-side scripting is going to work.
 
-JavaScript it is, then. Here’s the workaround:
+JavaScript it is, then. Here's the workaround:
 
 ```js
 if (!isNaN(parseInt(window.location.hash.substring(1, 2)))) {

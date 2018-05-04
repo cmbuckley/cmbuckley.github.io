@@ -13,7 +13,7 @@ categories:
  1           | 2
  1           | 3
 
-It is simple to select all people involved in a transaction, or all transactions attributed to one person. But how would we find out, say, those people who had been involved in both transaction 1 and transaction 2? It wasn’t clear to me, until now:
+It is simple to select all people involved in a transaction, or all transactions attributed to one person. But how would we find out, say, those people who had been involved in both transaction 1 and transaction 2? It wasn't clear to me, until now:
 
 ```mysql
 SELECT `person_id`

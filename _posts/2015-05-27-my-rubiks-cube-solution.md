@@ -129,7 +129,7 @@ At this point, I flip the cube over again so the white face is on top, but I'll 
 
 <img class="alignnone size-full wp-image-654" alt="4-faces" src="https://cmbuckley.co.uk/files/2015/05/4-faces.png" width="150" height="150" />
 
-First, pick one of the corner cubies to be in the right place. If one of them is in the correct orientation (e.g. yellow is correctly on the yellow face), then pick that one, as it'll save time in the next step. There are only two outcomes (the first 2 are mirrors of each other). Note also that flipping the back 2 cubies is almost identical to the second permutation of 3 cubies, with a leading _**D**_ move.
+First, pick one of the corner cubies to be in the right place. If one of them is in the correct orientation (e.g. yellow is correctly on the yellow face), then pick that one, as it'll save time in the next step. There are only two outcomes (the first 2 are mirrors of each other). Note also that flipping the back 2 cubies is almost identical to the second permutation of 3 cubies, with a leading _**D**_ move.
 
 <div id="attachment_655" style="max-width: 160px" class="wp-caption alignnone">
   <img class="size-full wp-image-655 " alt="L B' R' B L' B' R B" src="https://cmbuckley.co.uk/files/2015/05/4-lb-r-bl-b-rb.png" width="150" height="150" />
@@ -197,7 +197,7 @@ All other possibilities can be reduced to these examples with various applicatio
 
 This step will repeat the permutation performed in step 4, but for the edges instead of the corners. As with all these later steps, there are a much more limited number of positions that the cube can be in at this point. Again, there are only 2 algorithms, and again they are mirror images of each other, but we will use a slightly different notation here.
 
-Here, _**V**_ refers to the vertical slice between the _**L**_ and _**R**_ faces. The orientation of the _**V**_ moves should be considered the same as looking from the right-hand side, so a _**V**_ move rotates the middle slice upwards, and a _**V′**_ move rotates the middle slice downwards. The smoothest way to perform a _**V**_ move is to hold the _**L**_ face still and rotate _**V**_ and _**R**_ together, then rotate _**R**_ back.
+Here, _**V**_ refers to the vertical slice between the _**L**_ and _**R**_ faces. The orientation of the _**V**_ moves should be considered the same as looking from the right-hand side, so a _**V**_ move rotates the middle slice upwards, and a _**V′**_ move rotates the middle slice downwards. The smoothest way to perform a _**V**_ move is to hold the _**L**_ face still and rotate _**V**_ and _**R**_ together, then rotate _**R**_ back.
 
 <div id="attachment_660" style="max-width: 160px" class="wp-caption alignnone">
   <img class="size-full wp-image-660 " alt="V' B' V B2 V' B' V" src="https://cmbuckley.co.uk/files/2015/05/6-v-b-vb2v-b-v.png" width="150" height="150" />

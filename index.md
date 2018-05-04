@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Chris Buckley’s Personal Web Site
+title: Chris Buckley's Personal Web Site
 ---
 
 I'm Chris Buckley, a Leeds-born software enthusiast currently living in {{ site.details.location }}. I've been [interested in computers](/interests/computing/) ever since I can remember, and it was this and an obsession with all things mathematical that led me to study both at the [University of Durham](https://www.dur.ac.uk/) between 2003 and 2009. I work for {{ site.details.company }} as a {{ site.details.role }}.

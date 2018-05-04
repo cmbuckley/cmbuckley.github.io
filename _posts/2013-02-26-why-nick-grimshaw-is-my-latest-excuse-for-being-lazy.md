@@ -12,4 +12,4 @@ It worked (most of the time). I'd wake up to Radio 1 and the inane babble of Moy
 
 Unfortunately, this doesn't work any more. Now, _The Radio 1 Breakfast Show_ is presented by Nick Grimshaw. The result of this is that I now hit snooze in my sleep until it's nearly time to get up, and the only thing that manages to get me out of bed is a snippet of some song so terrible that it jolts me awake and causes me to need to leave the room and stand under a shower.
 
-I realise that I'm no longer the target audience. I realise that complaining about popular music is something that old people do. Maybe I should just set my alarm to be a podcast of  _Rob DJ's Monday Night Pub Quiz_ 🙂
+I realise that I'm no longer the target audience. I realise that complaining about popular music is something that old people do. Maybe I should just set my alarm to be a podcast of _Rob DJ's Monday Night Pub Quiz_ 🙂

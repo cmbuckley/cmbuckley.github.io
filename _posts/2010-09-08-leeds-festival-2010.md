@@ -11,25 +11,25 @@ Just recovered, so thought I'd post some ramblings for this year. Various high p
     <th>
       Friday
     </th>
-    
+
     <th>
       Saturday
     </th>
-    
+
     <th>
       Sunday
     </th>
   </tr>
-  
+
   <tr>
     <td>
       Bad Religion<br /> Arcade Fire<br /> The Libertines<br /> Cancer Bats<br /> Zebrahead<br /> The Cribs<br /> The Rats (Gallows)<br /> Modest Mouse<br /> The Gaslight Anthem<br /> Mystery Jets<br /> Random Hand<br /> Rolo Tomassi
     </td>
-    
+
     <td>
       blink-182<br /> We Are Scientists<br /> Foals<br /> Weezer<br /> Cypress Hill<br /> Limp Bizkit<br /> You Me at Six<br /> All Time Low<br /> The King Blues
     </td>
-    
+
     <td>
       Guns N' Roses<br /> LCD Soundsystem<br /> The Sunshine Underground<br /> Against Me<br /> Queens of the Stone Age<br /> Biffy Clyro<br /> Lostprophets<br /> NOFX<br /> Billy Talent<br /> The Skints
     </td>

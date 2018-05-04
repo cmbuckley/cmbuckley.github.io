@@ -22,4 +22,4 @@ categories:
   <br style='clear: both' />
 </div>
 
-Er, I can’t remember which is which now.
+Er, I can't remember which is which now.
