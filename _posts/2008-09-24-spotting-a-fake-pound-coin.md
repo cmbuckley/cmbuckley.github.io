@@ -9,7 +9,7 @@ Supposedly [2% of all pound coins are counterfeit](http://news.bbc.co.uk/1/hi/ma
 <div id='gallery-5' class='gallery galleryid-22 gallery-columns-3 gallery-size-thumbnail'>
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='https://cmbuckley.co.uk/blog/2008/09/24/spotting-a-fake-pound-coin/obverse/'><img width="150" height="150" src="https://cmbuckley.co.uk/files/2008/09/obverse-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="Obverse of a real and fake coin" aria-describedby="gallery-5-196" srcset="https://cmbuckley.co.uk/files/2008/09/obverse-150x150.jpg 150w, https://cmbuckley.co.uk/files/2008/09/obverse-75x75.jpg 75w, https://cmbuckley.co.uk/files/2008/09/obverse-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+      <a href='https://cmbuckley.co.uk/blog/2008/09/24/spotting-a-fake-pound-coin/obverse/'><img width="150" height="150" src="/assets/posts/2008/09/obverse-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="Obverse of a real and fake coin" aria-describedby="gallery-5-196" srcset="/assets/posts/2008/09/obverse-150x150.jpg 150w, /assets/posts/2008/09/obverse-75x75.jpg 75w, /assets/posts/2008/09/obverse-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
     </dt>
 
     <dd class='wp-caption-text gallery-caption' id='gallery-5-196'>
@@ -19,7 +19,7 @@ Supposedly [2% of all pound coins are counterfeit](http://news.bbc.co.uk/1/hi/ma
 
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='https://cmbuckley.co.uk/blog/2008/09/24/spotting-a-fake-pound-coin/reverse/'><img width="150" height="150" src="https://cmbuckley.co.uk/files/2008/09/reverse-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="Reverse of a real and fake coin" aria-describedby="gallery-5-197" srcset="https://cmbuckley.co.uk/files/2008/09/reverse-150x150.jpg 150w, https://cmbuckley.co.uk/files/2008/09/reverse-75x75.jpg 75w, https://cmbuckley.co.uk/files/2008/09/reverse-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+      <a href='https://cmbuckley.co.uk/blog/2008/09/24/spotting-a-fake-pound-coin/reverse/'><img width="150" height="150" src="/assets/posts/2008/09/reverse-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="Reverse of a real and fake coin" aria-describedby="gallery-5-197" srcset="/assets/posts/2008/09/reverse-150x150.jpg 150w, /assets/posts/2008/09/reverse-75x75.jpg 75w, /assets/posts/2008/09/reverse-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
     </dt>
 
     <dd class='wp-caption-text gallery-caption' id='gallery-5-197'>
@@ -29,7 +29,7 @@ Supposedly [2% of all pound coins are counterfeit](http://news.bbc.co.uk/1/hi/ma
 
   <dl class='gallery-item'>
     <dt class='gallery-icon landscape'>
-      <a href='https://cmbuckley.co.uk/blog/2008/09/24/spotting-a-fake-pound-coin/side/'><img width="150" height="150" src="https://cmbuckley.co.uk/files/2008/09/side-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="Side of a real and fake coin" aria-describedby="gallery-5-198" srcset="https://cmbuckley.co.uk/files/2008/09/side-150x150.jpg 150w, https://cmbuckley.co.uk/files/2008/09/side-75x75.jpg 75w, https://cmbuckley.co.uk/files/2008/09/side-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
+      <a href='https://cmbuckley.co.uk/blog/2008/09/24/spotting-a-fake-pound-coin/side/'><img width="150" height="150" src="/assets/posts/2008/09/side-150x150.jpg" class="attachment-thumbnail size-thumbnail" alt="Side of a real and fake coin" aria-describedby="gallery-5-198" srcset="/assets/posts/2008/09/side-150x150.jpg 150w, /assets/posts/2008/09/side-75x75.jpg 75w, /assets/posts/2008/09/side-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" /></a>
     </dt>
 
     <dd class='wp-caption-text gallery-caption' id='gallery-5-198'>

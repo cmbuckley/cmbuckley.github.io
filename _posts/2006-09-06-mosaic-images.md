@@ -9,6 +9,6 @@ Whilst browsing the [Facebook Developers' Directory](http://developers.facebook.
 
 This is the result, a mosaic of 3600 images from my [pictures collection](https://pictures.scholesmafia.co.uk/):
 
-[<img class="alignnone size-medium wp-image-275" src="https://cmbuckley.co.uk/files/2006/09/mosaic-300x225.jpg" alt="" width="300" height="225" srcset="https://cmbuckley.co.uk/files/2006/09/mosaic-300x225.jpg 300w, https://cmbuckley.co.uk/files/2006/09/mosaic-400x300.jpg 400w, https://cmbuckley.co.uk/files/2006/09/mosaic.jpg 800w" sizes="(max-width: 300px) 100vw, 300px" />](https://cmbuckley.co.uk/files/2006/09/mosaic.jpg)
+[<img class="alignnone size-medium wp-image-275" src="/assets/posts/2006/09/mosaic-300x225.jpg" alt="" width="300" height="225" srcset="/assets/posts/2006/09/mosaic-300x225.jpg 300w, /assets/posts/2006/09/mosaic-400x300.jpg 400w, /assets/posts/2006/09/mosaic.jpg 800w" sizes="(max-width: 300px) 100vw, 300px" />](/assets/posts/2006/09/mosaic.jpg)
 
 Anyone who wants to down the [full-size image](https://cmbuckley.co.uk/graphics/mosaic.jpg) may do so, but be warned that it's over 25MB!

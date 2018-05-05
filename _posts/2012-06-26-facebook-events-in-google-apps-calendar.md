@@ -14,14 +14,14 @@ Open up your [Facebook Events page](https://www.facebook.com/events/).
 
 Click on the dropdown and select "Export Events":
 
-<img class="alignnone size-full wp-image-567" title="events-dropdown" src="https://cmbuckley.co.uk/files/2012/06/events-dropdown.png" alt="" width="511" height="237" srcset="https://cmbuckley.co.uk/files/2012/06/events-dropdown.png 511w, https://cmbuckley.co.uk/files/2012/06/events-dropdown-195x90.png 195w" sizes="(max-width: 511px) 100vw, 511px" />
+<img class="alignnone size-full wp-image-567" title="events-dropdown" src="/assets/posts/2012/06/events-dropdown.png" alt="" width="511" height="237" srcset="/assets/posts/2012/06/events-dropdown.png 511w, /assets/posts/2012/06/events-dropdown-195x90.png 195w" sizes="(max-width: 511px) 100vw, 511px" />
 
-<img class="alignnone size-full wp-image-568" title="events-export" src="https://cmbuckley.co.uk/files/2012/06/events-export.png" alt="" width="540" height="311" srcset="https://cmbuckley.co.uk/files/2012/06/events-export.png 540w, https://cmbuckley.co.uk/files/2012/06/events-export-195x112.png 195w" sizes="(max-width: 540px) 100vw, 540px" />
+<img class="alignnone size-full wp-image-568" title="events-export" src="/assets/posts/2012/06/events-export.png" alt="" width="540" height="311" srcset="/assets/posts/2012/06/events-export.png 540w, /assets/posts/2012/06/events-export-195x112.png 195w" sizes="(max-width: 540px) 100vw, 540px" />
 
 Copy the link and take it over to [iCal Stripper](http://icalstripper.appspot.com/).
 
 Grab the stripped iCal URL and add it in Google Calendar:
 
-<img class="alignnone size-full wp-image-569" title="add-google-calendar" src="https://cmbuckley.co.uk/files/2012/06/add-google-calendar.png" alt="" width="547" height="299" srcset="https://cmbuckley.co.uk/files/2012/06/add-google-calendar.png 547w, https://cmbuckley.co.uk/files/2012/06/add-google-calendar-195x106.png 195w" sizes="(max-width: 547px) 100vw, 547px" />
+<img class="alignnone size-full wp-image-569" title="add-google-calendar" src="/assets/posts/2012/06/add-google-calendar.png" alt="" width="547" height="299" srcset="/assets/posts/2012/06/add-google-calendar.png 547w, /assets/posts/2012/06/add-google-calendar-195x106.png 195w" sizes="(max-width: 547px) 100vw, 547px" />
 
 And you're done!
