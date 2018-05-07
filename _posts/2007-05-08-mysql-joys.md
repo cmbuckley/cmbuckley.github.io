@@ -15,7 +15,7 @@ categories:
 
 It is simple to select all people involved in a transaction, or all transactions attributed to one person. But how would we find out, say, those people who had been involved in both transaction 1 and transaction 2? It wasn't clear to me, until now:
 
-```mysql
+```sql
 SELECT `person_id`
   FROM (
     SELECT `person_id`
