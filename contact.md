@@ -1,5 +1,6 @@
 ---
 title: Contact Me
+description: Contact Chris Buckley
 layout: page
 ---
 

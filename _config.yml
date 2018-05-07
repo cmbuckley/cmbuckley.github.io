@@ -1,5 +1,5 @@
-title: Chris Buckley's Personal Web Site
-description: Chris Buckley's Personal Web Site
+title: Chris Buckley
+description: Chris Buckley's personal Web site
 host: 0.0.0.0
 
 url: https://cmbuckley.co.uk
@@ -11,6 +11,13 @@ markdown: kramdown
 highlighter: rouge
 gems: [jekyll-paginate]
 paginate: 5
+
+defaults:
+  -
+    scope:
+      type: pages
+    values:
+      og_type: website
 
 navigation:
  - title: Home
