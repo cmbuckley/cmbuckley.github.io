@@ -22,7 +22,7 @@ I managed to get my hands on an old Dell Inspiron 3800 laptop and, after spendin
 
 So what now? There was only one way to go. Turning your old laptop into a digital picture frame seems rather popular at the moment and since Christmas is on its way, I thought I'd give it a go myself.
 
-### The software
+## The Software
 
 I apologise now. The laptop runs Windows XP. I know that for it to be at all reputable I shouldn't have done that, but after playing with a number of Linux distributions and not being happy with any, it was a lot quicker to get XP running. If I'd had more time then I would have done the job properly but as I said, Christmas was closing in!
 
@@ -38,7 +38,7 @@ With Apache running as a service, I could either run it as LocalSystem and allow
 
 The rather clunky but strangely satisfying method I went for was this: a PHP script output a text file containing paths to images that should be shown in the slideshow, and then updates a configuration file with instructions to execute the new slideshow. A constantly running VB program checks the config file and sends `Shell()` commands to IrfanView accordingly. Phew!
 
-### The code
+## The Code
 
 Here's the code for the VB program (I've neglected to include the module that handles the forced shutdown of the laptop):
 
@@ -282,7 +282,7 @@ To summarise the software, the picture frame will show photographs at random fro
 
 To summarise the summary: I'm very happy with the software!
 
-### The disassembly
+## The Disassembly
 
 I don't need most of what's provided in this laptop unit. I don't want the battery or CD-ROM drive, the keyboard or mouse pad, or any of the casing. All I need is the screen, the hard drive and the stripped-down motherboard.
 
@@ -300,7 +300,7 @@ The next part was to remove the track pad print layout from its metal frame. It 
 
 I decided to give it one last test, but somehow I managed to forget to hook up the keyboard and mouse. To my surprise, it booted fine, so I removed the keyboard and mouse completely, saving precious space behind the frame. Now the only connected devices are the PCMCIA slots and the hard drive.
 
-### The reassembly
+## The Reassembly
 
 The power button is a push-to-make switch with a built-in LED that comes on when the laptop is switched on.
 

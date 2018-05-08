@@ -7,7 +7,7 @@ layout: default
         <img src="{{ '/assets/img/' | prepend: site.baseurl | append: page.image }}" alt="" />
       </div>
   {% endif %}
-  <h2 class="postTitle">{{ page.title | markdownify | remove:'<p>' | remove:'</p>' | strip }}</h2>
+  <h1 class="postTitle">{{ page.title | markdownify | remove:'<p>' | remove:'</p>' | strip }}</h1>
   <p class="meta">{{ page.date | date: '%e %B %Y' }} | <span class="time">{{ page.content | number_of_words | divided_by:120.0 | ceil }}</span> Minute Read</p>
 
   {{ content }}

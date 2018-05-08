@@ -12,9 +12,9 @@ body {
 	z-index: 1;
 
 	&:after {
-		z-index: -1; 
+		z-index: -1;
 		background: white;
-		content: ""; 
+		content: "";
 		display: block;
 		width: 100%;
 		height: 10em;
@@ -22,7 +22,7 @@ body {
 		top: -2em;
 		left: 0;
 		transform: skewY(-2deg);
-		transform-origin: bottom left; 
+		transform-origin: bottom left;
 	}
 }
 
@@ -64,11 +64,11 @@ HEADER STYLING
 		position: relative;
 		top: 50%;
 		transform: translateY(-50%);
-    max-width: 800px;
+        max-width: 800px;
 		overflow: hidden;
 	}
 
-	h1 {
+	.logo {
 		font-size: 3em;
 		line-height: 1;
 		letter-spacing: -3px;
@@ -101,7 +101,7 @@ HEADER STYLING
 
 				&.current {
 					padding-bottom: .25em;
-					border-bottom: 4px solid rgba(255,255,255,.4); 
+					border-bottom: 4px solid rgba(255,255,255,.4);
 				}
 			}
 		}
@@ -120,7 +120,7 @@ MENU STYLING
 	  max-height: none;
 
 		&.closed {
-		  max-height: none; 
+		  max-height: none;
 		}
 
 		ul li a {
@@ -142,11 +142,11 @@ POST STYLING
 	h1, h2, h3, h4, h5, h6, p, ul, ol, dl, .pageTitle {
     width: 75%;
 		float: none;
-		margin: 0 auto 2rem; 
+		margin: 0 auto 2rem;
 	}
 
 	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-		margin: 1rem auto; 
+		margin: 1rem auto;
 	}
 
 	.pageTitle {
