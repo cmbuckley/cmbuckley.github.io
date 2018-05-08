@@ -8,7 +8,7 @@ layout: default
       </div>
   {% endif %}
   <h2 class="postTitle">{{ page.title | markdownify | remove:'<p>' | remove:'</p>' | strip }}</h2>
-  <p class="meta">{{ page.date | date: '%B %d, %Y' }} | <span class="time">{{ page.content | number_of_words | divided_by:120 | at_least:1 }}</span> Minute Read</p>
+  <p class="meta">{{ page.date | date: '%B %d, %Y' }} | <span class="time">{{ page.content | number_of_words | divided_by:120.0 | ceil }}</span> Minute Read</p>
 
   {{ content }}
 
