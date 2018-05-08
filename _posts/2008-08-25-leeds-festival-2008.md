@@ -11,35 +11,17 @@ I didn't get a ticket immediately after [last year](https://blog.cmbuckley.co.uk
 
 Again, my list of bands includes a couple of bands for whom we only saw the odd song:
 
-<table class="noborder">
-  <tr>
-    <th>
-      Friday
-    </th>
-
-    <th>
-      Saturday
-    </th>
-
-    <th>
-      Sunday
-    </th>
-  </tr>
-
-  <tr>
-    <td>
-      Metallica<br /> Pendulum<br /> Avenged Sevenfold<br /> Dropkick Murphys<br /> Plain White T's<br /> Alexisonfire<br /> Mindless Self Indulgence<br /> Eureka Machines
-    </td>
-
-    <td>
-      Babyshambles<br /> Rage Against The Machine<br /> Vampire Weekend<br /> Goldfinger<br /> Friendly Fires<br /> Biffy Clyro<br /> Serj Tankian<br /> Dizzee Rascal<br /> Taking Back Sunday
-    </td>
-
-    <td>
-      The Killers<br /> Bloc Party<br /> You Me At Six<br /> The Raconteurs<br /> Seasick Steve<br /> Hifi Handgrenades<br /> The Automatic<br /> Random Hand
-    </td>
-  </tr>
-</table>
+Friday                   | Saturday                 | Sunday
+-------------------------|--------------------------|------------------
+Metallica                | Babyshambles             | The Killers
+Pendulum                 | Rage Against The Machine | Bloc Party
+Avenged Sevenfold        | Vampire Weekend          | You Me At Six
+Dropkick Murphys         | Goldfinger               | The Raconteurs
+Plain White T's          | Friendly Fires           | Seasick Steve
+Alexisonfire             | Biffy Clyro              | Hifi Handgrenades
+Mindless Self Indulgence | Serj Tankian             | The Automatic
+Eureka Machines          | Dizzee Rascal            | Random Hand
+                         | Taking Back Sunday       |
 
 Again, I felt like I missed a load, but with so many on at the same time it's impossible to get it all in! Thanks go out to [Rob Marshall](http://rdmsoft.com/) for his [clash finder](http://bugs.rdmsoft.com/leeds/), which helped out greatly!
 
