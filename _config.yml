@@ -12,6 +12,9 @@ highlighter: rouge
 gems: [jekyll-paginate]
 paginate: 5
 
+sass:
+  style: compressed
+
 defaults:
   -
     scope:
