@@ -16,8 +16,7 @@ sass:
   style: compressed
 
 defaults:
-  -
-    scope:
+  - scope:
       type: pages
     values:
       og_type: website
