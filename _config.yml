@@ -20,6 +20,15 @@ defaults:
       type: pages
     values:
       og_type: website
+  - scope:
+      type: blog_categories
+    values:
+      layout: category
+
+collections:
+  blog_categories:
+    output: true
+    permalink: /blog/category/:name/
 
 navigation:
  - title: Home

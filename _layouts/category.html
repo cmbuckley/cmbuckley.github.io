@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<div class="home" id="home">
+  <h1 class="pageTitle">{{ page.name }}</h1>
+  {% if site.categories[page.name] %}
+  <ul class="posts noList">
+    {% for post in site.categories[page.name] %}
+    {% include post_excerpt.html %}
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>
