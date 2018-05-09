@@ -15,4 +15,4 @@ I've seen a few nice-looking representations of clocks around, but when I saw [G
 
 The result is tested in IE (5.5--8), Safari, Chrome and Firefox. I hit a slight issue in IE6− (what a surprise) whereby it interprets `a.sec.lit` as `a.lit` ([example](http://www.oppenheim.com.au/examples/multiple-css-classes-a-little-known-ie6-hack/)); I got around it by making `sec` an ID rather than a class (yes, I know it's dirty).
 
-[Have a look for yourself](https://cmbuckley.co.uk/projects/word-clock/).
+[Have a look for yourself](/projects/word-clock/).
