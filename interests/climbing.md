@@ -6,7 +6,7 @@ I have always been fond of climbing, to some degree. From an early age I always 
 
 In secondary school, we were twice taken to Bewerley Park, an outdoor pursuits centre in the Yorkshire Dales. I was given a chance to climb Yorkshire gritstone for the first time! Unfortunately, my interest was to be left by the wayside until university.
 
-[<img class="alignleft size-medium wp-image-374" title="Kyloe Out" src="/assets/posts/2012/05/kyloe-225x300.jpg" alt="Pitching a route at Kyloe Out" width="225" height="300" srcset="/assets/posts/2012/05/kyloe-225x300.jpg 225w, /assets/posts/2012/05/kyloe.jpg 300w" sizes="(max-width: 225px) 100vw, 225px" />](/assets/posts/2012/05/kyloe.jpg)
+[<img class="alignleft size-medium wp-image-374" title="Kyloe Out" src="/files/2012/05/kyloe-225x300.jpg" alt="Pitching a route at Kyloe Out" width="225" height="300" srcset="/files/2012/05/kyloe-225x300.jpg 225w, /files/2012/05/kyloe.jpg 300w" sizes="(max-width: 225px) 100vw, 225px" />](/files/2012/05/kyloe.jpg)
 
 In my first year at Durham, I joined the HBMC, my college climbing club. Our first meet was at Kyloe Out (left), a small crag in North Norhumberland. This was my first attempt at real roped climbing, but I threw myself at it and found that I very much enjoyed the challenges posed by the various routes.
 
@@ -14,7 +14,7 @@ Mainly the club focussed on indoor climbing due to the weather, so Sunderland Wa
 
 Towards the end of the first year, the HBMC AGM was held to discuss the continuation of the club. All of the executive committee were leaving, with no-one remaining to run the club. I was effectively the only person that stood for any of the roles, and was elected President and Treasurer of the club. This was a great responsibility for me, especially since I had only been climbing for a very short time.
 
-<img class="alignleft size-medium wp-image-375" style="clear: left;" title="Sunderland Wall" src="/assets/posts/2012/05/sunderland-225x300.jpg" alt="Sunderland Wall" width="225" height="300" srcset="/assets/posts/2012/05/sunderland-225x300.jpg 225w, /assets/posts/2012/05/sunderland.jpg 300w" sizes="(max-width: 225px) 100vw, 225px" />
+<img class="alignleft size-medium wp-image-375" style="clear: left;" title="Sunderland Wall" src="/files/2012/05/sunderland-225x300.jpg" alt="Sunderland Wall" width="225" height="300" srcset="/files/2012/05/sunderland-225x300.jpg 225w, /files/2012/05/sunderland.jpg 300w" sizes="(max-width: 225px) 100vw, 225px" />
 
 The first year of presidency, my second university year, was understandably slow, with very little provided for the members. Since there were no cars available, there were no outdoor meets, and the weekly trips were invariably to Berghaus. Berghaus is quite a good wall for more competent climbers, but it is definitely not the place to teach new ones. Also, there was no chance to teach anyone about roped climbing, so it seemed our services were not required!
 

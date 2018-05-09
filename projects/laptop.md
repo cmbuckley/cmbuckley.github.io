@@ -3,7 +3,7 @@ title: Laptop Digital Picture Frame
 layout: page
 ---
 <div id="attachment_469" style="max-width: 160px" class="wp-caption alignright">
-  <a href="/assets/posts/2012/04/img_0015.jpg"><img class="size-thumbnail wp-image-469" title="The finished product" src="/assets/posts/2012/04/img_0015-150x150.jpg" alt="The finished product" width="150" height="150" /></a>
+  <a href="/files/2012/04/img_0015.jpg"><img class="size-thumbnail wp-image-469" title="The finished product" src="/files/2012/04/img_0015-150x150.jpg" alt="The finished product" width="150" height="150" /></a>
 
   <p class="wp-caption-text">
     The finished product.
@@ -11,7 +11,7 @@ layout: page
 </div>
 
 <div id="attachment_471" style="max-width: 160px" class="wp-caption alignright">
-  <a href="/assets/posts/2012/04/img_0010.jpg"><img class="size-thumbnail wp-image-471" title="The laptop before I started attcking it" src="/assets/posts/2012/04/img_0010-150x150.jpg" alt="The laptop before I started attcking it" width="150" height="150" /></a>
+  <a href="/files/2012/04/img_0010.jpg"><img class="size-thumbnail wp-image-471" title="The laptop before I started attcking it" src="/files/2012/04/img_0010-150x150.jpg" alt="The laptop before I started attcking it" width="150" height="150" /></a>
 
   <p class="wp-caption-text">
     The laptop before I started attcking it.
