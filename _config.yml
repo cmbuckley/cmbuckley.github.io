@@ -9,8 +9,11 @@ permalink: blog/:year/:month/:day/:title/
 
 markdown: kramdown
 highlighter: rouge
-gems: [jekyll-paginate]
-paginate: 5
+paginate: 10
+
+plugins:
+  - jekyll-paginate
+  - jekyll-redirect-from
 
 sass:
   style: compressed
