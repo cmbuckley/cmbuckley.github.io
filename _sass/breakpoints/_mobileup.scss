@@ -177,9 +177,9 @@ HEADER STYLING
 
 .header {
 	background-color: $background-color;
-	background-image: url('../img/touring.jpg');
+	background-image: url('../img/tiki.jpg');
 	background-size: cover;
-	background-position: center center;
+	background-position: center 40%;
 	color: white;
 	padding: 0;
 	height: 3em;
@@ -190,6 +190,7 @@ HEADER STYLING
 	}
 
 	.logo {
+		text-shadow: black 0px 0px 10px;
 		margin: 0;
 		float: left;
 		padding-left: 2rem;
