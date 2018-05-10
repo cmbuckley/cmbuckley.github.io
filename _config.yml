@@ -11,6 +11,14 @@ markdown: kramdown
 highlighter: rouge
 paginate: 10
 
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - TODO
+
 plugins:
   - jekyll-paginate
   - jekyll-redirect-from
