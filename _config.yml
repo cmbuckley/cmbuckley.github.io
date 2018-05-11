@@ -22,6 +22,7 @@ exclude:
 plugins:
   - jekyll-paginate
   - jekyll-redirect-from
+  - jekyll-sitemap
 
 sass:
   style: compressed
