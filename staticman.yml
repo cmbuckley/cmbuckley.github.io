@@ -1,0 +1,13 @@
+comments:
+  allowedFields:
+    - name
+    - email
+    - message
+  requiredFields:
+    - name
+    - email
+    - message
+  branch: master
+  commitMessage: "Add comment to {options.slug}"
+  filename: "{@id}"
+  path: "_data/comments/{options.slug}"
