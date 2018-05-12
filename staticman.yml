@@ -2,11 +2,11 @@ comments:
   allowedFields:
     - name
     - email
-    - message
+    - comment
   requiredFields:
     - name
     - email
-    - message
+    - comment
   branch: master
   format: yaml
   commitMessage: "Add comment to {options.slug}"
