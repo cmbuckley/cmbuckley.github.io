@@ -226,32 +226,16 @@ POST STYLING
 
 	blockquote {
 		clear: both;
-		margin: 2.5em 0;
-		padding: 0;
+        border-left: 2px solid #2e8b57;
+        margin: 1em auto;
+        padding: 0 1em;
 		line-height: 1.8;
 		position: relative;
+        color: lighten(black, 40%);
 
-		&:before {
-			content: "";
-			position: absolute;
-			top: -1.25em;
-			background: $background-color;
-			display: block;
-			height: 2px;
-			width: 150px;
-			left: calc(50% - 75px);
-		}
-
-		&:after {
-			content: "";
-			position: absolute;
-			bottom: -1.25em;
-			background: $background-color;
-			display: block;
-			height: 2px;
-			width: 150px;
-			left: calc(50% - 75px);
-		}
+        p {
+            width: 100%;
+        }
 	}
 
 	.meta {
@@ -262,7 +246,7 @@ POST STYLING
 	}
 
 	figure {
-		margin: 3rem 0;
+		margin: 3rem auto;
 
 		figcaption {
 			text-align: center;

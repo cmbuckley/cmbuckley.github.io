@@ -8,7 +8,7 @@ categories:
 
 The picture on their site gives no scale, so here's a shot of it next to my finger:
 
-[<img class="alignnone size-medium wp-image-271" src="/files/2006/10/m2-300x179.jpg" alt="" width="300" height="179" srcset="/files/2006/10/m2-300x179.jpg 300w, /files/2006/10/m2.jpg 488w" sizes="(max-width: 300px) 100vw, 300px" />](/files/2006/10/m2.jpg)
+{% include img.html url="/files/2006/10/m2.jpg" img="/files/2006/10/m2-300x179.jpg" caption="Sony M2 memory card" %}
 
 I have to say, I was rather impressed!
 

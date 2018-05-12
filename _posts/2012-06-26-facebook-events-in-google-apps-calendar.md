@@ -14,14 +14,13 @@ Open up your [Facebook Events page](https://www.facebook.com/events/).
 
 Click on the dropdown and select "Export Events":
 
-<img class="alignnone size-full wp-image-567" title="events-dropdown" src="/files/2012/06/events-dropdown.png" alt="" width="511" height="237" srcset="/files/2012/06/events-dropdown.png 511w, /files/2012/06/events-dropdown-195x90.png 195w" sizes="(max-width: 511px) 100vw, 511px" />
-
-<img class="alignnone size-full wp-image-568" title="events-export" src="/files/2012/06/events-export.png" alt="" width="540" height="311" srcset="/files/2012/06/events-export.png 540w, /files/2012/06/events-export-195x112.png 195w" sizes="(max-width: 540px) 100vw, 540px" />
+{% include img.html img="/files/2012/06/events-dropdown.png" alt="Facebook events export button" %}
+{% include img.html img="/files/2012/06/events-export.png" alt="Facebook events link" %}
 
 Copy the link and take it over to [iCal Stripper](http://icalstripper.appspot.com/).
 
 Grab the stripped iCal URL and add it in Google Calendar:
 
-<img class="alignnone size-full wp-image-569" title="add-google-calendar" src="/files/2012/06/add-google-calendar.png" alt="" width="547" height="299" srcset="/files/2012/06/add-google-calendar.png 547w, /files/2012/06/add-google-calendar-195x106.png 195w" sizes="(max-width: 547px) 100vw, 547px" />
+{% include img.html img="/files/2012/06/add-google-calendar.png" alt="Adding Facebook events link to Google Calendar" %}
 
 And you're done!
