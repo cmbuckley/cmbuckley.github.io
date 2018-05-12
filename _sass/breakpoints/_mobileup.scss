@@ -20,6 +20,10 @@ body {
 	p , ul {
 		margin: 0 0 2rem;
 	}
+
+    ul ul {
+        margin-bottom: 0;
+    }
 }
 
 // Text Selection Styling

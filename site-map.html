@@ -8,10 +8,11 @@ title: Site Map
 <ul>
 <li>
 {% comment %}This is a complete mess, but it manages to nest to second level, which is enough for now.{% endcomment %}
-{% assign pages = site.html_pages | where_exp:'doc','doc.url != "/404.html"' | sort:'url' %}
+{% assign pages = site.html_pages | where_exp:'doc','doc.url != "/404.html"' | concat: site.navigation | sort:'url' %}
 {% assign url = nil %}
 {% assign inlist = nil %}
-{% for page in pages %}{% unless page.url contains "/page/" %}
+{% for page in pages %}
+{% unless page.url contains "/page/" or page.url == url %}
 {% if url != nil %}
 {% if url != "/" %}
 {% assign check = page.url | split: url %}
@@ -30,9 +31,10 @@ title: Site Map
 {% endif %}
 <li>
 {% endif %}
-<a href="{{ page.url }}">{{ page.title | default: site.description | markdownify | remove: '<p>' | remove: '</p>' | strip }}</a>
+<a href="{{ page.url }}">{{ page.title | default: 'Home' | markdownify | remove: '<p>' | remove: '</p>' | strip }}</a>
 {% assign url = page.url %}
-{% endunless %}{% endfor %}
+{% endunless %}
+{% endfor %}
 </li>
 </ul>
 
@@ -47,8 +49,20 @@ title: Site Map
 
 <h2>Posts</h2>
 
+{% assign year = site.posts | map: 'date' | first | date: '%Y' %}
+
+<h3>{{ year }}</h3>
 <ul>
 {% for post in site.posts %}
+{% assign newyear = post.date | date: '%Y' %}
+{% if newyear != year %}
+</ul>
+
+<h3>{{ newyear }}</h3>
+
+<ul>
+{% endif %}
 <li><a href="{{ post.url }}">{{ post.title | markdownify | remove: '<p>' | remove: '</p>' | strip }}</a></li>
+{% assign year = newyear %}
 {% endfor %}
 </ul>

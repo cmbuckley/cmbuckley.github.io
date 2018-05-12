@@ -6,6 +6,7 @@ url: https://cmbuckley.uk
 baseurl: ""
 paginate_path: "blog/page/:num/"
 permalink: blog/:year/:month/:day/:title/
+repository: cmbuckley/cmbuckley.github.io
 
 markdown: kramdown
 highlighter: rouge
@@ -20,6 +21,7 @@ exclude:
   - TODO
 
 plugins:
+  - jekyll-github-metadata
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-sitemap
