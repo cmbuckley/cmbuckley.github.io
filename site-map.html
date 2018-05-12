@@ -8,11 +8,11 @@ title: Site Map
 <ul>
 <li>
 {% comment %}This is a complete mess, but it manages to nest to second level, which is enough for now.{% endcomment %}
-{% assign pages = site.html_pages | where_exp:'doc','doc.url != "/404.html"' | concat: site.navigation | sort:'url' %}
+{% assign pages = site.html_pages | where_exp:'doc','doc.url != "/404.html"' | sort:'url' %}
 {% assign url = nil %}
 {% assign inlist = nil %}
 {% for page in pages %}
-{% unless page.url contains "/page/" or page.url == url %}
+{% unless page.url contains "/page/" %}
 {% if url != nil %}
 {% if url != "/" %}
 {% assign check = page.url | split: url %}
@@ -37,6 +37,17 @@ title: Site Map
 {% endfor %}
 </li>
 </ul>
+
+<h2>Showcase</h2>
+
+{% assign gh_pages = site.github.public_repositories | where_exp:'repo','repo.has_pages == true' %}
+{% if gh_pages.size %}
+<ul>
+{% for gh_page in gh_pages %}{% unless gh_page.name == site.github.repository_name %}
+<li><a href="{{ gh_page.name | prepend: '/' | append: '/' }}">{{ gh_page.description | default: gh_page.name }}</a></li>
+{% endunless %}{% endfor %}
+</ul>
+{% endif %}
 
 <h2>Categories</h2>
 

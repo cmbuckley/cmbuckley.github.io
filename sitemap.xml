@@ -26,11 +26,14 @@ layout: null
       {% endif %}
     </url>
   {% endfor %}
+
+  {% assign gh_pages = site.github.public_repositories | where_exp:'repo','repo.has_pages == true' %}
+  {% for gh_page in gh_pages %}{% unless gh_page.name == site.github.repository_name %}
   <url>
-    <loc>{{ '/cv/' | absolute_url | xml_escape }}</loc>
-    {% assign repo = site.github.public_repositories | where_exp:'repo','repo.name == "cv"' | first %}
-    <lastmod>{{ repo.updated_at | date_to_xmlschema }}</lastmod>
+    <loc>{{ gh_page.name | prepend: '/' | append: '/' | absolute_url | xml_escape }}</loc>
+    <lastmod>{{ gh_page.updated_at | date_to_xmlschema }}</lastmod>
   </url>
+  {% endunless %}{% endfor %}
 
   {% assign static_files = page.static_files | where_exp:'page','page.sitemap != false' | where_exp:'page','page.name != "404.html"' %}
   {% for file in static_files %}
