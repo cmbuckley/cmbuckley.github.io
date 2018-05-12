@@ -8,6 +8,7 @@ comments:
     - email
     - message
   branch: master
+  format: yaml
   commitMessage: "Add comment to {options.slug}"
   filename: "{@id}"
   path: "_data/comments/{options.slug}"
