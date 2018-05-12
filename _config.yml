@@ -24,7 +24,6 @@ plugins:
   - jekyll-github-metadata
   - jekyll-paginate
   - jekyll-redirect-from
-  - jekyll-sitemap
 
 sass:
   style: compressed
