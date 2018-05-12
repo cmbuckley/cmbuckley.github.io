@@ -10,15 +10,5 @@ comments:
   branch: master
   format: yaml
   commitMessage: "Add comment to {options.slug}"
-  pullRequestBody: |
-    Hi,
-
-    Here’s a new comment made on [{options.title}]({options.redirect}).
-
-    Merge the pull request to accept it, or close it to remove it.
-
-    :heart: Your friend [Staticman](https://staticman.net) :muscle:
-    ---
-
   filename: "{@id}"
   path: "_data/comments/{options.slug}"
