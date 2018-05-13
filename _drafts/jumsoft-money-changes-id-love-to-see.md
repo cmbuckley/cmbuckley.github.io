@@ -1,5 +1,5 @@
 ---
-title: Jumsoft Money: Changes I'd Love to See
+title: "Jumsoft Money: Changes I'd Love to See"
 ---
 
 Features:
