@@ -2,7 +2,7 @@ title: Chris Buckley
 description: Chris Buckley's personal Web site
 host: 0.0.0.0
 
-url: https://cmbuckley.uk
+url: https://cmbuckley.co.uk
 baseurl: ""
 paginate_path: "blog/page/:num/"
 permalink: blog/:year/:month/:day/:title/
