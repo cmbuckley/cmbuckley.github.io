@@ -1,0 +1,19 @@
+<h2>Leave a Reply</h2>
+
+<form class="reply" method="POST" action="https://api.staticman.net/v2/entry/{{ site.github.repository_nwo }}/master/comments">
+  <!-- <input name="options[redirect]" type="hidden" value="{{ page.url | absolute_url }}">-->
+  <input name="options[redirect]" type="hidden" value="http://new.cmbuckley.co.uk:4000{{ page.url }}">
+  <input name="options[title]" type="hidden" value="{{ page.title | escape }}">
+  <input name="options[slug]" type="hidden" value="{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}">
+
+  <label for="comment-name">Name</label>
+  <input id="comment-name" name="fields[name]" type="text"><br />
+
+  <label for="comment-email">Email Address</label>
+  <input id="comment-email" name="fields[email]" type="email"><br />
+
+  <label for="comment-message">Message</label>
+  <textarea id="comment-message" name="fields[comment]"></textarea><br />
+
+  <input class="button" type="submit" value="Post Comment">
+</form>

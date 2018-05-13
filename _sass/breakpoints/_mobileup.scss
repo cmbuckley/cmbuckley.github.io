@@ -278,6 +278,30 @@ POST STYLING
 			margin-bottom: 0;
 		}
 	}
+
+    .comments {
+        padding: 0;
+
+        li {
+            list-style-type: none;
+        }
+
+        .avatar {
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .comment {
+            white-space: pre-line;
+            width: 100%;
+            clear: left;
+        }
+    }
+
+    form.reply {
+        margin: 0 auto;
+    }
 }
 
 
