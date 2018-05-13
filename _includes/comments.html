@@ -10,7 +10,7 @@
 <img class="avatar" src="https://www.gravatar.com/avatar/{{ comment.email | default: 0 }}?d=mm" />
 <cite>{{ comment.name }}</cite>
 <p class="time">{{ comment.date | date: '%e %B %Y %H:%M' }}</p>
-<p class="comment">{{ comment.comment }}</p>
+<p class="comment">{{ comment.comment | smartify }}</p>
 </li>
 {% endfor %}
 </ol>
