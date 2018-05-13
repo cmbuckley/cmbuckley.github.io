@@ -1,8 +1,7 @@
 <h2>Leave a Reply</h2>
 
 <form class="reply" method="POST" action="https://api.staticman.net/v2/entry/{{ site.github.repository_nwo }}/master/comments">
-  <!-- <input name="options[redirect]" type="hidden" value="{{ page.url | absolute_url }}">-->
-  <input name="options[redirect]" type="hidden" value="http://new.cmbuckley.co.uk:4000{{ page.url }}">
+  <input name="options[redirect]" type="hidden" value="{{ page.url | absolute_url }}">
   <input name="options[title]" type="hidden" value="{{ page.title | escape }}">
   <input name="options[slug]" type="hidden" value="{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}">
 
