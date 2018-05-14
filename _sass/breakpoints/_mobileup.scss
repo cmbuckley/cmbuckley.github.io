@@ -42,6 +42,34 @@ img,video,audio,iframe,object{
 	max-width:100%;
 }
 
+figure {
+    margin: 3rem auto;
+
+    &.fl-right {
+        clear: right;
+        float: right;
+        margin: 1em 0 1em 40px;
+    }
+
+    &.fl-left {
+        float: left;
+        clear: left;
+        margin: 1em 40px 1em 0;
+    }
+
+    figcaption {
+        text-align: center;
+        font-size: .9em;
+        font-style: italic;
+        color: lighten($black, 30%);
+    }
+
+    img {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
 // Layout
 .container {
   max-width: 610px;
@@ -245,22 +273,6 @@ POST STYLING
 		font-weight: 300;
 	}
 
-	figure {
-		margin: 3rem auto;
-
-		figcaption {
-			text-align: center;
-			font-size: .9em;
-			font-style: italic;
-			color: lighten($black, 30%);
-		}
-
-		img {
-			margin: 0 auto;
-			display: block;
-		}
-	}
-
 	img {
 		margin-bottom: 2rem;
 	}
@@ -303,7 +315,6 @@ POST STYLING
         margin: 0 auto;
     }
 }
-
 
 /***************
 POST NAV STYLING

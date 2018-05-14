@@ -2,21 +2,10 @@
 title: Laptop Digital Picture Frame
 layout: page
 ---
-<div id="attachment_469" style="max-width: 160px" class="wp-caption alignright">
-  <a href="/files/2012/04/img_0015.jpg"><img class="size-thumbnail wp-image-469" title="The finished product" src="/files/2012/04/img_0015-150x150.jpg" alt="The finished product" width="150" height="150" /></a>
 
-  <p class="wp-caption-text">
-    The finished product.
-  </p>
-</div>
+{% include img.html url="/files/2012/04/img_0015.jpg" img="/files/2012/04/img_0015-320x200.jpg" caption="The finished product" float="right" %}
 
-<div id="attachment_471" style="max-width: 160px" class="wp-caption alignright">
-  <a href="/files/2012/04/img_0010.jpg"><img class="size-thumbnail wp-image-471" title="The laptop before I started attcking it" src="/files/2012/04/img_0010-150x150.jpg" alt="The laptop before I started attcking it" width="150" height="150" /></a>
-
-  <p class="wp-caption-text">
-    The laptop before I started attcking it.
-  </p>
-</div>
+{% include img.html url="/files/2012/04/img_0010.jpg" img="/files/2012/04/img_0010-320x200.jpg" caption="The laptop before I started attacking it" float="right" %}
 
 I managed to get my hands on an old Dell Inspiron 3800 laptop and, after spending a day or so fiddling with it, I finally decided it had no use as a laptop. The laptop was useless for a number of reasons: The battery didn't work, it had a single USB 1.1 port and only 64MB of RAM. Now, I know I could have bought some more RAM, but considering it takes 144-pin modules it was something I wasn't prepared to buy.
 
