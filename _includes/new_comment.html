@@ -6,10 +6,13 @@
   <input name="options[slug]" type="hidden" value="{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}">
 
   <label for="comment-name">Name</label>
-  <input id="comment-name" name="fields[name]" type="text"><br />
+  <input autocomplete="name" id="comment-name" name="fields[name]" type="text"><br />
 
   <label for="comment-email">Email Address</label>
-  <input id="comment-email" name="fields[email]" type="email"><br />
+  <input autocomplete="email" id="comment-email" name="fields[email]" type="email"><br />
+
+  <label class="hp" for="comment-url">Homepage (&#x6C;&#x65;&#x61;&#x76;&#x65;&#x20;&#x62;&#x6C;&#x61;&#x6E;&#x6B;&#x20;&#x69;&#x66;&#x20;&#x68;&#x75;&#x6D;&#x61;&#x6E;)</label>
+  <input class="hp" id="comment-url" name="fields[url]" type="url"><br class="hp" />
 
   <label for="comment-message">Message</label>
   <textarea id="comment-message" name="fields[comment]"></textarea><br />
