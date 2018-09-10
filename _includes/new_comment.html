@@ -1,11 +1,11 @@
 <h2>Leave a Reply</h2>
 
-<form class="reply" method="POST" action="https://api.staticman.net/v2/entry/{{ site.github.repository_nwo }}/master/comments">
+<form id="comments-form" class="reply" method="POST" action="https://api.staticman.net/v2/entry/{{ site.github.repository_nwo }}/master/comments">
   <input type="hidden" name="options[redirect]" value="{{ page.url | absolute_url }}">
   <input type="hidden" name="options[title]" value="{{ page.title | escape }}">
   <input type="hidden" name="options[slug]" value="{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}">
-  <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.data.staticman.reCaptcha.siteKey }}">
-  <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.data.staticman.reCaptcha.secret }}">
+  <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.data.staticman.comments.reCaptcha.siteKey }}">
+  <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.data.staticman.comments.reCaptcha.secret }}">
 
   <label for="comment-name">Name</label>
   <input autocomplete="name" id="comment-name" name="fields[name]" type="text"><br />
@@ -16,8 +16,16 @@
   <label for="comment-message">Message</label>
   <textarea id="comment-message" name="fields[comment]"></textarea><br />
 
-  <div class="g-recaptcha" data-sitekey="{{ site.data.staticman.reCaptcha.siteKey }}"></div>
-  <script src='https://www.google.com/recaptcha/api.js'></script>
-
-  <input class="button" type="submit" value="Post Comment">
+  <button type="button" class="button g-recaptcha" data-sitekey="{{ site.data.staticman.comments.reCaptcha.siteKey }}" data-callback="postComment">Post Comment</button>
 </form>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+    function postComment(token) {
+        document.getElementById("comments-form").submit();
+    }
+</script>
+<img src="/assets/img/c/s.gif" />
+<noscript>
+<p class="warning">Due to comment spam, this form cannot be posted without JavaScript. Please see <a href="https://github.com/cmbuckley/cmbuckley.github.io/wiki/Posting-a-comment-without-JavaScript">this guide</a> to add a comment. <img src="/assets/img/c/ns.gif" /></p>
+</noscript>
