@@ -1,10 +1,11 @@
 <h2>Leave a Reply</h2>
 
 <form class="reply" method="POST" action="https://api.staticman.net/v2/entry/{{ site.github.repository_nwo }}/master/comments">
-  <input name="options[redirect]" type="hidden" value="{{ page.url | absolute_url }}">
-  <input name="options[title]" type="hidden" value="{{ page.title | escape }}">
-  <input name="options[slug]" type="hidden" value="{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}">
-  <input type="hidden" name="_gotcha" value="">
+  <input type="hidden" name="options[redirect]" value="{{ page.url | absolute_url }}">
+  <input type="hidden" name="options[title]" value="{{ page.title | escape }}">
+  <input type="hidden" name="options[slug]" value="{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}">
+  <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.data.staticman.reCaptcha.siteKey }}">
+  <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.data.staticman.reCaptcha.secret }}">
 
   <label for="comment-name">Name</label>
   <input autocomplete="name" id="comment-name" name="fields[name]" type="text"><br />
@@ -14,6 +15,9 @@
 
   <label for="comment-message">Message</label>
   <textarea id="comment-message" name="fields[comment]"></textarea><br />
+
+  <div class="g-recaptcha" data-sitekey="{{ site.data.staticman.reCaptcha.siteKey }}"></div>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 
   <input class="button" type="submit" value="Post Comment">
 </form>

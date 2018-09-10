@@ -12,3 +12,7 @@ comments:
   commitMessage: "Add comment to {options.slug}"
   filename: "{@id}"
   path: "_data/comments/{options.slug}"
+  reCaptcha:
+    enabled: true
+    siteKey: "6LfNfG8UAAAAAD4z8500zG59Qvq4o9fmB_HlbkKk"
+    secret: "Q705CkzhHAKP/0Y4B83Pg+eAgXLJ4WrTbOCNIuxVwkiObt2N3KzR5wcpEzISX4rP/VyHezWkaNYwKJzd+fAJBbp9jmGFLwDnMPLdG1I1oFA34/wTGzkUUFyx9vvn8KQLlvJquK25gmbQRya+34588sPuA5VPn9LqG4XcijFEgQo="
