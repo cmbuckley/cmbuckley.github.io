@@ -10,13 +10,13 @@ Most basic functionality seems to be fine, and we regularly use the Home Assista
 
 However, even some basic functionality isn't available with my set-up, because I use a [G Suite](https://gsuite.google.co.uk/) (formerly Google Apps) account rather than a standard Google account. Because G Suite is a multi-user suite of tools commonly used for businesses, there's no proper Google Home integration yet. I've had Google Apps since it was offered as "Gmail for your domain" so have become incorporated into the paid-for suite.
 
-The immediate problem is that I can't access my calendar with the Assistant, so typical actions like "how's my calendar for tomorrow?" or "schedule an event for me" aren't possible. It is a similar story with email. It also means I currently can't share the users with anyone else.
+The immediate problem is that I can't access my calendar with the Assistant, so typical actions like "how's my calendar for tomorrow?" or "schedule an event for me" aren't possible. It is a similar story with email. It also means I currently can't share the devices with anyone else.
 
 I did have a play with using a standard Google Account, but it's by no means ideal (I don't want to use it for everything, which would mean I'd need to synchronise my mail, calendar, photos, music, and probably more).
 
 Where Google Home is meant to excel, however, is with integrations with other IoT products. So far, this has not been my experience. I'm aware this is a relatively new space, and there is plenty that needs to be improved upon (security, safety, privacy, wellbeing being the top of the list), so for now I've learned to do my research a little better.
 
-The first problem I experienced was linking to our [Ring](https://ring.com/) doorbell. This is to be expected with Google and Amazon both pushing their own set of tecnologies, but I thought it would be better than this. The advertised "Ring integration" essentially allows my to ask "when did my doorbell last ring?" or to find out the battery health. If I want to actually get doorbell alerts in the house, I have three choices: buy a Nest doorbell instead, use Ring with Alexa, or get a separate Ring Chime.
+The first problem I experienced was linking to our [Ring](https://ring.com/) doorbell. This is to be expected with Google and Amazon both pushing their own set of tecnologies, but I thought it would be better than this. The advertised "Ring integration" essentially allows me to ask "when did my doorbell last ring?" or to find out the battery health. If I want to actually get doorbell alerts in the house, I have three choices: buy a Nest doorbell instead, use Ring with Alexa, or get a separate Ring Chime.
 
 I ended up with a convoluted fourth option:
 
