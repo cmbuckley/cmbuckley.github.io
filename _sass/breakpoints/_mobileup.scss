@@ -15,7 +15,7 @@ body {
 	font-size: 112.5%; // 18px base font size
 	color: $black;
 	overflow-x: hidden;
-  margin: 0;
+    margin: 0;
 
 	p , ul {
 		margin: 0 0 2rem;
@@ -43,19 +43,7 @@ img,video,audio,iframe,object{
 }
 
 figure {
-    margin: 3rem auto;
-
-    &.fl-right {
-        clear: right;
-        float: right;
-        margin: 1em 0 1em 40px;
-    }
-
-    &.fl-left {
-        float: left;
-        clear: left;
-        margin: 1em 40px 1em 0;
-    }
+    margin: 1rem auto;
 
     figcaption {
         text-align: center;
@@ -195,7 +183,7 @@ PAGE STYLES
 ***************/
 
 .pageTitle {
-	margin: 2rem auto 1em;
+	margin: 1rem auto;
 	text-align: center;
 }
 

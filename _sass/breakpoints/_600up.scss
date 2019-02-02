@@ -1,0 +1,23 @@
+figure {
+    margin: 3rem auto;
+
+    &.fl-right {
+        clear: right;
+        float: right;
+        margin: 1em 0 1em 40px;
+    }
+
+    &.fl-left {
+        float: left;
+        clear: left;
+        margin: 1em 40px 1em 0;
+    }
+}
+
+.pageTitle {
+	margin: 2rem auto 1em;
+}
+
+.highlight {
+    padding: 10px;
+}
