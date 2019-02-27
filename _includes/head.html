@@ -1,6 +1,6 @@
 {% assign site_title = site.title | markdownify | strip_html | strip %}
 {% assign page_title = page.title | markdownify | strip_html | strip %}
-{% assign page_description = page.description | markdownify | strip_html | strip %}
+{% assign page_description = page.description | default: page.excerpt | markdownify | strip_html | strip %}
 {% assign site_description = site.description | markdownify | strip_html | strip %}
 <head>
     <meta charset="utf-8">
@@ -42,7 +42,7 @@
     {% if page.url %}
       <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
     {% endif %}
-    <meta name="twitter:description" content="{{ page_description | site_description }}">
+    <meta name="twitter:description" content="{{ page_description | default: site_description }}">
     {% if page.image %}
       <meta name="twitter:image:src" content="{{ site.url }}/assets/img/{{ page.image }}">
     {% else %}

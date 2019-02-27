@@ -1,5 +1,6 @@
 ---
 title: Interests
+description: Things that I'm interested in
 layout: page
 ---
 

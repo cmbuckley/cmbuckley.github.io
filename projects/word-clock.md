@@ -1,6 +1,6 @@
 ---
 title: Word Clock
-excerpt: A clock showing the word representation of the time using CSS and JavaScript.
+description: A clock showing the word representation of the time using CSS and JavaScript.
 layout: page
 ---
 

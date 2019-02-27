@@ -1,5 +1,6 @@
 ---
 title: Snowboarding
+description: Two planks bad, one plank good
 layout: page
 ---
 In Easter of 2002, TGS Year 12 were given an opportunity to go to Tignes, a Winter resort near Val d'Isère, for a week. Having already being skiing with the school to Cormayeur, Italy in Year 8, I knew I liked skiing. However, I was offered the chance to go snowboarding, and it appealed to me very much.

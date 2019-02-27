@@ -1,5 +1,6 @@
 ---
 title: Laptop Digital Picture Frame
+description: I built a digital picture frame from an old laptop and too much free time!
 layout: page
 ---
 

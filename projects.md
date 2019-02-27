@@ -1,5 +1,6 @@
 ---
 title: Projects
+description: Some projects that I've worked on and managed to write about.
 layout: page
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Climbing
+description: My interest in climbing over the years.
 layout: page
 ---
 I have always been fond of climbing, to some degree. From an early age I always climbed the nearest rock, tree, cliff face, or anything that looked scalable. My dad was always a great help --- though never a climber himself, he had a great ability to assess risk, and taught me likewise. He never really stopped me from climbing something beyond my abilities; rather, he told me why something was too risky. My mother was the reason I climbed everything --- in her day, she says she did the same. Nevertheless it is a mother's job to worry, but fortunately (for her) that mostly wore off!

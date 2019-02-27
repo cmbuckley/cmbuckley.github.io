@@ -1,5 +1,6 @@
 ---
 title: Computing
+description: Computers have been a big part of my life!
 layout: page
 ---
 
