@@ -151,6 +151,11 @@ MENU STYLING
   }
 }
 
+@media print {
+    .nav-toggle {
+        display: none;
+    }
+}
 
 /***************
 LIST STYLING
@@ -210,7 +215,6 @@ HEADER STYLING
     }
 
     .logo {
-        text-shadow: black 0px 0px 10px;
         margin: 0;
         float: left;
         padding-left: 2rem;
@@ -224,6 +228,18 @@ HEADER STYLING
             color: white;
             text-decoration: none;
         }
+    }
+}
+
+@media screen {
+    .header .logo {
+        text-shadow: black 0px 0px 10px;
+    }
+}
+
+@media print {
+    .header .logo a {
+        color: black;
     }
 }
 
