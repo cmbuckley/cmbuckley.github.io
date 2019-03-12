@@ -15,11 +15,11 @@ Here's a useful bit of [Firefox](http://getfirefox.com/) hackery for you all. It
  * Image from https://commons.wikimedia.org/wiki/File:Checker-16x16.png?oldid=19631383
  */
 html > body > img:only-child {
-	background: url('https://starsquare.co.uk/images/checkerboard') repeat;
+    background: url('https://starsquare.co.uk/images/checkerboard') repeat;
 }
 
 html > body > img:only-child:hover {
-	background: none;
+    background: none;
 }
 ```
 
@@ -30,7 +30,7 @@ html > body > img:only-child:hover {
  * Image from https://commons.wikimedia.org/wiki/File:Checker-16x16.png?oldid=19631383
  */
 html > body > img:only-child:hover {
-	background: url('https://starsquare.co.uk/images/checkerboard') repeat;
+    background: url('https://starsquare.co.uk/images/checkerboard') repeat;
 }
 ```
 

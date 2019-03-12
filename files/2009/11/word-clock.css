@@ -1,24 +1,24 @@
 #clock {
-  text-align: center;
-	color: #f0f0f0;
-	font: 50px "DejaVu Sans Mono", "Monaco", "Lucida Console", monospace;
+    text-align: center;
+    color: #f0f0f0;
+    font: 50px "DejaVu Sans Mono", "Monaco", "Lucida Console", monospace;
 }
 
 #clock p {
-	text-align: center;
-	margin: 0;
+    text-align: center;
+    margin: 0;
 }
 
 .lit, .it, .is {
-	color: #222;
+    color: #222;
 }
 
 #sec.lit {
-	color: #446;
+    color: #446;
 }
 
 @media (max-width: 480px) {
-  #clock {
-    font-size: 30px;
-  }
+    #clock {
+        font-size: 30px;
+    }
 }
