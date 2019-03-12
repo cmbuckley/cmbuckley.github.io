@@ -27,6 +27,8 @@ layout: null
         <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
       {% elsif page.url == '/index.html' or page.url == '/' %}{% assign this = site.github.public_repositories | where: 'name',site.github.repository_name | first %}
         <lastmod>{{ this.updated_at | date_to_xmlschema }}</lastmod>
+      {% elsif page.url == '/blog/' %}{% assign latest = site.posts | first %}
+        <lastmod>{{ latest.last_modified_at | default: latest.date | date_to_xmlschema }}</lastmod>
       {% endif %}
     </url>
   {% endfor %}
