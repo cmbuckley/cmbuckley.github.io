@@ -10,6 +10,8 @@ layout: null
     {% for doc in docs %}
       <url>
         <loc>{{ doc.url | replace:'/index.html','/' | absolute_url | xml_escape }}</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
         {% if doc.last_modified_at or doc.date %}
           <lastmod>{{ doc.last_modified_at | default: doc.date | date_to_xmlschema }}</lastmod>
         {% else %}{% assign latest = site.categories[doc.name] | where_exp:'p','p.sitemap != false' | first %}
@@ -26,8 +28,12 @@ layout: null
       {% if page.last_modified_at %}
         <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
       {% elsif page.url == '/index.html' or page.url == '/' %}{% assign this = site.github.public_repositories | where: 'name',site.github.repository_name | first %}
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
         <lastmod>{{ this.updated_at | date_to_xmlschema }}</lastmod>
       {% elsif page.url == '/blog/' %}{% assign latest = site.posts | first %}
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
         <lastmod>{{ latest.last_modified_at | default: latest.date | date_to_xmlschema }}</lastmod>
       {% endif %}
     </url>
@@ -37,6 +43,7 @@ layout: null
   {% for gh_page in gh_pages %}{% unless gh_page.name == site.github.repository_name %}
   <url>
     <loc>{{ gh_page.name | prepend: '/' | append: '/' | absolute_url | xml_escape }}</loc>
+    <priority>0.7</priority>
     <lastmod>{{ gh_page.updated_at | date_to_xmlschema }}</lastmod>
   </url>
   {% endunless %}{% endfor %}
