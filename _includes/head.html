@@ -44,9 +44,10 @@
     {% endif %}
     <meta name="twitter:description" content="{{ page_description | default: site_description }}">
     {% if page.image %}
-      <meta name="twitter:image:src" content="{{ site.url }}/assets/img/{{ page.image }}">
+      <meta name="twitter:image" content="{{ site.url }}/assets/img/{{ page.image }}">
     {% else %}
-      <meta name="twitter:image:src" content="{{ '/assets/img/tiki.jpg' | prepend: site.url }}">
+      <meta name="twitter:image:src" content="{{ '/assets/img/tiki-square.jpg' | prepend: site.url }}">
+      <meta name="twitter:image:alt" content="Chris on the Tiki Trail in Queenstown, NZ">
     {% endif %}
 
     <meta name="theme-color" content="#2c8654">
