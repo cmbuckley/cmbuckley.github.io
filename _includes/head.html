@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ page_description | default: site_description }}">
-    <title>{{ page_title }}{% if page.title %} • {{ site_title }}{% else %}{{ site_title }}{% endif %}</title>
+    <title>{{ page_title }}{% if page.title %} • {% endif %}{{ site_title }}</title>
 
     <!-- Open Graph Meta -->
     <meta content="{{ site_title }}" property="og:site_name">
