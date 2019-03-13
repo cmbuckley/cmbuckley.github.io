@@ -1,7 +1,7 @@
 <header class="header">
     <div class="container">
-        {% if page.url == '/' %}{% assign tag='h1' %}{% else %}{% assign tag='div' %}{% endif %}
-        <{{ tag}} class="logo">
+        {% if page.url == '/' and site.baseurl == '' %}{% assign tag='h1' %}{% else %}{% assign tag='div' %}{% endif %}
+        <{{ tag }} class="logo">
             <a href="/">{{ site.title | markdownify | remove:'<p>' | remove:'</p>' | strip }}</a>
         </{{ tag }}>
         <nav class="nav-collapse">
