@@ -1,6 +1,6 @@
 {% capture date_slug %}{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}{% endcapture %}
-{% if site.data.comments[date_slug] %}
-<h2>{{ site.data.comments[date_slug] | size }} Comments</h2>
+{% if site.data.comments[date_slug] %}{% assign count = site.data.comments[date_slug] | size %}
+<h2>{{ count }} Comment{% if count != 1 %}s{% endif %}</h2>
 
 <ol class="comments">
 {% assign comments = site.data.comments[date_slug] | sort: date %}
