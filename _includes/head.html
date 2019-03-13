@@ -28,7 +28,7 @@
     {% if page.image %}
       <meta content="{{ site.url }}/assets/img/{{ page.image }}" property="og:image">
     {% else %}
-      <meta content="{{ '/assets/img/tiki-square.jpg' | prepend: site.url }}" property="og:image">
+      <meta content="{{ site.url }}/assets/img/tiki-square.jpg" property="og:image">
       <meta content="Chris on the Tiki Trail in Queenstown, NZ" property="og:image:alt">
     {% endif %}
 
@@ -48,17 +48,17 @@
     {% if page.image %}
       <meta name="twitter:image" content="{{ site.url }}/assets/img/{{ page.image }}">
     {% else %}
-      <meta name="twitter:image:src" content="{{ '/assets/img/tiki-square.jpg' | prepend: site.url }}">
+      <meta name="twitter:image:src" content="{{ site.url }}/assets/img/tiki-square.jpg">
       <meta name="twitter:image:alt" content="Chris on the Tiki Trail in Queenstown, NZ">
     {% endif %}
 
     <meta name="theme-color" content="#2c8654">
     <link rel="dns-prefetch" href="https://use.fontawesome.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site_title }}" href="{{ "/feed/" | prepend: site.url }}" />
+    <link rel="icon" type="image/x-icon" href="{{ site.url }}/assets/img/favicon.ico" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site_title }}" href="{{ site.url }}/feed/" />
 
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <!--[if IE 8]><link rel="stylesheet" href="/assets/css/ie.css"><![endif]-->
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/style.css">
+    <!--[if IE 8]><link rel="stylesheet" href="{{ site.url }}/assets/css/ie.css"><![endif]-->
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}">
 </head>
