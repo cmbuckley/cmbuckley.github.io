@@ -2,6 +2,7 @@
 {% assign page_title = page.title | markdownify | strip_html | strip %}
 {% assign page_description = page.description | default: page.excerpt | markdownify | strip_html | strip %}
 {% assign site_description = site.description | markdownify | strip_html | strip %}
+{% if page.absolute_urls %}{% assign site_url = site.url %}{% endif %}
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -55,10 +56,10 @@
     <meta name="theme-color" content="#2c8654">
     <link rel="dns-prefetch" href="https://use.fontawesome.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    <link rel="icon" type="image/x-icon" href="{{ site.url }}/assets/img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="{{ site_url }}/assets/img/favicon.ico" />
     <link rel="alternate" type="application/rss+xml" title="{{ site_title }}" href="{{ site.url }}/feed/" />
 
-    <link rel="stylesheet" href="{{ site.url }}/assets/css/style.css">
-    <!--[if IE 8]><link rel="stylesheet" href="{{ site.url }}/assets/css/ie.css"><![endif]-->
+    <link rel="stylesheet" href="{{ site_url }}/assets/css/style.css">
+    <!--[if IE 8]><link rel="stylesheet" href="{{ site_url }}/assets/css/ie.css"><![endif]-->
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}">
 </head>

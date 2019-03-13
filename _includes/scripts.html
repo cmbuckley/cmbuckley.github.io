@@ -1,2 +1,3 @@
-<script src="{{ site.url }}/assets/js/responsive-nav.min.js"></script>
-<script src="{{ site.url }}/assets/js/scripts.js"></script>
+{% if page.absolute_urls %}{% assign site_url = site.url %}{% endif %}
+<script src="{{ site_url }}/assets/js/responsive-nav.min.js"></script>
+<script src="{{ site_url }}/assets/js/scripts.js"></script>
