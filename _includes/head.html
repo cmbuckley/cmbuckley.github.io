@@ -12,6 +12,7 @@
     <!-- Open Graph Meta -->
     <meta content="{{ site_title }}" property="og:site_name">
     <meta content="{% if page.paginated and paginator.page > 1 %}Page {{ paginator.page }} • {% endif %}{{ page_title | default: site_title }}" property="og:title">
+    <meta content="en_GB" property="og:locale">
     {% if page.title or page.og_type %}
       <meta content="{{ page.og_type | default: 'article' }}" property="og:type">
     {% else %}
@@ -27,7 +28,8 @@
     {% if page.image %}
       <meta content="{{ site.url }}/assets/img/{{ page.image }}" property="og:image">
     {% else %}
-      <meta content="{{ '/assets/img/tiki.jpg' | prepend: site.url }}" property="og:image">
+      <meta content="{{ '/assets/img/tiki-square.jpg' | prepend: site.url }}" property="og:image:url">
+      <meta content="Chris on the Tiki Trail in Queenstown, NZ" property="og:image:alt">
     {% endif %}
 
     <!-- Twitter Cards -->
