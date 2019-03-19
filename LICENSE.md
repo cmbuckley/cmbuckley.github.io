@@ -1,6 +1,10 @@
-The MIT License (MIT)
+The text content of this project is licensed under the [Creative Commons Attribution 3.0 Unported licence](https://creativecommons.org/licenses/by/3.0/), and the underlying source code used to format and display that content is licensed under the MIT licence.
 
-Copyright (c) <year> <copyright holders>
+The [original Jekyll theme](https://github.com/brianmaierjr/long-haul) is also licenced under the MIT licence by [Brian Maier Jr](https://brianmaierjr.com/).
+
+The MIT Licence (MIT)
+
+Copyright (c) 2018 Chris Buckley
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
