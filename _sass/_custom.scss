@@ -38,3 +38,13 @@ body.cv .content {
     border: 0;
     outline: 0;
 }
+
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+.post .recaptcha-message {
+    margin: 0 0 1em;
+    font-size: 65%;
+    width: 100%;
+}
