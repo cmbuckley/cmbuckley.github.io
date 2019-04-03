@@ -1,3 +1,6 @@
+---
+lauout: null
+---
 User-agent: *
 Allow: /
-Sitemap: https://cmbuckley.co.uk/sitemap.xml
+Sitemap: {{ "/sitemap.xml" | absolute_url }}
