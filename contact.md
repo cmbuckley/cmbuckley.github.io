@@ -24,7 +24,7 @@ layout: page
     <input type="hidden" name="_gotcha" value="">
 
     <label for="name">Name</label>
-    <input type="text" id="name" name="name" autocomplete="name" class="full-width"><br />
+    <input type="text" id="name" name="name" autocomplete="name" autocapitalize="words" class="full-width"><br />
 
     <label for="email">Email Address</label>
     <input type="email" id="email" name="_replyto" autocomplete="email" class="full-width"><br />
