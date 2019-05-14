@@ -2,7 +2,7 @@
 title: An Analogy of DNS Resolution
 layout: post
 categories:
-  - Uncategorized
+  - Computing
 ---
 Imagine that you own a store in the high street. Now, for people to find your store, they can't just look it up, or walk down the street or anything. They have to rely on some guy (an "informer") who stands outside their house and says, "The Widget Shop? Yes, it's on the high street." People will be able to get to your store, and they'll remember what the informer told them, but only for a week or so. After that they'll be like, "Where's The Widget Shop again?" and have to ask the informer.
 

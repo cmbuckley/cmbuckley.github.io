@@ -1,5 +1,7 @@
 ---
 title: Computer Names
+categories:
+  - Computing
 ---
 
 dirac

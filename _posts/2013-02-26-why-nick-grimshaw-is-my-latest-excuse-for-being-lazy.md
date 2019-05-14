@@ -2,7 +2,7 @@
 title: Why Nick Grimshaw Is My Latest Excuse for Being Lazy
 layout: post
 categories:
-  - Uncategorized
+  - Play
 ---
 Okay, I'll admit it. I'm pretty terrible at getting up in the morning. (Actually, it's probably that I'm terrible at going to bed in the evening, but that's semantics.)
 
