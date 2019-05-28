@@ -15,8 +15,8 @@ google.setOnLoadCallback(function() {
             default: classes.push('minutes', (30 - Math.abs(30 - minutes) + 'from'), (minutes < 30 ? 'past' : 'to'));
         }
 
-        $('#sec').toggleClass('lit'); // sec needs to be id to avoid multiclass fail in IE6-
+        $('sec').toggleClass('lit'); // sec needs to be id to avoid multiclass fail in IE6-
         $$('#clock span.lit:not([id=sec])').removeClass('lit'); // #sec fails in IE5.5
-        classes.each(function(className) { $$('#clock span.' + className).addClass('lit'); });
+        classes.each(function(className) { console.log(className); $$('#clock span.' + className).addClass('lit'); });
     }).periodical(1000);
 });
