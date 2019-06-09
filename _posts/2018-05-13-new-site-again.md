@@ -8,7 +8,7 @@ This isn't the first time I've moved my personal site; the [first post I still h
 
 Enter [Jekyll](https://jekyllrb.com) and [GitHub Pages](https://pages.github.com).
 
-We've been using GitHub Pages on the [technology blog](https://engineering.skybettingandgaming.com) for a while, and for the most part it's quite easy to manage blog posts and pages in a simple structure, and of course all version controlled. With it being static, there are some restrictions to what can be done directly, but thankfully there are some helpful tools out there to add back in the important dynamic features.
+We've been using GitHub Pages on the [technology blog](https://sbg.technology) for a while, and for the most part it's quite easy to manage blog posts and pages in a simple structure, and of course all version controlled. With it being static, there are some restrictions to what can be done directly, but thankfully there are some helpful tools out there to add back in the important dynamic features.
 
 ## Basics
 
