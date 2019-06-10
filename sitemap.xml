@@ -31,7 +31,7 @@ layout: null
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <lastmod>{{ this.updated_at | date_to_xmlschema }}</lastmod>
-      {% elsif page.url == '/blog/' %}{% assign latest = site.posts | first %}
+      {% elsif page.url contains '/blog/' %}{% assign latest = site.posts | first %}
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <lastmod>{{ latest.last_modified_at | default: latest.date | date_to_xmlschema }}</lastmod>
