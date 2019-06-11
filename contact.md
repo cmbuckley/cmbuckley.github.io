@@ -8,7 +8,7 @@ layout: page
   <div class="contactContent">
     <dl class="vcard">
     <dt>Name:</dt>
-    <dd class="fn n"><span class="given-name">Christopher Mark</span> <span class="family-name">Buckley</span></dd>
+    <dd class="fn n"><span class="given-name">Christopher</span> <span class="additional-name">Mark</span> <span class="family-name">Buckley</span></dd>
 
     <dt>Mobile phone:</dt>
     <dd class="tel">+44 7763 868 005</dd>
