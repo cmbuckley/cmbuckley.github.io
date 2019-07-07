@@ -1,5 +1,5 @@
 <figure{% if include.float %} class="fl-{{ include.float }}"{% endif %}>
    {% if include.url %}<a href="{{ include.url }}">{% endif %}
-   <img src="{{ include.img }}" alt="{{ include.alt | include.caption }}" />{% if include.url %}</a>{% endif %}
+   <img src="{{ include.img }}" alt="{{ include.alt | default: include.caption }}" />{% if include.url %}</a>{% endif %}
    {% if include.caption %}<figcaption>{{ include.caption | markdownify | remove:'<p>' | remove: '</p>' | strip }}</figcaption>{% endif %}
 </figure>
