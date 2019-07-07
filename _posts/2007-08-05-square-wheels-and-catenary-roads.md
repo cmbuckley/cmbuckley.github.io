@@ -20,4 +20,4 @@ Anyway, armed with this information, I spent this afternoon making a real-life v
 
 {% include img.html url="/files/2007/08/road-real.jpg" img="/files/2007/08/road-real-300x225.jpg" alt="Model of a catenary road" %}
 
-I was really surprised how well it worked! Check [the video](/files/2007/08/catenary-road.m4v) to see how smoothly the "wheel" runs along the "road"!
+I was really surprised how well it worked! Check [the video](/videos/misc/catenary-road.m4v) to see how smoothly the "wheel" runs along the "road"!

@@ -6,9 +6,8 @@ layout: page
 
 {% for item in page.gallery %}
   {% assign parts = item[0] | split: "." %}
-  {% assign base = parts[0] | prepend: "/videos/climbing/" %}
-  {% assign url = base | append: "." | append: parts[1] %}
-  {% assign img = base | append: ".jpg" %}
+  {% assign url = parts[0] | append: "." | append: parts[1] %}
+  {% assign img = parts[0] | append: ".jpg" %}
   {% assign caption = item[1] %}
   {% include img.html img=img url=url caption=caption %}
 {% endfor %}
