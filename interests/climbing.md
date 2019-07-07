@@ -27,6 +27,6 @@ In the Easter break, I managed to get outdoors, though only once. We ran a few p
 
 In October, our fourth and final year of both the university and the club, a great number of people showed an interest at the freshers' fair, and a couple of sessions were organised, both to Sunderland and Berghaus.
 
-It took over three years, but by mid-November I nailed the Berghaus route that had daunted me since the beginning! The Leap of Faith™ is a formidable leap from a free-standing boulder to a section of the main wall. Thankfully I brought my camera along, so you can view my attempt, along with some other routes from the same afternoon.
+It took over three years, but by mid-November I nailed the Berghaus route that had daunted me since the beginning! The Leap of Faith™ is a formidable leap from a free-standing boulder to a section of the main wall. Thankfully I brought my camera along, so you can [view my attempt](/videos/climbing/), along with some other routes from the same afternoon.
 
 In March, we went to an outdoor man-made bouldering park near Hartlepool called [Summerhill](https://www.ukclimbing.com/logbook/crag.php?id=16743). Eight free-standing boulders have been formed from concrete and pose a number of challenges ranging up to 6b. For more information on this trip, you can [view the pictures](https://pictures.scholesmafia.co.uk/2007/03/03/01.03.07-summerhill/).
