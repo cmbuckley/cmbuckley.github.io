@@ -4,3 +4,7 @@
 {% if page.maths %}
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 {% endif %}
+{% if page.search %}
+<script src="{{ site_url }}/assets/js/lunr.js"></script>
+<script src="{{ site_url }}/assets/js/search.js"></script>
+{% endif %}

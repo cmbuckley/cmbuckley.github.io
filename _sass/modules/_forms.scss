@@ -66,3 +66,14 @@ form {
         color:$bad-color;
     }
 }
+
+.search {
+    width: 350px;
+    margin: -2em auto 2em;
+
+    input[type=search] {
+        background: none;
+        border: none;
+        border-bottom: 1px solid;
+    }
+}

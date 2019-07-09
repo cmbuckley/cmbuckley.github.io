@@ -7,6 +7,7 @@ redirect_from: /blog/category/uncategorized/
 
 <div class="home" id="home">
   <h1 class="pageTitle">Recent Posts{% if page.paginated and paginator.page > 1 %} (Page {{ paginator.page }}){% endif %}</h1>
+  {% include search.html %}
   <ul class="posts noList">
     {% for post in paginator.posts %}
     {% include post_excerpt.html %}
