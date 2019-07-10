@@ -69,10 +69,12 @@ form {
 
 .search {
     width: 350px;
-    margin: -2em auto 2em;
+    margin: -1em auto 1em;
 
     input[type=search] {
+        -webkit-appearance: none;
         background: none;
+        border-radius: 0;
         border: none;
         border-bottom: 1px solid;
     }
