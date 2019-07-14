@@ -1,10 +1,10 @@
-{% if page.absolute_urls %}{% assign site_url = site.url %}{% endif %}
+{%- if page.absolute_urls -%}{% assign site_url = site.url %}{% endif %}
 <script src="{{ site_url }}/assets/js/responsive-nav.min.js"></script>
 <script src="{{ site_url }}/assets/js/scripts.js"></script>
-{% if page.maths %}
+{%- if page.maths -%}
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-{% endif %}
-{% if page.search %}
+{%- endif -%}
+{%- if page.search -%}
 <script src="{{ site_url }}/assets/js/lunr.js"></script>
 <script src="{{ site_url }}/assets/js/search.js"></script>
-{% endif %}
+{%- endif -%}
