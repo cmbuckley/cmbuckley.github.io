@@ -26,6 +26,7 @@
 
 // Mobile up base styles
 @import "breakpoints/mobileup";
+@import "breakpoints/layout";
 
 // Import media queries add more as you desire
 @media only screen and (min-width: 600px) { @import "breakpoints/600up";}
