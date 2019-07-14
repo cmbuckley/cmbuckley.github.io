@@ -1,6 +1,1 @@
-{%- if include.xs -%}
-<span class="hide-s-up">{{ include.xs }}</span>
-{%- endif -%}
-{%- if include.s_up -%}
-<span class="hide-xs">{{ include.s_up }}</span>
-{%- endif -%}
+<span class="break-text"{% if include.xs %} data-xs="{{ include.xs }}"{% endif %}{% if include.s_up %} data-s-up="{{ include.s_up }}"{% endif %}>{{ include.default }}</span>{%- comment -%}avoid trailing newline{%- endcomment -%}
