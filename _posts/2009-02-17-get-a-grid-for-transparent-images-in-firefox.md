@@ -23,7 +23,7 @@ html > body > img:only-child:hover {
 }
 ```
 
-    With the above CSS, viewing an image directly displays the checkerboard at all times, unless you hover over the image, in which case it reverts back to show the normal image. If you want it the other way round, so the checkerboard only shows when you hover over the image, insert the following CSS:
+With the above CSS, viewing an image directly displays the checkerboard at all times, unless you hover over the image, in which case it reverts back to show the normal image. If you want it the other way round, so the checkerboard only shows when you hover over the image, insert the following CSS:
 
 ```css
 /*
