@@ -10,6 +10,6 @@ The weather was more suited for getting out to a crag somewhere, but since we co
 
 We ran a number of tricky routes as well as some of the all holds routes --- Lara and Georgina proving themselves exceptionally good at climbing! Feel like I need to get some more practice in now!
 
-I now can't work out if I ache from climbing or [football yesterday](https://blog.cmbuckley.co.uk/2007/04/16/tex-junior-texs-party/)!
+I now can't work out if I ache from climbing or [football yesterday]({% post_url 2007-04-16-tex-junior-texs-party %})!
 
 View [videos](/videos/climbing/) and [pictures of the day](https://pictures.scholesmafia.co.uk/index.php/2007/04/15.04.07-leeds-wall/).

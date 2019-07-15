@@ -5,7 +5,7 @@ categories:
   - Nights Out
   - Pictures
 ---
-This weekend, [Hannah](https://pictures.scholesmafia.co.uk/index.php/?profile=1) and [JC](https://pictures.scholesmafia.co.uk/index.php/?profile=35) have been up to Durham --- JC to disturb his brother's revision, and Hannah to return a book to our library. We met up in the Swan & 3 (where else) on Friday, JC having made it down this time; [last time](https://blog.cmbuckley.co.uk/2007/02/04/new-wii-jcs-antics/) having not gone so well!
+This weekend, [Hannah](https://pictures.scholesmafia.co.uk/index.php/?profile=1) and [JC](https://pictures.scholesmafia.co.uk/index.php/?profile=35) have been up to Durham --- JC to disturb his brother's revision, and Hannah to return a book to our library. We met up in the Swan & 3 (where else) on Friday, JC having made it down this time; [last time]({% post_url 2007-02-04-new-wii-jcs-antics %}) having not gone so well!
 
 We headed from there to Jimmy Allen's, where [Andy](https://pictures.scholesmafia.co.uk/index.php/?profile=30) almost managed to trick me out of a tenner on a drinking bet... thankfully he didn't specify the rules well enough and I avoided the loss! After JA's we went to Lloyds, where I apparently bought JC a "bad pint..." That's his excuse, at least!
 

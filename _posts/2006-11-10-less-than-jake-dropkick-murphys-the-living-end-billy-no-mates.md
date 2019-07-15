@@ -14,6 +14,6 @@ Both were amazing, except TLE unfortunately didn't play their cover of "Tainted 
 
 And then for [Less Than Jake](http://lessthanjake.com/)...
 
-When they played at [Leeds Festival](https://blog.cmbuckley.co.uk/2006/08/29/my-personal-festival/), they played a lot of stuff from their then-forthcoming album _[In With The Out Crowd](https://en.wikipedia.org/wiki/In_with_the_Out_Crowd)_, which I didn't own. This time, however, they played mostly songs of a _[Losing Streak](https://en.wikipedia.org/wiki/Losing_Streak)_ / _[Hello Rockview](https://en.wikipedia.org/wiki/Hello_Rockview)_ era, which was brilliant!
+When they played at [Leeds Festival]({% post_url 2006-08-29-my-personal-festival %}), they played a lot of stuff from their then-forthcoming album _[In With The Out Crowd](https://en.wikipedia.org/wiki/In_with_the_Out_Crowd)_, which I didn't own. This time, however, they played mostly songs of a _[Losing Streak](https://en.wikipedia.org/wiki/Losing_Streak)_ / _[Hello Rockview](https://en.wikipedia.org/wiki/Hello_Rockview)_ era, which was brilliant!
 
 Aside from the music, it was great to catch up with [Cait](https://pictures.scholesmafia.co.uk/index.php/?profile=7), who had been avoiding me, and [Joe](https://pictures.scholesmafia.co.uk/index.php/?profile=8), who travelled all the way up from Manchester. His long journey back meant that he got back around 6am and had a 9 o'clock lecture. Oh dear!

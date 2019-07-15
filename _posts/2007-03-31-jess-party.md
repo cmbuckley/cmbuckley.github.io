@@ -13,6 +13,6 @@ When the rest arrived into Leeds ([Olly](https://pictures.scholesmafia.co.uk/ind
 
 We stayed for a brilliant evening in Oceana, there was a lot of cheesy music but I guess we're used to that... We ended up staying almost until the end and headed for some sustenance --- Jess finding it in two burgers! It was her party, she's allowed...
 
-After [previous luck](https://blog.cmbuckley.co.uk/2006/09/05/birthday-night-out/) with catching taxis outside Oceana, we went all the way down to the station to get a proper black-and-white. It took us the best part of an hour to get there!
+After [previous luck]({% post_url 2006-09-05-birthday-night-out %}) with catching taxis outside Oceana, we went all the way down to the station to get a proper black-and-white. It took us the best part of an hour to get there!
 
 All in all an amazing night, finished by us spending ages laughing our way through Jess' poses in [the pictures](https://pictures.scholesmafia.co.uk/index.php/2007/03/30.03.07_31.03.07-jess'-birthday/)!

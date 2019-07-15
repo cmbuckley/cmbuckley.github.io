@@ -4,7 +4,7 @@ categories:
   - Computing
 ---
 
-This isn't the first time I've moved my personal site; the [first post I still have](/blog/2006/08/03/back-up-running/) was after I lost some old blog posts, and I [moved to WordPress](/blog/2012/04/19/everything-changes/) in 2012 to avoid supporting a separate blog and page builder. However, it was still running on my VPS, and I've been trying to remove all production content from there for a while.
+This isn't the first time I've moved my personal site; the [first post I still have]({% post_url 2006-08-03-back-up-running %}) was after I lost some old blog posts, and I [moved to WordPress]({% post_url 2012-04-19-everything-changes %}) in 2012 to avoid supporting a separate blog and page builder. However, it was still running on my VPS, and I've been trying to remove all production content from there for a while.
 
 Enter [Jekyll](https://jekyllrb.com) and [GitHub Pages](https://pages.github.com).
 
