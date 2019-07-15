@@ -5,9 +5,11 @@ layout: null
     var posts = {
      {% for post in site.posts %}
       {{ post.slug | jsonify }}: {
-        title: {{ post.title | smartify | strip_html | normalize_whitespace | jsonify }},
         date: {{ post.date | date: '%e %B %Y' | jsonify }},
-        excerpt: {{ post.description | default: post.excerpt | smartify | strip_html | normalize_whitespace | jsonify }},
+        title: {{ post.title | markdownify | strip_html | normalize_whitespace | jsonify }},
+        title_html: {{ post.title | markdownify | remove: '<p>' | remove: '</p>' | jsonify }},
+        excerpt: {{ post.description | default: post.excerpt | strip_html | normalize_whitespace | jsonify }},
+        excerpt_html: {{ post.description | default: post.excerpt | normalize_whitespace | jsonify }},
         content: {{ post.content | strip_html | normalize_whitespace | jsonify }},
         categories: {{ post.categories | join: ' ' | normalize_whitespace | jsonify }},
         url: {{ post.url | absolute_url | jsonify }}
@@ -92,7 +94,7 @@ layout: null
 
         // post title/url
         postLink.href = post.url;
-        postLink.textContent = post.title;
+        postLink.innerHTML = post.title_html;
         postLink.className = 'post-link';
 
         if (positions.title && Object.keys(positions.title).length) {
@@ -101,7 +103,7 @@ layout: null
         heading.appendChild(postLink);
 
         // post excerpt
-        excerpt.textContent = post.excerpt;
+        excerpt.innerHTML = post.excerpt_html;
         if (positions.excerpt && Object.keys(positions.excerpt).length) {
             mark(excerpt, positions.excerpt);
         }
