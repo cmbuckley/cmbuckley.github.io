@@ -95,7 +95,7 @@ layout: null
         // post title/url
         postLink.href = post.url;
         postLink.innerHTML = post.title_html;
-        postLink.className = 'post-link';
+        postLink.className = 'post__link';
 
         if (positions.title && Object.keys(positions.title).length) {
             mark(postLink, positions.title);
@@ -112,6 +112,7 @@ layout: null
         li.appendChild(date);
         li.appendChild(heading);
         li.appendChild(excerpt);
+        li.className = 'post post--excerpt';
         doc.querySelector('ul.posts').appendChild(li);
     }
 

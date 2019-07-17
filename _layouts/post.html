@@ -1,13 +1,13 @@
 ---
 layout: default
 ---
-<div class="post">
+<div class="post post--full">
   {% if page.image %}
     <div class="featuredImage">
         <img src="{{ '/assets/img/' | prepend: site.baseurl | append: page.image }}" alt="" />
       </div>
   {% endif %}
-  <h1 class="postTitle">{{ page.title | markdownify | remove:'<p>' | remove:'</p>' | strip }}</h1>
+  <h1 class="post__title">{{ page.title | markdownify | remove:'<p>' | remove:'</p>' | strip }}</h1>
   <p class="meta">{{ page.date | date: '%e %B %Y' }} | <span class="time">{{ page.content | number_of_words | divided_by:120.0 | ceil }}</span> Minute Read
   {% if page.categories.size > 0 %} |
     {% for post_cat in page.categories %}
@@ -23,7 +23,7 @@ layout: default
   {% include comments.html %}
 
   <!-- POST NAVIGATION -->
-  <div class="postNav clearfix">
+  <div class="post__nav clearfix">
     {% if page.previous.url %}
       <a class="prev{% if page.previous.image %} image{% endif %}" href="{{ page.previous.url | prepend: site.baseurl }}"><span>&laquo;&nbsp;{{ page.previous.title | markdownify | remove:'<p>' | remove:'</p>' | strip }}</span>
       {% if page.previous.image %}

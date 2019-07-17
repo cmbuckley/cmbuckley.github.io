@@ -252,15 +252,7 @@ HEADER STYLING
 /***************
 POST STYLING
 ***************/
-
 .post {
-
-    .postTitle {
-        text-align: center;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-    }
-
     blockquote {
         clear: both;
         border-left: 2px solid #2e8b57;
@@ -273,6 +265,14 @@ POST STYLING
         p {
             width: 100%;
         }
+    }
+}
+
+.post--full {
+    .post__title {
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
     }
 
     .meta {
@@ -329,7 +329,7 @@ POST STYLING
 POST NAV STYLING
 ***************/
 
-.postNav {
+.post__nav {
     border-top: 1px solid darken(white, 10%);
     border-bottom: 1px solid darken(white, 10%);
     overflow: hidden;
@@ -489,7 +489,7 @@ POST LIST STYLING
 ***************/
 
 .posts {
-    > li {
+    .post--excerpt {
         margin-bottom: 4rem;
         position: relative;
 
@@ -503,14 +503,6 @@ POST LIST STYLING
             width: 60px;
         }
 
-        a {
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-
         .date {
             color: lighten(black, 50%);
             font-family: $sans-serif;
@@ -520,6 +512,14 @@ POST LIST STYLING
 
         h3 {
             margin: 0 0 .5em;
+
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }

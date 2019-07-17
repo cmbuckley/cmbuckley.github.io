@@ -40,12 +40,12 @@ HOMEPAGE STYLING
 
 #home {
     .posts, .pageTitle, .pagination {
-    width: 75%;
+        width: 75%;
         float: none;
         margin: 0 auto 1.5em;
     }
 
-    .pageTitle {
+    .page__title {
         margin: 2rem auto 1em;
     }
 }
@@ -140,7 +140,13 @@ MENU STYLING
 POST STYLING
 ***************/
 
-.post {
+.post--excerpt {
+    blockquote, figure {
+        width: 95%;
+    }
+}
+
+.post--full {
     h1, h2, h3, h4, h5, h6, p, ul, ol, dl, .pageTitle {
     width: 75%;
         float: none;
@@ -151,7 +157,7 @@ POST STYLING
         margin: 1rem auto;
     }
 
-    .pageTitle {
+    .page__title {
         margin: 2rem auto 1em;
     }
 
@@ -188,7 +194,7 @@ POST STYLING
 POST NAV STYLING
 ***************/
 
-.postNav {
+.post__nav {
 
     .prev, .next {
         width: 50%;
