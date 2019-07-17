@@ -6,11 +6,11 @@ layout: null
      {% for post in site.posts %}
       {{ post.slug | jsonify }}: {
         date: {{ post.date | date: '%e %B %Y' | jsonify }},
-        title: {{ post.title | markdownify | strip_html | normalize_whitespace | jsonify }},
-        title_html: {{ post.title | markdownify | remove: '<p>' | remove: '</p>' | jsonify }},
-        excerpt: {{ post.description | default: post.excerpt | strip_html | normalize_whitespace | jsonify }},
-        excerpt_html: {{ post.description | default: post.excerpt | normalize_whitespace | jsonify }},
-        content: {{ post.content | strip_html | normalize_whitespace | jsonify }},
+        title: {{ post.title | markdownify | replace: '&amp;', '&' | strip_html | normalize_whitespace | jsonify }},
+        title_html: {{ post.title | markdownify | remove: '<p>' | remove: '</p>' | strip | jsonify }},
+        excerpt: {{ post.description | default: post.excerpt | markdownify | replace: '&amp;', '&' | strip_html | normalize_whitespace | jsonify }},
+        excerpt_html: {{ post.description | default: post.excerpt | markdownify | remove: '<p>' | remove: '</p>' | strip | jsonify }},
+        content: {{ post.content | replace: '&amp;', '&' | strip_html | normalize_whitespace | jsonify }},
         categories: {{ post.categories | join: ' ' | normalize_whitespace | jsonify }},
         url: {{ post.url | absolute_url | jsonify }}
       }{% unless forloop.last %}, {% endunless %}
@@ -120,6 +120,13 @@ layout: null
         doc.getElementById('q').value = params.get('q');
 
         var results = searchIndex.search(params.get('q'));
-        results.forEach(buildSearchResult);
+        if (results.length) {
+            results.forEach(buildSearchResult);
+        }
+        else {
+            var noResults = doc.createElement('p');
+            noResults.textContent = 'No results found.';
+            doc.querySelector('ul.posts').replaceWith(noResults);
+        }
     });
 })(document);
