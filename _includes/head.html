@@ -52,6 +52,14 @@
       <meta name="twitter:image:src" content="{{ site.url }}/assets/img/tiki-square.jpg">
       <meta name="twitter:image:alt" content="Chris on the Tiki Trail in Queenstown, NZ">
     {% endif %}
+    {% if page.layout == 'post' %}
+      <meta name="twitter:label1" content="Reading Time" />
+      <meta name="twitter:data1" content="{{ page.content | number_of_words | divided_by: 120.0 | ceil }} min" />
+    {% if page.categories.size > 0 %}
+      <meta name="twitter:label2" content="Categories" />
+      <meta name="twitter:data2" content="{{ page.categories | join: ", " }}" />
+    {% endif %}
+    {% endif %}
 
     <link rel="shortcut icon" href="{{ site_url }}/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ site_url }}/assets/img/icons/favicon-16.png">
