@@ -5,7 +5,7 @@ layout: null
     var posts = {
      {% for post in site.posts %}
       {{ post.slug | jsonify }}: {
-        date: {{ post.date | date: '%e %B %Y' | jsonify }},
+        date: {{ post.date | date: '%e %B %Y' | strip | jsonify }},
         title: {{ post.title | markdownify | replace: '&amp;', '&' | strip_html | normalize_whitespace | jsonify }},
         title_html: {{ post.title | markdownify | remove: '<p>' | remove: '</p>' | strip | jsonify }},
         excerpt: {{ post.description | default: post.excerpt | markdownify | replace: '&amp;', '&' | strip_html | normalize_whitespace | jsonify }},

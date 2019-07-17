@@ -253,6 +253,10 @@ HEADER STYLING
 POST STYLING
 ***************/
 .post {
+    .date {
+        color: lighten(black, 50%);
+    }
+
     blockquote {
         clear: both;
         border-left: 2px solid #2e8b57;
@@ -504,7 +508,6 @@ POST LIST STYLING
         }
 
         .date {
-            color: lighten(black, 50%);
             font-family: $sans-serif;
             font-weight: 300;
             font-size: .8em;
