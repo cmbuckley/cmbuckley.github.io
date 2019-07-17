@@ -1,6 +1,7 @@
 ---
 title: '*Delicatessen* & Digressions'
 layout: post
+description: It was late on in the morning (ooh, at least 11). The conversation had wandered.
 categories:
   - Film
 ---

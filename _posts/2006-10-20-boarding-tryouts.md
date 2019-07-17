@@ -1,5 +1,6 @@
 ---
 title: Boarding Tryouts
+description: This evening was spent at the artificial ski slope at Silkworth Sports Complex in Sunderland.
 layout: post
 categories:
   - Nights Out

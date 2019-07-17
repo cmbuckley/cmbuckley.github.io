@@ -1,5 +1,6 @@
 ---
 title: Mosaic Images
+description: Whilst browsing the Facebook Developers' Directory, I happened upon a product called Photomosaic.
 layout: post
 categories:
   - Computing

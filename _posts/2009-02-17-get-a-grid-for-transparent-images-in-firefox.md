@@ -1,12 +1,13 @@
 ---
 title: Get a Grid for Transparent Images in Firefox
+description: Here's a useful bit of Firefox hackery for you all.
 layout: post
 categories:
   - Computing
 ---
-Here's a useful bit of [Firefox](http://getfirefox.com/) hackery for you all. It puts a checkerboard (or chequerboard, for you elitists) image as the background for your transparent images. It works for any image when viewed directly in Firefox, by checking for a HTML page containing a single `img` tag. If you reproduce this structure manually, then you'll see the checkerboard, but there's very little chance that a legitimate HTML page would match these selectors. It works by adding some content to your `userContent.css`:
+Here's a useful bit of [Firefox](https://www.mozilla.org/en-GB/firefox/) hackery for you all. It puts a checkerboard (or chequerboard, for you elitists) image as the background for your transparent images. It works for any image when viewed directly in Firefox, by checking for a HTML page containing a single `img` tag. If you reproduce this structure manually, then you'll see the checkerboard, but there's very little chance that a legitimate HTML page would match these selectors. It works by adding some content to your `userContent.css`:
 
-  1. Lifehacker has a [guide](http://lifehacker.com/software/firefox/customize-firefox-with-userchromecss-197715.php) to finding your `userChrome.css` file --- your `userContent.css` resides in the same folder.
+  1. Lifehacker has a [guide](https://lifehacker.com/customize-firefox-with-userchrome-css-197715) to finding your `userChrome.css` file --- your `userContent.css` resides in the same folder.
   2. You may not have a `userContent.css` file; if not, you should create it. In some instances you may have a `userContent-example.css` file, which you can rename to get the idea of what goes in this file.
   3. Open the file and insert the following CSS:
 

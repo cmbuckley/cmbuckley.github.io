@@ -1,5 +1,6 @@
 ---
 title: Dell Laptops Suck
+description: I hate Dell PCs.
 layout: post
 categories:
   - Computing

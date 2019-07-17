@@ -1,5 +1,6 @@
 ---
 title: The Automatic + Mumm-Ra + Alterkicks
+description: Last night we went over to Newcastle University Union to see The Automatic, supported by Mumm-Ra and Alterkicks.
 layout: post
 categories:
   - Music

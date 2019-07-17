@@ -1,6 +1,7 @@
 ---
 title: Leeds Festival 2010
 layout: post
+description: Just recovered, so thought I'd post some ramblings for this year.
 categories:
   - Music
 ---

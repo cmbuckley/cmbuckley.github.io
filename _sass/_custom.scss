@@ -11,7 +11,7 @@ body.cv .content {
 }
 
 // HTTP error messages
-.http-error p {
+.http-error p, figure.poem {
     text-align: center;
     white-space: pre;
     font-style: italic;

@@ -1,5 +1,5 @@
-      <li>
+      <li class="excerpt">
         <span class="date">{{ post.date | date: '%e %B %Y' }}</span>
         <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | markdownify | remove:'<p>' | remove:'</p>' | strip}}</a></h3>
-        <p>{{ post.description | default: post.excerpt }}</p>
+        <p>{{ post.description | default: post.excerpt | smartify }}</p>
       </li>
