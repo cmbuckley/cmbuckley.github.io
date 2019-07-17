@@ -55,7 +55,7 @@ layout: null
                     // use a range to surround the match
                     var range = doc.createRange();
                     range.setStart(node, position[0] - index);
-                    range.setEnd(node, position[0] + position[1] - index);
+                    range.setEnd(node, Math.min(node.length, position[0] + position[1] - index));
                     range.surroundContents(doc.createElement('mark'));
 
                     // update counters
