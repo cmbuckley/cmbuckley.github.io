@@ -117,10 +117,13 @@ layout: null
     }
 
     doc.addEventListener('DOMContentLoaded', function(event) {
-        var params = (new URL(doc.location)).searchParams;
-        doc.getElementById('q').value = params.get('q');
+        var params = (new URL(doc.location)).searchParams,
+            query = params.get('q');
 
-        var results = searchIndex.search(params.get('q'));
+        if (!query) { return; }
+        doc.getElementById('q').value = query;
+        var results = searchIndex.search(query);
+
         if (results.length) {
             results.forEach(buildSearchResult);
         }
