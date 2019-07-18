@@ -9,3 +9,5 @@
   * https://cmbuckley.co.uk/graphics/mosaic.jpg
   * https://cmbuckley.co.uk/projects/laptop/photos/
 * post creation helper
+* theme data
+  * Ideally with jekyll-data (https://github.com/github/pages-gem/issues/610)
