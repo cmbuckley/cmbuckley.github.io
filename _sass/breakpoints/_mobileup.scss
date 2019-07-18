@@ -239,18 +239,23 @@ POST STYLING
 
         li {
             list-style-type: none;
-        }
+            border: 1px solid $grey;
+            padding: 0.5em 0.75em;
+            margin-bottom: 1em;
 
-        .avatar {
-            float: left;
-            margin-right: 10px;
-            margin-bottom: 10px;
-        }
+            .avatar {
+                width: 80px;
+                float: left;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
 
-        .comment {
-            white-space: pre-line;
-            width: 100%;
-            clear: left;
+            .comment {
+                white-space: pre-line;
+                width: 100%;
+                clear: left;
+                margin-bottom: 0;
+            }
         }
     }
 
