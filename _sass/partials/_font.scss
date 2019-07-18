@@ -1,0 +1,154 @@
+// Text Selection Styling
+::-moz-selection {
+    background: $primary-color;
+    color: white;
+}
+
+// these are separate because Chrome doesn't like them being on the same selector
+::selection {
+    background: $primary-color;
+    color: white;
+}
+
+body {
+    color: $black;
+    font-family: $serif;
+}
+
+figure {
+    figcaption {
+        color: lighten($black, 30%);
+        font-style: italic;
+    }
+}
+
+dt {
+    font-weight: bold;
+}
+
+
+/***************
+LINK STYLING
+***************/
+
+a {
+    color: $link-color;
+
+    &:hover {
+        color: darken($link-color, 15%);
+    }
+}
+
+
+/***************
+MENU STYLING
+***************/
+
+.nav-collapse {
+    ul li {
+        background: $background-color;
+        border-bottom: 2px solid lighten($background-color, 5%);
+
+        a {
+            color: white;
+        }
+    }
+}
+
+.nav-toggle {
+    color: white;
+    background-color: $background-color;
+
+    &:hover {
+        color: white;
+        background-color: darken($background-color, 10%);
+    }
+}
+
+
+/***************
+HEADER STYLING
+***************/
+
+.header {
+    color: white;
+    background-color: $background-color;
+
+    .logo {
+        font-family: $sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    nav a {
+        color: white;
+
+        &:hover {
+            color: darken(white, 20%);
+        }
+    }
+}
+
+@media screen {
+    .header .logo {
+        text-shadow: black 0px 0px 10px;
+    }
+}
+
+@media print {
+    .header .logo a {
+        color: black;
+    }
+}
+
+
+/***************
+POST STYLING
+***************/
+.post {
+    .date {
+        color: lighten(black, 50%);
+        font-family: $sans-serif;
+        font-weight: 300;
+    }
+
+    blockquote {
+        color: lighten(black, 40%);
+    }
+
+    .meta {
+        font-family: $sans-serif;
+        font-weight: 300;
+        color: lighten(black, 50%);
+    }
+}
+
+
+/***************
+POST NAV STYLING
+***************/
+.post__nav {
+    .prev, .next {
+        font-family: $sans-serif;
+        font-weight: 800;
+
+        &.image {
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,.8);
+        }
+    }
+}
+
+
+/***************
+FOOTER STYLING
+***************/
+.footer-links {
+    svg {
+    }
+}

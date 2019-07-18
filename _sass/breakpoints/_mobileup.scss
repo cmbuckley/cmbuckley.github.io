@@ -5,15 +5,14 @@ GLOBAL STYLES
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 body {
-    font-family: $serif;
     line-height: 1.75;
     font-size: 112.5%; // 18px base font size
-    color: $black;
     overflow-x: hidden;
     margin: 0;
 
@@ -26,20 +25,10 @@ body {
     }
 }
 
-// Text Selection Styling
-::-moz-selection {
-    background: $primary-color;
-    color: white;
-}
-
-::selection {
-    background: $primary-color;
-    color: white;
-}
 
 // Media Styling
-img,video,audio,iframe,object{
-    max-width:100%;
+img, video, audio, iframe, object {
+    max-width: 100%;
 }
 
 figure {
@@ -48,8 +37,6 @@ figure {
     figcaption {
         text-align: center;
         font-size: .9em;
-        font-style: italic;
-        color: lighten($black, 30%);
     }
 
     img {
@@ -60,23 +47,10 @@ figure {
 
 // Layout
 .container {
-  max-width: 610px;
+    max-width: 610px;
     padding: 0 20px;
     margin-left: auto;
     margin-right: auto;
-}
-
-
-/***************
-LINK STYLING
-***************/
-
-a {
-    color: $link-color;
-
-    &:hover {
-        color: darken($link-color, 15%);
-    }
 }
 
 
@@ -88,67 +62,57 @@ MENU STYLING
     z-index: 1;
 
     ul {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      display: block;
-      list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: block;
+        list-style: none;
 
         li {
-          width: 100%;
-          display: block;
-          background: $background-color;
-          border-bottom: 2px solid lighten($background-color, 5%);
+            width: 100%;
+            display: block;
 
-          a {
-              color: white;
-              text-decoration: none;
-              display: block;
-              padding: 5px 2rem;
-          }
+            a {
+                text-decoration: none;
+                display: block;
+                padding: 5px 2rem;
+            }
         }
     }
 }
 
 .js .nav-collapse {
-  clip: rect(0 0 0 0);
-  max-height: 0;
-  position: absolute;
-  display: block;
-  overflow: hidden;
-  zoom: 1;
-  clear: both;
-  width: 100%;
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+    clear: both;
+    width: 100%;
 }
 
 .nav-collapse.opened {
-  max-height: 9999px;
+    max-height: 9999px;
 }
 
 .nav-toggle {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  float: right;
-  line-height: 2em;
-  margin-top: .5em;
-  background-color: $background-color;
-  border-radius: 4px;
-  padding: 0 .5em;
-  color: white;
-  text-decoration: none;
-  position: relative;
-  right: 2rem;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-      color: white;
-      background-color: darken($background-color, 10%);
-  }
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    float: right;
+    line-height: 2em;
+    margin-top: .5em;
+    border-radius: 4px;
+    padding: 0 .5em;
+    text-decoration: none;
+    position: relative;
+    right: 2rem;
+    transition: all 0.2s ease-in-out;
 }
 
 @media print {
@@ -162,13 +126,9 @@ LIST STYLING
 ***************/
 
 .noList {
-    list-style:none;
-    padding-left:0;
-    margin-left:0;
-}
-
-dt {
-    font-weight: bold;
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 dd {
@@ -179,7 +139,7 @@ dd {
 .post ul ol,
 .post ol ul,
 .post ol ol {
-  margin: 0;
+    margin: 0;
 }
 
 
@@ -187,7 +147,7 @@ dd {
 PAGE STYLES
 ***************/
 
-.pageTitle {
+.page__title {
     margin: 1rem auto;
     text-align: center;
 }
@@ -206,11 +166,9 @@ HEADER STYLING
 ***************/
 
 .header {
-    background-color: $background-color;
     background-image: url('../img/tiki-800w.jpg');
     background-size: cover;
     background-position: center 40%;
-    color: white;
     padding: 0;
     height: 3em;
 
@@ -225,26 +183,6 @@ HEADER STYLING
         padding-left: 2rem;
         font-size: 1em;
         line-height: 3em;
-        font-family: $sans-serif;
-        font-weight: 800;
-        text-transform: uppercase;
-
-        a {
-            color: white;
-            text-decoration: none;
-        }
-    }
-}
-
-@media screen {
-    .header .logo {
-        text-shadow: black 0px 0px 10px;
-    }
-}
-
-@media print {
-    .header .logo a {
-        color: black;
     }
 }
 
@@ -253,10 +191,6 @@ HEADER STYLING
 POST STYLING
 ***************/
 .post {
-    .date {
-        color: lighten(black, 50%);
-    }
-
     blockquote {
         clear: both;
         border-left: 2px solid #2e8b57;
@@ -264,7 +198,6 @@ POST STYLING
         padding: 0 1em;
         line-height: 1.8;
         position: relative;
-        color: lighten(black, 40%);
 
         p {
             width: 100%;
@@ -281,9 +214,6 @@ POST STYLING
 
     .meta {
         text-align: center;
-        color: lighten(black, 50%);
-        font-family: $sans-serif;
-        font-weight: 300;
     }
 
     img {
@@ -329,10 +259,10 @@ POST STYLING
     }
 }
 
+
 /***************
 POST NAV STYLING
 ***************/
-
 .post__nav {
     border-top: 1px solid darken(white, 10%);
     border-bottom: 1px solid darken(white, 10%);
@@ -344,8 +274,6 @@ POST NAV STYLING
         height: 5rem;
         overflow: hidden;
         position: relative;
-        font-family: $sans-serif;
-        font-weight: 800;
         font-size: .9em;
         text-transform: uppercase;
         text-align: center;
@@ -374,8 +302,6 @@ POST NAV STYLING
 
         &.image {
             text-decoration: none;
-            color: white;
-            text-shadow: 1px 1px 3px rgba(0,0,0,.8);
             padding: 0 .5rem;
             position: relative;
             transition: all 0.2s ease-in-out;
@@ -405,7 +331,6 @@ POST NAV STYLING
 /***************
 FOOTER STYLING
 ***************/
-
 .footer {
     text-align: center;
     padding: 2rem 0;
@@ -441,31 +366,6 @@ FOOTER STYLING
                     width: 30px;
                     height: 30px;
                     transition: all 0.2s ease-in-out;
-
-                    svg {
-                        display: block;
-                        width: 100%;
-                        height: 100%;
-
-                        .outer-shape {
-                            fill: $primary-color;
-                        }
-
-                        .inner-shape {
-                            fill: white;
-                        }
-                    }
-                }
-
-
-                &:hover {
-                    a {
-                        svg {
-                            .outer-shape {
-                                fill: darken($primary-color, 10%);
-                            }
-                        }
-                    }
                 }
             }
         }
@@ -508,8 +408,6 @@ POST LIST STYLING
         }
 
         .date {
-            font-family: $sans-serif;
-            font-weight: 300;
             font-size: .8em;
         }
 
@@ -526,4 +424,3 @@ POST LIST STYLING
         }
     }
 }
-

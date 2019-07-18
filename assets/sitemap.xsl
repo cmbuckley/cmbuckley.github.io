@@ -26,7 +26,7 @@ layout: null
     </xsl:template>
 
     <xsl:template match="sitemap:urlset">
-        <h1 class="pageTitle">XML Sitemap</h1>
+        <h1 class="page__title">XML Sitemap</h1>
         <ul>
             <xsl:for-each select="./sitemap:url">
                 <xsl:variable name="itemUrl">

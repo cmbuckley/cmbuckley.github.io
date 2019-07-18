@@ -3,7 +3,7 @@ GLOBAL STYLES
 ***************/
 
 body {
-  font-size: 125%;
+    font-size: 125%;
 }
 
 .content {
@@ -27,27 +27,20 @@ body {
 }
 
 .container {
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 10px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
 }
-
 
 /***************
 HOMEPAGE STYLING
 ***************/
 
-#home {
-    .posts, .pageTitle, .pagination {
-        width: 75%;
-        float: none;
-        margin: 0 auto 1.5em;
-    }
-
-    .page__title {
-        margin: 2rem auto 1em;
-    }
+.posts, .page__title, .pagination {
+    width: 75%;
+    float: none;
+    margin: 0 auto 1.5em;
 }
 
 
@@ -83,6 +76,7 @@ HEADER STYLING
 
         ul {
             margin: 0;
+
             li {
                 display: inline;
                 line-height: 3em;
@@ -91,14 +85,9 @@ HEADER STYLING
                 border: none;
 
                 a {
-                    color: white;
                     font-size: .9em;
                     text-decoration: none;
                     padding: 0 .25em;
-
-                    &:hover {
-                        color: darken(white, 20%);
-                    }
                 }
 
                 &.current {
@@ -116,13 +105,12 @@ MENU STYLING
 ***************/
 
 .js {
-
     .nav-collapse {
-      position: relative;
-      max-height: none;
+        position: relative;
+        max-height: none;
 
         &.closed {
-          max-height: none;
+            max-height: none;
         }
 
         ul li a {
@@ -132,14 +120,13 @@ MENU STYLING
 }
 
 .nav-toggle {
-  display: none;
+    display: none;
 }
 
 
 /***************
 POST STYLING
 ***************/
-
 .post--excerpt {
     blockquote, figure {
         width: 95%;
@@ -147,18 +134,14 @@ POST STYLING
 }
 
 .post--full {
-    h1, h2, h3, h4, h5, h6, p, ul, ol, dl, .pageTitle {
-    width: 75%;
+    h1, h2, h3, h4, h5, h6, p, ul, ol, dl, .page__title {
+        width: 75%;
         float: none;
         margin: 0 auto 2rem;
     }
 
-    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    h1, h2, h3, h4, h5, h6 {
         margin: 1rem auto;
-    }
-
-    .page__title {
-        margin: 2rem auto 1em;
     }
 
     .featuredImage {
@@ -193,7 +176,6 @@ POST STYLING
 /***************
 POST NAV STYLING
 ***************/
-
 .post__nav {
 
     .prev, .next {
@@ -215,7 +197,6 @@ POST NAV STYLING
 /***************
 FOOTER STYLES
 ***************/
-
 .footer {
     &-links {
         float: right;
@@ -235,18 +216,17 @@ FOOTER STYLES
 /***************
 CONTACT PAGE STYLING
 ***************/
-
 .contactContent {
-  max-width: 48%;
-  margin-right: 2%;
-  float: left;
+    max-width: 48%;
+    margin-right: 2%;
+    float: left;
 }
 
 #contact {
     form {
-    max-width: 48%;
-    width: 48%;
-    float: right;
-    margin-right: 0;
+        max-width: 48%;
+        width: 48%;
+        float: right;
+        margin-right: 0;
     }
 }
