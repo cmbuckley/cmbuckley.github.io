@@ -19,6 +19,8 @@ textarea {
     color: #333;
     background: #e6e6e6;
     border: 1px solid #e6e6e6;
+    border-radius: 0;
+    -webkit-appearance: none;
     padding: 5px;
     outline: none;
     height: $line-height;
@@ -78,9 +80,7 @@ form {
     margin: -1em auto 1em;
 
     input[type=search] {
-        -webkit-appearance: none;
         background: none;
-        border-radius: 0;
         border: none;
         border-bottom: 1px solid;
     }
