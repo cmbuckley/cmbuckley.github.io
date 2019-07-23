@@ -3,8 +3,8 @@ FORM STYLING
 ***************/
 
 label {
-    display:block;
-    margin-bottom:5px;
+    display: block;
+    margin-bottom: 5px;
 }
 
 input[type=text],
@@ -34,25 +34,25 @@ textarea {
     }
 
     &.full-width {
-        width:100%;
+        width: 100%;
     }
 }
 textarea {
-    height:$line-height*3;
+    height: $line-height*3;
 }
 
 form {
-    margin-bottom:$padding;
+    margin-bottom: $padding;
 
     // Wrap each form input/element in a field div
     .field {
-        margin-bottom:$padding/2;
+        margin-bottom: $padding/2;
     }
 
     // Notes go under the input fields
     .note {
-        margin-top:5px;
-        color:$subtle-color;
+        margin-top: 5px;
+        color: $subtle-color;
     }
 
     // Required label
@@ -62,8 +62,14 @@ form {
 
     // Validation, add error class to the item div
     .error .reason {
-        margin-top:5px;
-        color:$bad-color;
+        margin-top: 5px;
+        color: $bad-color;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    form .button {
+        width: 100%;
     }
 }
 
