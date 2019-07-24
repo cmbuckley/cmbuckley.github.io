@@ -44,7 +44,7 @@ BUTTON DEFAULTS
 .button {
   @extend %btn;
 
-  &-secondary {
+  &__secondary {
     @extend %btn;
     background-color: $secondary-color;
 
@@ -53,7 +53,7 @@ BUTTON DEFAULTS
     }
   }
 
-  &-tertiary {
+  &__tertiary {
     @extend %btn;
     background-color: $tertiary-color;
 

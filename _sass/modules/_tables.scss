@@ -35,7 +35,7 @@ td, th {
 }
 
 th {
-    color: $secondary-color;
+    color: darken($primary-color, 10%);
     background-color: lighten($grey, 30%);
     border-bottom: 1px solid $primary-color;
 }
