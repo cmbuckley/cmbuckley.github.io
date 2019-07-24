@@ -385,6 +385,10 @@ PAGINATION STYLING
 .pagination {
     padding-bottom: 3em;
 
+    .button__outline {
+        width: auto;
+    }
+
     .next {
         float: left;
     }
