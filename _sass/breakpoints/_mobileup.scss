@@ -336,9 +336,9 @@ POST NAV STYLING
 /***************
 FOOTER STYLING
 ***************/
-.footer {
+footer {
     text-align: center;
-    padding: 2rem 0;
+    margin: 2rem 0;
     clear: both;
 
     .container {
@@ -359,7 +359,7 @@ FOOTER STYLING
         }
     }
 
-    &-links {
+    .footer-links {
         ul {
             text-align: center;
 
@@ -383,6 +383,8 @@ PAGINATION STYLING
 ***************/
 
 .pagination {
+    padding-bottom: 3em;
+
     .next {
         float: left;
     }
