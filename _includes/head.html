@@ -26,8 +26,9 @@
     {% if page.date %}
       <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
     {% endif %}
-    {% if page.image %}
-      <meta content="{{ site.url }}/assets/img/{{ page.image }}" property="og:image">
+    {% if page.image.meta %}
+      <meta content="{{ site.url }}/assets/img/{{ page.image.meta.src }}" property="og:image">
+      <meta content="{{ page.image.meta.alt }}" property="og:image:alt">
     {% else %}
       <meta content="{{ site.url }}/assets/img/tiki-square.jpg" property="og:image">
       <meta content="Chris on the Tiki Trail in Queenstown, NZ" property="og:image:alt">
@@ -46,8 +47,9 @@
       <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
     {% endif %}
     <meta name="twitter:description" content="{{ page_description | default: site_description }}">
-    {% if page.image %}
-      <meta name="twitter:image" content="{{ site.url }}/assets/img/{{ page.image }}">
+    {% if page.image.meta %}
+      <meta name="twitter:image:src" content="{{ site.url }}/assets/img/{{ page.image.meta.src }}">
+      <meta name="twitter:image:alt" content="{{ page.image.meta.alt }}">
     {% else %}
       <meta name="twitter:image:src" content="{{ site.url }}/assets/img/tiki-square.jpg">
       <meta name="twitter:image:alt" content="Chris on the Tiki Trail in Queenstown, NZ">
