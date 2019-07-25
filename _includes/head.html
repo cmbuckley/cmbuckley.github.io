@@ -21,7 +21,7 @@
     {% endif %}
     <meta content="{{ page_description | default: site_description }}" property="og:description">
     {% if page.url %}
-      <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+      <meta content="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}" property="og:url">
     {% endif %}
     {% if page.date %}
       <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
@@ -44,7 +44,7 @@
       <meta name="twitter:title" content="{{ site_title }}">
     {% endif %}
     {% if page.url %}
-      <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+      <meta name="twitter:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}">
     {% endif %}
     <meta name="twitter:description" content="{{ page_description | default: site_description }}">
     {% if page.image.meta %}
