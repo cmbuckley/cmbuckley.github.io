@@ -13,7 +13,7 @@
     <!-- Open Graph Meta -->
     <meta content="{{ site_title }}" property="og:site_name">
     <meta content="{% if page.paginated and paginator.page > 1 %}Page {{ paginator.page }} • {% endif %}{{ page_title | default: site_title }}" property="og:title">
-    <meta content="en_GB" property="og:locale">
+    <meta content="{{ site.locale | replace: '-','_' }}" property="og:locale">
     {% if page.title or page.og_type %}
       <meta content="{{ page.og_type | default: 'article' }}" property="og:type">
     {% else %}
@@ -26,8 +26,8 @@
     {% if page.date %}
       <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
     {% endif %}
-    <meta content="{{ site.url }}/assets/img/{{ page.image.meta.src | default: "tiki-square.jpg" }}" property="og:image">
-    <meta content="{{ page.image.meta.alt | default: "Chris on the Tiki Trail in Queenstown, NZ" }}" property="og:image:alt">
+    <meta content="{{ site.url }}/assets/img/{{ page.image.meta.src | default: 'tiki-square.jpg' }}" property="og:image">
+    <meta content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' }}" property="og:image:alt">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary{% if page.image.meta.large %}_large_image{% endif %}">
@@ -42,14 +42,14 @@
       <meta name="twitter:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}">
     {% endif %}
     <meta name="twitter:description" content="{{ page_description | default: site_description }}">
-    <meta name="twitter:image:src" content="{{ site.url }}/assets/img/{{ page.image.meta.src | default: "tiki-square.jpg" }}">
-    <meta name="twitter:image:alt" content="{{ page.image.meta.alt | default: "Chris on the Tiki Trail in Queenstown, NZ" }}">
+    <meta name="twitter:image:src" content="{{ site.url }}/assets/img/{{ page.image.meta.src | default: 'tiki-square.jpg' }}">
+    <meta name="twitter:image:alt" content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' }}">
     {% if page.layout == 'post' %}
       <meta name="twitter:label1" content="Reading Time" />
       <meta name="twitter:data1" content="{{ page.content | number_of_words | divided_by: 120.0 | ceil }} min" />
     {% if page.categories.size > 0 %}
       <meta name="twitter:label2" content="Categories" />
-      <meta name="twitter:data2" content="{{ page.categories | join: ", " }}" />
+      <meta name="twitter:data2" content="{{ page.categories | join: ', ' }}" />
     {% endif %}
     {% endif %}
 
