@@ -26,16 +26,11 @@
     {% if page.date %}
       <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
     {% endif %}
-    {% if page.image.meta %}
-      <meta content="{{ site.url }}/assets/img/{{ page.image.meta.src }}" property="og:image">
-      <meta content="{{ page.image.meta.alt }}" property="og:image:alt">
-    {% else %}
-      <meta content="{{ site.url }}/assets/img/tiki-square.jpg" property="og:image">
-      <meta content="Chris on the Tiki Trail in Queenstown, NZ" property="og:image:alt">
-    {% endif %}
+    <meta content="{{ site.url }}/assets/img/{{ page.image.meta.src | default: "tiki-square.jpg" }}" property="og:image">
+    <meta content="{{ page.image.meta.alt | default: "Chris on the Tiki Trail in Queenstown, NZ" }}" property="og:image:alt">
 
     <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary{% if page.image.meta.large %}_large_image{% endif %}">
     <meta name="twitter:site" content="@{{ site.social.twitter }}">
     <meta name="twitter:creator" content="@{{ site.social.twitter }}">
     {% if page.title %}
@@ -47,13 +42,8 @@
       <meta name="twitter:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}">
     {% endif %}
     <meta name="twitter:description" content="{{ page_description | default: site_description }}">
-    {% if page.image.meta %}
-      <meta name="twitter:image:src" content="{{ site.url }}/assets/img/{{ page.image.meta.src }}">
-      <meta name="twitter:image:alt" content="{{ page.image.meta.alt }}">
-    {% else %}
-      <meta name="twitter:image:src" content="{{ site.url }}/assets/img/tiki-square.jpg">
-      <meta name="twitter:image:alt" content="Chris on the Tiki Trail in Queenstown, NZ">
-    {% endif %}
+    <meta name="twitter:image:src" content="{{ site.url }}/assets/img/{{ page.image.meta.src | default: "tiki-square.jpg" }}">
+    <meta name="twitter:image:alt" content="{{ page.image.meta.alt | default: "Chris on the Tiki Trail in Queenstown, NZ" }}">
     {% if page.layout == 'post' %}
       <meta name="twitter:label1" content="Reading Time" />
       <meta name="twitter:data1" content="{{ page.content | number_of_words | divided_by: 120.0 | ceil }} min" />
