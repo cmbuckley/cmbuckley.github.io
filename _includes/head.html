@@ -2,7 +2,6 @@
 {%- assign page_title = page.title | markdownify | strip_html | strip -%}
 {%- assign page_description = page.description | default: page.excerpt | markdownify | strip_html | strip -%}
 {%- assign site_description = site.description | markdownify | strip_html | strip -%}
-{%- if page.absolute_urls -%}{% assign site_url = site.url %}{%- endif -%}
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -21,7 +20,7 @@
     {% endif %}
     <meta content="{{ page_description | default: site_description }}" property="og:description">
     {% if page.url %}
-      <meta content="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}" property="og:url">
+      <meta content="{{ page.url | replace:'index.html','' | absolute_url }}" property="og:url">
     {% endif %}
     {% if page.date %}
       <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
@@ -39,7 +38,7 @@
       <meta name="twitter:title" content="{{ site_title }}">
     {% endif %}
     {% if page.url %}
-      <meta name="twitter:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}">
+      <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
     {% endif %}
     <meta name="twitter:description" content="{{ page_description | default: site_description }}">
     <meta name="twitter:image:src" content="{{ site.url }}/assets/img/{{ page.image.meta.src | default: 'tiki-square.jpg' }}">
@@ -53,19 +52,19 @@
     {% endif %}
     {% endif %}
 
-    <link rel="shortcut icon" href="{{ site_url }}/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ site_url }}/assets/img/icons/favicon-16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ site_url }}/assets/img/icons/favicon-32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ site_url }}/assets/img/icons/favicon-180.png">
-    <link rel="mask-icon" href="{{ site_url }}/assets/img/icons/favicon.svg" color="#2c8654">
-    <link rel="manifest" href="{{ site_url }}/assets/site.webmanifest">
+    <link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}/assets/img/icons/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/assets/img/icons/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/assets/img/icons/favicon-180.png">
+    <link rel="mask-icon" href="{{ site.url }}/assets/img/icons/favicon.svg" color="#2c8654">
+    <link rel="manifest" href="{{ site.url }}/assets/site.webmanifest">
     <meta name="msapplication-config" content="/assets/browserconfig.xml">
     <meta name="theme-color" content="#2c8654">
 
     <link rel="dns-prefetch" href="https://use.fontawesome.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="{{ site_url }}/assets/css/style.css">
-    <!--[if IE 8]><link rel="stylesheet" href="{{ site_url }}/assets/css/ie.css"><![endif]-->
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/style.css">
+    <!--[if IE 8]><link rel="stylesheet" href="{{ site.url }}/assets/css/ie.css"><![endif]-->
     <link rel="alternate" type="application/rss+xml" title="{{ site_title }}" href="{{ site.url }}/feed/" />
-    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 </head>
