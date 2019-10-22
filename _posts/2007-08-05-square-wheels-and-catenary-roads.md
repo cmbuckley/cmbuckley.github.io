@@ -6,7 +6,7 @@ categories:
   - Academic
   - Play
 ---
-The other day [Paul](https://pictures.scholesmafia.co.uk/index.php/?profile=150) told me that square wheels (and, indeed, any regular polygon except a triangle) can [ride on a road constructed of inverted catenaries](http://web.archive.org/web/20070726071221/http://maa.org/mathland/mathtrek_04_05_04.html). A catenary is the curve made by a telegraph wire when stretched between two poles --- a cable hanging under its own weight.
+The other day [Paul](https://pictures.scholesmafia.co.uk/index.php/?profile=150) told me that square wheels (and, indeed, any regular polygon except a triangle) can {% include archive.html url="http://www.maa.org/mathland/mathtrek_04_05_04.html" text="ride on a road constructed of inverted catenaries" %}. A catenary is the curve made by a telegraph wire when stretched between two poles --- a cable hanging under its own weight.
 
 {% include img.html img="/files/2007/08/catenary.png" alt="Catenary" %}
 
