@@ -3,6 +3,10 @@ title: Happy Switch
 layout: post
 categories:
   - Play
+image:
+  meta:
+    src: /files/2008/02/happy_switch.jpg
+    alt: Happy switch is happy
 ---
 After spending too much time looking at [images](http://imagechan.com/img/4093/) on [imagechan](http://imagechan.com/img/4062/), I was reminded of a perfect photo opportunity from childhood, sitting just in my garage:
 

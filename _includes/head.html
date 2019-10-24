@@ -25,8 +25,8 @@
     {% if page.date %}
       <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
     {% endif %}
-    <meta content="{{ site.url }}/assets/img/{{ page.image.meta.src | default: 'tiki-square.jpg' }}" property="og:image">
-    <meta content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' }}" property="og:image:alt">
+    <meta content="{{ site.url }}{{ page.image.meta.src | default: '/assets/img/tiki-square.jpg' }}" property="og:image">
+    <meta content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' | smartify }}" property="og:image:alt">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary{% if page.image.meta.large %}_large_image{% endif %}">

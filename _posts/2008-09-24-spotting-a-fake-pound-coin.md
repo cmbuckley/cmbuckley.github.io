@@ -4,6 +4,10 @@ needs_gallery: true
 layout: post
 categories:
   - Play
+image:
+  meta:
+    src: /files/2008/09/reverse.jpg
+    alt: Reverse of fake and real pound coins
 ---
 Supposedly [2% of all pound coins are counterfeit](http://news.bbc.co.uk/1/hi/magazine/7628930.stm). But how do you know when you have a fake? I heard the news item and had a quick look at the pound coins in my pocket, and couldn't see anything. I thought that maybe it wasn't all that easy to spot. But then I saw one my [Mum](https://pictures.scholesmafia.co.uk/index.php/?profile=36) had:
 
