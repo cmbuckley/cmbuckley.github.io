@@ -5,9 +5,7 @@ layout: page
 {{ content }}
 
 {% for item in page.gallery %}
-  {% assign parts = item[0] | split: "." %}
-  {% assign url = parts[0] | append: "." | append: parts[1] %}
-  {% assign img = parts[0] | append: ".jpg" %}
-  {% assign caption = item[1] %}
-  {% include img.html img=img url=url caption=caption %}
+  {% assign video=item[0] %}
+  {% assign caption=item[1] %}
+  {% include figure.html video=video caption=caption %}
 {% endfor %}

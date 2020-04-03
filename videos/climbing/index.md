@@ -2,11 +2,11 @@
 layout: gallery
 title: Climbing
 gallery:
-  leapoffaith.m4v: The Leap of Faith™!
-  pockets.m4v: Pockets route at Berghaus
-  ibar.m4v: Transition from the I-bar to the main wall
-  leeds-abseil.m4v: My simple climb; interesting end to the abseil down...
-  leeds-bouldering.m4v: Bouldering route
-  leeds-jay.m4v: Jay's attempt on the tufa route
-  leeds-georgina.m4v: One of Georgina's longer routes (very impressive!)
+  climbing/leapoffaith: The Leap of Faith™!
+  climbing/pockets: Pockets route at Berghaus
+  climbing/ibar: Transition from the I-bar to the main wall
+  climbing/leeds-abseil: My simple climb; interesting end to the abseil down...
+  climbing/leeds-bouldering: Bouldering route
+  climbing/leeds-jay: Jay's attempt on the tufa route
+  climbing/leeds-georgina: One of Georgina's longer routes (very impressive!)
 ---
