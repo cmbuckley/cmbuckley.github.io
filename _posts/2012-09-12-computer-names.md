@@ -33,3 +33,6 @@ sagan
 
 taniyama
 :    MacBook Pro
+
+voltaire
+:   DiskStation NAS
