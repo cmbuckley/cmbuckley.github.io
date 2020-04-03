@@ -1,0 +1,23 @@
+<figure{% if include.float %} class="fl-{{ include.float }}"{% endif %}>
+
+{%- if include.video -%}
+  {% assign video_prefix="https://res.cloudinary.com/cmbuckley/video/upload" %}
+  <video controls poster="{{ video_prefix }}/so_0/v1/{{ include.video }}.jpg">
+    <source src="{{ video_prefix }}/{{ include.video }}.webm" type="video/webm">
+    <source src="{{ video_prefix }}/{{ include.video }}.mp4" type="video/mp4">
+    <source src="{{ video_prefix }}/{{ include.video }}.ogv" type="video/ogg">
+
+    Sorry, your browser does not support embedded videos. You can view the video in
+    <a href="{{ video_prefix }}/{{ include.video }}.webm">WebM</a>,
+    <a href="{{ video_prefix }}/{{ include.video }}.mp4">MP4</a> or
+    <a href="{{ video_prefix }}/{{ include.video }}.ogv">Vorbis</a> format.
+  </video>
+{% elsif include.img %}
+   {% if include.url %}<a href="{{ include.url }}">{%- endif -%}
+   <img src="{{ include.img }}" alt="{{ include.alt | default: include.caption }}" />
+   {%- if include.url -%}</a>{%- endif -%}
+{%- endif -%}
+{%- if include.caption -%}
+  <figcaption>{{ include.caption | markdownify | remove:'<p>' | remove: '</p>' | strip }}</figcaption>
+{% endif %}
+</figure>

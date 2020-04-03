@@ -11,11 +11,11 @@ The second time round went better, but I still had to use [A-Patch](http://apatc
 
 However, my mood improved greatly when I found the button I had been looking for (it had been there all along, this is what happens when we don't explore):
 
-{% include img.html img="/files/2006/11/wlm-1.png" caption="Before: no Display Pictures. Hey, it's 3am, there're usually more than 3 contacts online..." %}
+{% include figure.html img="/files/2006/11/wlm-1.png" caption="Before: no Display Pictures. Hey, it's 3am, there're usually more than 3 contacts online..." %}
 
-{% include img.html img="/files/2006/11/wlm-2.png" caption="Look over here! Innocuous button hides useful options!" %}
+{% include figure.html img="/files/2006/11/wlm-2.png" caption="Look over here! Innocuous button hides useful options!" %}
 
-{% include img.html img="/files/2006/11/wlm-3.png" caption="After: Woo --- thumbnails! Plus it shows the personal message and email address of each user." %}
+{% include figure.html img="/files/2006/11/wlm-3.png" caption="After: Woo --- thumbnails! Plus it shows the personal message and email address of each user." %}
 
 Seems I'm not the only one who found this information useful:
 

@@ -4,7 +4,7 @@ description: Computers have been a big part of my life!
 layout: page
 ---
 
-{% include img.html img="/files/2012/05/amstrad_cpc_6128-300x267.jpg" url="/files/2012/05/amstrad_cpc_6128.jpg" alt="Amstrad CPC 6128 and monitor" float="right" %}
+{% include figure.html img="/files/2012/05/amstrad_cpc_6128-300x267.jpg" url="/files/2012/05/amstrad_cpc_6128.jpg" alt="Amstrad CPC 6128 and monitor" float="right" %}
 
 I have worked closely with computers since I was very young. My first computer was an Amstrad CPC 6128 ({% include break.html default="above" xs="above" s_up="right" %}), with such games as _Arkanoid_, _Barry McGuigan World Championship Boxing_, _Chuckie Egg_, _Dizzy_ and _Michael Jackson&#8217;s Moonwalker_ among others.
 

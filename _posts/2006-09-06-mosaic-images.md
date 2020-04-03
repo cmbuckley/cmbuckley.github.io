@@ -10,6 +10,6 @@ Whilst browsing the [Facebook Developers' Directory](http://developers.facebook.
 
 This is the result, a mosaic of 3600 images from my [pictures collection](https://pictures.scholesmafia.co.uk/):
 
-{% include img.html url="/files/2006/09/mosaic.jpg" img="/files/2006/09/mosaic-300x225.jpg" caption="Mosaic of me and Mini Buckley" %}
+{% include figure.html url="/files/2006/09/mosaic.jpg" img="/files/2006/09/mosaic-300x225.jpg" caption="Mosaic of me and Mini Buckley" %}
 
 Anyone who wants to down the [full-size image](https://cmbuckley.co.uk/graphics/mosaic.jpg) may do so, but be warned that it's over 25MB!

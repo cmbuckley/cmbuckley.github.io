@@ -11,9 +11,9 @@ image:
 ---
 Supposedly [2% of all pound coins are counterfeit](http://news.bbc.co.uk/1/hi/magazine/7628930.stm). But how do you know when you have a fake? I heard the news item and had a quick look at the pound coins in my pocket, and couldn't see anything. I thought that maybe it wasn't all that easy to spot. But then I saw one my [Mum](https://pictures.scholesmafia.co.uk/index.php/?profile=36) had:
 
-{% include img.html url="/files/2008/09/obverse.jpg" img="/files/2008/09/obverse-150x150.jpg" caption="Obverse" %}
-{% include img.html url="/files/2008/09/reverse.jpg" img="/files/2008/09/reverse-150x150.jpg" caption="Reverse" %}
-{% include img.html url="/files/2008/09/side.jpg" img="/files/2008/09/side-150x150.jpg" caption="Side" %}
+{% include figure.html url="/files/2008/09/obverse.jpg" img="/files/2008/09/obverse-150x150.jpg" caption="Obverse" %}
+{% include figure.html url="/files/2008/09/reverse.jpg" img="/files/2008/09/reverse-150x150.jpg" caption="Reverse" %}
+{% include figure.html url="/files/2008/09/side.jpg" img="/files/2008/09/side-150x150.jpg" caption="Side" %}
 
 There are a few noticeable differences:
 

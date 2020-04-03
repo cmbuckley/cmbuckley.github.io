@@ -8,7 +8,7 @@ categories:
 
 The picture on their site gives no scale, so here's a shot of it next to my finger:
 
-{% include img.html url="/files/2006/10/m2.jpg" img="/files/2006/10/m2-300x179.jpg" caption="Sony M2 memory card" %}
+{% include figure.html url="/files/2006/10/m2.jpg" img="/files/2006/10/m2-300x179.jpg" caption="Sony M2 memory card" %}
 
 I have to say, I was rather impressed!
 

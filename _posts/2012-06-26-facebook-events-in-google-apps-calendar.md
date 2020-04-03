@@ -14,13 +14,13 @@ Open up your [Facebook Events page](https://www.facebook.com/events/).
 
 Click on the dropdown and select "Export Events":
 
-{% include img.html img="/files/2012/06/events-dropdown.png" alt="Facebook events export button" %}
-{% include img.html img="/files/2012/06/events-export.png" alt="Facebook events link" %}
+{% include figure.html img="/files/2012/06/events-dropdown.png" alt="Facebook events export button" %}
+{% include figure.html img="/files/2012/06/events-export.png" alt="Facebook events link" %}
 
 Copy the link and take it over to [iCal Stripper](http://icalstripper.appspot.com/).
 
 Grab the stripped iCal URL and add it in Google Calendar:
 
-{% include img.html img="/files/2012/06/add-google-calendar.png" alt="Adding Facebook events link to Google Calendar" %}
+{% include figure.html img="/files/2012/06/add-google-calendar.png" alt="Adding Facebook events link to Google Calendar" %}
 
 And you're done!

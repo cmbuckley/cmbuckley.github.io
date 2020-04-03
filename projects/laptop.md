@@ -4,9 +4,9 @@ description: I built a digital picture frame from an old laptop and too much fre
 layout: page
 ---
 
-{% include img.html url="/files/2012/04/img_0015.jpg" img="/files/2012/04/img_0015-320x200.jpg" caption="The finished product" float="right" %}
+{% include figure.html url="/files/2012/04/img_0015.jpg" img="/files/2012/04/img_0015-320x200.jpg" caption="The finished product" float="right" %}
 
-{% include img.html url="/files/2012/04/img_0010.jpg" img="/files/2012/04/img_0010-320x200.jpg" caption="The laptop before I started attacking it" float="right" %}
+{% include figure.html url="/files/2012/04/img_0010.jpg" img="/files/2012/04/img_0010-320x200.jpg" caption="The laptop before I started attacking it" float="right" %}
 
 I managed to get my hands on an old Dell Inspiron 3800 laptop and, after spending a day or so fiddling with it, I finally decided it had no use as a laptop. The laptop was useless for a number of reasons: The battery didn't work, it had a single USB 1.1 port and only 64MB of RAM. Now, I know I could have bought some more RAM, but considering it takes 144-pin modules it was something I wasn't prepared to buy.
 

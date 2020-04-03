@@ -7,7 +7,7 @@ I have always been fond of climbing, to some degree. From an early age I always 
 
 In secondary school, we were twice taken to Bewerley Park, an outdoor pursuits centre in the Yorkshire Dales. I was given a chance to climb Yorkshire gritstone for the first time! Unfortunately, my interest was to be left by the wayside until university.
 
-{% include img.html img="/files/2012/05/kyloe-225x300.jpg" url="/files/2012/05/kyloe.jpg" caption="Pitching a route at Kyloe Out" float="left" %}
+{% include figure.html img="/files/2012/05/kyloe-225x300.jpg" url="/files/2012/05/kyloe.jpg" caption="Pitching a route at Kyloe Out" float="left" %}
 
 In my first year at Durham, I joined the HBMC, my college climbing club. Our first meet was at Kyloe Out (left), a small crag in North Norhumberland. This was my first attempt at real roped climbing, but I threw myself at it and found that I very much enjoyed the challenges posed by the various routes.
 
@@ -15,7 +15,7 @@ Mainly the club focussed on indoor climbing due to the weather, so Sunderland Wa
 
 Towards the end of the first year, the HBMC AGM was held to discuss the continuation of the club. All of the executive committee were leaving, with no-one remaining to run the club. I was effectively the only person that stood for any of the roles, and was elected President and Treasurer of the club. This was a great responsibility for me, especially since I had only been climbing for a very short time.
 
-{% include img.html img="/files/2012/05/sunderland-225x300.jpg" url="/files/2012/05/sunderland.jpg" caption="Sunderland Wall" float="left" %}
+{% include figure.html img="/files/2012/05/sunderland-225x300.jpg" url="/files/2012/05/sunderland.jpg" caption="Sunderland Wall" float="left" %}
 
 The first year of presidency, my second university year, was understandably slow, with very little provided for the members. Since there were no cars available, there were no outdoor meets, and the weekly trips were invariably to Berghaus. Berghaus is quite a good wall for more competent climbers, but it is definitely not the place to teach new ones. Also, there was no chance to teach anyone about roped climbing, so it seemed our services were not required!
 
