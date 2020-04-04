@@ -5,8 +5,7 @@
 <dl>
 {% for gh_page in gh_pages %}{% unless gh_page.name == site.github.repository_name %}
 {% assign default_href = gh_page.name | prepend: '/' | append: '/' %}
-<dt><a href="{{ gh_page.homepage | default: default_href }}">{{ gh_page.name | markdownify | remove: '<p>' | remove: '</p>' | strip }}</a>
-{% if include.source %}(<a href="{{ gh_page.html_url }}">source</a>){% endif %}</dt>
+<dt><a href="{{ gh_page.homepage | default: default_href }}">{{ gh_page.name | markdownify | remove: '<p>' | remove: '</p>' | strip }}</a></dt>
 <dd>{{ gh_page.description | markdownify | remove: '<p>' | remove: '</p>' | strip }}</dd>
 {% endunless %}{% endfor %}
 </dl>
