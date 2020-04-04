@@ -103,7 +103,7 @@ Private Sub tmrPause_Timer()
     bUpdate = True
 
     If DriveExists(sFlashDrive) Then 'should show some flash drive stuff
-        If sActionCommand &lt;&gt; sFlashSlideshowPath Then
+        If sActionCommand <> sFlashSlideshowPath Then
             bManualChange = True
             bInDefault = False
             CreateFlashDriveSlideshow
@@ -116,8 +116,8 @@ Private Sub tmrPause_Timer()
 
             sNewSettingsDate = FileDateTime(sHandlerPath)
 
-            If (bInDefault Or sNewSettingsDate &lt;&gt; sSettingsDate) _
-              And sNewSettingsDate &lt;&gt; vbNullString _
+            If (bInDefault Or sNewSettingsDate <> sSettingsDate) _
+              And sNewSettingsDate <> vbNullString _
               And FileLen(sHandlerPath) &gt; 0 Then
                 lFileHandle = FreeFile()
                 bInDefault = False
@@ -129,7 +129,7 @@ Private Sub tmrPause_Timer()
             End If
 
         Else
-            If sActionCommand &lt;&gt; sDefaultImagesPath Then
+            If sActionCommand <> sDefaultImagesPath Then
                 bManualChange = True
             End If
             sNewAction = "default"
@@ -138,7 +138,7 @@ Private Sub tmrPause_Timer()
         End If
 
     Else 'should do some default stuff
-        If sActionCommand &lt;&gt; sDefaultImagesPath Then
+        If sActionCommand <> sDefaultImagesPath Then
             bManualChange = True
         End If
         sNewAction = "default"
@@ -148,7 +148,7 @@ Private Sub tmrPause_Timer()
 
     If bDeleteFile Then DeleteFile sActionCommand
 
-    If sNewSettingsDate &lt;&gt; sSettingsDate Or bManualChange Then
+    If sNewSettingsDate <> sSettingsDate Or bManualChange Then
         Select Case sNewAction
             Case "slideshow", "flash", "default"
                 bDeleteFile = False
