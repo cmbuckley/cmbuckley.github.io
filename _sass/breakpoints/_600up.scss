@@ -26,10 +26,18 @@ figure {
     margin: -2em auto 2em;
 }
 
-.highlight {
-    padding: 10px;
-}
-
 footer .copy .powered {
     display: inline;
+}
+
+
+/***********
+CODE STYLING
+************/
+pre.highlight {
+    margin: 0 0 2rem;
+    max-height: 30em;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
 }

@@ -4,15 +4,12 @@
   http://sourcey.com
 ***************/
 
-.highlight {
-  max-height: 30em;
+pre.highlight {
   white-space: pre;
   overflow: auto;
   word-wrap: normal; /* horizontal scrolling */
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
   padding: 5px;
+  margin: 0 -20px 2rem;
   background: #343642;
   color: #C1C2C3;
   font-size: 90%;
