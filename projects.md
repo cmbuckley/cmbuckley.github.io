@@ -7,4 +7,4 @@ layout: page
 * [Laptop Digital Picture Frame](/projects/laptop/)
 * [Word Clock](/projects/word-clock/)
 
-{% include showcase.html source=true %}
+{% include showcase.html define=true %}
