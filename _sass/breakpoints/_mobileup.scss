@@ -343,11 +343,11 @@ footer {
 
     .container {
         border-top: 4px solid darken(white, 15%);
-        padding-top: .5em;
+        padding: .5em 0;
         max-width: 90%;
     }
 
-    .copy, .footer-links {
+    .copy {
         font-size: .8em;
     }
 
@@ -360,6 +360,8 @@ footer {
     }
 
     .footer-links {
+        font-size: 1.3em;
+
         ul {
             text-align: center;
 
@@ -370,6 +372,7 @@ footer {
                     display: inline-block;
                     width: 30px;
                     height: 30px;
+                    margin: 0 3px;
                     transition: all 0.2s ease-in-out;
                 }
             }
