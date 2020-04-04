@@ -25,6 +25,6 @@ Now I know that ł is encoded as `b3` in this file. Looking at the [encodings of
 > Napisy zostały specjalnie dopasowane do Twojej wersji filmu.
 {:lang="pl"}
 
-I have to say I don't really follow this manual process that often any more, since Polish text is almost always in ISO-8859-2 due to its support for Slavic languages. I'll often just try this conversion first as a default, or Windows-1252 comes up quite a lot for data files, or I'll run the file through a [very basic detection and conversion script](https://github.com/cmbuckley/toutf8) that uses Google's [Compact Encoding Detection](https://github.com/google/compact_enc_det). However, it's quite rewarding to watch the mojibake transform into the original text after a bit of digging!
+I have to say I don't really follow this manual process that often any more, since Polish text is almost always in ISO-8859-2 due to its support for Slavic languages. I'll often just try this conversion first as a default, or Windows-1252 comes up quite a lot for data files, or I'll run the file through a [very basic detection and conversion script](/toutf8/) that uses Google's [Compact Encoding Detection](https://github.com/google/compact_enc_det). However, it's quite rewarding to watch the mojibake transform into the original text after a bit of digging!
 
 Further essential reading for programmers: [What Every Programmer Absolutely, Positively Needs To Know About Encodings And Character Sets To Work With Text](http://kunststube.net/encoding/)
