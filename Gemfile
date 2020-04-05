@@ -5,3 +5,7 @@ group :jekyll_plugins do
   gem 'jekyll-compose'
   gem 'jekyll-redirect-from'
 end
+
+group :development, :test do
+  gem 'rspec'
+end
