@@ -118,7 +118,7 @@ Private Sub tmrPause_Timer()
 
             If (bInDefault Or sNewSettingsDate <> sSettingsDate) _
               And sNewSettingsDate <> vbNullString _
-              And FileLen(sHandlerPath) &gt; 0 Then
+              And FileLen(sHandlerPath) > 0 Then
                 lFileHandle = FreeFile()
                 bInDefault = False
 
@@ -163,7 +163,7 @@ Private Sub tmrPause_Timer()
                 RestorePreviousHandler
 
                 bDeleteFile = True
-                If FileLen(sNewActionCommand) &gt; 0 Then
+                If FileLen(sNewActionCommand) > 0 Then
                     If bDebug Then
                         Print "Changing to uploaded image at " & sNewActionCommand
                     Else
@@ -222,8 +222,8 @@ Function DriveExists(ByVal sDrive As String) As Boolean
 End Function
 
 Function FileExists(sPathName As String) As Boolean ' checks if a file exists
-    If Len(sPathName) &gt; 0 Then ' checks filename entered
-        FileExists = (Len(Dir(sPathName)) &gt; 0) ' dir function returns directory if file exists
+    If Len(sPathName) > 0 Then ' checks filename entered
+        FileExists = (Len(Dir(sPathName)) > 0) ' dir function returns directory if file exists
     Else: FileExists = False
     End If
 End Function

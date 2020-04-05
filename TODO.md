@@ -11,3 +11,4 @@
 * post creation helper
 * theme data
   * Ideally with jekyll-data (https://github.com/github/pages-gem/issues/610)
+  * See also https://github.com/benbalter/jekyll-remote-theme/pull/72
