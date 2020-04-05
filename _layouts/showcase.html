@@ -2,10 +2,13 @@
 layout: page
 ---
 
-{% assign repo = site.github.public_repositories | where:'name',site.github.repository_name | first %}
+{%- assign repo = site.github.public_repositories | where:'name',site.github.repository_name | first -%}
 <div class="showcase-actions">
     <a href="{{ repo.html_url }}/tarball/master" class="button__outline"><i class="far fa-file-archive"></i> Download Tarball</a>
     <a href="{{ repo.html_url }}" class="button__outline"><i class="fab fa-github"></i> View on GitHub</a>
+    {% if page.npm %}
+    <a href="https://www.npmjs.com/package/{{ page.npm }}" class="button__outline"><i class="fab fa-npm"></i> View on npm</a>
+    {% endif %}
 </div>
 
 {{ content }}
