@@ -128,7 +128,7 @@ LIST STYLING
 .noList {
     list-style: none;
     padding-left: 0;
-    margin-left: 0;
+    margin: 0;
 }
 
 dd {
@@ -269,8 +269,6 @@ POST STYLING
 POST NAV STYLING
 ***************/
 .post__nav {
-    border-top: 1px solid darken(white, 10%);
-    border-bottom: 1px solid darken(white, 10%);
     overflow: hidden;
 
     .prev, .next {
@@ -338,7 +336,7 @@ FOOTER STYLING
 ***************/
 footer {
     text-align: center;
-    margin: 2rem 0;
+    margin: 0 0 2rem;
     clear: both;
 
     .container {
