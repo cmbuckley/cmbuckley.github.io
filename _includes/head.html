@@ -25,7 +25,7 @@
     {% if page.date %}
       <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
     {% endif %}
-    <meta content="{{ site.url }}{{ page.image.meta.src | default: '/assets/img/tiki-square.jpg' }}" property="og:image">
+    <meta content="{{ site.url }}{{ site.baseurl }}{{ page.image.meta.src | default: '/assets/img/tiki-square.jpg' }}" property="og:image">
     <meta content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' | smartify }}" property="og:image:alt">
 
     <!-- Twitter Cards -->
@@ -41,7 +41,7 @@
       <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
     {% endif %}
     <meta name="twitter:description" content="{{ page_description | default: site_description }}">
-    <meta name="twitter:image:src" content="{{ site.url }}{{ page.image.meta.src | default: 'tiki-square.jpg' }}">
+    <meta name="twitter:image:src" content="{{ site.url }}{{ site.baseurl }}{{ page.image.meta.src | default: '/assets/img/tiki-square.jpg' }}">
     <meta name="twitter:image:alt" content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' }}">
     {% if page.layout == 'post' %}
       <meta name="twitter:label1" content="Reading Time" />
