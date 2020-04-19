@@ -41,7 +41,7 @@
       <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
     {% endif %}
     <meta name="twitter:description" content="{{ page_description | default: site_description }}">
-    <meta name="twitter:image:src" content="{{ site.url }}/assets/img/{{ page.image.meta.src | default: 'tiki-square.jpg' }}">
+    <meta name="twitter:image:src" content="{{ site.url }}{{ page.image.meta.src | default: 'tiki-square.jpg' }}">
     <meta name="twitter:image:alt" content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' }}">
     {% if page.layout == 'post' %}
       <meta name="twitter:label1" content="Reading Time" />
