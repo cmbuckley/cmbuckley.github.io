@@ -18,4 +18,4 @@ University was a similar experience, combining theory (this time adding formal m
 
 {% include figure.html img="/files/2020/04/raspberry-pi-thumb.jpg" url="/files/2020/04/raspberry-pi.jpg" alt="Raspberry Pi with RF transmitter and receiver" caption="A Raspberry Pi for home automation." float="left" %}
 
-Since then, either through [professional experience](/cv/) or [personal projects](/projects/), I have continued to work with computers of all shapes and sizes, and I see no reason why that won't continue! Most recently my personal projects have revolved around home automation, and I'm hoping to be able to do more with this in the future.
+After university, either through [professional experience](/cv/) or [personal projects](/projects/), I have continued to work with computers of all shapes and sizes, and I see no reason why that won't continue! Most recently my personal projects have revolved around home automation, and I'm hoping to be able to do more with this in the future.
