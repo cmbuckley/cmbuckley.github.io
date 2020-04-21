@@ -2,6 +2,10 @@
 title: Computing
 description: Computers have been a big part of my life!
 layout: page
+image:
+  meta:
+    src: /files/2012/05/amstrad_cpc_6128.jpg
+    alt: Amstrad CPC 6128 and monitor
 ---
 
 {% include figure.html img="/files/2012/05/amstrad_cpc_6128-300x267.jpg" url="/files/2012/05/amstrad_cpc_6128.jpg" alt="Amstrad CPC 6128 and monitor" float="right" %}
