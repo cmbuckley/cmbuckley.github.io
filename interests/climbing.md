@@ -9,9 +9,9 @@ In secondary school, we were twice taken to Bewerley Park, an outdoor pursuits c
 
 {% include figure.html img="/files/2012/05/kyloe-225x300.jpg" url="/files/2012/05/kyloe.jpg" caption="Pitching a route at Kyloe Out" float="left" %}
 
-In my first year at Durham, I joined the HBMC, my college climbing club. Our first meet was at Kyloe Out (left), a small crag in North Norhumberland. This was my first attempt at real roped climbing, but I threw myself at it and found that I very much enjoyed the challenges posed by the various routes.
+In my first year at Durham, I joined the HBMC, my college climbing club. Our first meet was at Kyloe Out ({% include break.html default="above" xs="above" s_up="left" %}), a small crag in North Norhumberland. This was my first attempt at real roped climbing, but I threw myself at it and found that I very much enjoyed the challenges posed by the various routes.
 
-Mainly the club focussed on indoor climbing due to the weather, so Sunderland Wall (bottom left) and occasionally Berghaus Wall in Newcastle were our main venues. Berghaus is entirely a bouldering wall, whereas Sunderland is mainly top-rope and lead climbs. The routes range from the walkable to the insane, and there is a wide variety of heights and angles to climb.
+Mainly the club focussed on indoor climbing due to the weather, so Sunderland Wall (below) and occasionally Berghaus Wall in Newcastle were our main venues. Berghaus is entirely a bouldering wall, whereas Sunderland is mainly top-rope and lead climbs. The routes range from the walkable to the insane, and there is a wide variety of heights and angles to climb.
 
 Towards the end of the first year, the HBMC AGM was held to discuss the continuation of the club. All of the executive committee were leaving, with no-one remaining to run the club. I was effectively the only person that stood for any of the roles, and was elected President and Treasurer of the club. This was a great responsibility for me, especially since I had only been climbing for a very short time.
 
