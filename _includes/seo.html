@@ -1,7 +1,16 @@
 {%- assign site_title = site.title | markdownify | strip_html | strip -%}
 {%- assign page_title = page.title | markdownify | strip_html | strip -%}
-{%- assign page_description = page.description | default: page.excerpt | markdownify | strip_html | strip -%}
-{%- assign site_description = site.description | markdownify | strip_html | strip -%}
+{%- assign page_description = page.description | default: page.excerpt | markdownify | strip_html | strip | normalize_whitespace -%}
+{%- if page_description.size > 120 -%}
+  {%- assign splitters = '.;:!' | split: '' -%}
+  {%- for char in splitters -%}
+    {%- assign splitter = char | append: ' ' -%}
+    {%- if page_description.size > 120 and page_description contains splitter -%}
+      {%- assign page_description = page_description | split: splitter | first | append: "." -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+{%- assign site_description = site.description | markdownify | strip_html | strip | normalize_whitespace -%}
 {%- if page.paginated and paginator.page > 1 %}{% assign title_pagination = paginator.page | prepend: 'Page ' | append: ' • ' %}{% endif -%}
 
 {%- capture meta_image_url -%}

@@ -26,7 +26,7 @@ pages.each do |page|
 
     it 'should have valid title' do
       page_content.scan(/<title>(.+)<\/title>/).each do |title|
-        expect(title[0].length).to be_between(10, 60)
+        expect(title[0].length).to be_between(10, 65)
         expect(title[0]).to match(/(.+ • )?Chris Buckley/)
       end.empty? and raise "could not find page title"
 
