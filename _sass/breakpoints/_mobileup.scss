@@ -264,6 +264,14 @@ POST STYLING
     }
 }
 
+.footnotes {
+    font-size: 0.9rem;
+
+    li > p {
+        width: inherit;
+    }
+}
+
 
 /***************
 POST NAV STYLING
