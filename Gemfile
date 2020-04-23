@@ -1,4 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'github-pages', group: :jekyll_plugins
-gem 'jekyll-redirect-from'
+group :jekyll_plugins do
+  gem 'github-pages'
+  gem 'jekyll-compose'
+  gem 'jekyll-redirect-from'
+end
