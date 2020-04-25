@@ -270,6 +270,11 @@ POST STYLING
     li > p {
         width: inherit;
     }
+
+    .reversefootnote {
+        font-family: monospace;
+        font-size: 1.5em; // for hit area
+    }
 }
 
 
