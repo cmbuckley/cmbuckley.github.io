@@ -12,7 +12,7 @@ We moved into our new house around 18 months ago, and there are still plenty of 
 
 As well as tackling jobs around the house, I've taken the same approach to my digital space, and have spent time on my own technical projects that I just couldn't justify previously. Here are a few of the things I've been having fun with:
 
-* [dino](/dino/) - a daft little script to try and play the [chrome://dino](https://www.blog.google/products/chrome/chrome-dino/). It's not very good at the moment!
+* [dino](/dino/) - a daft little script to try and play the [chrome://dino](https://www.blog.google/products/chrome/chrome-dino/) game. It's not very good at the moment!
 * Updated a number of the [GitHub projects](/projects/) to use a standard showcase template, using [jekyll-remote-theme](https://github.com/benbalter/jekyll-remote-theme)
 * Moved all my [videos](/videos/) to [Cloudinary](https://cloudinary.com/) to consistently handle videos without converting them myself. Makes a big improvement to the Flash videos I had a number of years ago!
 * General improvements to mobile style, especially code blocks
