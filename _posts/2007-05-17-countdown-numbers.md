@@ -2,7 +2,7 @@
 title: '*Countdown* Numbers'
 layout: post
 categories:
-  - Video
+  - Academic
 ---
 As a mathematician, obviously I have particularly poor mental arithmetic, but I'm usually okay at the _[Countdown](https://en.wikipedia.org/wiki/Countdown_(game_show))_ numbers. Not quite as good, however, as this guy:
 

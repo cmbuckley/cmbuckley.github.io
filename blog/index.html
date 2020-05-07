@@ -2,7 +2,9 @@
 layout: default
 title: Blog
 paginated: true
-redirect_from: /blog/category/uncategorized/
+redirect_from:
+  - blog/category/uncategorized/
+  - blog/category/video/
 ---
 <h1 class="page__title">{% if paginator.page == 1 %}Recent {% endif %}Posts{% if paginator.page > 1 %} (Page {{ paginator.page }}){% endif %}</h1>
 {% include search.html %}
