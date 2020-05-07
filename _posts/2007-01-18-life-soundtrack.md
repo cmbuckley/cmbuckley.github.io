@@ -16,23 +16,23 @@ So, here's how it works:
 
 **Opening credits:**
 
-[The Streets](http://the-streets.co.uk/) --- Fit But You Know It
+[The Streets](https://www.thestreetsmusic.co.uk/) --- Fit But You Know It
 
 **Waking up:**
 
-[Bryan Adams](http://bryanadams.com/) --- Vanishing
+[Bryan Adams](https://bryanadams.com/) --- Vanishing
 
 **First day at school:**
 
-[Captain](http://captaintheband.com/) --- Build A Life
+[Captain](https://myspace.com/captaintheband) --- Build A Life
 
 **Falling in love:**
 
-[Vonda Shepard](http://vesperalley.com/) --- Will You Marry Me?
+[Vonda Shepard](http://vondashepard.com/) --- Will You Marry Me?
 
 **Fight song:**
 
-[Aerosmith](http://aerosmith.com/) --- Cryin'
+[Aerosmith](https://www.aerosmith.com/) --- Cryin'
 
 **Breaking up:**
 
@@ -40,15 +40,15 @@ So, here's how it works:
 
 **Prom:**
 
-[The Stimulagos](http://thestimulagos.onlinesongs.co.uk/) --- Contradictions
+[The Stimulagos](http://cdtrrracks.com/The%20Stimulagos/) --- Contradictions
 
 **Life:**
 
-[The Beach Boys](http://thebeachboys.com/) --- Then I Kissed Her
+[The Beach Boys](https://thebeachboys.com/) --- Then I Kissed Her
 
 **Making babies:**
 
-[The Mighty Mighty Bosstones](http://sideonedummy.com/bands.php?band_name=The_Mighty_Mighty_Bosstones) --- The Impression That I Get
+[The Mighty Mighty Bosstones](http://www.bosstonesmusic.com/) --- The Impression That I Get
 
 **Mental breakdown:**
 
@@ -80,7 +80,7 @@ So, here's how it works:
 
 **Funeral song:**
 
-[Nelly Furtado](http://nellyfurtado.com/) --- Maneater
+[Nelly Furtado](https://nellyfurtado.com/) --- Maneater
 
 **End credits:**
 

@@ -5,9 +5,9 @@ categories:
   - Computing
   - Play
 ---
-I have re-installed [Windows Live Messenger](http://get.live.com/messenger/overview) today, after attempting to get it working before and being a bit miffed. For one thing, the contact list seemed to have lost any control over showing display pictures as per MSN Messenger 7.5, and plugin control for [Messenger Plus! Live](http://msgpluslive.net) was handled rather differently.
+I have re-installed Windows Live Messenger today, after attempting to get it working before and being a bit miffed. For one thing, the contact list seemed to have lost any control over showing display pictures as per MSN Messenger 7.5, and plugin control for Messenger Plus! Live was handled rather differently.
 
-The second time round went better, but I still had to use [A-Patch](http://apatch.org) to remove the adverts and make a few other tweaks. That done, I started messing around with some scripting and discovered I'd lost the knack for anything but PHP...
+The second time round went better, but I still had to use A-Patch to remove the adverts and make a few other tweaks. That done, I started messing around with some scripting and discovered I'd lost the knack for anything but PHP...
 
 However, my mood improved greatly when I found the button I had been looking for (it had been there all along, this is what happens when we don't explore):
 

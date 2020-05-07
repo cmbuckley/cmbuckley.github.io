@@ -6,7 +6,7 @@ categories:
   - Computing
   - Graphics
 ---
-Whilst browsing the [Facebook Developers' Directory](http://developers.facebook.com/products.php), I happened upon a product called Photomosaic (thankfully not guilty of [CamelCase](https://en.wikipedia.org/wiki/CamelCase)). The product offered to create a mosaic of a profile picture using friends' profile pictures. Being rather frustrated to find that it didn't work, I set out to find a program to do it for me, and found [AndreaMosaic](http://andreaplanet.com/andreamosaic/) (who _are_ guilty of CamelCase).
+Whilst browsing the [Facebook Developers' Directory](http://developers.facebook.com/), I happened upon a product called Photomosaic (thankfully not guilty of [CamelCase](https://en.wikipedia.org/wiki/CamelCase)). The product offered to create a mosaic of a profile picture using friends' profile pictures. Being rather frustrated to find that it didn't work, I set out to find a program to do it for me, and found [AndreaMosaic](http://andreaplanet.com/andreamosaic/) (who _are_ guilty of CamelCase).
 
 This is the result, a mosaic of 3600 images from my [pictures collection](https://pictures.scholesmafia.co.uk/):
 

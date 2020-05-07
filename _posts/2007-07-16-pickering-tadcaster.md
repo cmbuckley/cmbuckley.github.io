@@ -8,7 +8,7 @@ categories:
 ---
 I went on holiday this weekend to Pickering with my parents and [Geoff](https://pictures.scholesmafia.co.uk/index.php/?profile=186) and [Gwen](https://pictures.scholesmafia.co.uk/index.php/?profile=173). Okay, it's not that far away --- one might argue that it's not a holiday if the Coastliner goes past the camp site --- but we had a really great time, despite the rain on Friday!
 
-While we were there, we went to the Dalby Forest to check out [Bridestones](http://www.ukclimbing.com/databases/crags/craginfo.html?id=1085), a small set of bouldering problems about 5 minutes' walk from the forest drive. We didn't even try to get Geoff on [Go Ape](http://www.goape.co.uk/ContentArticle.aspx?Id=99), having failed at getting him to go on the jet boat out of Whitby harbour!
+While we were there, we went to the Dalby Forest to check out [Bridestones](https://www.ukclimbing.com/logbook/crags/bridestones_north_yorkshire-1085), a small set of bouldering problems about 5 minutes' walk from the forest drive. We didn't even try to get Geoff on [Go Ape](https://goape.co.uk/locations/dalby), having failed at getting him to go on the jet boat out of Whitby harbour!
 
 [View pictures of the holiday](https://pictures.scholesmafia.co.uk/index.php/2007/07/13.07.07_14.07.07-pickering,whitby/)
 

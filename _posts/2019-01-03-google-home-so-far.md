@@ -20,7 +20,7 @@ The first problem I experienced was linking to our [Ring](https://ring.com/) doo
 
 I ended up with a convoluted fourth option:
 
-* Set up [Stringify](https://www.stringify.com/) with Ring integration
+* Set up Stringify[^1] with Ring integration
 * Create a flow to make an HTTP POST when the doorbell rings
 * Set up a Raspberry Pi on the home network to receive the POST
 * Use npm package [`google-home-push`](https://www.npmjs.com/package/google-home-push) to announce the doorbell
@@ -32,3 +32,5 @@ Most recently, I ran into the biggest pain trying to integrate with our LG TV. W
 Not wanting to set up another Gmail account, I tried another suggestion, using the Google Assistant app to link to LG. After this, and also switching the Home Mini to be on the same Google account, they could talk! I figured this must be repeatable with my G Suite account, so switched the Mini back, switched the TV registration (third long password entry) and tried again with Google Assistant. Everything looked to work, and I can use the Assistant app to control the TV, but the Home Mini can't control the TV (I just get "I'm afraid something went wrong").
 
 All in all, that's quite a lot of effort for minimal return at this point!
+
+[^1]: Stringify has since been deactivated, but response time on [IFTTT](https://ifttt.com/) has improved enough for me to switch to that.
