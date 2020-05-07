@@ -8,4 +8,4 @@ layout: page
 * [Word Clock](/projects/word-clock/)
 * [Homemade PS4 Headset](/projects/headset/)
 
-{% include showcase.html define=true %}
+{% include showcase.html define=true external=true %}
