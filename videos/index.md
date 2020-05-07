@@ -1,6 +1,7 @@
 ---
 layout: gallery
 title: Videos
+description: Collections of videos for projects or posts.
 ---
 
 Video collections:
