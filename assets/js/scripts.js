@@ -20,4 +20,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
         // now remove the default element
         el.parentNode.removeChild(el);
     });
+
+    // add an interacted class to forms to highlight required fields
+    document.querySelectorAll('[type="submit"]').forEach(function (el) {
+        el.addEventListener('click', function (e) {
+            el.closest('form').classList.add('interacted');
+        });
+    });
 });
