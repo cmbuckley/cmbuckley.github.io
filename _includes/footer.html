@@ -8,46 +8,46 @@
          <ul class="noList">
             {% if site.social.github %}
             <li><a href="https://github.com/{{ site.social.github }}" title="{{ site.social.github }} on GitHub">
-            <i class="fab fa-github"></i><span class="sr-only">GitHub</span>
+            {% include icons/use.html icon="github" %}<span class="sr-only">GitHub</span>
             </a></li>
             {% endif %}
             {% if site.social.linkedin %}
             <li><a href="https://www.linkedin.com/in/{{ site.social.linkedin }}" title="{{ site.social.linkedin }} on LinkedIn">
-            <i class="fab fa-linkedin"></i><span class="sr-only">LinkedIn</span>
+            {% include icons/use.html icon="linkedin-square" %}<span class="sr-only">LinkedIn</span>
             </a></li>
             {% endif %}
             {% if site.social.email %}
             <li><a href="mailto:{{ site.social.email }}" title="Email">
-            <i class="fas fa-envelope"></i><span class="sr-only">Email</span>
+            {% include icons/use.html icon="envelope" %}<span class="sr-only">Email</span>
             </a></li>
             {% endif %}
             {% if site.social.twitter %}
             <li><a href="https://twitter.com/{{ site.social.twitter }}" title="@{{ site.social.twitter }} on Twitter">
-            <i class="fab fa-twitter"></i><span class="sr-only">Twitter</span>
+            {% include icons/use.html icon="twitter" %}<span class="sr-only">Twitter</span>
             </a></li>
             {% endif %}
             {% if site.social.facebook %}
             <li><a href="https://www.facebook.com/{{ site.social.facebook }}" title="{{ site.social.facebook }} on Facebook">
-            <i class="fab fa-facebook"></i><span class="sr-only">Facebook</span>
+            {% include icons/use.html icon="facebook-official" %}<span class="sr-only">Facebook</span>
             </a></li>
             {% endif %}
             {% if site.social.instagram %}
             <li><a href="https://instagr.am/{{ site.social.instagram }}" title="@{{ site.social.instagram }} on Instagram">
-            <i class="fab fa-instagram"></i><span class="sr-only">Instagram</span>
+            {% include icons/use.html icon="instagram" %}<span class="sr-only">Instagram</span>
             </a></li>
             {% endif %}
             {% if site.social.amazon %}
             <li><a href="{{ site.social.amazon }}" title="Amazon Wishlist">
-            <i class="fab fa-amazon"></i><span class="sr-only">Amazon Wishlist</span>
+            {% include icons/use.html icon="amazon" %}<span class="sr-only">Amazon Wishlist</span>
             </a></li>
             {% endif %}
             {% if site.social.google %}
             <li><a href="{{ site.social.google }}" title="Chris on Google+">
-            <i class="fab fa-google-plus-g"></i><span class="sr-only">Google+</span>
+            {% include icons/use.html icon="google-plus-g" %}<span class="sr-only">Google+</span>
             </a></li>
             {% endif %}
             <li><a href="/site-map/" title="Site Map">
-            <i class="fa fa-sitemap"></i><span class="sr-only">Site Map</span>
+            {% include icons/use.html icon="sitemap" %}<span class="sr-only">Site Map</span>
             </a></li>
          </ul>
       </div>
