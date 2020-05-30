@@ -23,6 +23,7 @@ exclude:
   - README.md
   - TODO
   - staticman.yml
+  - vendor
 
 plugins:
   - jekyll-github-metadata
