@@ -4,8 +4,8 @@ layout: page
 
 {%- assign repo = site.github.public_repositories | where:'name',site.github.repository_name | first -%}
 <div class="showcase-actions">
-    <a href="{{ repo.html_url }}/tarball/master" class="button__outline">{% include icons/use.html icon="file-archive-o" %} Download Tarball</a>
-    <a href="{{ repo.html_url }}" class="button__outline">{% include icons/use.html icon="github" %} View on GitHub</a>
+    <a href="{{ site.github.repository_url }}/archive/{{ site.github.latest_release.tag_name | default: repo.default_branch }}.tar.gz" class="button__outline">{% include icons/use.html icon="file-archive-o" %} Download {{ site.github.latest_release.tag_name | default: 'Tarball' }}</a>
+    <a href="{{ site.github.repository_url }}" class="button__outline">{% include icons/use.html icon="github" %} View on GitHub</a>
     {% if page.npm %}
     <a href="https://www.npmjs.com/package/{{ page.npm }}" class="button__outline">{% include icons/use.html icon="npm" %} View on npm</a>
     {% endif %}
