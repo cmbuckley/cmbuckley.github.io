@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="post post--full">
+<article class="post post--full">
   {% if page.image.main %}
     <div class="featuredImage">
         <img src="{{ '/assets/img/' | prepend: site.baseurl | append: page.image.main.src }}" alt="{{ page.image.main.alt }}" />
@@ -39,4 +39,4 @@ layout: default
       </a>
     {% endif %}
   </div>
-</div>
+</article>

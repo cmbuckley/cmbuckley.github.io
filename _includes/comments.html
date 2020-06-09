@@ -1,23 +1,25 @@
+<section class="post__comments" id="comments">
 {% capture date_slug %}{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}{% endcapture %}
 {% if site.data.comments[date_slug] %}{% assign count = site.data.comments[date_slug] | size %}
-<h2>{{ count }} Comment{% if count != 1 %}s{% endif %}</h2>
+  <h2>{{ count }} Comment{% if count != 1 %}s{% endif %}</h2>
 
-<ol class="comments">
-{%- comment -%}Data structure is [[id, {data}], ...] so cannot sort without creating new array{%- endcomment -%}
-{%- assign post_comments = '' | split: ',' -%}
-{%- for comment_data in site.data.comments[date_slug] -%}
-{%- assign post_comments = post_comments | push: comment_data[1] -%}
-{%- endfor -%}
-{%- assign comments_by_date = post_comments | sort: 'date' -%}
-{% for comment in comments_by_date %}
-<li id="comment-{{ comment._id }}">
-<img class="avatar" src="https://www.gravatar.com/avatar/{{ comment.email | default: 0 }}?d=mm" alt="Avatar for {{ comment.name | escape }}" />
-<cite>{{ comment.name }}</cite>
-<p class="date">{{ comment.date | date: '%e %B %Y %H:%M' | strip }}</p>
-<p class="comment">{{ comment.comment | markdownify | remove: '<p>' | remove: '</p>' | trim }}</p>
-</li>
-{% endfor %}
-</ol>
-{% endif %}
+  <ol class="comments">
+    {%- comment -%}Data structure is [[id, {data}], ...] so cannot sort without creating new array{%- endcomment -%}
+    {%- assign post_comments = '' | split: ',' -%}
+    {%- for comment_data in site.data.comments[date_slug] -%}
+    {%- assign post_comments = post_comments | push: comment_data[1] -%}
+    {%- endfor -%}
+    {%- assign comments_by_date = post_comments | sort: 'date' -%}
+    {% for comment in comments_by_date %}
+    <li id="comment-{{ comment._id }}" role="article">
+      <img class="avatar" src="https://www.gravatar.com/avatar/{{ comment.email | default: 0 }}?d=mm" alt="Avatar for {{ comment.name | escape }}" />
+      <cite>{{ comment.name }}</cite>
+      <p class="date">{{ comment.date | date: '%e %B %Y %H:%M' | strip }}</p>
+      <p class="comment">{{ comment.comment | markdownify | remove: '<p>' | remove: '</p>' | trim }}</p>
+    </li>
+    {% endfor %}
+  </ol>
+  {% endif %}
 
-{% include new_comment.html %}
+  {% include new_comment.html %}
+</section>
