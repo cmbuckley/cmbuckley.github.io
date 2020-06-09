@@ -1,5 +1,59 @@
-document.addEventListener('DOMContentLoaded', function(event) {
-    var nav = responsiveNav('.nav-collapse');
+document.addEventListener('DOMContentLoaded', function () {
+    document.documentElement.classList.add('js');
+
+    let style = document.createElement('style'),
+        nav = document.querySelector('.nav-collapse'),
+        navButton = document.createElement('button');
+
+    // add max-height style for menu transition
+    function updateMenu() {
+        let list = nav.querySelector('ul'),
+            cssText = '.nav-toggle[aria-expanded="true"]+.nav-collapse{max-height:' + list.offsetHeight + 'px}';
+
+        if (style.styleSheet) {
+            style.styleSheet.cssText = cssText;
+        } else {
+            style.innerHTML = cssText;
+        }
+
+        if (!style.parentNode) {
+            document.querySelector('head').appendChild(style);
+        }
+
+        // the list should be marked as hidden if the menu button is visible and not expanded
+        list.hidden = (navButton.offsetParent ? !nav.classList.contains('open') : false);
+    }
+
+    // add nav toggle button before the nav
+    navButton.setAttribute('id', 'nav-toggle');
+    navButton.setAttribute('aria-expanded', 'false');
+    navButton.classList.add('nav-toggle');
+    navButton.innerText = nav.getAttribute('aria-label');
+    nav.removeAttribute('aria-label');
+    nav.setAttribute('aria-labelledby', 'nav-toggle');
+    nav.parentNode.insertBefore(navButton, nav);
+
+    // toggle menu on button click
+    navButton.addEventListener('click', function (e) {
+        let open = !(this.getAttribute('aria-expanded') === 'true'),
+            list = this.nextElementSibling;
+
+        this.setAttribute('aria-expanded', open);
+
+        if (open) {
+            list.classList.add('open');
+            list.querySelector('ul').hidden = false;
+        } else {
+            setTimeout(() => {
+                list.classList.remove('open');
+                list.querySelector('ul').hidden = true;
+            }, 270);
+        }
+    });
+
+    // update the menu height if screen changes
+    window.addEventListener('resize', updateMenu);
+    updateMenu();
 
     // loop through all elements and replace with breakpoint elements
     document.querySelectorAll('.break-text').forEach(function (el) {

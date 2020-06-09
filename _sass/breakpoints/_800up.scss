@@ -50,9 +50,12 @@ HEADER STYLING
 
 .header {
     background-image: url('../img/tiki.jpg');
-    height: 15em;
     position: relative;
     padding-bottom: 2em;
+
+    &, .js & {
+        height: 15em;
+    }
 
     .container {
         position: relative;
@@ -104,25 +107,18 @@ HEADER STYLING
 MENU STYLING
 ***************/
 
-.js {
-    .nav-collapse {
-        position: relative;
-        max-height: none;
+.nav-collapse, .js .nav-collapse {
+    position: relative;
+    max-height: none;
 
-        &.closed {
-            max-height: none;
-        }
-
-        ul li a {
-            display: inline-block;
-        }
+    ul li a {
+        display: inline-block;
     }
 }
 
 .nav-toggle {
     display: none;
 }
-
 
 /***************
 POST STYLING

@@ -58,14 +58,38 @@ figure {
 MENU STYLING
 ***************/
 
+.nav-toggle {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    user-select: none;
+    line-height: 2em;
+    font-size: inherit;
+    margin-top: .5em;
+    border-width: 0;
+    border-radius: 4px;
+    padding: 0 .5em;
+    text-decoration: none;
+    position: absolute;
+    right: 2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+@media print {
+    .nav-toggle {
+        display: none;
+    }
+}
+
 .nav-collapse {
-    z-index: 1;
+    position: relative;
+    clear: both;
+    display: block;
+    width: 100%;
 
     ul {
         margin: 0;
         padding: 0;
         width: 100%;
-        display: block;
         list-style: none;
 
         li {
@@ -85,41 +109,20 @@ MENU STYLING
     clip: rect(0 0 0 0);
     max-height: 0;
     position: absolute;
-    display: block;
     overflow: hidden;
     zoom: 1;
-    clear: both;
-    width: 100%;
+    transition: max-height 260ms ease 0s;
+    z-index: 1;
 }
 
-.nav-collapse.opened {
+.nav-toggle[aria-expanded="true"] + .nav-collapse {
     max-height: 9999px;
 }
 
-.nav-toggle {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-    float: right;
-    line-height: 2em;
-    margin-top: .5em;
-    border-radius: 4px;
-    padding: 0 .5em;
-    text-decoration: none;
+.nav-collapse.open {
     position: relative;
-    right: 2rem;
-    transition: all 0.2s ease-in-out;
 }
 
-@media print {
-    .nav-toggle {
-        display: none;
-    }
-}
 
 /***************
 LIST STYLING
@@ -170,7 +173,6 @@ HEADER STYLING
     background-size: cover;
     background-position: center 40%;
     padding: 0;
-    height: 3em;
 
     .container {
         padding: 0;
@@ -186,6 +188,9 @@ HEADER STYLING
     }
 }
 
+.js .header {
+    height: 3em;
+}
 
 /***************
 POST STYLING
