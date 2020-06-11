@@ -9,9 +9,11 @@ categories:
 
 When using Bitbucket, you can end up with quite unwieldy Git URLs:
 
+<!--email_off-->
 ```bash
 git clone ssh://git@bitbucket.example.com:7999/project/repo.git
 ```
+<!--/email_off-->
 
 To save copying the URL from the UI any time you clone a new repository, add the following to your `~/.ssh/config`:
 
