@@ -15,7 +15,7 @@ git clone ssh://git@bitbucket.example.com:7999/project/repo.git
 
 To save copying the URL from the UI any time you clone a new repository, add the following to your `~/.ssh/config`:
 
-```ssh
+```bash
 Host bb
     User git
     Hostname bitbucket.example.com
@@ -32,7 +32,7 @@ git clone bb:project/repo
 
 The same is true for GitHub URLs:
 
-```ssh
+```bash
 Host gh
     User git
     Hostname github.com
