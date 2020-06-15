@@ -81,4 +81,25 @@ document.addEventListener('DOMContentLoaded', function () {
             el.closest('form').classList.add('interacted');
         });
     });
+
+    // media metadata
+    if ('mediaSession' in navigator) {
+        function updateMediaSession(e) {
+            let size = 192;
+
+            navigator.mediaSession.metadata = new MediaMetadata({
+                title:   e.target.parentNode.querySelector('figcaption').innerText,
+                artwork: [{
+                    src:   e.target.getAttribute('poster').replace('so_0', ['c_thumb,h_', ',so_0,w_', ''].join(size)),
+                    sizes: [size, size].join('x'),
+                    type:  'image/jpg',
+                }],
+            });
+        }
+
+        document.querySelectorAll('video').forEach(function (video) {
+            video.addEventListener('play', updateMediaSession);
+            video.addEventListener('pause', updateMediaSession);
+        });
+    }
 });
