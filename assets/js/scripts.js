@@ -8,12 +8,15 @@ document.addEventListener('DOMContentLoaded', function () {
     // add max-height style for menu transition
     function updateMenu() {
         let list = nav.querySelector('ul'),
-            cssText = '.nav-toggle[aria-expanded="true"]+.nav-collapse{max-height:' + list.offsetHeight + 'px}';
+            height = list.offsetHeight,
+            cssText = '.nav-toggle[aria-expanded="true"]+.nav-collapse{max-height:' + height + 'px}';
 
-        if (style.styleSheet) {
-            style.styleSheet.cssText = cssText;
-        } else {
-            style.innerHTML = cssText;
+        if (height) {
+            if (style.styleSheet) {
+                style.styleSheet.cssText = cssText;
+            } else {
+                style.innerHTML = cssText;
+            }
         }
 
         if (!style.parentNode) {
