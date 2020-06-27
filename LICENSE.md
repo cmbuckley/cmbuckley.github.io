@@ -1,4 +1,4 @@
-The text content of this project is licensed under the [Creative Commons Attribution 3.0 Unported licence](https://creativecommons.org/licenses/by/3.0/), and the underlying source code used to format and display that content is licensed under the MIT licence.
+The text content of this project is licensed under the [Creative Commons Attribution 4.0 Unported licence](https://creativecommons.org/licenses/by/4.0/), and the underlying source code used to format and display that content is licensed under the MIT licence.
 
 The [original Jekyll theme](https://github.com/brianmaierjr/long-haul) is also licenced under the MIT licence by [Brian Maier Jr](https://brianmaierjr.com/).
 
