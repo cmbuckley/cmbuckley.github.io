@@ -10,14 +10,14 @@ layout: page
     <dt>Name:</dt>
     <dd class="fn n"><span class="given-name">Christopher</span> <span class="additional-name">Mark</span> <span class="family-name">Buckley</span></dd>
 
-    <dt>Mobile phone:</dt>
-    <dd class="tel">+44 7763 868 005</dd>
-
     <dt>Home page:</dt>
     <dd class="url">{{ site.url }}</dd>
 
     <dt>E-mail address / Google Talk:</dt>
-    <dd class="email">chris@cmbuckley.co.uk</dd>
+    <dd class="email">{{ site.social.email }}</dd>
+
+    <dt>PGP key:</dt>
+    <dd><a class="key" href="https://keybase.io/{{ site.social.keybase }}/pgp_keys.asc">{{ site.social.pgp | replace: ' ', '&nbsp;' }}</a></dd>
     </dl>
   </div>
   <form action="https://formcarry.com/s/HJ9BPYcTf" method="POST">
