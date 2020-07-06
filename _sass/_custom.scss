@@ -56,3 +56,7 @@ mark {
     background-color: #bddecc;
     color: inherit;
 }
+
+.key-focussed {
+    outline: 3px solid $primary-color;
+}

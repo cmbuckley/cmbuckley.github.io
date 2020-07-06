@@ -105,4 +105,46 @@ document.addEventListener('DOMContentLoaded', function () {
             video.addEventListener('pause', updateMediaSession);
         });
     }
+
+    // search keyboard navigation
+    if (search = document.querySelector('input[type="search"]')) {
+        document.addEventListener('keyup', function (e) {
+            if (!e.ctrlKey && !e.altKey && !e.metaKey) {
+                // focus search box with "/"
+                if (e.key == '/') {
+                    search.focus();
+                    if (search.select) {
+                        search.select();
+                    } else {
+                        search.setSelectionRange(0, search.value.length);
+                    }
+                }
+
+                // scrolling with J/K keys
+                if (e.key == 'j' || e.key == 'k') {
+                    let inFocus = document.querySelector('.search-results .key-focussed'),
+                        spec = {sibling: {j: 'next', k: 'previous'}, child: {j: 'first', k: 'last'}},
+                        toFocus;
+
+                    if (inFocus) {
+                        inFocus.classList.remove('key-focussed');
+                        toFocus = inFocus[spec.sibling[e.key] + 'ElementSibling'];
+                    } else {
+                        toFocus = document.querySelector('.search-results')[spec.child[e.key] + 'ElementChild'];
+                    }
+
+                    if (toFocus) {
+                        toFocus.classList.add('key-focussed');
+                        toFocus.scrollIntoView({behavior: 'smooth', block: 'center'});
+                    }
+                }
+            }
+        });
+
+        search.addEventListener('keyup', function (e) {
+            if ((e.key == 'Esc' || e.key == 'Escape') && !e.ctrlKey && !e.altKey && !e.metaKey && !e.shiftKey) {
+                e.target.blur();
+            }
+        });
+    }
 });
