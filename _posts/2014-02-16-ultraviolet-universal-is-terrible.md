@@ -3,6 +3,7 @@ title: UltraViolet Universal is Terrible
 layout: post
 categories:
   - Film
+shortlink: buuit
 ---
 My _[Oblivion](https://www.imdb.com/title/tt1483013/)_ DVD came with a digital download copy from UltraViolet. I headed over to the UltraViolet Web site to download it. My experience went something like this:
 

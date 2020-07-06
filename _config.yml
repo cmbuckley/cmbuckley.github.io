@@ -4,6 +4,7 @@ host: 0.0.0.0
 
 url: https://cmbuckley.co.uk
 baseurl: ""
+shorturl: https://bux.re
 paginate_path: "blog/page/:num/"
 permalink: blog/:year/:month/:day/:title/
 repository: cmbuckley/cmbuckley.github.io
