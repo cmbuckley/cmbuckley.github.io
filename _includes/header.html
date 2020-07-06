@@ -1,17 +1,17 @@
 <header class="header">
     <div class="container">
-        {% if page.url == '/' and site.baseurl == '' %}{% assign tag='h1' %}{% else %}{% assign tag='div' %}{% endif %}
+        {% if page.url == '/' and site.baseurl == '' %}{% assign tag='h1' %}{% else %}{% assign tag='div' %}{% endif -%}
         <{{ tag }} class="logo">
             <a href="/">{{ site.title | markdownify | remove:'<p>' | remove:'</p>' | strip }}</a>
         </{{ tag }}>
         <nav class="nav-collapse" aria-label="Menu">
             <ul class="noList">
-                 {% assign page_url = page.url | prepend: site.baseurl %}
-                 {% for link in site.navigation %}{% assign current = nil %}{% if page_url contains link.url and link.url != '/' or page_url == '/' %}{% assign current = 'current' %}{% endif %}
-                 <li class="element {% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
-                     <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
-                 </li>
-                 {% endfor %}
+                {%- assign page_url = page.url | prepend: site.baseurl %}
+                {%- for link in site.navigation %}{% assign current = nil %}{% if page_url contains link.url and link.url != '/' or page_url == '/' %}{% assign current = ' current' %}{% endif %}
+                <li class="element{% if forloop.first %} first{% endif %}{{ current }}{% if forloop.last %} last{% endif %}">
+                    <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
+                </li>
+                {%- endfor %}
             </ul>
         </nav>
     </div>

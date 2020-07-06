@@ -2,16 +2,16 @@
 <html lang="{{ site.locale }}">
 {% include head.html %}
 <body{% if page.class %} class="{{ page.class }}"{% endif %}>
-   {% include icons/embed.html %}
-   {% include header.html %}
+{% include icons/embed.html %}
+{% include header.html %}
 
-   <div class="content">
-      <div class="container">
-         {{ content }}
-      </div>
-   </div><!-- end .content -->
+    <div class="content">
+        <div class="container">
+          {{ content }}
+        </div>
+    </div><!-- end .content -->
 
-   {% include footer.html %}
-   {% include scripts.html %}
+{% include footer.html %}
+{% include scripts.html %}
 </body>
 </html>
