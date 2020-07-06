@@ -12,7 +12,7 @@ I was originally planning not to go, but when [Reg](https://pictures.scholesmafi
 
 Both were amazing, except TLE unfortunately didn't play their cover of "Tainted Love" --- ah well!
 
-And then for [Less Than Jake](http://lessthanjake.com/)...
+And then for [Less Than Jake](http://www.lessthanjake.com/)...
 
 When they played at [Leeds Festival]({% post_url 2006-08-29-my-personal-festival %}), they played a lot of stuff from their then-forthcoming album _[In With The Out Crowd](https://en.wikipedia.org/wiki/In_with_the_Out_Crowd)_, which I didn't own. This time, however, they played mostly songs of a _[Losing Streak](https://en.wikipedia.org/wiki/Losing_Streak)_ / _[Hello Rockview](https://en.wikipedia.org/wiki/Hello_Rockview)_ era, which was brilliant!
 

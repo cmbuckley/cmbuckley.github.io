@@ -36,7 +36,7 @@ So, here's how it works:
 
 **Breaking up:**
 
-[Scissor Sisters](http://scissorsisters.com/) --- Better Luck
+[Scissor Sisters](https://www.facebook.com/scissorsisters) --- Better Luck
 
 **Prom:**
 
@@ -64,7 +64,7 @@ So, here's how it works:
 
 **Getting back together:**
 
-[DJ Luck & MC Neat](http://djluckandmcneat.com/) --- A Little Bit Of Luck
+[DJ Luck & MC Neat](https://www.djluckandmcneat.com/) --- A Little Bit Of Luck
 
 **Birth of a child:**
 
@@ -72,7 +72,7 @@ So, here's how it works:
 
 **Final battle:**
 
-[Bear McCreary](http://bearmccreary.com/) --- Baltar's Dream
+[Bear McCreary](https://www.bearmccreary.com/) --- Baltar's Dream
 
 **Death scene:**
 

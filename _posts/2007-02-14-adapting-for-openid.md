@@ -4,7 +4,7 @@ layout: post
 categories:
   - Computing
 ---
-Adapting for [OpenID](http://openid.net) is no fun. Especially when:
+Adapting for [OpenID](https://openid.net) is no fun. Especially when:
 
   1. bBlog is particularly difficult to extend in this area, even though being Smarty-based it's supposed to be highly customisable;
   2. there is so little comprehensive documentation for being an OpenID consumer.

@@ -37,4 +37,4 @@ Seems I'm not the only one who found this information useful:
 >
 > THANK YOU 🙂
 >
-> --- <cite><a href="http://msghelp.net/showthread.php?tid=65054&pid=715292#pid715292">arammid</a></cite>
+> --- <cite><a href="https://shoutbox.menthix.net/showthread.php?tid=65054&pid=715292#pid715292">arammid</a></cite>

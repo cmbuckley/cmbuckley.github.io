@@ -16,6 +16,6 @@ Some of my favourites:
 [![<lolcat align=right>](/files/2007/06/4-100x100.jpg)](/files/2007/06/4.jpg)
 [![In ur quantum box... maybe](/files/2007/06/5-100x100.jpg "In ur quantum box... maybe")](/files/2007/06/5.jpg)
 
-For more pictures, check [http://icanhas.cheezburger.com/](http://icanhas.cheezburger.com/) or [http://www.lolcats.com](http://www.lolcats.com), or perhaps you might want to check out [http://lolcode.org](http://lolcode.org), a programming language based on those exact macros. It's arguably as good as some of the [esoteric programming languages](https://en.wikipedia.org/wiki/Esoteric_programming_language)!
+For more pictures, check [httips://icanhas.cheezburger.com/](http://icanhas.cheezburger.com/) or [http://www.lolcats.com](http://www.lolcats.com), or perhaps you might want to check out [http://lolcode.org](http://lolcode.org), a programming language based on those exact macros. It's arguably as good as some of the [esoteric programming languages](https://en.wikipedia.org/wiki/Esoteric_programming_language)!
 
 So good, even [xkcd](https://xkcd.com) has [picked up on it](https://xkcd.com/262/).

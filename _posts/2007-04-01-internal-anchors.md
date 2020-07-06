@@ -26,4 +26,4 @@ if (!isNaN(parseInt(window.location.hash.substring(1, 2)))) {
 }
 ```
 
-This matches any case, thanks to [TheScripts](http://thescripts.com/forum/thread152866.html): since the anchor is `CDATA` (either through `name` or `id`), it must begin with a letter, so only incorrect anchors are checked.
+This matches any case, thanks to [TheScripts](https://bytes.com/topic/javascript/answers/152866-decoding-numeric-html-entities): since the anchor is `CDATA` (either through `name` or `id`), it must begin with a letter, so only incorrect anchors are checked.

@@ -5,7 +5,7 @@ categories:
   - Computing
   - Graphics
 ---
-Today I [stumbled](http://stumbleupon.com) upon this vectorising tool, called [textorizer](http://textorizer.whatfettle.com/), that converts images into <acronym title="Scalable Vector Graphics">SVG</acronym> format. You can specify your own text and size, as well as playing around with the edge-finding sensitivity.
+Today I stumbled upon this vectorising tool, called {% include archive.html text="textorizer" url="http://textorizer.whatfettle.com/" %}, that converts images into <acronym title="Scalable Vector Graphics">SVG</acronym> format. You can specify your own text and size, as well as playing around with the edge-finding sensitivity.
 
 Here's the result on the logo used on my <acronym title="Really Simple Syndication">RSS</acronym> feeds:
 
