@@ -7,50 +7,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ page_description | default: site_description }}">
-    <title>{% if page.paginated and paginator.page > 1 %}Page {{ paginator.page }} • {% endif %}{{ page_title }}{% if page.title %} • {% endif %}{{ site_title }}</title>
+    <title>{% if page.paginated and paginator.page > 1 %}Page {{ paginator.page }} • {% endif %}{{ page_title }}{% unless page.supress_site_title %}{% if page.title %} • {% endif %}{{ site_title }}{% endunless %}</title>
 
-    <!-- Open Graph Meta -->
     <meta content="{{ site_title }}" property="og:site_name">
     <meta content="{% if page.paginated and paginator.page > 1 %}Page {{ paginator.page }} • {% endif %}{{ page_title | default: site_title }}" property="og:title">
     <meta content="{{ site.locale | replace: '-','_' }}" property="og:locale">
-    {% if page.title or page.og_type %}
+    {% if page.title or page.og_type -%}
       <meta content="{{ page.og_type | default: 'article' }}" property="og:type">
-    {% else %}
+    {% else -%}
       <meta content="website" property="og:type">
-    {% endif %}
+    {% endif -%}
     <meta content="{{ page_description | default: site_description }}" property="og:description">
-    {% if page.url %}
+    {% if page.url -%}
       <meta content="{{ page.url | replace:'index.html','' | absolute_url }}" property="og:url">
-    {% endif %}
-    {% if page.date %}
+    {% endif -%}
+    {% if page.date -%}
       <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
-    {% endif %}
+    {% endif -%}
     <meta content="{{ site.url }}{% unless page.image.meta.main_repo %}{{ site.baseurl }}{% endunless %}{{ page.image.meta.src | default: '/assets/img/tiki-square.jpg' }}" property="og:image">
     <meta content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' | smartify }}" property="og:image:alt">
 
-    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary{% if page.image.meta.large %}_large_image{% endif %}">
     <meta name="twitter:site" content="@{{ site.social.twitter }}">
     <meta name="twitter:creator" content="@{{ site.social.twitter }}">
-    {% if page.title %}
+    {% if page.title -%}
       <meta name="twitter:title" content="{% if page.paginated and paginator.page > 1 %}Page {{ paginator.page }} • {% endif %}{{ page_title }}">
-    {% else %}
+    {% else -%}
       <meta name="twitter:title" content="{{ site_title }}">
-    {% endif %}
-    {% if page.url %}
+    {% endif -%}
+    {% if page.url -%}
       <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
-    {% endif %}
+    {% endif -%}
     <meta name="twitter:description" content="{{ page_description | default: site_description }}">
     <meta name="twitter:image:src" content="{{ site.url }}{% unless page.image.meta.main_repo %}{{ site.baseurl }}{% endunless %}{{ page.image.meta.src | default: '/assets/img/tiki-square.jpg' }}">
     <meta name="twitter:image:alt" content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' }}">
-    {% if page.layout == 'post' %}
+    {% if page.layout == 'post' -%}
       <meta name="twitter:label1" content="Reading Time" />
       <meta name="twitter:data1" content="{{ page.content | number_of_words | divided_by: 120.0 | ceil }} min" />
-    {% if page.categories.size > 0 %}
+    {% if page.categories.size > 0 -%}
       <meta name="twitter:label2" content="Categories" />
       <meta name="twitter:data2" content="{{ page.categories | join: ', ' }}" />
-    {% endif %}
-    {% endif %}
+    {% endif -%}
+    {% endif -%}
 
     <link rel="shortcut icon" href="{{ site.url }}/favicon.ico?m">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}/assets/img/icons/favicon-16.png?m">
@@ -65,8 +63,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,800;1,300;1,400;1,800&&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,800;1,300;1,400;1,800&&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" /></noscript>
-    <link rel="alternate" type="application/rss+xml" title="{{ site_title }} Blog Feed" href="{{ site.url }}/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Blog Feed" href="{{ site.url }}/feed/" />
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+    <link rel="pgpkey" type="application/pgp-keys" href="https://keybase.io/{{ site.social.keybase }}/pgp_keys.asc">
     {% if page.shortlink -%}
       <link rel="shortlink" href="{{ site.shorturl }}{{ page.shortlink | prepend: '/' | replace: '//', '/' }}">
     {%- endif %}

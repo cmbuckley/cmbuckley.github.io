@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Chris Buckley's Personal Site
+supress_site_title: true
 shortlink: /
 ---
 
