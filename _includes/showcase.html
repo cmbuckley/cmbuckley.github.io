@@ -11,19 +11,37 @@
 {%- endif -%}
 
 <{{ list }}>
-  {%- for gh_page in gh_pages -%}{%- unless gh_page.name == site.github.repository_name -%}
-  {%- assign default_href = gh_page.name | prepend: '/' | append: '/' -%}
-  {%- if include.external or gh_page.homepage == '' or gh_page.homepage == nil or gh_page.homepage contains site.url -%}
+  {% for gh_page in gh_pages -%}{%- unless gh_page.name == site.github.repository_name -%}
+  {%- if gh_page.homepage == '' or gh_page.homepage == nil or gh_page.homepage contains site.url -%}
 
   <{{ item }}>
-    <a href="{{ gh_page.homepage | default: default_href }}">{{ gh_page.name | markdownify | remove: '<p>' | remove: '</p>' | strip }}</a>
+    <a href="{{ gh_page.name | prepend: '/' | append: '/' }}">{{ gh_page.name | markdownify | remove: '<p>' | remove: '</p>' | strip }}</a>
   </{{ item }}>
 
-  {%- if include.define -%}
+  {%- if include.define %}
   <dd>{{ gh_page.description | markdownify | remove: '<p>' | remove: '</p>' | strip }}</dd>
-  {%- endif -%}
+  {% endif -%}
 
   {%- endif -%}
-  {%- endunless -%}{%- endfor -%}
+  {%- endunless -%}{%- endfor %}
+</{{ list }}>
+{% endif -%}
+
+{%- if include.external %}
+<h2>Portfolio</h2>
+<{{ list }}>
+  {% for gh_page in gh_pages -%}{%- unless gh_page.name == site.github.repository_name -%}
+  {%- unless gh_page.homepage == '' or gh_page.homepage == nil or gh_page.homepage contains site.url -%}
+
+  <{{ item }}>
+    <a href="{{ gh_page.homepage }}">{{ gh_page.name | markdownify | remove: '<p>' | remove: '</p>' | strip }}</a>
+  </{{ item }}>
+
+  {%- if include.define %}
+  <dd>{{ gh_page.description | markdownify | remove: '<p>' | remove: '</p>' | strip }}</dd>
+  {% endif -%}
+
+  {%- endunless -%}
+  {%- endunless -%}{%- endfor %}
 </{{ list }}>
 {% endif %}
