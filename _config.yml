@@ -19,7 +19,6 @@ paginate: 10
 exclude:
   - CNAME
   - Gemfile
-  - Gemfile.lock
   - LICENSE
   - README.md
   - TODO

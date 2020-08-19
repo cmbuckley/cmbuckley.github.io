@@ -4,3 +4,4 @@ _site
 .ruby-version
 .bundle
 vendor
+Gemfile.lock
