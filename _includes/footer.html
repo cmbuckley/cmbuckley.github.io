@@ -16,6 +16,11 @@
                   {% include icons/use.html icon="linkedin-square" %}<span class="sr-only">LinkedIn</span>
                 </a></li>
                 {%- endif %}
+                {%- if site.social.hackerone %}
+                <li><a href="https://hackerone.com/{{ site.social.hackerone }}" title="{{ site.social.hackerone }} on HackerOne">
+                  {% include icons/use.html icon="hackerone" %}<span class="sr-only">HackerOne</span>
+                </a></li>
+                {%- endif %}
                 {%- if site.social.email %}
                 <li><a href="mailto:{{ site.social.email }}" title="Email">
                   {% include icons/use.html icon="envelope" %}<span class="sr-only">Email</span>
