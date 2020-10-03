@@ -273,6 +273,10 @@ POST STYLING
 .footnotes {
     font-size: 0.9rem;
 
+    ol {
+        padding-left: 1rem;
+    }
+
     li > p {
         width: inherit;
     }
