@@ -1,3 +1,8 @@
+?v=
+
 {%- assign time = site.time | date: '%s' -%}
-?v={{ site.data.fingerprints[include.id] | default: time }}
-{%- comment -%}Avoid trailing whitespace{%- endcomment -%}
+{%- if jekyll.environment == 'production' -%}
+  {{ site.data.fingerprints[include.id] | default: time }}
+{%- else -%}
+  {{ time }}
+{%- endif -%}
