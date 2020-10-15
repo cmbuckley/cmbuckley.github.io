@@ -1,8 +1,18 @@
 ?v=
 
-{%- assign time = site.time | date: '%s' -%}
+{%- assign fingerprints = 'icons: 95ce7b5b,scripts: 6a23ff59,search: cb7c8817,style: 42c930e4' | split: ',' -%}
+{%- assign found = false -%}
+
 {%- if jekyll.environment == 'production' -%}
-  {{ site.data.fingerprints[include.id] | default: time }}
-{%- else -%}
-  {{ time }}
+  {%- for fingerprint in fingerprints -%}
+    {%- assign info = fingerprint | split: ': ' -%}
+    {%- if info[0] == include.id -%}
+      {%- assign found = true -%}
+      {{ info[1] }}
+    {%- endif -%}
+  {%- endfor -%}
 {%- endif -%}
+
+{%- unless found -%}
+  {{ site.time | date: '%s' }}
+{%- endunless -%}
