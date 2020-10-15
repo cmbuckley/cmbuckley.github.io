@@ -7,7 +7,7 @@
         <nav class="nav-collapse" aria-label="Menu">
             <ul class="noList">
                 {%- assign page_url = page.url | prepend: site.baseurl %}
-                {%- for link in site.navigation %}{% assign current = nil %}{% if page_url contains link.url and link.url != '/' or page_url == '/' %}{% assign current = ' current' %}{% endif %}
+                {%- for link in site.data.global.navigation %}{% assign current = nil %}{% if page_url contains link.url and link.url != '/' or page_url == '/' %}{% assign current = ' current' %}{% endif %}
                 <li class="element{% if forloop.first %} first{% endif %}{{ current }}{% if forloop.last %} last{% endif %}">
                     <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
                 </li>
