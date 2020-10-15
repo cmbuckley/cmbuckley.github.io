@@ -6,12 +6,45 @@
         </{{ tag }}>
         <nav class="nav-collapse" aria-label="Menu">
             <ul class="noList">
-                {%- assign page_url = page.url | prepend: site.baseurl %}
-                {%- for link in site.data.global.navigation %}{% assign current = nil %}{% if page_url contains link.url and link.url != '/' or page_url == '/' %}{% assign current = ' current' %}{% endif %}
+              {%- if site.data.global.navigation -%}
+                {%- assign navigation = site.data.global.navigation -%}
+              {%- else -%}
+                {%- assign navigation = '' | split: ',' -%}
+
+                {%- capture nav_data -%}
+                {%- include navigation.yml -%}
+                {%- endcapture -%}
+
+                {%- assign nav_array = nav_data | split: ' - ' %}
+                {%- for nav_item in nav_array -%}
+                  {%- if nav_item != '' -%}
+                    {%- assign nav_cleaned = nav_item | strip | replace: 'title: ', '' | replace: '   url: ', '' -%}
+                    {%- assign navigation = navigation | push: nav_cleaned -%}
+                  {%- endif -%}
+                {%- endfor -%}
+              {%- endif -%}
+
+              {%- assign page_url = page.url | prepend: site.baseurl -%}
+              {%- for link in navigation -%}
+                {%- assign current = nil -%}
+                {%- if link.url -%}
+                  {%- assign title = link.title -%}
+                  {%- assign url = link.url -%}
+                {%- else -%}
+                  {%- capture newline %}
+{% endcapture -%}
+                  {%- assign link_array = link | split: newline -%}
+                  {%- assign title = link_array[0] -%}
+                  {%- assign url = link_array[1] -%}
+                {%- endif -%}
+
+                {%- if page_url contains url and url != '/' or page_url == '/' -%}
+                  {%- assign current = ' current' -%}
+                {%- endif %}
                 <li class="element{% if forloop.first %} first{% endif %}{{ current }}{% if forloop.last %} last{% endif %}">
-                    <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
+                    <a href="{{ site.url }}{{ url }}">{{ title }}</a>
                 </li>
-                {%- endfor %}
+              {%- endfor %}
             </ul>
         </nav>
     </div>
