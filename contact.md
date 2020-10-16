@@ -14,10 +14,13 @@ layout: page
     <dd class="url">{{ site.url }}</dd>
 
     <dt>E-mail address / Google Talk:</dt>
-    <dd class="email">{{ site.social.email }}</dd>
+    <dd class="email">{% include social.html id='email' %}</dd>
 
     <dt>PGP key:</dt>
-    <dd><a class="key" href="https://keybase.io/{{ site.social.keybase }}/pgp_keys.asc">{{ site.social.pgp | replace: ' ', '&nbsp;' }}</a></dd>
+    {%- capture pgp -%}
+    {%- include social.html id='pgp' -%}
+    {%- endcapture -%}
+    <dd><a class="key" href="https://keybase.io/{% include social.html id='keybase' %}/pgp_keys.asc">{{ pgp | replace: ' ', '&nbsp;' }}</a></dd>
     </dl>
   </div>
   <form action="https://formcarry.com/s/HJ9BPYcTf" method="POST">

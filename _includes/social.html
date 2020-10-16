@@ -1,0 +1,12 @@
+{%- if site.data.global.social -%}
+  {{ site.data.global.social[include.id] }}
+{%- else -%}
+  {%- capture social -%}
+  {%- include social.yml -%}
+  {%- endcapture -%}
+  {%- capture newline %}
+{% endcapture -%}
+
+  {%- assign item = social | split: newline | where_exp: 'i', 'i contains include.id' | first -%}
+  {{ item | split: ': ' | last | strip }}
+{%- endif -%}

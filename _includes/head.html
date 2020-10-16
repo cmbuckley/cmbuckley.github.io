@@ -28,8 +28,8 @@
     <meta content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' | smartify }}" property="og:image:alt">
 
     <meta name="twitter:card" content="summary{% if page.image.meta.large %}_large_image{% endif %}">
-    <meta name="twitter:site" content="@{{ site.social.twitter }}">
-    <meta name="twitter:creator" content="@{{ site.social.twitter }}">
+    <meta name="twitter:site" content="@{% include social.html id='twitter' %}">
+    <meta name="twitter:creator" content="@{% include social.html id='twitter' %}">
     {% if page.title -%}
       <meta name="twitter:title" content="{% if page.paginated and paginator.page > 1 %}Page {{ paginator.page }} • {% endif %}{{ page_title }}">
     {% else -%}
@@ -65,7 +65,7 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,800;1,300;1,400;1,800&&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" /></noscript>
     <link rel="alternate" type="application/rss+xml" title="Blog Feed" href="{{ site.url }}/feed/" />
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-    <link rel="pgpkey" type="application/pgp-keys" href="https://keybase.io/{{ site.social.keybase }}/pgp_keys.asc">
+    <link rel="pgpkey" type="application/pgp-keys" href="https://keybase.io/{% include social.html id='keybase' %}/pgp_keys.asc">
     {% if page.shortlink -%}
       <link rel="shortlink" href="{{ site.shorturl }}{{ page.shortlink | prepend: '/' | replace: '//', '/' }}">
     {%- endif %}

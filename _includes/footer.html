@@ -6,51 +6,30 @@
 
         <div class="footer-links">
             <ul class="noList">
-                {%- if site.social.github %}
-                <li><a href="https://github.com/{{ site.social.github }}" title="{{ site.social.github }} on GitHub">
+                <li><a href="https://github.com/{% include social.html id='github' %}" title="{% include social.html id='github' %} on GitHub">
                   {% include icons/use.html icon="github" %}<span class="sr-only">GitHub</span>
                 </a></li>
-                {%- endif %}
-                {%- if site.social.linkedin %}
-                <li><a href="https://www.linkedin.com/in/{{ site.social.linkedin }}" title="{{ site.social.linkedin }} on LinkedIn">
+                <li><a href="https://www.linkedin.com/in/{% include social.html id='linkedin' %}" title="{% include social.html id='linkedin' %} on LinkedIn">
                   {% include icons/use.html icon="linkedin-square" %}<span class="sr-only">LinkedIn</span>
                 </a></li>
-                {%- endif %}
-                {%- if site.social.hackerone %}
-                <li><a href="https://hackerone.com/{{ site.social.hackerone }}" title="{{ site.social.hackerone }} on HackerOne">
+                <li><a href="https://hackerone.com/{% include social.html id='hackerone' %}" title="{% include social.html id='hackerone' %} on HackerOne">
                   {% include icons/use.html icon="hackerone" %}<span class="sr-only">HackerOne</span>
                 </a></li>
-                {%- endif %}
-                {%- if site.social.email %}
-                <li><a href="mailto:{{ site.social.email }}" title="Email">
+                <li><a href="mailto:{% include social.html id='email' %}" title="Email">
                   {% include icons/use.html icon="envelope" %}<span class="sr-only">Email</span>
                 </a></li>
-                {%- endif %}
-                {%- if site.social.twitter %}
-                <li><a href="https://twitter.com/{{ site.social.twitter }}" title="@{{ site.social.twitter }} on Twitter">
+                <li><a href="https://twitter.com/{% include social.html id='twitter' %}" title="@{% include social.html id='twitter' %} on Twitter">
                   {% include icons/use.html icon="twitter" %}<span class="sr-only">Twitter</span>
                 </a></li>
-                {%- endif %}
-                {%- if site.social.facebook %}
-                <li><a href="https://www.facebook.com/{{ site.social.facebook }}" title="{{ site.social.facebook }} on Facebook">
+                <li><a href="https://www.facebook.com/{% include social.html id='facebook' %}" title="{% include social.html id='facebook' %} on Facebook">
                   {% include icons/use.html icon="facebook-official" %}<span class="sr-only">Facebook</span>
                 </a></li>
-                {%- endif %}
-                {%- if site.social.instagram %}
-                <li><a href="https://instagr.am/{{ site.social.instagram }}" title="@{{ site.social.instagram }} on Instagram">
+                <li><a href="https://instagr.am/{% include social.html id='instagram' %}" title="@{% include social.html id='instagram' %} on Instagram">
                   {% include icons/use.html icon="instagram" %}<span class="sr-only">Instagram</span>
                 </a></li>
-                {%- endif %}
-                {%- if site.social.amazon %}
-                <li><a href="{{ site.social.amazon }}" title="Amazon Wishlist">
+                <li><a href="{% include social.html id='amazon' %}" title="Amazon Wishlist">
                   {% include icons/use.html icon="amazon" %}<span class="sr-only">Amazon Wishlist</span>
                 </a></li>
-                {%- endif %}
-                {%- if site.social.google %}
-                <li><a href="{{ site.social.google }}" title="Chris on Google+">
-                  {% include icons/use.html icon="google-plus-g" %}<span class="sr-only">Google+</span>
-                </a></li>
-                {%- endif %}
                 <li><a href="/site-map/" title="Site Map">
                   {% include icons/use.html icon="sitemap" %}<span class="sr-only">Site Map</span>
                 </a></li>
