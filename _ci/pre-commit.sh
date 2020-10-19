@@ -2,7 +2,7 @@
 
 paths=(
     assets
-    _includes
+    _includes/icons
     _sass
 )
 
