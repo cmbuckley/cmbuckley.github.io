@@ -12,7 +12,7 @@
 
     <meta content="{{ site_title }}" property="og:site_name">
     <meta content="{{ page_title | default: site_title | prepend: title_pagination }}" property="og:title">
-    <meta content="{{ site.locale | replace: '-','_' }}" property="og:locale">
+    <meta content="{{ include.locale }}" property="og:locale">
     {% if page.title or page.og_type -%}
       <meta content="{{ page.og_type | default: 'article' }}" property="og:type">
     {% else -%}

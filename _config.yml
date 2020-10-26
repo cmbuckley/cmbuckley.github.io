@@ -10,7 +10,6 @@ permalink: blog/:year/:month/:day/:title/
 repository: cmbuckley/cmbuckley.github.io
 
 timezone: Europe/London
-locale: en-GB
 
 markdown: kramdown
 highlighter: rouge
