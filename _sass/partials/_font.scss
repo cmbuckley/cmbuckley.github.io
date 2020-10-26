@@ -111,21 +111,15 @@ HEADER STYLING
 /***************
 POST STYLING
 ***************/
-.post {
-    .date {
-        color: lighten(black, 50%);
-        font-family: $sans-serif;
-        font-weight: 300;
-    }
+.date, .meta {
+    color: lighten(black, 50%);
+    font-family: $sans-serif;
+    font-weight: 300;
+}
 
+.post {
     blockquote {
         color: lighten(black, 40%);
-    }
-
-    .meta {
-        font-family: $sans-serif;
-        font-weight: 300;
-        color: lighten(black, 50%);
     }
 
     .comments li {

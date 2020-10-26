@@ -426,6 +426,9 @@ PAGINATION STYLING
 /***************
 POST LIST STYLING
 ***************/
+.date {
+    font-size: .8em;
+}
 
 .posts {
     .post--excerpt {
@@ -440,10 +443,6 @@ POST LIST STYLING
             background: darken(white, 10%);
             height: 2px;
             width: 60px;
-        }
-
-        .date {
-            font-size: .8em;
         }
 
         h3 {

@@ -14,7 +14,7 @@
     <li id="comment-{{ comment._id }}" role="article">
       <img class="avatar" src="https://www.gravatar.com/avatar/{{ comment.email | default: 0 }}?d=mm" alt="Avatar for {{ comment.name | escape }}" />
       <cite>{{ comment.name }}</cite>
-      <p class="date">{{ comment.date | date: '%e %B %Y %H:%M' | strip }}</p>
+      <p><time class="date" datetime="{{ comment.date | date_to_xmlschema }}">{{ comment.date | date: '%e %B %Y %H:%M' | strip }}</time></p>
       <p class="comment">{{ comment.comment | markdownify | remove: '<p>' | remove: '</p>' | trim }}</p>
     </li>
     {% endfor %}
