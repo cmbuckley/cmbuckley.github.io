@@ -12,6 +12,7 @@
             <head>
                 <title>XML Sitemap</title>
                 <link rel="stylesheet" href="/assets/css/style.css" />
+                {% include google_fonts.html %}
             </head>
             <body>
                 {% include header.html %}
