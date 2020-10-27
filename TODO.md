@@ -2,6 +2,7 @@
 * improved sitemap nesting
 * build stage
   * blog archives - https://github.com/dblock/code.dblock.org/commit/555fd54ee2c6f973b09746a718f56e6f0977affa
+  * also https://aneejian.com/automated-jekyll-archives-github-pages/
   * last modified times from git
   * asset fingerprinting
   * videos from CDN
