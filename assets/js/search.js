@@ -4,7 +4,8 @@
     var posts = {
      {% for post in site.posts %}
       {{ post.slug | jsonify }}: {
-        date: {{ post.date | date: '%e %B %Y' | strip | jsonify }},
+        date: {{ post.date | date_to_long_string | strip | jsonify }},
+        isoDate: {{ post.date | date: '%Y-%m-%d' | jsonify }},
         title: {{ post.title | markdownify | replace: '&amp;', '&' | strip_html | normalize_whitespace | jsonify }},
         title_html: {{ post.title | markdownify | remove: '<p>' | remove: '</p>' | strip | jsonify }},
         excerpt: {{ post.description | default: post.excerpt | markdownify | replace: '&amp;', '&' | strip_html | normalize_whitespace | jsonify }},
@@ -73,7 +74,7 @@
     function buildSearchResult(result) {
         var post = posts[result.ref],
             li = doc.createElement('li'),
-            date = doc.createElement('span'),
+            date = doc.createElement('time'),
             heading = doc.createElement('h3'),
             postLink = doc.createElement('a'),
             excerpt = doc.createElement('p'),
@@ -90,6 +91,7 @@
         // post date
         date.textContent = post.date;
         date.className = 'date';
+        date.setAttribute('datetime', post.isoDate);
 
         // post title/url
         postLink.href = post.url;
@@ -112,6 +114,7 @@
         li.appendChild(heading);
         li.appendChild(excerpt);
         li.className = 'post post--excerpt';
+        li.setAttribute('role', 'article');
         doc.querySelector('ul.posts').appendChild(li);
     }
 
@@ -128,6 +131,7 @@
         }
         else {
             var noResults = doc.createElement('p');
+            noResults.setAttribute('role', 'status');
             noResults.textContent = 'No results found.';
             doc.querySelector('ul.posts').replaceWith(noResults);
         }
