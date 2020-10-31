@@ -8,15 +8,20 @@ layout: default
       </div>
   {% endif %}
   <h1 class="post__title">{{ page.title | markdownify | remove:'<p>' | remove:'</p>' | strip }}</h1>
-  <p class="meta"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time> | {{ page.content | number_of_words | divided_by:120.0 | ceil }} Minute Read
-  {%- if page.categories.size > 0 %} |
-    {% for post_cat in page.categories -%}
-      {%- assign cat = site.blog_categories | where: "name", post_cat | first -%}
-      {%- if cat -%}
-      <a href="{{ cat.url }}">{{ cat.name }}</a>{% unless forloop.last %}, {% endunless %}
-      {%- endif -%}
-    {%- endfor -%}
-  {%- endif %}</p>
+  <ul class="meta">
+    <li><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time></li>
+    <li>{{ page.content | number_of_words | divided_by:120.0 | ceil }} Minute Read</li>
+    {% if page.categories.size > 0 -%}
+    <li>
+      {%- for post_cat in page.categories -%}
+        {%- assign cat = site.blog_categories | where: "name", post_cat | first -%}
+        {%- if cat -%}
+          <a href="{{ cat.url }}">{{ cat.name }}</a>{% unless forloop.last %}, {% endunless %}
+        {%- endif -%}
+      {%- endfor -%}
+    </li>
+    {%- endif %}
+  </ul>
 
   {{ content }}
 
