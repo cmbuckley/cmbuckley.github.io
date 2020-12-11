@@ -22,8 +22,8 @@
   <button type="button" class="button g-recaptcha" data-sitekey="{{ site.data.staticman.comments.reCaptcha.siteKey }}" data-callback="postComment">Post Comment</button>
 </form>
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script>
+<script nonce="" src="https://www.google.com/recaptcha/api.js" defer></script>
+<script nonce="">
     function postComment(token) {
         document.getElementById("comments-form").submit();
     }

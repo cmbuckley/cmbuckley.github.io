@@ -16,4 +16,4 @@ layout: page
 </div>
 
 <link rel="stylesheet" href="/files/2009/11/word-clock.css" />
-<script src="/files/2009/11/word-clock.js"></script>
+<script nonce="" src="/files/2009/11/word-clock.js"></script>
