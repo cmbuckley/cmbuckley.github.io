@@ -13,7 +13,7 @@ layout: page
     <dt>Home page:</dt>
     <dd class="url">{{ site.url }}</dd>
 
-    <dt>E-mail address / Google Talk:</dt>
+    <dt>Email address / Google Talk:</dt>
     <dd class="email">{% include social.html id='email' %}</dd>
 
     <dt>PGP key:</dt>
