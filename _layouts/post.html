@@ -8,20 +8,25 @@ layout: default
       </div>
   {% endif %}
   <h1 class="post__title">{{ page.title | markdownify | remove:'<p>' | remove:'</p>' | strip }}</h1>
-  <ul class="meta">
-    <li><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time></li>
-    <li>{{ page.content | number_of_words | divided_by:120.0 | ceil }} Minute Read</li>
+  <dl class="meta">
+    <dt>Post date</dt>
+    <dd><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time></dd>
+
+    <dt>Reading time</dt>
+    <dd>{{ page.content | number_of_words | divided_by:120.0 | ceil }} Minute Read</dd>
+
     {% if page.categories.size > 0 -%}
-    <li>
+    <dt>Categories</dt>
+    <dd>
       {%- for post_cat in page.categories -%}
         {%- assign cat = site.blog_categories | where: "name", post_cat | first -%}
         {%- if cat -%}
           <a href="{{ cat.url }}">{{ cat.name }}</a>{% unless forloop.last %}, {% endunless %}
         {%- endif -%}
       {%- endfor -%}
-    </li>
+    </dd>
     {%- endif %}
-  </ul>
+  </dl>
 
   {{ content }}
 
