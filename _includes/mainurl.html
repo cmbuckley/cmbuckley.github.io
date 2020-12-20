@@ -1,2 +1,8 @@
+{%- comment %}
+  The mainurl include is used to prefix an asset from the remote_theme repo.
+  In production builds, this should have no baseurl prefix to all use the same assets.
+  In non-production builds, the baseurl prefix uses the locally built copy.
+{% endcomment -%}
+
 {%- if site.absolute_assets %}{{ site.url }}{% endif -%}
 {%- unless jekyll.environment == 'production' %}{{ site.baseurl }}{% endunless -%}
