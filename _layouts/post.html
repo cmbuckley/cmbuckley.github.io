@@ -4,7 +4,7 @@ layout: default
 <article class="post post--full">
   {% if page.image.main %}
     <div class="featuredImage">
-        <img src="{{ '/assets/img/' | prepend: site.baseurl | append: page.image.main.src }}" alt="{{ page.image.main.alt }}" />
+        <img src="{{ '/assets/img/' | relative_url | append: page.image.main.src }}" alt="{{ page.image.main.alt }}" />
       </div>
   {% endif %}
   <h1 class="post__title">{{ page.title | markdownify | remove:'<p>' | remove:'</p>' | strip }}</h1>
@@ -35,16 +35,16 @@ layout: default
   <!-- POST NAVIGATION -->
   <div class="post__nav clearfix">
     {% if page.previous.url %}
-      <a class="prev{% if page.previous.image.main %} image{% endif %}" href="{{ page.previous.url | prepend: site.baseurl }}"><span>&laquo;&nbsp;{{ page.previous.title | markdownify | remove:'<p>' | remove:'</p>' | strip }}</span>
+      <a class="prev{% if page.previous.image.main %} image{% endif %}" href="{{ page.previous.url | relative_url }}"><span>&laquo;&nbsp;{{ page.previous.title | markdownify | remove:'<p>' | remove:'</p>' | strip }}</span>
       {% if page.previous.image.main %}
-        <img src="{{ '/assets/img/' | prepend: site.baseurl | append: page.previous.image.main.src }}" alt="{{ page.previous.image.main.alt }}">
+        <img src="{{ '/assets/img/' | relative_url | append: page.previous.image.main.src }}" alt="{{ page.previous.image.main.alt }}">
       {% endif %}
     </a>
     {% endif %}
     {% if page.next.url %}
-      <a class="next{% if page.next.image.main %} image{% endif %}" href="{{ page.next.url | prepend: site.baseurl }}"><span>{{ page.next.title | markdownify | remove:'<p>' | remove:'</p>' | strip }}&nbsp;&raquo;</span>
+      <a class="next{% if page.next.image.main %} image{% endif %}" href="{{ page.next.url | relative_url }}"><span>{{ page.next.title | markdownify | remove:'<p>' | remove:'</p>' | strip }}&nbsp;&raquo;</span>
       {% if page.next.image.main %}
-        <img src="{{ '/assets/img/' | prepend: site.baseurl | append: page.next.image.main.src }}" alt="{{ page.next.image.main.alt }}">
+        <img src="{{ '/assets/img/' | relative_url | append: page.next.image.main.src }}" alt="{{ page.next.image.main.alt }}">
       {% endif %}
       </a>
     {% endif %}

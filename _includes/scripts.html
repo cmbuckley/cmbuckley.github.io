@@ -1,8 +1,8 @@
-<script nonce="" src="{{ site.url }}/assets/js/scripts.js{% include v.html id='scripts' %}"></script>
+<script nonce="" src="{% include mainurl.html %}/assets/js/scripts.js{% include v.html id='scripts' %}"></script>
 {%- if page.maths -%}
 <script nonce="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 {%- endif -%}
 {%- if page.search -%}
-<script nonce="" src="{{ site.url }}/assets/js/lunr.js{% include v.html id='lunr' %}"></script>
-<script nonce="" src="{{ site.url }}/assets/js/search.js{% include v.html id='search' %}"></script>
+<script nonce="" src="{% include mainurl.html %}/assets/js/lunr.js{% include v.html id='lunr' %}"></script>
+<script nonce="" src="{% include mainurl.html %}/assets/js/search.js{% include v.html id='search' %}"></script>
 {%- endif -%}

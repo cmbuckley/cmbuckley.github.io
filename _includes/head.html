@@ -54,19 +54,19 @@
     {% endif -%}
     {% endif -%}
 
-    <link rel="shortcut icon" href="{{ site.url }}/favicon.ico?m">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}/assets/img/icons/favicon-16.png?m">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/assets/img/icons/favicon-32.png?m">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/assets/img/icons/favicon-180.png?m">
-    <link rel="mask-icon" href="{{ site.url }}/assets/img/icons/favicon.svg?m" color="#2c8654">
-    <link rel="manifest" href="{{ site.url }}/assets/site.webmanifest">
-    <meta name="msapplication-config" content="/assets/browserconfig.xml">
+    <link rel="shortcut icon" href="{% include mainurl.html %}/favicon.ico?m">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% include mainurl.html %}/assets/img/icons/favicon-16.png?m">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% include mainurl.html %}/assets/img/icons/favicon-32.png?m">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% include mainurl.html %}/assets/img/icons/favicon-180.png?m">
+    <link rel="mask-icon" href="{% include mainurl.html %}/assets/img/icons/favicon.svg?m" color="#2c8654">
+    <link rel="manifest" href="{% include mainurl.html %}/assets/site.webmanifest">
+    <meta name="msapplication-config" content="{% include mainurl.html %}/assets/browserconfig.xml">
     <meta name="theme-color" content="#2c8654">
 
-    <link rel="stylesheet" href="{{ site.url }}/assets/css/style.css{% include v.html id='style' %}">
+    <link rel="stylesheet" href="{% include mainurl.html %}/assets/css/style.css{% include v.html id='style' %}">
     {% if page.style -%}
       {% for style in page.style -%}
-        <link rel="stylesheet" href="{{ site.baseurl }}{{ style }}{% include v.html %}">
+        <link rel="stylesheet" href="{{ style | relative_url }}{% include v.html %}">
       {%- endfor %}
     {% endif -%}
 

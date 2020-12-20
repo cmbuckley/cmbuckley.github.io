@@ -1,5 +1,5 @@
       <li class="post post--excerpt" role="article"{% if include.total %} aria-posinset="{{ include.current }}" aria-setsize="{{ include.total }}"{% endif %}>
         <time class="date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string }}</time>
-        <h3><a class="post__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | markdownify | remove:'<p>' | remove:'</p>' | strip}}</a></h3>
+        <h3><a class="post__link" href="{{ post.url | relative_url }}">{{ post.title | markdownify | remove:'<p>' | remove:'</p>' | strip}}</a></h3>
         <p>{{ post.description | default: post.excerpt | smartify }}</p>
       </li>

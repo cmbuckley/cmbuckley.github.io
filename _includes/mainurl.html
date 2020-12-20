@@ -1,0 +1,2 @@
+{%- if site.absolute_assets %}{{ site.url }}{% endif -%}
+{%- unless jekyll.environment == 'production' %}{{ site.baseurl }}{% endunless -%}

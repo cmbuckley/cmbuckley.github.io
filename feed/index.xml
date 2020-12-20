@@ -5,7 +5,7 @@
   <channel>
     <title>{{ site.title | markdownify | strip_html | strip | xml_escape }}</title>
     <description>{{ site.description | markdownify | strip_html | strip | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
+    <link>{{ "" | absolute_url }}</link>
     <atom:link href="{{ "/feed/" | absolute_url }}" rel="self" type="application/rss+xml"/>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
