@@ -21,7 +21,7 @@ tr {
     border-bottom: 1px solid $primary-color;
 
     &:nth-child(even) {
-        background-color: lighten($grey, 30%);
+        background-color: $offwhite;
     }
 }
 
@@ -36,6 +36,6 @@ td, th {
 
 th {
     color: darken($primary-color, 10%);
-    background-color: lighten($grey, 30%);
+    background-color: $offwhite;
     border-bottom: 1px solid $primary-color;
 }

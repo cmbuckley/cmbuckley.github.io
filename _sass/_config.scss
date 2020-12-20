@@ -19,10 +19,11 @@ $fuchsia: #F012BE;
 $purple:  #B10DC9;
 $maroon:  #85144B;
 // Gray Scale
-$white:  #fff;
-$silver: #ddd;
-$grey:   #aaa;
-$black:  #111;
+$white:    #fff;
+$offwhite: #f7f7f7;
+$silver:   #767676;
+$grey:     #5e5e5e;
+$blackish: #111;
 
 // Color variables
 $primary-color: #2C8654;
@@ -35,7 +36,7 @@ $bad-color: $red; // Bad color for errors, validation etc.
 $good-color: $green; // Good color for success etc.
 $info-color: $blue; // Good color for success etc.
 $warning-color: $orange; // Good color for success etc.
-$subtle-color: $grey; // Subtle color for subtle text
+$subtle-color: $silver; // Subtle color for subtle text
 
 
 /***************

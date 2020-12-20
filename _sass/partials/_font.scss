@@ -11,13 +11,13 @@
 }
 
 body {
-    color: $black;
+    color: $blackish;
     font-family: $serif;
 }
 
 figure {
     figcaption {
-        color: lighten($black, 30%);
+        color: $grey;
         font-style: italic;
     }
 }
@@ -112,14 +112,14 @@ HEADER STYLING
 POST STYLING
 ***************/
 .date, .meta {
-    color: lighten(black, 50%);
+    color: $subtle-color;
     font-family: $sans-serif;
     font-weight: 300;
 }
 
 .post {
     blockquote {
-        color: lighten(black, 40%);
+        color: $grey;
     }
 
     .comments li {
