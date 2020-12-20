@@ -3,6 +3,16 @@
 {%- assign page_description = page.description | default: page.excerpt | markdownify | strip_html | strip -%}
 {%- assign site_description = site.description | markdownify | strip_html | strip -%}
 {%- if page.paginated and paginator.page > 1 %}{% assign title_pagination = paginator.page | prepend: 'Page ' | append: ' • ' %}{% endif -%}
+
+{%- capture meta_image_url -%}
+{{ site.url }}
+{%- if page.image.meta.main_repo -%}
+  {%- include mainurl.html -%}
+{%- else -%}
+  {{ site.baseurl }}
+{%- endif -%}
+{{ page.image.meta.src | default: '/assets/img/tiki-square.jpg' }}
+{%- endcapture -%}
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -28,7 +38,7 @@
     {% if page.last_modified_at -%}
       <meta content="{{ page.last_modified_at | date_to_xmlschema }}" property="article:modified_time">
     {% endif -%}
-    <meta content="{{ site.url }}{% unless page.image.meta.main_repo %}{{ site.baseurl }}{% endunless %}{{ page.image.meta.src | default: '/assets/img/tiki-square.jpg' }}" property="og:image">
+    <meta content="{{ meta_image_url }}" property="og:image">
     <meta content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' | smartify }}" property="og:image:alt">
 
     <meta name="twitter:card" content="summary{% if page.image.meta.large %}_large_image{% endif %}">
@@ -43,7 +53,7 @@
       <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
     {% endif -%}
     <meta name="twitter:description" content="{{ page_description | default: site_description }}">
-    <meta name="twitter:image:src" content="{{ site.url }}{% unless page.image.meta.main_repo %}{{ site.baseurl }}{% endunless %}{{ page.image.meta.src | default: '/assets/img/tiki-square.jpg' }}">
+    <meta name="twitter:image:src" content="{{ meta_image_url }}">
     <meta name="twitter:image:alt" content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' }}">
     {% if page.layout == 'post' -%}
       <meta name="twitter:label1" content="Reading Time" />
