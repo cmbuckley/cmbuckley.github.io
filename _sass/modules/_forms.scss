@@ -86,3 +86,13 @@ form {
         border-radius: 0;
     }
 }
+
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+.post--full .recaptcha-message {
+    margin: 0 0 1em;
+    font-size: 65%;
+    width: 100%;
+}

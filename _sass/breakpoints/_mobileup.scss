@@ -224,7 +224,7 @@ POST STYLING
         padding: 0;
 
         dt {
-            @extend .sr-only;
+            @extend %sr-only;
         }
 
         dd {
