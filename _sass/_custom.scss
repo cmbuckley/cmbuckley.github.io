@@ -34,3 +34,11 @@ mark {
 .key-focussed {
     outline: 3px solid $primary-color;
 }
+
+.clearfix {
+    @include clearfix;
+}
+
+.sr-only {
+    @extend %sr-only;
+}
