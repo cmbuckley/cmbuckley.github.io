@@ -196,19 +196,13 @@ HEADER STYLING
 /***************
 POST STYLING
 ***************/
-.post {
-    blockquote {
-        clear: both;
-        border-left: 2px solid #2e8b57;
-        margin: 1em auto;
-        padding: 0 1em;
-        line-height: 1.8;
-        position: relative;
-
-        p {
-            width: 100%;
-        }
-    }
+blockquote {
+    clear: both;
+    border-left: 2px solid #2e8b57;
+    margin: 1em auto;
+    padding: 0 1em;
+    line-height: 1.8;
+    position: relative;
 }
 
 .post--full {
