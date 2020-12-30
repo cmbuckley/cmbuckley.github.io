@@ -4,6 +4,14 @@
     border: 1px solid $color;
     border-radius: 3px;
     background-color: change-color($color, $alpha: 0.08);
+
+    a {
+        color: $color;
+    }
+
+    a:hover {
+        color: darken($color, 15%);
+    }
 }
 
 .error {
