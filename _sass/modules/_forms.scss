@@ -32,7 +32,7 @@ textarea {
     }
 
     .interacted &:invalid, .error & {
-        border-color: $bad-color;
+        border-color: $error-color;
     }
 
     &.full-width {
@@ -65,7 +65,7 @@ form {
     // Validation, add error class to the item div
     .error .reason {
         margin-top: 5px;
-        color: $bad-color;
+        color: $error-color;
     }
 }
 

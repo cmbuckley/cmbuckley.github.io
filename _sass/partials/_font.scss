@@ -117,14 +117,12 @@ POST STYLING
     font-weight: 300;
 }
 
-.post {
-    blockquote {
-        color: $grey;
-    }
+blockquote {
+    color: $grey;
+}
 
-    .comments li {
-        background-color: #fcfcfc;
-    }
+.comments li {
+    background-color: #fcfcfc;
 }
 
 

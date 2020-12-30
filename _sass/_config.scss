@@ -32,10 +32,10 @@ $tertiary-color: #aaa;
 $link-color: $primary-color;
 $background-color: $primary-color;
 
-$bad-color: $red; // Bad color for errors, validation etc.
-$good-color: $green; // Good color for success etc.
-$info-color: $blue; // Good color for success etc.
-$warning-color: $orange; // Good color for success etc.
+$error-color: $red; // Bad color for errors, validation etc.
+$warning-color: $orange; // Warning color for less serious warning messages.
+$ok-color: $green; // Good color for success etc.
+$info-color: $blue; // Information level color.
 $subtle-color: $silver; // Subtle color for subtle text
 
 

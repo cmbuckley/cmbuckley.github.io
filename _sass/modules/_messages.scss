@@ -1,0 +1,23 @@
+@mixin message($color) {
+    padding: 0 0.3em;
+    color: $color;
+    border: 1px solid $color;
+    border-radius: 3px;
+    background-color: change-color($color, $alpha: 0.08);
+}
+
+.error {
+    @include message($error-color);
+}
+
+.warning {
+    @include message($warning-color);
+}
+
+.info {
+    @include message($info-color);
+}
+
+.ok {
+    @include message($ok-color);
+}
