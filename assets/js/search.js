@@ -4,7 +4,7 @@
     var posts = {
      {% for post in site.posts %}
       {{ post.slug | jsonify }}: {
-        date: {{ post.date | date_to_long_string | strip | jsonify }},
+        date: {{ post.date | date: site.data.global.format.date | strip | jsonify }},
         isoDate: {{ post.date | date: '%Y-%m-%d' | jsonify }},
         title: {{ post.title | markdownify | replace: '&amp;', '&' | strip_html | normalize_whitespace | jsonify }},
         title_html: {{ post.title | markdownify | remove: '<p>' | remove: '</p>' | strip | jsonify }},
