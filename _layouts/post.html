@@ -10,7 +10,7 @@ layout: default
   <h1 class="post__title">{{ page.title | markdownify | remove:'<p>' | remove:'</p>' | strip }}</h1>
   <dl class="meta">
     <dt>Post date</dt>
-    <dd><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string }}</time></dd>
+    <dd><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: site.data.global.format.date }}</time></dd>
 
     <dt>Reading time</dt>
     <dd>{{ page.content | number_of_words | divided_by:120.0 | ceil }} Minute Read</dd>
