@@ -1,1 +1,1 @@
-<a href="https://web.archive.org/web/{{ include.date | default: page.date | date: "%Y%m%d%H%M%S" }}/{{ include.url }}">{{ include.text }}</a>{%- comment -%}avoid trailing newline{%- endcomment -%}
+<a href="https://web.archive.org/web/{{ include.date | default: page.date | date: "%Y%m%d%H%M%S" }}/{{ include.url }}">{{ include.text | default: include.url }}</a>{%- comment -%}avoid trailing newline{%- endcomment -%}
