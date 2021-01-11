@@ -2,6 +2,8 @@
 title: Word Clock
 description: A clock showing the word representation of the time using CSS and JavaScript.
 layout: page
+style:
+ - /files/2009/11/word-clock.css
 ---
 
 <div id="clock">
@@ -15,5 +17,4 @@ layout: page
 <span class="n2">tw<span class="n1">o</span></span><span class="n1">ne</span>·<span class="oclock">o’clock</span>
 </div>
 
-<link rel="stylesheet" href="/files/2009/11/word-clock.css" />
 <script nonce="" src="/files/2009/11/word-clock.js"></script>
