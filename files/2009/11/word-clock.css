@@ -2,6 +2,7 @@
     text-align: center;
     color: #f0f0f0;
     font: 50px "DejaVu Sans Mono", "Monaco", "Lucida Console", monospace;
+    margin-bottom: 2rem;
 }
 
 #clock p {
