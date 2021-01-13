@@ -1,21 +1,7 @@
 ---
 ---
 (function (doc) {
-    var posts = {
-     {% for post in site.posts %}
-      {{ post.slug | jsonify }}: {
-        date: {{ post.date | date: site.data.global.format.date | strip | jsonify }},
-        isoDate: {{ post.date | date: '%Y-%m-%d' | jsonify }},
-        title: {{ post.title | markdownify | replace: '&amp;', '&' | strip_html | normalize_whitespace | jsonify }},
-        title_html: {{ post.title | markdownify | remove: '<p>' | remove: '</p>' | strip | jsonify }},
-        excerpt: {{ post.description | default: post.excerpt | markdownify | replace: '&amp;', '&' | strip_html | normalize_whitespace | jsonify }},
-        excerpt_html: {{ post.description | default: post.excerpt | markdownify | remove: '<p>' | remove: '</p>' | strip | jsonify }},
-        content: {{ post.content | replace: '&amp;', '&' | strip_html | normalize_whitespace | jsonify }},
-        categories: {{ post.categories | join: ' ' | normalize_whitespace | jsonify }},
-        url: {{ post.url | absolute_url | jsonify }}
-      }{% unless forloop.last %}, {% endunless %}
-     {% endfor %}
-    };
+    var posts = JSON.parse(document.getElementById('posts').innerHTML);
 
     var searchIndex = lunr(function () {
         this.ref('id');
