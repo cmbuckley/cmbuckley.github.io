@@ -3,7 +3,7 @@ layout: default
 ---
 <article class="post post--full">
   {% if page.image.main %}
-    <div class="featuredImage">
+    <div class="image--featured">
         <img src="{{ '/assets/img/' | relative_url | append: page.image.main.src }}" alt="{{ page.image.main.alt }}" />
       </div>
   {% endif %}

@@ -129,7 +129,7 @@ MENU STYLING
 LIST STYLING
 ***************/
 
-.noList {
+.list--inline {
     list-style: none;
     padding-left: 0;
     margin: 0;
@@ -247,7 +247,7 @@ blockquote {
         margin-bottom: 2rem;
     }
 
-    .featuredImage {
+    .image--featured {
         position: relative;
         margin-top: 2rem;
 
