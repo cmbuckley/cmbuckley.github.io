@@ -12,4 +12,4 @@ if [ $changed -gt 0 ]; then
     ./_ci/fingerprints.sh
 fi
 
-git diff -z --cached --name-only --diff-filter=M _posts | ./_ci/last-modified.sh
+git diff -z --cached --name-only --diff-filter=M **/*.md | ./_ci/last-modified.sh
