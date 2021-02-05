@@ -2,7 +2,7 @@
 layout: page
 ---
 {% if site.categories[page.name] %}
-<ul class="posts noList" role="feed">
+<ul class="posts list--inline" role="feed">
   {% for post in site.categories[page.name] %}
   {% include post_excerpt.html %}
   {% endfor %}

@@ -5,7 +5,7 @@
         <p class="copy">&copy; <a href="{{ main_repo.html_url | replace: 'http:','https:' }}/blob/{{ main_repo.default_branch }}/LICENSE.md">{{ site.time | date: '%Y' }} Chris Buckley</a>. <span class="powered">Powered by <a href="https://jekyllrb.com">Jekyll</a> / <a href="https://pages.github.com/">GitHub Pages</a> ({{ edit_link | replace_first: '/edit/','/blob/' }})</span></p>
 
         <div class="footer-links">
-            <ul class="noList">
+            <ul class="list--inline">
                 <li><a href="https://github.com/{% include social.html id='github' %}" title="{% include social.html id='github' %} on GitHub">
                   {% include icons/use.html icon="github" %}<span class="sr-only">GitHub</span>
                 </a></li>

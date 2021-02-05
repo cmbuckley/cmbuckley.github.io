@@ -6,7 +6,7 @@
             {%- endif %}>{{ site.title | markdownify | remove:'<p>' | remove:'</p>' | strip }}</a>
         </{{ tag }}>
         <nav class="nav-collapse" aria-label="Menu">
-            <ul class="noList">
+            <ul class="list--inline">
               {%- if site.data.global.navigation -%}
                 {%- assign navigation = site.data.global.navigation -%}
               {%- else -%}

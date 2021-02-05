@@ -5,7 +5,7 @@ layout: page
 ---
 
 <div id="contact">
-  <div class="contactContent">
+  <div class="contact__content">
     <dl class="vcard">
     <dt>Name:</dt>
     <dd class="fn n"><span class="given-name">Christopher</span> <span class="additional-name">Mark</span> <span class="family-name">Buckley</span></dd>
