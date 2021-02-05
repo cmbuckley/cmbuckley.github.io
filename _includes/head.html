@@ -32,11 +32,14 @@
     {% if page.url -%}
       <meta content="{{ page.url | replace:'index.html','' | absolute_url }}" property="og:url">
     {% endif -%}
-    {% if page.date -%}
-      <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
-    {% endif -%}
-    {% if page.last_modified_at -%}
-      <meta content="{{ page.last_modified_at | date_to_xmlschema }}" property="article:modified_time">
+    {% if page.last_modified_at or page.date -%}
+      <meta http-equiv="Last-Modified" content="{{ page.last_modified_at | default: page.date | date_to_rfc822 }}">
+      {% if page.date -%}
+        <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
+      {% endif -%}
+      {% if page.last_modified_at -%}
+        <meta content="{{ page.last_modified_at | date_to_xmlschema }}" property="article:modified_time">
+      {% endif -%}
     {% endif -%}
     <meta content="{{ meta_image_url }}" property="og:image">
     <meta content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' | smartify }}" property="og:image:alt">

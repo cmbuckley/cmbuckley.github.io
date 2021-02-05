@@ -34,10 +34,6 @@ sass:
 
 defaults:
   - scope:
-      type: pages
-    values:
-      og_type: website
-  - scope:
       type: blog_categories
     values:
       layout: category
