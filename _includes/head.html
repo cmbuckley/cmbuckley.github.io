@@ -1,72 +1,8 @@
-{%- assign site_title = site.title | markdownify | strip_html | strip -%}
-{%- assign page_title = page.title | markdownify | strip_html | strip -%}
-{%- assign page_description = page.description | default: page.excerpt | markdownify | strip_html | strip -%}
-{%- assign site_description = site.description | markdownify | strip_html | strip -%}
-{%- if page.paginated and paginator.page > 1 %}{% assign title_pagination = paginator.page | prepend: 'Page ' | append: ' • ' %}{% endif -%}
-
-{%- capture meta_image_url -%}
-{{ site.url }}
-{%- if page.image.meta.main_repo -%}
-  {%- include mainurl.html -%}
-{%- else -%}
-  {{ site.baseurl }}
-{%- endif -%}
-{{ page.image.meta.src | default: '/assets/img/tiki-square.jpg' }}
-{%- endcapture -%}
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ page_description | default: site_description }}">
-    <title>{{ page_title | prepend: title_pagination }}{% unless page.supress_site_title %}{% if page.title %} • {% endif %}{{ site_title }}{% endunless %}</title>
-
-    <meta content="{{ site_title }}" property="og:site_name">
-    <meta content="{{ page_title | default: site_title | prepend: title_pagination }}" property="og:title">
-    <meta content="{{ include.locale }}" property="og:locale">
-    {% if page.title or page.og_type -%}
-      <meta content="{{ page.og_type | default: 'article' }}" property="og:type">
-    {% else -%}
-      <meta content="website" property="og:type">
-    {% endif -%}
-    <meta content="{{ page_description | default: site_description }}" property="og:description">
-    {% if page.url -%}
-      <meta content="{{ page.url | replace:'index.html','' | absolute_url }}" property="og:url">
-    {% endif -%}
-    {% if page.last_modified_at or page.date -%}
-      <meta http-equiv="Last-Modified" content="{{ page.last_modified_at | default: page.date | date_to_rfc822 }}">
-      {% if page.date -%}
-        <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
-      {% endif -%}
-      {% if page.last_modified_at -%}
-        <meta content="{{ page.last_modified_at | date_to_xmlschema }}" property="article:modified_time">
-      {% endif -%}
-    {% endif -%}
-    <meta content="{{ meta_image_url }}" property="og:image">
-    <meta content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' | smartify }}" property="og:image:alt">
-
-    <meta name="twitter:card" content="summary{% if page.image.meta.large %}_large_image{% endif %}">
-    <meta name="twitter:site" content="@{% include social.html id='twitter' %}">
-    <meta name="twitter:creator" content="@{% include social.html id='twitter' %}">
-    {% if page.title -%}
-      <meta name="twitter:title" content="{{ page_title | prepend: title_pagination }}">
-    {% else -%}
-      <meta name="twitter:title" content="{{ site_title }}">
-    {% endif -%}
-    {% if page.url -%}
-      <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
-    {% endif -%}
-    <meta name="twitter:description" content="{{ page_description | default: site_description }}">
-    <meta name="twitter:image:src" content="{{ meta_image_url }}">
-    <meta name="twitter:image:alt" content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' }}">
-    {% if page.layout == 'post' -%}
-      <meta name="twitter:label1" content="Reading Time" />
-      <meta name="twitter:data1" content="{{ page.content | number_of_words | divided_by: 120.0 | ceil }} min" />
-    {% if page.categories.size > 0 -%}
-      <meta name="twitter:label2" content="Categories" />
-      <meta name="twitter:data2" content="{{ page.categories | join: ', ' }}" />
-    {% endif -%}
-    {% endif -%}
-
+    {% include seo.html %}
     <link rel="shortcut icon" href="{% include mainurl.html %}/favicon.ico?m">
     <link rel="icon" type="image/png" sizes="16x16" href="{% include mainurl.html %}/assets/img/icons/favicon-16.png?m">
     <link rel="icon" type="image/png" sizes="32x32" href="{% include mainurl.html %}/assets/img/icons/favicon-32.png?m">
@@ -86,10 +22,4 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     {% include google_fonts.html defer=true %}
     <noscript>{% include google_fonts.html %}</noscript>
-    <link rel="alternate" type="application/rss+xml" title="Blog Feed" href="{{ site.url }}/feed/" />
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-    <link rel="pgpkey" type="application/pgp-keys" href="https://keybase.io/{% include social.html id='keybase' %}/pgp_keys.asc">
-    {% if page.shortlink -%}
-      <link rel="shortlink" href="{{ site.shorturl }}{{ page.shortlink | prepend: '/' | replace: '//', '/' }}">
-    {%- endif %}
 </head>
