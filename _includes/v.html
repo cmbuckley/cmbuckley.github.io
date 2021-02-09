@@ -14,5 +14,9 @@
 {%- endif -%}
 
 {%- unless found -%}
-  {{ site.time | date: '%s' }}
+  {%- if site.github -%}
+    r{{ site.github.build_revision | slice: 0,8 }}
+  {%- else -%}
+    {{ site.time | date: '%s' }}
+  {%- endif -%}
 {%- endunless -%}
