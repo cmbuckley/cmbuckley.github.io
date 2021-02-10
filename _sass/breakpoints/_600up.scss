@@ -42,8 +42,17 @@ footer .copy .powered {
 /***********
 CODE STYLING
 ************/
+.post--full {
+    div.highlighter-rouge {
+        margin: 0;
+    }
+
+    li div.highlighter-rouge {
+        margin-left: -40px;
+    }
+}
+
 pre.highlight {
-    margin: 0 0 2rem;
     max-height: 30em;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
