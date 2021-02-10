@@ -242,9 +242,12 @@ blockquote {
         margin-bottom: 2rem;
     }
 
-    .highlight {
-        clear: both;
-        margin-bottom: 2rem;
+    div.highlighter-rouge {
+        margin: 0 -20px;
+    }
+
+    li div.highlighter-rouge {
+        margin-left: -60px;
     }
 
     .image--featured {
