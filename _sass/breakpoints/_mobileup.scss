@@ -169,6 +169,10 @@ PAGE STYLES
     text-align: center;
 }
 
+.showcase__status {
+    display: block;
+}
+
 .content {
     padding-top: 1em;
 }
@@ -428,7 +432,7 @@ PAGINATION STYLING
 .pagination {
     padding-bottom: 3em;
 
-    .button__outline {
+    .button--outline {
         width: auto;
     }
 
