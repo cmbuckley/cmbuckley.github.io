@@ -1,14 +1,19 @@
 ---
 layout: page
 ---
-
-{%- assign repo = site.github.public_repositories | where:'name',site.github.repository_name | first -%}
+{%- assign repo = site.github.public_repositories | find:'name',site.github.repository_name -%}
 <div class="showcase-actions">
-    <a href="{{ site.github.repository_url }}/archive/{{ site.github.latest_release.tag_name | default: repo.default_branch }}.tar.gz" class="button__outline">{% include icons/use.html icon="file-archive-o" %} Download {{ site.github.latest_release.tag_name | default: 'Tarball' }}</a>
-    <a href="{{ site.github.repository_url }}" class="button__outline">{% include icons/use.html icon="github" %} View on GitHub</a>
+    <a href="{{ site.github.repository_url }}/archive/{{ site.github.latest_release.tag_name | default: repo.default_branch }}.tar.gz" class="button--outline">{% include icons/use.html icon="file-archive-o" %} Download {{ site.github.latest_release.tag_name | default: 'Tarball' }}</a>
+    <a href="{{ site.github.repository_url }}" class="button--outline">{% include icons/use.html icon="github" %} View on GitHub</a>
     {% if page.npm %}
-    <a href="https://www.npmjs.com/package/{{ page.npm }}" class="button__outline">{% include icons/use.html icon="npm" %} View on npm</a>
+    <a href="https://www.npmjs.com/package/{{ page.npm }}" class="button--outline">{% include icons/use.html icon="npm" %} View on npm</a>
     {% endif %}
+
+    {%- if page.travis %}
+    <a href="https://travis-ci.com/{{ site.github.repository_nwo }}" class="showcase__status">
+      <img src="https://api.travis-ci.com/{{ site.github.repository_nwo }}.svg?branch={{ repo.default_branch }}" alt="Build status for {{ site.github.repository_nwo }}" />
+    </a>
+    {%- endif %}
 </div>
 
 {{ content }}
