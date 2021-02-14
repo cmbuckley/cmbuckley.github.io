@@ -19,9 +19,9 @@ redirect_from:
 
 <nav class="pagination" aria-label="Pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}" rel="prev" class="previous button__outline">Newer Posts</a>
+    <a href="{{ paginator.previous_page_path | relative_url }}" rel="prev" class="previous button--outline">Newer Posts</a>
   {% endif %}
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url }}" rel="next" class="next button__outline">Older Posts</a>
+    <a href="{{ paginator.next_page_path | relative_url }}" rel="next" class="next button--outline">Older Posts</a>
   {% endif %}
 </nav>
