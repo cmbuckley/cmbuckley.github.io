@@ -12,7 +12,7 @@
     {%- assign comments_by_date = post_comments | sort: 'date' -%}
     {% for comment in comments_by_date %}
     <li id="comment-{{ comment._id }}" role="article">
-      <img class="avatar" src="https://www.gravatar.com/avatar/{{ comment.email | default: 0 }}?d=mm" alt="Avatar for {{ comment.name | escape }}" />
+      <img class="avatar" src="https://www.gravatar.com/avatar/{{ comment.email | default: 0 }}?d=mm" alt="Avatar for {{ comment.name | escape }}">
       <cite>{{ comment.name }}</cite>
       <p><time class="date" datetime="{{ comment.date | date_to_xmlschema }}">{{ comment.date | date: site.data.global.format.datetime | strip }}</time></p>
       <p class="comment">{{ comment.comment | markdownify | remove: '<p>' | remove: '</p>' | trim }}</p>

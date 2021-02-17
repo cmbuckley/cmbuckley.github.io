@@ -56,15 +56,15 @@
     <meta name="twitter:image:src" content="{{ meta_image_url }}">
     <meta name="twitter:image:alt" content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' }}">
     {% if page.layout == 'post' -%}
-      <meta name="twitter:label1" content="Reading Time" />
-      <meta name="twitter:data1" content="{{ page.content | number_of_words | divided_by: 120.0 | ceil }} min" />
+      <meta name="twitter:label1" content="Reading Time">
+      <meta name="twitter:data1" content="{{ page.content | number_of_words | divided_by: 120.0 | ceil }} min">
     {% if page.categories.size > 0 -%}
-      <meta name="twitter:label2" content="Categories" />
-      <meta name="twitter:data2" content="{{ page.categories | join: ', ' }}" />
+      <meta name="twitter:label2" content="Categories">
+      <meta name="twitter:data2" content="{{ page.categories | join: ', ' }}">
     {% endif -%}
     {% endif -%}
 
-    <link rel="alternate" type="application/rss+xml" title="Blog Feed" href="{{ site.url }}/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Blog Feed" href="{{ site.url }}/feed/">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
     <link rel="pgpkey" type="application/pgp-keys" href="https://keybase.io/{% include social.html id='keybase' %}/pgp_keys.asc">
     {% if page.shortlink -%}

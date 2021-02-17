@@ -4,7 +4,7 @@ layout: default
 <article class="post post--full">
   {% if page.image.main %}
     <div class="image--featured">
-        <img src="{{ '/assets/img/' | relative_url | append: page.image.main.src }}" alt="{{ page.image.main.alt }}" />
+        <img src="{{ '/assets/img/' | relative_url | append: page.image.main.src }}" alt="{{ page.image.main.alt }}">
       </div>
   {% endif %}
   <h1 class="post__title">{{ page.title | markdownify | remove:'<p>' | remove:'</p>' | strip }}</h1>
