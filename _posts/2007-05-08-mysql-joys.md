@@ -3,8 +3,9 @@ title: MySQL Joys
 layout: post
 categories:
   - Computing
+last_modified_at: 2021-02-17 18:04 +00:00
 ---
-[<acronym title="First normal form">1NF</acronym>](https://en.wikipedia.org/wiki/First_normal_form) teaches us that we should not store repeating groups in fields. Given that we have a table satisfying 1NF containing values as such:
+[<abbr title="First normal form">1NF</abbr>](https://en.wikipedia.org/wiki/First_normal_form) teaches us that we should not store repeating groups in fields. Given that we have a table satisfying 1NF containing values as such:
 
  `person_id` | `transaction_id`
 -------------|-----------------
