@@ -3,13 +3,14 @@ title: Adapting for OpenID
 layout: post
 categories:
   - Computing
+last_modified_at: 2021-02-17 18:04 +00:00
 ---
 Adapting for [OpenID](https://openid.net) is no fun. Especially when:
 
   1. bBlog is particularly difficult to extend in this area, even though being Smarty-based it's supposed to be highly customisable;
   2. there is so little comprehensive documentation for being an OpenID consumer.
 
-Being an <acronym title="identity provider">IdP</acronym> is simple; the OpenID consumer sends a request to the IdP (in this case, https://cmbuckley.co.uk/myid/) and, if successful, the user is redirected back to the consumer to confirm that the user has logged in successfully.
+Being an <abbr title="identity provider">IdP</abbr> is simple; the OpenID consumer sends a request to the IdP (in this case, https://cmbuckley.co.uk/myid/) and, if successful, the user is redirected back to the consumer to confirm that the user has logged in successfully.
 
 Doing this the other way round, with the blog as the consumer, the bBlog class gives a bit of a problem: The commenting method is written quite strongly for the POST method --- which I'd like to keep, as I don't really like submitting forms with GET anyway. However, the set-up for OpenID is very GET-orientated, so I'd have to almost completely rewrite the function for adding a new comment. And then I have to decide whether I send the comment to the IdP as part of the successful URL, or hold it in some sort of session variable or other method. Either way, if the comment is submitted at the same time as the OpenID, then the comment has to wait.
 
