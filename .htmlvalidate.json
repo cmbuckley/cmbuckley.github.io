@@ -1,0 +1,13 @@
+{
+  "rules": {
+    "attribute-boolean-style": "warn",
+    "element-permitted-content": "warn",
+    "element-required-attributes": "warn",
+    "element-required-content": "warn",
+    "no-trailing-whitespace": "warn",
+    "prefer-button": "warn",
+    "prefer-native-element": "warn",
+    "void-style": "warn",
+    "wcag/h32": "warn"
+  }
+}
