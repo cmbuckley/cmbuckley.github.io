@@ -23,6 +23,7 @@ exclude:
   - TODO
   - staticman.yml
   - vendor
+  - node_modules
 
 plugins:
   - jekyll-github-metadata
