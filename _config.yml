@@ -33,6 +33,9 @@ plugins:
 sass:
   style: compressed
 
+kramdown:
+  auto_id_prefix: h-
+
 defaults:
   - scope:
       type: blog_categories
