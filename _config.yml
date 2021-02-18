@@ -23,6 +23,7 @@ exclude:
   - TODO
   - staticman.yml
   - vendor
+  - node_modules
 
 plugins:
   - jekyll-github-metadata
@@ -31,6 +32,9 @@ plugins:
 
 sass:
   style: compressed
+
+kramdown:
+  auto_id_prefix: h-
 
 defaults:
   - scope:

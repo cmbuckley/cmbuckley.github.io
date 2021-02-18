@@ -1,6 +1,6 @@
 <h2>Leave a Reply</h2>
 
-<form id="comments-form" class="reply" method="POST" action="https://api.staticman.net/v2/entry/{{ site.github.repository_nwo }}/master/comments">
+<form id="comments-form" class="reply" method="post" action="https://api.staticman.net/v2/entry/{{ site.github.repository_nwo }}/master/comments">
   <input type="hidden" name="options[redirect]" value="{{ page.url | absolute_url }}">
   <input type="hidden" name="options[title]" value="{{ page.title | escape }}">
   <input type="hidden" name="options[slug]" value="{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}">
@@ -8,13 +8,13 @@
   <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.data.staticman.comments.reCaptcha.secret }}">
 
   <label for="comment-name">Name</label>
-  <input autocomplete="name" autocapitalize="words" id="comment-name" name="fields[name]" type="text" class="full-width"><br />
+  <input autocomplete="name" autocapitalize="words" id="comment-name" name="fields[name]" type="text" class="full-width"><br>
 
   <label for="comment-email">Email Address</label>
-  <input autocomplete="email" id="comment-email" name="fields[email]" type="email" class="full-width"><br />
+  <input autocomplete="email" id="comment-email" name="fields[email]" type="email" class="full-width"><br>
 
   <label for="comment-message">Message</label>
-  <textarea id="comment-message" name="fields[comment]" class="full-width"></textarea><br />
+  <textarea id="comment-message" name="fields[comment]" class="full-width"></textarea><br>
   <p class="recaptcha-message note">This site is protected by reCAPTCHA and the Google
       <a href="https://policies.google.com/privacy">Privacy Policy</a> and
       <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>

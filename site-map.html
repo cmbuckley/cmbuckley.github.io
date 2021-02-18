@@ -6,40 +6,8 @@ description: List of all pages on this site.
 
 <h2>Pages</h2>
 
-<ul>
-<li>
-{%- comment -%}This is a complete mess, but it manages to nest to second level, which is enough for now.{% endcomment %}
-{%- assign pages = site.html_pages | where_exp:'p','p.layout!="error"' | where_exp:'p','p.layout!="redirect"' | sort:'url' -%}
-{%- assign url = nil -%}
-{%- assign inlist = nil -%}
-{%- for page in pages -%}
-  {%- unless page.url contains "/page/" -%}
-    {%- if url != nil -%}
-      {%- if url != "/" -%}
-        {%- assign check = page.url | split: url -%}
-        {% if check[0] == "" %}
-          <ul>
-          {% assign inlist = url %}
-        {% else %}
-          </li>
-          {%- assign checklist = page.url | split: inlist -%}
-          {% if inlist != nil and checklist[0] != "" %}
-            </ul><!-- end {{ inlist }} -->
-            {%- assign inlist = nil -%}
-          {%- endif -%}
-        {%- endif -%}
-      {% else %}
-        </li>
-      {% endif %}
-      <li>
-    {% endif %}
-    <a href="{{ page.url }}">{{ page.title | default: 'Home' | markdownify | remove: '<p>' | remove: '</p>' | strip }}</a>
-    {%- assign url = page.url -%}
-  {%- endunless -%}
-{%- endfor -%}
-{%- if inlist != nil -%}</li></ul>{% endif # for when a second-level item ends the list -%}
-</li>
-</ul>
+{%- assign pages = site.html_pages | where_exp:'p','p.layout!="error"' | where_exp:'p','p.layout!="redirect"' | sort:'url' %}
+{% include listing.html pages=pages prefix='/' %}
 
 {% include showcase.html %}
 
