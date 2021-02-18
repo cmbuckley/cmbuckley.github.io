@@ -7,7 +7,7 @@ description: List of all pages on this site.
 <h2>Pages</h2>
 
 <ul>
-<li>
+  <li>
 {%- comment -%}This is a complete mess, but it manages to nest to second level, which is enough for now.{% endcomment %}
 {%- assign pages = site.html_pages | where_exp:'p','p.layout!="error"' | where_exp:'p','p.layout!="redirect"' | sort:'url' -%}
 {%- assign url = nil -%}
@@ -17,28 +17,33 @@ description: List of all pages on this site.
     {%- if url != nil -%}
       {%- if url != "/" -%}
         {%- assign check = page.url | split: url -%}
-        {% if check[0] == "" %}
-          <ul>
-          {% assign inlist = url %}
-        {% else %}
-          </li>
+        {% if check[0] == "" %}{% comment %}this page starts with the previous url, start a second-level{% endcomment %}
+
+    <ul>
+          {%- assign inlist = url -%}
+        {%- else %}
+  </li>
           {%- assign checklist = page.url | split: inlist -%}
           {% if inlist != nil and checklist[0] != "" %}
-            </ul><!-- end {{ inlist }} -->
+    </ul>
+  </li><!-- end {{ inlist }} -->
             {%- assign inlist = nil -%}
           {%- endif -%}
         {%- endif -%}
-      {% else %}
-        </li>
-      {% endif %}
-      <li>
-    {% endif %}
+      {% else %}{% comment %}special case for "/" since all pages start with that{% endcomment %}
+  </li>
+      {%- endif %}
+  <li>
+    {%- endif %}
     <a href="{{ page.url }}">{{ page.title | default: 'Home' | markdownify | remove: '<p>' | remove: '</p>' | strip }}</a>
     {%- assign url = page.url -%}
   {%- endunless -%}
 {%- endfor -%}
-{%- if inlist != nil -%}</li></ul>{% endif # for when a second-level item ends the list -%}
-</li>
+{%- if inlist != nil # for when a second-level item ends the entire list %}
+  </li>
+    </ul>
+{%- endif %}
+  </li>
 </ul>
 
 {% include showcase.html %}
