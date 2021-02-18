@@ -1,0 +1,46 @@
+{{ include.indent }}<ul>
+
+{%- for page in include.pages %}
+  {%- if page.url contains include.prefix %}
+
+    {%- comment %}    Check that the prefix is actually at the beginning of the URL
+    {%- endcomment %}
+    {%- assign split_by_prefix = page.url | split: include.prefix %}
+    {%- if split_by_prefix[0] == nil or split_by_prefix[0] == empty %}
+
+      {%- comment %}    Now put the remainder of the URL back together
+      {%- endcomment %}
+      {%- assign split_length = split_by_prefix | size %}
+      {%- assign remainder = split_by_prefix | slice: 1, split_length - 1 | join: include.prefix %}
+      {%- if include.prefix != '/' %}
+        {%- assign remainder_length = remainder | size %}
+        {%- assign remainder = remainder | split: "" | reverse | slice: 1, remainder_length - 1 | reverse | join: "" %}
+      {%- endif %}
+
+      {%- comment %}    Only output direct children of the prefix
+      {%- endcomment %}
+      {%- unless remainder contains '/' %}
+        {%- if page.url == '/' %}{% assign page_title = 'Home' %}{% else %}{% assign page_title = page.title %}{% endif %}
+{{ include.indent }}  <li>
+{{ include.indent }}    <a href="{{ page.url }}">{{ page_title | markdownify | remove: '<p>' | remove: '</p>' | strip }}</a>
+
+        {%- if page.url != '/' %}
+          {%- comment %}    Are there any pages below this one?
+          {%- endcomment %}
+          {%- assign subpages = include.pages | where_exp:'p':'p.url != page.url' | where_exp:'p','p.url contains page.url' %}
+          {%- assign subpages_size = subpages | size %}
+          {%- if subpages_size > 0 %}
+            {%- capture indent %}{{ include.indent }}    {% endcapture %}
+{% include listing.html pages=subpages prefix=page.url indent=indent %}
+
+          {%- endif %}
+        {%- endif %}
+{{ include.indent }}  </li>
+
+      {%- endunless %}
+    {%- endif %}
+  {%- endif %}
+{%- endfor %}
+{{ include.indent }}</ul>
+
+{%- comment %}Avoid trailing whitespace{% endcomment -%}
