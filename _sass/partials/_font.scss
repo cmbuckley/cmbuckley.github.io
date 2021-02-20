@@ -111,10 +111,13 @@ HEADER STYLING
 /***************
 POST STYLING
 ***************/
-.date, .meta {
+.date, .meta, .note {
     color: $subtle-color;
-    font-family: $sans-serif;
     font-weight: 300;
+}
+
+.date, .meta {
+    font-family: $sans-serif;
 }
 
 blockquote {
