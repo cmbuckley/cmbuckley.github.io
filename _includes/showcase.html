@@ -16,6 +16,9 @@
 
   <{{ item }}>
     <a href="{{ gh_page.name | prepend: '/' | append: '/' }}">{{ gh_page.name | markdownify | remove: '<p>' | remove: '</p>' | strip }}</a>
+    {% if gh_page.archived -%}
+      <small class="note">(archived)</small>
+    {%- endif %}
   </{{ item }}>
 
   {%- if include.define %}
