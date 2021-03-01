@@ -1,4 +1,4 @@
-{%- assign main_repo = site.github.public_repositories | where_exp:'r','r.name == "cmbuckley.github.io"' | first -%}
+{%- assign main_repo = site.github.public_repositories | where_exp:'r','r.name == site.github.repository_name' | first -%}
 {%- capture edit_link -%}{% github_edit_link "source" %}{%- endcapture -%}
 <footer>
     <div class="container">
