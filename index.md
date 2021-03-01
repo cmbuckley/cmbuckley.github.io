@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Chris Buckley's Personal Site
+link_title: Home
 supress_site_title: true
 shortlink: /
 og_type: website
