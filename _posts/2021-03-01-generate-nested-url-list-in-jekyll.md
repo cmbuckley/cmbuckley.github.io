@@ -2,7 +2,7 @@
 title: Generate Nested URL List in Jekyll
 categories:
   - Computing
-last_modified_at: 2021-03-01 23:02 +00:00
+last_modified_at: 2021-03-02 00:04 +00:00
 ---
 This site uses Jekyll on [GitHub Pages](https://pages.github.com), which has a restricted set of
 plugins that can be used when generating the static site.
@@ -62,12 +62,14 @@ This is the start and end of the loop, which first checks if the URL contains th
 Then, check the URL actually begins with the prefix. Liquid doesn't have a "starts with" operator,
 so split the string by the prefix, and check that the first element is empty.
 
-Notice how Jekyll has some inconsistencies in how splits are handled at the beginning and end:
+Notice how Liquid has some inconsistencies in how splits are handled at the beginning and end:
 
-*  `{% raw %}{{ 'a/b' | split: '/' }}{% endraw %}` = <samp>{{ 'a/b' | split: '/' | inspect }}</samp>
-*  `{% raw %}{{  '/b' | split: '/' }}{% endraw %}` = <samp>{{ '/b' | split: '/' | inspect }}</samp>
-*  `{% raw %}{{ 'a/'  | split: '/' }}{% endraw %}` = <samp>{{ 'a/' | split: '/' | inspect }}</samp>
-*  `{% raw %}{{  '/'  | split: '/' }}{% endraw %}` = <samp>{{ '/' | split: '/' | inspect }}</samp>
+```liquid
+{% raw %}{{ 'a/b' | split: '/' }}{% endraw %} = {{ 'a/b' | split: '/' | jsonify }}
+{% raw %}{{  '/b' | split: '/' }}{% endraw %} = {{ '/b' | split: '/' | jsonify }}
+{% raw %}{{ 'a/'  | split: '/' }}{% endraw %} = {{ 'a/' | split: '/' | jsonify }}
+{% raw %}{{  '/'  | split: '/' }}{% endraw %} = {{ '/' | split: '/' | jsonify }}
+```
 
 Empty strings appear at the beginning of the split, but not at the end, and the initial empty string
 disappears too in the last case; hence the extra check. (I previously used `[0] == nil` and `size == 0`,
@@ -82,8 +84,8 @@ but this equality check seemed easier to understand later.)
 ```
 {% endraw %}
 
-Now, stick the rest of the URL back together. This is safer than using `page.url | remove: include.prefix`.
-Also, my permalinks have trailing slashes, so I remove the final character (unless the prefix was
+Now, stick the rest of the URL back together. I could `remove: include.prefix` from the URL, but my
+permalinks have trailing slashes so I need to remove the final character anyway (unless the prefix was
 "/", in which case it's swallowed by the split inconsistencies mentioned above).
 
 {% raw %}
