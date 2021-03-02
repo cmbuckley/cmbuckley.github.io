@@ -20,6 +20,9 @@
     {% endif -%}
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    {% if page.layout == 'post' -%}
+      <link rel="preload" href="{{ site.data.staticman.comments.url }}" as="fetch" crossorigin>
+    {% endif -%}
     {% include google_fonts.html defer=true %}
     <noscript>{% include google_fonts.html %}</noscript>
 </head>
