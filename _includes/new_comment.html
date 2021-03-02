@@ -1,7 +1,7 @@
 <h2>Leave a Reply</h2>
 
-<form id="comments-form" class="reply" method="post" action="https://cmbuckley-staticman.herokuapp.com/v2/entry/{{ site.github.repository_nwo }}/{{ site.data.staticman.comments.branch }}/comments">
-  <input type="hidden" name="options[redirect]" value="{{ page.url | absolute_url }}">
+<form id="comments-form" class="reply" method="post" action="{{ site.data.staticman.comments.url }}/v2/entry/{{ site.github.repository_nwo }}/{{ site.data.staticman.comments.branch }}/comments">
+  <input type="hidden" name="options[redirect]" value="{{ page.url | absolute_url }}#comments-form">
   <input type="hidden" name="options[title]" value="{{ page.title | escape }}">
   <input type="hidden" name="options[slug]" value="{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}">
   <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.data.staticman.comments.reCaptcha.siteKey }}">
