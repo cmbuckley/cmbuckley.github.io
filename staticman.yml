@@ -13,7 +13,7 @@ comments:
       type: date
       options:
         format: timestamp-seconds
-  branch: master
+  branch: staticman
   format: yaml
   commitMessage: "Add comment to {options.slug}"
   filename: "{@id}"
