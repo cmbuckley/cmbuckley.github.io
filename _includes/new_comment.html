@@ -4,8 +4,11 @@
   <input type="hidden" name="options[redirect]" value="{{ page.url | absolute_url }}#comments-form">
   <input type="hidden" name="options[title]" value="{{ page.title | escape }}">
   <input type="hidden" name="options[slug]" value="{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}">
+
+  {%- if site.data.staticman.comments.reCaptcha.enabled %}
   <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.data.staticman.comments.reCaptcha.siteKey }}">
   <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.data.staticman.comments.reCaptcha.secret }}">
+  {%- endif %}
 
   <label for="comment-name">Name</label>
   <input autocomplete="name" autocapitalize="words" id="comment-name" name="fields[name]" type="text" class="full-width"><br>
@@ -15,13 +18,20 @@
 
   <label for="comment-message">Message</label>
   <textarea id="comment-message" name="fields[comment]" class="full-width"></textarea><br>
+
+  {%- if site.data.staticman.comments.reCaptcha.enabled %}
   <p class="recaptcha-message note">This site is protected by reCAPTCHA and the Google
       <a href="https://policies.google.com/privacy">Privacy Policy</a> and
       <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
+  {%- endif %}
 
-  <button type="button" class="button g-recaptcha" data-sitekey="{{ site.data.staticman.comments.reCaptcha.siteKey }}" data-callback="postComment">Post Comment</button>
+  <button class="button g-recaptcha" {% if site.data.staticman.comments.reCaptcha.enabled -%}
+    type="button" data-sitekey="{{ site.data.staticman.comments.reCaptcha.siteKey }}" data-callback="postComment"
+    {%- else %}type="submit"
+    {%- endif %}>Post Comment</button>
 </form>
 
+{% if site.data.staticman.comments.reCaptcha.enabled -%}
 <script nonce="" src="https://www.google.com/recaptcha/api.js" defer></script>
 <script nonce="">
     function postComment(token) {
@@ -31,3 +41,4 @@
 <noscript>
 <p class="warning">Due to comment spam, this form cannot be posted without JavaScript. Please see <a href="{{ site.github.wiki_url }}/Posting-a-comment-without-JavaScript">the guide to add a comment to the blog</a>.</p>
 </noscript>
+{%- endif %}
