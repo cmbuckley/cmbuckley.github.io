@@ -47,9 +47,9 @@ page-comments:
         format: timestamp-seconds
   branch: staticman
   format: yaml
-  commitMessage: "Add comment to {options.url}"
+  commitMessage: "Add comment to {options.slug}"
   filename: "{@id}"
-  path: "_data/comments/page/{options.url}"
+  path: "_data/comments/page/{options.slug}"
   transforms:
     email: md5
   akismet:
