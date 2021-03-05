@@ -168,9 +168,13 @@ POST STYLING
     }
 
     form.reply {
-        width: 50%;
-        margin: 0 auto 40px 12.5%;
+        margin-left: 12.5%;
     }
+}
+
+form.reply {
+    width: 50%;
+    margin: 0 auto 40px 0;
 }
 
 

@@ -256,35 +256,35 @@ blockquote {
             margin-bottom: 0;
         }
     }
+}
 
-    .comments {
-        padding: 0;
+.comments {
+    padding: 0;
 
-        li {
-            list-style-type: none;
-            border: 1px solid #aaa;
-            padding: 0.5em 0.75em;
-            margin-bottom: 1em;
+    li {
+        list-style-type: none;
+        border: 1px solid #aaa;
+        padding: 0.5em 0.75em;
+        margin-bottom: 1em;
 
-            .avatar {
-                width: 80px;
-                float: left;
-                margin-right: 10px;
-                margin-bottom: 10px;
-            }
+        .avatar {
+            width: 80px;
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
 
-            .comment {
-                white-space: pre-line;
-                width: 100%;
-                clear: left;
-                margin-bottom: 0;
-            }
+        .comment {
+            white-space: pre-line;
+            width: 100%;
+            clear: left;
+            margin-bottom: 0;
         }
     }
+}
 
-    form.reply {
-        margin: 0 auto;
-    }
+form.reply {
+    margin: 0 auto;
 }
 
 .footnotes {

@@ -1,12 +1,16 @@
+{%- if include.prop == 'blog' %}
+  {%- assign slug = page.date | date: '%Y-%m-%d' | append: '-' | append: page.slug %}
+{%- else %}
+  {%- assign slug = page.url | replace: '/', ' ' | strip | replace: ' ', '_' %}
+{%- endif %}
 <section class="post__comments" id="comments">
-{% capture date_slug %}{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}{% endcapture %}
-{% if site.data.comments[date_slug] %}{% assign count = site.data.comments[date_slug] | size %}
+{% if site.data.comments[include.prop][slug] %}{% assign count = site.data.comments[include.prop][slug].size %}
   <h2>{{ count }} Comment{% if count != 1 %}s{% endif %}</h2>
 
   <ol class="comments">
     {%- comment -%}Data structure is [[id, {data}], ...] so cannot sort without creating new array{%- endcomment -%}
     {%- assign post_comments = '' | split: ',' -%}
-    {%- for comment_data in site.data.comments[date_slug] -%}
+    {%- for comment_data in site.data.comments[include.prop][slug] -%}
     {%- assign post_comments = post_comments | push: comment_data[1] -%}
     {%- endfor -%}
     {%- assign comments_by_date = post_comments | sort: 'date' -%}
@@ -21,5 +25,5 @@
   </ol>
   {% endif %}
 
-  {% include new_comment.html %}
+  {% include new_comment.html prop=include.prop slug=slug %}
 </section>
