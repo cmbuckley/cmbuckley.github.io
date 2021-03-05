@@ -138,6 +138,15 @@ document.addEventListener('DOMContentLoaded', function () {
                         toFocus.scrollIntoView({behavior: 'smooth', block: 'center'});
                     }
                 }
+
+                // visit the selected result
+                if (e.key == 'Enter') {
+                    let inFocus = document.querySelector('.search-results .key-focussed');
+
+                    if (inFocus) {
+                        inFocus.querySelector('a').click();
+                    }
+                }
             }
         });
 
