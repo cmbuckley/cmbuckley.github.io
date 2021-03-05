@@ -125,7 +125,15 @@ blockquote {
 }
 
 .comments li {
-    background-color: #fcfcfc;
+    background-color: $offwhite;
+
+    &.author {
+        background-color: #d9f1c7;
+
+        .date {
+            color: $grey;
+        }
+    }
 }
 
 
