@@ -11,13 +11,13 @@
   {%- endif %}
 
   <label for="comment-name">Name</label>
-  <input autocomplete="name" autocapitalize="words" id="comment-name" name="fields[name]" type="text" class="full-width"><br>
+  <input required autocomplete="name" autocapitalize="words" id="comment-name" name="fields[name]" type="text" class="full-width"><br>
 
   <label for="comment-email">Email Address</label>
-  <input autocomplete="email" id="comment-email" name="fields[email]" type="email" class="full-width"><br>
+  <input required autocomplete="email" id="comment-email" name="fields[email]" type="email" class="full-width"><br>
 
   <label for="comment-message">Message</label>
-  <textarea id="comment-message" name="fields[comment]" class="full-width"></textarea><br>
+  <textarea required id="comment-message" name="fields[comment]" class="full-width"></textarea><br>
 
   {%- if site.data.staticman.comments.reCaptcha.enabled %}
   <p class="recaptcha-message note">This site is protected by reCAPTCHA and the Google
