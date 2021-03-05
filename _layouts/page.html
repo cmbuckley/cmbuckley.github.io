@@ -4,3 +4,7 @@ layout: default
 <h1 class="page__title">{{ page.title | smartify }}</h1>
 
 {{ content }}
+
+{%- if page.allow_comments %}
+  {% include comments.html prop='page-comments' %}
+{%- endif %}
