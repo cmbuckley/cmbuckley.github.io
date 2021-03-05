@@ -1,13 +1,13 @@
 <h2>Leave a Reply</h2>
 
-<form id="comments-form" class="reply" method="post" action="{{ site.data.staticman.comments.url }}/v2/entry/{{ site.github.repository_nwo }}/{{ site.data.staticman.comments.branch }}/comments">
+<form id="comments-form" class="reply" method="post" action="{{ site.data.staticman[include.prop].url }}/v2/entry/{{ site.github.repository_nwo }}/{{ site.data.staticman[include.prop].branch }}/{{ include.prop }}">
   <input type="hidden" name="options[redirect]" value="{{ page.url | absolute_url }}#comments-form">
   <input type="hidden" name="options[title]" value="{{ page.title | escape }}">
-  <input type="hidden" name="options[slug]" value="{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}">
+  <input type="hidden" name="options[slug]" value="{{ include.slug }}">
 
-  {%- if site.data.staticman.comments.reCaptcha.enabled %}
-  <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.data.staticman.comments.reCaptcha.siteKey }}">
-  <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.data.staticman.comments.reCaptcha.secret }}">
+  {%- if site.data.staticman[include.prop].reCaptcha.enabled %}
+  <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.data.staticman[include.prop].reCaptcha.siteKey }}">
+  <input type="hidden" name="options[reCaptcha][secret]" value="{{ site.data.staticman[include.prop].reCaptcha.secret }}">
   {%- endif %}
 
   <label for="comment-name">Name</label>
@@ -19,19 +19,19 @@
   <label for="comment-message">Message</label>
   <textarea required id="comment-message" name="fields[comment]" class="full-width"></textarea><br>
 
-  {%- if site.data.staticman.comments.reCaptcha.enabled %}
+  {%- if site.data.staticman[include.prop].reCaptcha.enabled %}
   <p class="recaptcha-message note">This site is protected by reCAPTCHA and the Google
       <a href="https://policies.google.com/privacy">Privacy Policy</a> and
       <a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
   {%- endif %}
 
-  <button class="button g-recaptcha" {% if site.data.staticman.comments.reCaptcha.enabled -%}
-    type="button" data-sitekey="{{ site.data.staticman.comments.reCaptcha.siteKey }}" data-callback="postComment"
+  <button class="button g-recaptcha" {% if site.data.staticman[include.prop].reCaptcha.enabled -%}
+    type="button" data-sitekey="{{ site.data.staticman[include.prop].reCaptcha.siteKey }}" data-callback="postComment"
     {%- else %}type="submit"
     {%- endif %}>Post Comment</button>
 </form>
 
-{% if site.data.staticman.comments.reCaptcha.enabled -%}
+{% if site.data.staticman[include.prop].reCaptcha.enabled -%}
 <script nonce="" src="https://www.google.com/recaptcha/api.js" defer></script>
 <script nonce="">
     function postComment(token) {

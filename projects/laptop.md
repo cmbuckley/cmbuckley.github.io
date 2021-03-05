@@ -2,6 +2,7 @@
 title: Laptop Digital Picture Frame
 description: I built a digital picture frame from an old laptop and too much free time!
 layout: page
+allow_comments: true
 ---
 
 {% include figure.html url="/files/2012/04/img_0015.jpg" img="/files/2012/04/img_0015-320x200.jpg" caption="The finished product" float="right" %}
