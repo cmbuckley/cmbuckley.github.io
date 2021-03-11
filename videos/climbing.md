@@ -2,6 +2,7 @@
 layout: gallery
 title: Climbing
 description: Videos taken while climbing.
+type: video
 gallery:
   climbing/leapoffaith: The Leap of Faith™!
   climbing/pockets: Pockets route at Berghaus

@@ -335,4 +335,4 @@ The total cost of this project was around £30 for a wireless card and a frame, 
 
 This is a really fun project that got me doing a bit of coding, a bit of woodworking and a bit of taking things apart to see how they work --- all were thoroughly enjoyable and I'd recommend giving one of these projects a go. It took me a day to fully set up the laptop and code the software, then an afternoon to take it apart and a couple of evenings to construct the frame. And, like everyone says, if you do attempt one of these, take pictures!
 
-You can also view pictures of the project.
+You can also view [more pictures of the project](photos/).
