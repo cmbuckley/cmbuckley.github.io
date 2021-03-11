@@ -4,6 +4,7 @@ description: I built a digital picture frame from an old laptop and too much fre
 date: 2006-12-25
 layout: page
 allow_comments: true
+float_small: true
 image:
   meta:
     src: /projects/laptop/photos/img_0202.jpg

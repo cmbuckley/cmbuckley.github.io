@@ -1,4 +1,4 @@
-<figure class="fl-{{ include.float | default: 'none' }}">
+<figure class="fl-{{ include.float | default: 'none' }}{% if include.float and page.float_small %} fl--small{% endif %}">
 
 {%- if include.video -%}
   {% assign video_prefix="https://res.cloudinary.com/cmbuckley/video/upload" %}
