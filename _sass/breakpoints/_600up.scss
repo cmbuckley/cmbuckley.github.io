@@ -4,19 +4,25 @@ figure {
     &.fl-right {
         clear: right;
         float: right;
-        margin: 1em 0 1em 40px;
+        margin: 0 0 1em 40px;
     }
 
     &.fl-left {
         float: left;
         clear: left;
-        margin: 1em 40px 1em 0;
+        margin: 0 40px 1em 0;
     }
 
     &.fl-none img {
         max-width: 50%;
     }
+
+    &.fl--small {
+        max-width: 240px;
+        font-size: 0.8em;
+    }
 }
+
 
 .page__title {
     margin: 2rem auto 1em;
