@@ -4,6 +4,11 @@ layout: post
 categories:
   - Computing
   - Pictures
+image:
+  meta:
+    src: /projects/laptop/photos/img_0202.jpg
+    alt: The inside of the finished picture frame
+last_modified_at: 2021-03-11 00:42 +00:00
 ---
 Happy Christmas!
 
