@@ -4,8 +4,31 @@ layout: page
 
 {{ content }}
 
-{% for item in page.gallery %}
-  {% assign video=item[0] %}
-  {% assign caption=item[1] %}
-  {% include figure.html video=video caption=caption %}
-{% endfor %}
+{%- if page.gallery == 'auto' %}
+  {%- assign folder = page.folder | default: page.url %}
+  {%- assign gallery = site.static_files | map:'path' | where_exp:'i','i contains folder' | where_exp:'i','i contains "_thumb"' %}
+{%- else %}
+  {%- assign gallery = page.gallery %}
+{%- endif %}
+
+{%- if page.grid %}<div class="gallery">{% endif %}
+
+{%- for item in gallery %}
+  {%- if item.first %}
+    {%- if page.type == 'video' %}
+      {%- assign video=item[0] %}
+    {%- else %}
+      {%- assign img=item[0] %}
+    {%- endif %}
+    {%- assign caption=item[1] %}
+  {%- else %}
+    {%- assign img=item %}
+    {%- assign url=item | remove:'_thumb' %}
+  {%- endif %}
+
+  {%- include figure.html figure=false url=url img=img video=video caption=caption %}
+{%- endfor %}
+
+{%- if page.grid %}
+  <span class="filler"></span>
+</div>{% endif %}
