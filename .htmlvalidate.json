@@ -1,5 +1,6 @@
 {
   "rules": {
+    "attribute-allowed-values": "warn",
     "attribute-boolean-style": "warn",
     "element-permitted-content": "warn",
     "element-required-attributes": "warn",
