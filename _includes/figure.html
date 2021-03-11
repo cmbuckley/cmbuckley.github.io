@@ -1,4 +1,6 @@
-<figure class="fl-{{ include.float | default: 'none' }}">
+{%- if include.caption != nil or include.figure != false %}
+<figure class="fl-{{ include.float | default: 'none' }}{% if include.float and page.float_small %} fl--small{% endif %}">
+{%- endif %}
 
 {%- if include.video -%}
   {% assign video_prefix="https://res.cloudinary.com/cmbuckley/video/upload" %}
@@ -20,4 +22,7 @@
 {%- if include.caption -%}
   <figcaption>{{ include.caption | markdownify | remove:'<p>' | remove: '</p>' | strip }}</figcaption>
 {% endif %}
+
+{%- if include.caption != nil or include.figure != false %}
 </figure>
+{% endif %}
