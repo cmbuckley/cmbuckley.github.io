@@ -11,7 +11,9 @@
     }
 
     // Stop last row taking up full width
-    .filler {
+    &::after {
+        content: "";
+        flex: auto;
         flex-grow: 10;
     }
 

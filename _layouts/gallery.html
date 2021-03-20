@@ -4,11 +4,11 @@ layout: page
 
 {{ content }}
 
-{%- if page.gallery == 'auto' %}
-  {%- assign folder = page.folder | default: page.url %}
-  {%- assign gallery = site.static_files | map:'path' | where_exp:'i','i contains folder' | where_exp:'i','i contains "_thumb"' %}
-{%- else %}
+{%- if page.gallery and page.gallery.first %}
   {%- assign gallery = page.gallery %}
+{%- else %}
+  {%- assign folder = page.gallery | default: page.url %}
+  {%- assign gallery = site.static_files | map:'path' | where_exp:'i','i contains folder' | where_exp:'i','i contains "_thumb"' %}
 {%- endif %}
 
 {%- if page.grid %}<div class="gallery">{% endif %}
@@ -30,5 +30,4 @@ layout: page
 {%- endfor %}
 
 {%- if page.grid %}
-  <span class="filler"></span>
 </div>{% endif %}
