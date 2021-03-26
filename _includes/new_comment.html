@@ -1,7 +1,7 @@
 <h2>Leave a Reply</h2>
 
 <form id="comments-form" class="reply" method="post" action="{{ site.data.staticman[include.prop].url }}/v2/entry/{{ site.github.repository_nwo }}/{{ site.data.staticman[include.prop].branch }}/{{ include.prop }}">
-  <input type="hidden" name="options[redirect]" value="{{ page.url | absolute_url }}#comments-form">
+  <input type="hidden" name="options[redirect]" value="{{ page.url | absolute_url }}#comment-posted">
   <input type="hidden" name="options[title]" value="{{ page.title | escape }}">
   <input type="hidden" name="options[slug]" value="{{ include.slug }}">
 

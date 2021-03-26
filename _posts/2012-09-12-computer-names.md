@@ -2,41 +2,48 @@
 title: Computer Names
 categories:
   - Computing
+last_modified_at: 2021-03-26 23:39 +00:00
 ---
 
 I started this list at _D_ because this home desktop was the fourth computer I or my family owned, starting with the [Amstrad](/interests/computing/), and it seemed like they deserved a gap to be left for them!
 
 Things got a little weird in the middle so I may have to go back and fill the gaps at some point, since I'm running out of letters...
 
-dirac
+[dirac](https://en.wikipedia.org/wiki/Paul_Dirac)
 :    Home desktop (decommissioned)
 
-euler
+[euler](https://en.wikipedia.org/wiki/Leonhard_Euler)
 :    Netbook (retired, in a box somewhere)
 
-fermat
+[fermat](https://en.wikipedia.org/wiki/Pierre_de_Fermat)
 :    Home desktop (decommissioned)
 
-gauss
+[gauss](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss)
 :    VPS
 
-hardy
+[hardy](https://en.wikipedia.org/wiki/G._H._Hardy)
 :    Home desktop
 
-newton
+[newton](https://en.wikipedia.org/wiki/Isaac_Newton)
 :    MacBook Pro (retired, gifted to family, still just about runs)
 
-pythagoras
-:    Work desktop (unloved thanks to corporate security policies)
+[pythagoras](https://en.wikipedia.org/wiki/Pythagoras)
+:    Work desktop (retired thanks to corporate security policies)
 
-riemann
-:    Apple TV (retired, in the loft)
+[riemann](https://en.wikipedia.org/wiki/Bernhard_Riemann)
+:    Apple TV (retired, in a box somewhere)
 
-sagan
+[sagan](https://en.wikipedia.org/wiki/Carl_Sagan)
 :    Apple TV
 
-taniyama
+[taniyama](https://en.wikipedia.org/wiki/Yutaka_Taniyama)
 :    MacBook Pro
 
-voltaire
+[voltaire](https://en.wikipedia.org/wiki/Voltaire)
 :    DiskStation NAS
+
+[wiles](https://en.wikipedia.org/wiki/Andrew_Wiles)
+:    Home Assistant Pi
+
+[young](https://en.wikipedia.org/wiki/Grace_Chisholm_Young)
+:    Media Player Pi
