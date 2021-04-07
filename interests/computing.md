@@ -1,11 +1,12 @@
 ---
 title: Computing
-description: Computers have been a big part of my life!
+description: I've been interested in computers from an early age, and that's an interest that's only grown over the years.
 layout: page
 image:
   meta:
     src: /files/2012/05/amstrad_cpc_6128.jpg
     alt: Amstrad CPC 6128 and monitor
+last_modified_at: 2021-04-07 17:43 +01:00
 ---
 
 {% include figure.html img="/files/2012/05/amstrad_cpc_6128-300x267.jpg" url="/files/2012/05/amstrad_cpc_6128.jpg" alt="Amstrad CPC 6128 and monitor" float="right" %}

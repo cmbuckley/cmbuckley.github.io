@@ -1,6 +1,6 @@
 ---
 title: Contact Me
-description: Contact Chris Buckley
+description: Contact Chris Buckley via email or social media. Includes PGP keys for private messages.
 layout: page
 ---
 
