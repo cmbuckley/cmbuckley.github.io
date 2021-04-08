@@ -67,6 +67,11 @@ form {
         margin-top: 5px;
         color: $error-color;
     }
+
+    :disabled {
+        opacity: 40%;
+        cursor: not-allowed;
+    }
 }
 
 @media only screen and (max-width: 499px) {
