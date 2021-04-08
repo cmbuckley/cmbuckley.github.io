@@ -80,8 +80,51 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // add an interacted class to forms to highlight required fields
     document.querySelectorAll('[type="submit"]').forEach(function (el) {
-        el.addEventListener('click', function (e) {
+        el.addEventListener('click', function () {
             el.closest('form').classList.add('interacted');
+        });
+    });
+
+    // forms that should be submitted via XHR
+    document.querySelectorAll('form.xhr').forEach(function (form) {
+        form.addEventListener('submit', function (submitEvent) {
+            submitEvent.preventDefault();
+
+            form.classList.add('form--loading');
+            form.querySelectorAll('[type="submit"]').forEach(el => el.disabled = true);
+            form.querySelectorAll('input.not-xhr').forEach(el => el.remove());
+
+            var toast = form.querySelector('.form__notification');
+            if (toast) {
+                toast.innerText = '';
+            } else {
+                toast = document.createElement('div');
+                toast.classList.add('form__notification');
+                form.appendChild(toast);
+            }
+
+            var xhr = new XMLHttpRequest();
+            xhr.addEventListener('load', function () {
+                form.classList.add('form--success');
+                form.classList.remove('interacted');
+                toast.innerText = 'Thanks for your post! It will appear here once it has been approved.';
+                form.querySelectorAll('[type="submit"]').forEach(el => el.remove());
+                form.reset();
+            });
+
+            xhr.addEventListener('error', function () {
+                form.classList.add('form--error');
+                toast.innerText = 'The comment could not be posted.';
+            });
+
+            xhr.addEventListener('loadend', function () {
+                form.classList.remove('form--loading');
+                form.querySelectorAll('[type="submit"]').forEach(el => el.disabled = false);
+            });
+
+            xhr.open(form.method, form.action);
+            xhr.setRequestHeader('Content-Type', form.enctype);
+            xhr.send(Array.from(new FormData(form), e => e.map(encodeURIComponent).join('=')).join('&'));
         });
     });
 
