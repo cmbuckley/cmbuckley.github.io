@@ -20,18 +20,18 @@ BUTTON DEFAULTS
   transition: background-color 0.14s ease-in-out;
 
   // hovering on the btn
-  &:hover, &:focus {
+  &:not(:disabled):hover, &:not(:disabled):focus {
     color: $white;
     text-decoration: none;
     background-color: darken($primary-color, 10%);
-  } // end hover
+  }
 
   // clicking on the button
   &:active {
     top: 1px; // adds a tiny hop to the click
-  } // end active
+  }
 
-} // end .button
+}
 
 @media only screen and (max-width: 499px) {
     %btn {
@@ -48,7 +48,7 @@ BUTTON DEFAULTS
     @extend %btn;
     background-color: $secondary-color;
 
-    &:hover {
+    &:not(:disabled):hover {
       background-color: darken($secondary-color, 10%);
     }
   }
@@ -57,7 +57,7 @@ BUTTON DEFAULTS
     @extend %btn;
     background-color: $tertiary-color;
 
-    &:hover {
+    &:not(:disabled):hover {
       background-color: darken($tertiary-color, 10%);
     }
   }
@@ -71,7 +71,7 @@ BUTTON DEFAULTS
   border: 3px solid $primary-color;
   color: $primary-color;
 
-  &:hover {
+  &::not(:disabled):hover {
     background-color: $primary-color;
     color: $white;
   }
