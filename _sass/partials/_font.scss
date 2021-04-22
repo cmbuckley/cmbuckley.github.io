@@ -127,11 +127,25 @@ blockquote {
 .comments li {
     background-color: $offwhite;
 
+    &:target {
+        border-color: $primary-color;
+        box-shadow: 0 0 3px 0.2em scale-color($primary-color, $lightness: 75%);
+    }
+
     &.author {
-        background-color: #d9f1c7;
+        background-color: scale-color($primary-color, $lightness: 95%);
 
         .date {
             color: $grey;
+        }
+    }
+
+    .comment__link {
+        color: $grey;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
         }
     }
 }
