@@ -22,6 +22,15 @@ figure {
     }
 }
 
+ins {
+    background-color: change-color($ok-color, $alpha: 0.5);
+    text-decoration: none;
+}
+
+del {
+    background-color: change-color($error-color, $alpha: 0.5);
+}
+
 dt {
     font-weight: bold;
 }
