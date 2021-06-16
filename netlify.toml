@@ -1,2 +1,9 @@
 [build]
   command = "jekyll build --config _config.yml,_staging.yml"
+
+[[plugins]]
+  package = "netlify-plugin-html-validate"
+
+  [plugins.inputs]
+    ext = "html"
+    config = ".htmlvalidate.json"
