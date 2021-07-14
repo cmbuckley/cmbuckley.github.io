@@ -73,7 +73,10 @@ MENU STYLING
     text-decoration: none;
     position: absolute;
     right: 2rem;
-    transition: all 0.2s ease-in-out;
+
+    @media (prefers-reduced-motion: no-preference) {
+        transition: all 0.2s ease-in-out;
+    }
 }
 
 @media print {
@@ -113,8 +116,11 @@ MENU STYLING
     position: absolute;
     overflow: hidden;
     zoom: 1;
-    transition: max-height 260ms ease 0s;
     z-index: 1;
+
+    @media (prefers-reduced-motion: no-preference) {
+        transition: max-height 260ms ease 0s;
+    }
 }
 
 .nav-toggle[aria-expanded="true"] + .nav-collapse {
