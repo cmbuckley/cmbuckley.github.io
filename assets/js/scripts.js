@@ -59,24 +59,26 @@ document.addEventListener('DOMContentLoaded', function () {
     updateMenu();
 
     // loop through all elements and replace with breakpoint elements
-    document.querySelectorAll('.break-text').forEach(function (el) {
-        var span, attr;
+    if (window.CSS && CSS.supports('display', 'none')) {
+        document.querySelectorAll('.break-text').forEach(function (el) {
+            var span, attr;
 
-        for (var key in el.attributes) {
-            attr = el.attributes[key];
+            for (var key in el.attributes) {
+                attr = el.attributes[key];
 
-            if (/^data-/.test(attr.nodeName)) {
-                // create span with the appropriate text
-                span = document.createElement('span');
-                span.className = {xs: 'hide-s-up', 's-up': 'hide-xs'}[attr.nodeName.replace(/^data-/, '')];
-                span.textContent = attr.nodeValue;
-                el.parentNode.insertBefore(span, el);
+                if (/^data-/.test(attr.nodeName)) {
+                    // create span with the appropriate text
+                    span = document.createElement('span');
+                    span.className = {xs: 'hide-s-up', 's-up': 'hide-xs'}[attr.nodeName.replace(/^data-/, '')];
+                    span.textContent = attr.nodeValue;
+                    el.parentNode.insertBefore(span, el);
+                }
             }
-        }
 
-        // now remove the default element
-        el.parentNode.removeChild(el);
-    });
+            // now remove the default element
+            el.parentNode.removeChild(el);
+        });
+    }
 
     // add an interacted class to forms to highlight required fields
     document.querySelectorAll('[type="submit"]').forEach(function (el) {
