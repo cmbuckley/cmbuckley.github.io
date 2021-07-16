@@ -61,18 +61,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // loop through all elements and replace with breakpoint elements
     if (window.CSS && CSS.supports('display', 'none')) {
         document.querySelectorAll('.break-text').forEach(function (el) {
-            var span, attr;
+            var span;
 
-            for (var key in el.attributes) {
-                attr = el.attributes[key];
-
-                if (/^data-/.test(attr.nodeName)) {
-                    // create span with the appropriate text
-                    span = document.createElement('span');
-                    span.className = {xs: 'hide-s-up', 's-up': 'hide-xs'}[attr.nodeName.replace(/^data-/, '')];
-                    span.textContent = attr.nodeValue;
-                    el.parentNode.insertBefore(span, el);
-                }
+            for (var key in el.dataset) {
+                // create span with the appropriate text
+                span = document.createElement('span');
+                span.className = {xs: 'hide-s-up', sUp: 'hide-xs'}[key];
+                span.textContent = el.dataset[key];
+                el.parentNode.insertBefore(span, el);
             }
 
             // now remove the default element
