@@ -1,29 +1,30 @@
-{%- if include.prop == 'blog' %}
-  {%- assign slug = page.date | date: '%Y-%m-%d' | append: '-' | append: page.slug %}
-{%- else %}
-  {%- assign slug = page.url | replace: '/', ' ' | strip | replace: ' ', '_' %}
-{%- endif %}
+{%- if include.prop == 'blog' -%}
+  {%- assign slug = page.date | date: '%Y-%m-%d' | append: '-' | append: page.slug -%}
+{%- else -%}
+  {%- assign slug = page.url | replace: '/', ' ' | strip | replace: ' ', '_' -%}
+{%- endif -%}
 <section class="post__comments" id="comments">
 {% if site.data.comments[include.prop][slug] %}{% assign count = site.data.comments[include.prop][slug].size %}
   <h2>{{ count }} Comment{% if count != 1 %}s{% endif %}</h2>
 
   <ol class="comments">
-    {%- comment -%}Data structure is [[id, {data}], ...] so cannot sort without creating new array{%- endcomment -%}
+    {% comment -%}Data structure is [[id, {data}], ...] so cannot sort without creating new array{%- endcomment -%}
     {%- assign post_comments = '' | split: ',' -%}
     {%- for comment_data in site.data.comments[include.prop][slug] -%}
-    {%- assign post_comments = post_comments | push: comment_data[1] -%}
+      {%- assign post_comments = post_comments | push: comment_data[1] -%}
     {%- endfor -%}
     {%- assign comments_by_date = post_comments | sort: 'date' -%}
-    {% for comment in comments_by_date %}
+
+    {% for comment in comments_by_date -%}
     <li id="c-{{ comment._id }}" role="article"{% if comment.name == site.title %} class="author"{% endif %}>
       <img class="avatar" src="https://www.gravatar.com/avatar/{{ comment.email | default: 0 }}?d=mm" alt="Avatar for {{ comment.name | escape }}">
       <cite>{{ comment.name }}</cite>
       <p><a class="comment__link" href="#c-{{ comment._id }}"><time class="date" datetime="{{ comment.date | date_to_xmlschema }}">{{ comment.date | date: site.data.global.format.datetime | strip }}</time></a></p>
       <p class="comment">{{ comment.comment | markdownify | remove: '<p>' | remove: '</p>' | trim }}</p>
     </li>
-    {% endfor %}
+    {% endfor -%}
   </ol>
-  {% endif %}
+  {% endif -%}
 
   {% include new_comment.html prop=include.prop slug=slug %}
 </section>
