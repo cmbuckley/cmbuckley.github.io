@@ -116,19 +116,7 @@ form {
     }
 
     .form--loading &::after {
-        content: "";
-        width: 30px;
-        height: 30px;
-        border: 5px solid #e6e6e6;
-        border-top-color: $primary-color;
-        border-radius: 50%;
-        animation: loading 1s ease infinite;
+        @extend %loading;
         display: inline-block;
-    }
-}
-
-@keyframes loading {
-    to {
-        transform: rotate(1turn);
     }
 }

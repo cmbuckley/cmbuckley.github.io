@@ -31,3 +31,8 @@ mark {
 .sr-only {
     @extend %sr-only;
 }
+
+.search-results:empty {
+    @extend %loading;
+    margin: 0 auto 1.5em;
+}
