@@ -1,11 +1,13 @@
 ---
 title: Word Clock v2
+description: My trials and tribulations with a modified word clock.
 layout: post
 categories:
   - Computing
   - Play
+last_modified_at: 2021-08-19 22:46 +01:00
 ---
-I've seen a few nice-looking representations of clocks around, but when I saw {% include archive.html url="http://gumuz.nl/weblog/javascript-word-clock/" text="Gumuz's word clock" %} I though I could make some improvements to it. Here's a couple of the changes:
+I've seen a few nice-looking representations of clocks around, but when I saw {% include archive.html url="http://gumuz.nl/weblog/javascript-word-clock/" text="Gumuz's word clock" %} I thought I could make some improvements to it. Here's a couple of the changes:
 
   * Rewrote using [MooTools](https://mootools.net) (only because I know it better, I'm currently developing in it, and it gave me a chance to play with Google's JS API)
   * Rewrote some of the JavaScript logic to be a bit tidier

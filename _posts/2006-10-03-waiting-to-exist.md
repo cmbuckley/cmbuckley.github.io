@@ -1,11 +1,13 @@
 ---
 title: Waiting to Exist
+description: Headaches of university registration, and the inevitable solution.
 layout: post
 categories:
   - Academic
   - Nights Out
+last_modified_at: 2021-08-19 22:46 +01:00
 ---
-So after my induction meeting yesterday, I decided to go and get my registration form from the department, and sort out tuition fees and the like. At least, that was the plan...
+After my induction meeting yesterday, I decided to go and get my registration form from the department, and sort out tuition fees and the like. At least, that was the plan...
 
 I didn't have a form. Apparently this is not surprising, and SPA (the centre that handles our registration process) don't seem to be very good at their job. Richard seems to be in a similar situation, finding out first-hand about the general incompetence of the graduate school. Still, hopefully the department are on top of it! Looks like I'll have to wait around for a bit. I'm off to see my office tomorrow!
 

@@ -1,5 +1,6 @@
 ---
 title: Square Wheels and Catenary Roads
+description: I learned that square wheels can ride on a road constructed of inverted catenaries.
 layout: post
 maths: true
 categories:
@@ -10,7 +11,7 @@ image:
     src: /files/2007/08/road-real.jpg
     alt: Model of a catenary road
 shortlink: bswcr
-last_modified_at: 2020-10-31 02:41 +00:00
+last_modified_at: 2021-08-19 22:46 +01:00
 ---
 The other day [Paul](https://pictures.scholesmafia.co.uk/index.php/?profile=150) told me that square wheels (and, indeed, any regular polygon except a triangle) can {% include archive.html url="http://www.maa.org/mathland/mathtrek_04_05_04.html" text="ride on a road constructed of inverted catenaries" %}. A catenary is the curve made by a telegraph wire when stretched between two poles --- a cable hanging under its own weight.
 

@@ -1,9 +1,10 @@
 ---
 title: Gmail in Multiple Clients
+description: Gmail has always confused me when opening POP emails from multiple clients.
 layout: post
 categories:
   - Computing
-last_modified_at: 2021-02-17 18:04 +00:00
+last_modified_at: 2021-08-19 22:46 +01:00
 ---
 Gmail has always confused me that when opening <abbr title="Post Office Protocol">POP</abbr> emails from multiple clients, only those opened in that client show up. In other words, if you open up an email using client A, you can't open it in client B --- you have to view it in webmail.
 

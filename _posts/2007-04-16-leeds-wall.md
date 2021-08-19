@@ -1,8 +1,10 @@
 ---
 title: Leeds Wall
+description: The weather was more suited for outdoor climbing, but since we couldn't manage that we decided to visit the Leeds Wall.
 layout: post
 categories:
   - Climbing
+last_modified_at: 2021-08-19 22:46 +01:00
 ---
 The weather was more suited for getting out to a crag somewhere, but since we couldn't manage that we decided to visit [the Leeds Wall](https://www.theclimbingdepot.co.uk/) --- and since it was such a nice day, it was quite quiet!
 

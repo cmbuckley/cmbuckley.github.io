@@ -4,8 +4,9 @@ layout: post
 categories:
   - Music
   - Pictures
+last_modified_at: 2021-08-19 22:46 +01:00
 ---
-I'm still tired even a whole day after getting back, but I though it was worth it to mention how good the festival was, yet again!
+I'm still tired a full day after getting back, but I thought it was worth mentioning how good the festival was!
 
 I didn't get a ticket immediately after [last year]({% post_url 2007-08-27-leeds-festival-2007 %}), but [waited until March]({% post_url 2008-03-31-leeds-festival-line-up %}). With hindsight, I reckon an early bird ticket might be required from now on, as it was even busier than last year! I even missed out on the brie and crackers...
 

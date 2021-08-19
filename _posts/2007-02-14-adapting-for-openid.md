@@ -1,9 +1,10 @@
 ---
 title: Adapting for OpenID
+description: Adapting for OpenID is no fun.
 layout: post
 categories:
   - Computing
-last_modified_at: 2021-02-17 18:04 +00:00
+last_modified_at: 2021-08-19 22:46 +01:00
 ---
 Adapting for [OpenID](https://openid.net) is no fun. Especially when:
 
