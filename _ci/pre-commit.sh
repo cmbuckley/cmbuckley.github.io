@@ -3,7 +3,6 @@
 paths=(
     assets
     _includes/icons
-    _posts
     _sass
 )
 
