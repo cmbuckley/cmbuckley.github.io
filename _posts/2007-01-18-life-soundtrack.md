@@ -3,6 +3,7 @@ title: Life Soundtrack
 layout: post
 categories:
   - Play
+last_modified_at: 2021-08-19 22:47 +01:00
 ---
 If your life was film what would the soundtrack be?
 
@@ -20,7 +21,7 @@ So, here's how it works:
 
 **Waking up:**
 
-[Bryan Adams](https://bryanadams.com/) --- Vanishing
+[Bryan Adams](https://www.bryanadams.com/) --- Vanishing
 
 **First day at school:**
 
@@ -28,7 +29,7 @@ So, here's how it works:
 
 **Falling in love:**
 
-[Vonda Shepard](http://vondashepard.com/) --- Will You Marry Me?
+[Vonda Shepard](https://www.vondashepard.com/) --- Will You Marry Me?
 
 **Fight song:**
 
@@ -44,7 +45,7 @@ So, here's how it works:
 
 **Life:**
 
-[The Beach Boys](https://thebeachboys.com/) --- Then I Kissed Her
+[The Beach Boys](https://www.thebeachboys.com/) --- Then I Kissed Her
 
 **Making babies:**
 
@@ -52,15 +53,15 @@ So, here's how it works:
 
 **Mental breakdown:**
 
-[NOFX](http://nofxofficialwebsite.com/) --- Bottles To The Ground
+[NOFX](https://www.nofxofficialwebsite.com/) --- Bottles To The Ground
 
 **Driving:**
 
-[Anti-Flag](http://anti-flag.com/) --- Their System Doesn't Work For You
+[Anti-Flag](http://www.anti-flag.com/) --- Their System Doesn't Work For You
 
 **Flashback:**
 
-[Def Leppard](http://defleppard.com/) --- Photograph
+[Def Leppard](https://www.defleppard.com/) --- Photograph
 
 **Getting back together:**
 
@@ -68,11 +69,11 @@ So, here's how it works:
 
 **Birth of a child:**
 
-[[spunge]](http://spunge.co.uk/) --- Break Up
+[[spunge]](https://spunge.co.uk/) --- Break Up
 
 **Final battle:**
 
-[Bear McCreary](https://www.bearmccreary.com/) --- Baltar's Dream
+[Bear McCreary](https://bearmccreary.com/) --- Baltar's Dream
 
 **Death scene:**
 
@@ -84,6 +85,6 @@ So, here's how it works:
 
 **End credits:**
 
-[Primal Scream](http://primalscream.net/) --- Leaves
+[Primal Scream](https://store.primalscream.net/) --- Leaves
 
 So many of those were entirely appropriate! With my stupidly large music collection I wasn't expecting results half that good!
