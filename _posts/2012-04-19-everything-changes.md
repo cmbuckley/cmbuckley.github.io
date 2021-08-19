@@ -1,9 +1,11 @@
 ---
 title: Everything Changes
+description: Motivated by a number of reasons, I've begun to move everything from my old VPS.
 layout: post
 categories:
   - Computing
   - Websites
+last_modified_at: 2021-08-19 22:46 +01:00
 ---
 Motivated by a number of reasons, I've begun to move everything from my old VPS to what has been my development server until recently. It's been a complete digital spring-clean of all the old sites I used to maintain and hopefully the result should be an improvement. Here's a list of the main changes:
 

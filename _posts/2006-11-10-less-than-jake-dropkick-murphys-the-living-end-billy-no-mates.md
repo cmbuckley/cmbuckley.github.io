@@ -5,9 +5,9 @@ categories:
   - Music
   - Nights Out
   - Play
-last_modified_at: 2021-02-17 18:26 +00:00
+last_modified_at: 2021-08-19 22:46 +01:00
 ---
-Awesome!
+Such an awesome gig!
 
 I was originally planning not to go, but when [Reg](https://pictures.scholesmafia.co.uk/index.php/?profile=88) popped round and said he had a spare ticket for £17.50, I thought: "why not?" At this time I had no idea who were supporting, so you can imagine how good it felt to find out that [The Living End](http://thelivingend.com.au/) and [Dropkick Murphys](http://dropkickmurphys.com/) were two of the warm-up acts, alongside Billy No Mates!
 
