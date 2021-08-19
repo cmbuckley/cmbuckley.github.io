@@ -1,7 +1,8 @@
 require 'rspec'
 require 'date'
-require 'safe_yaml'
 require 'net/http'
+require 'safe_yaml'
+require 'uri'
 
 posts = Dir.glob('_posts/*.md')
 category_files = Dir.glob('_blog_categories/*.md');
@@ -30,8 +31,11 @@ posts.each do |post|
         post_content = File.read(post)
         post_content.scan(/^!?\[(?:\[[^\[\]]*\]|\\[\[\]]?|`[^`]*`|[^\[\]\\])*?\]\(\s*(<(?:\\[<>]?|[^\s<>\\])*>|(?:\\[()]?|\([^\s\x00-\x1f()\\]*\)|[^\s\x00-\x1f()\\])*?(?:\s+=(?:[\w%]+)?x(?:[\w%]+)?)?)(?:\s+(?:"(?:\\"?|[^"\\])*"|'(?:\\'?|[^'\\])*'|\((?:\\\)?|[^)\\])*\)))?\s*\)/).each do |link|
             unless link[0].chars.first == '/'
-                response = Net::HTTP.get(link)
-                expect(response.code).to be(200)
+                uri = URI.parse(URI.escape(link[0]))
+                skip 'pictures links not tested yet' if uri.host == 'pictures.scholesmafia.co.uk'
+
+                response = Net::HTTP.get_response(uri)
+                expect(['200', '301', '302', '303', '307']).to include(response.code), "got #{response.code} for #{link[0]}"
             end
         end
     end
