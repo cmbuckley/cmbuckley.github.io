@@ -74,8 +74,7 @@ pages.each do |page|
           end
 
           urls.uniq.each do |url|
-            response = Net::HTTP.get_response(URI.parse(url))
-            expect(response.code).to eq('200'), "bad response for #{url}"
+            url =~ /\A#{URI::regexp(['https'])}\z/ or raise "image URL is not https"
           end
 
           page_content.scan(/<meta content="(.+)" property="og:image:alt">/).each do |alt|
