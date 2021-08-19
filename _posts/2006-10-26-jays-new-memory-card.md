@@ -1,8 +1,10 @@
 ---
 title: Jay's New Memory Card
+description: Jay managed to get a Sony M2 memory card. It's tiny!
 layout: post
 categories:
   - Play
+last_modified_at: 2021-08-19 22:46 +01:00
 ---
 [Jay](https://pictures.scholesmafia.co.uk/index.php/?profile=31) managed to get a [Sony M2 memory card](http://sony.co.uk/view/ShowProduct.action?product=MSA1GA) delivered next-day after getting bored of waiting for a month for Orange to deliver. It's tiny!
 

@@ -1,9 +1,11 @@
 ---
 layout: post
 title: Lockdown Activities
+description: A list of my attempts to keep myself occupied and connected during lockdown.
 date: 2020-04-24 00:38 +0100
 categories:
   - Play
+last_modified_at: 2021-08-19 22:46 +01:00
 ---
 
 So much has been written about the [COVID-19 pandemic](https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic) over the past few months, and adding any more to it will certainly not be helpful. But while we all learn to cope with our new reality, it's been important for me to refocus my attention from the external to the internal.

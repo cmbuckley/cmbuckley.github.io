@@ -1,7 +1,9 @@
 ---
 title: Detecting Character Encoding
+description: How I make a best guess at the character encoding of a file using its contents.
 categories:
   - Computing
+last_modified_at: 2021-08-19 22:46 +01:00
 ---
 
 I occasionally find myself having to determine the character encoding of a file, either for foreign-language content or other data files that don't identify their encoding.

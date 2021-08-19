@@ -1,8 +1,9 @@
 ---
 title: Generate Nested URL List in Jekyll
+description: A Jekyll recursive include to output a nested site map.
 categories:
   - Computing
-last_modified_at: 2021-03-02 00:04 +00:00
+last_modified_at: 2021-08-19 22:46 +01:00
 ---
 This site uses Jekyll on [GitHub Pages](https://pages.github.com), which has a restricted set of
 plugins that can be used when generating the static site.

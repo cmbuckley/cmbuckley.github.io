@@ -1,8 +1,9 @@
 ---
 title: Computer Names
+description: My alphabetical mathematical computer naming convention.
 categories:
   - Computing
-last_modified_at: 2021-03-26 23:39 +00:00
+last_modified_at: 2021-08-19 22:46 +01:00
 ---
 
 I started this list at _D_ because this home desktop was the fourth computer I or my family owned, starting with the [Amstrad](/interests/computing/), and it seemed like they deserved a gap to be left for them!

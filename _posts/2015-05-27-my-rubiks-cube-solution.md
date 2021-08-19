@@ -1,5 +1,6 @@
 ---
 title: My Rubik's Cube Solution
+description: A number of people have been solving Rubik's cubes at work recently.
 layout: post
 categories:
   - Academic
@@ -8,6 +9,7 @@ image:
   meta:
     src: /files/2015/05/2-fl.png
     alt: Rubik's cube with finished first layer
+last_modified_at: 2021-08-19 22:46 +01:00
 ---
 A number of people have been solving Rubik's cubes at work recently, and although there are numerous guides out there I can't seem to find one that matches my approach for every step.
 

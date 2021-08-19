@@ -1,7 +1,16 @@
 {%- assign site_title = site.title | markdownify | strip_html | strip -%}
 {%- assign page_title = page.title | markdownify | strip_html | strip -%}
-{%- assign page_description = page.description | default: page.excerpt | markdownify | strip_html | strip -%}
-{%- assign site_description = site.description | markdownify | strip_html | strip -%}
+{%- assign page_description = page.description | default: page.excerpt | markdownify | strip_html | strip | normalize_whitespace -%}
+{%- if page_description.size > 120 -%}
+  {%- assign splitters = '.;:!' | split: '' -%}
+  {%- for char in splitters -%}
+    {%- assign splitter = char | append: ' ' -%}
+    {%- if page_description.size > 120 and page_description contains splitter -%}
+      {%- assign page_description = page_description | split: splitter | first | append: "." -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+{%- assign site_description = site.description | markdownify | strip_html | strip | normalize_whitespace -%}
 {%- if page.paginated and paginator.page > 1 %}{% assign title_pagination = paginator.page | prepend: 'Page ' | append: ' • ' %}{% endif -%}
 
 {%- capture meta_image_url -%}
@@ -14,7 +23,7 @@
 {{ page.image.meta.src | default: '/assets/img/tiki-square.jpg' }}
 {%- endcapture -%}
 
-    <meta name="description" content="{{ page_description | default: site_description }}">
+    <meta content="{{ page_description | default: site_description }}" name="description">
     <title>{{ page_title | prepend: title_pagination }}{% unless page.supress_site_title %}{% if page.title %} • {% endif %}{{ site_title }}{% endunless %}</title>
 
     <meta content="{{ site_title }}" property="og:site_name">
@@ -32,7 +41,7 @@
     {% endif -%}
 
     {%- if page.last_modified_at or page.date %}
-    <meta http-equiv="Last-Modified" content="{{ page.last_modified_at | default: page.date | date_to_rfc822 }}">
+    <meta content="{{ page.last_modified_at | default: page.date | date_to_rfc822 }}" http-equiv="Last-Modified">
       {%- if page.date %}
       <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
       {%- endif %}
@@ -44,29 +53,29 @@
     <meta content="{{ meta_image_url }}" property="og:image">
     <meta content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' | smartify }}" property="og:image:alt">
 
-    <meta name="twitter:card" content="summary{% if page.image.meta.large %}_large_image{% endif %}">
-    <meta name="twitter:site" content="@{% include social.html id='twitter' %}">
-    <meta name="twitter:creator" content="@{% include social.html id='twitter' %}">
+    <meta content="summary{% if page.image.meta.large %}_large_image{% endif %}" name="twitter:card">
+    <meta content="@{% include social.html id='twitter' %}" name="twitter:site">
+    <meta content="@{% include social.html id='twitter' %}" name="twitter:creator">
     {% if page.title -%}
-      <meta name="twitter:title" content="{{ page_title | prepend: title_pagination }}">
+      <meta content="{{ page_title | prepend: title_pagination }}" name="twitter:title">
     {% else -%}
-      <meta name="twitter:title" content="{{ site_title }}">
+      <meta content="{{ site_title }}" name="twitter:title">
     {% endif -%}
 
     {% if page.url -%}
-      <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
+      <meta content="{{ page.url | replace:'index.html','' | absolute_url }}" name="twitter:url">
     {% endif -%}
 
-    <meta name="twitter:description" content="{{ page_description | default: site_description }}">
-    <meta name="twitter:image:src" content="{{ meta_image_url }}">
-    <meta name="twitter:image:alt" content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' }}">
+    <meta content="{{ page_description | default: site_description }}" name="twitter:description">
+    <meta content="{{ meta_image_url }}" name="twitter:image:src">
+    <meta content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' }}" name="twitter:image:alt">
     {%- if page.layout == 'post' %}
-      <meta name="twitter:label1" content="Reading Time">
-      <meta name="twitter:data1" content="{{ page.content | number_of_words | divided_by: 120.0 | ceil }} min">
+      <meta content="Reading Time" name="twitter:label1">
+      <meta content="{{ page.content | number_of_words | divided_by: 120.0 | ceil }} min" name="twitter:data1">
 
       {%- if page.categories.size > 0 %}
-      <meta name="twitter:label2" content="Categories">
-      <meta name="twitter:data2" content="{{ page.categories | join: ', ' }}">
+      <meta content="Categories" name="twitter:label2">
+      <meta content="{{ page.categories | join: ', ' }}" name="twitter:data2">
       {%- endif %}
     {%- endif %}
 
