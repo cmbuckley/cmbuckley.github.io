@@ -1,8 +1,8 @@
 [context.deploy-preview]
-  command = "printf \"url: %s\" \"$DEPLOY_PRIME_URL\" > _preview.yml; jekyll build --config _config.yml,_preview.yml"
+  command = "printf \"url: %s\" \"$DEPLOY_PRIME_URL\" > _preview.yml; jekyll build --config _config.yml,_preview.yml && rspec"
 
 [build]
-  command = "jekyll build --config _config.yml,_staging.yml"
+  command = "jekyll build --config _config.yml,_staging.yml && rspec"
 
 [[plugins]]
   package = "netlify-plugin-html-validate"
