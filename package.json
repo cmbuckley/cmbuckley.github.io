@@ -1,5 +1,6 @@
 {
   "devDependencies": {
-    "netlify-plugin-html-validate": "^1.1.1"
+    "netlify-plugin-html-validate": "^1.1.1",
+    "netlify-plugin-seo-lint": "^0.0.2"
   }
 }
