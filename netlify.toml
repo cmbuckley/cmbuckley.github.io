@@ -1,12 +1,18 @@
+[context.branch-deploy]
+command = "printf \"url: %s\" \"$DEPLOY_PRIME_URL\" > _preview.yml; jekyll build --config _config.yml,_preview.yml && rspec"
+
 [context.deploy-preview]
-  command = "printf \"url: %s\" \"$DEPLOY_PRIME_URL\" > _preview.yml; jekyll build --config _config.yml,_preview.yml && rspec"
+command = "printf \"url: %s\" \"$DEPLOY_PRIME_URL\" > _preview.yml; jekyll build --config _config.yml,_preview.yml && rspec"
 
 [build]
-  command = "jekyll build --config _config.yml,_staging.yml && rspec"
+command = "jekyll build --config _config.yml,_staging.yml && rspec"
 
 [[plugins]]
-  package = "netlify-plugin-html-validate"
+package = "netlify-plugin-html-validate"
 
   [plugins.inputs]
-    ext = "html"
-    config = ".htmlvalidate.json"
+  ext = "html"
+  config = ".htmlvalidate.json"
+
+[[plugins]]
+package = "netlify-plugin-seo-lint"
