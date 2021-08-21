@@ -34,7 +34,12 @@ posts.each do |post|
                 uri = URI.parse(URI.escape(link[0]))
                 skip 'pictures links not tested yet' if uri.host == 'pictures.scholesmafia.co.uk'
 
-                response = Net::HTTP.get_response(uri)
+                begin
+                    response = Net::HTTP.get_response(uri)
+                rescue OpenSSL::SSL::SSLError
+                    skip "got SSL error for #{link[0]}, hopefully temporary"
+                end
+
                 expect(['200', '301', '302', '303', '307']).to include(response.code), "got #{response.code} for #{link[0]}"
             end
         end
