@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 {% include head.html locale='en_GB' %}
-<body{% if page.class %} class="{{ page.class }}"{% endif %}>
+<body{% if page.class or layout.class %} class="{{ page.class | default: layout.class }}"{% endif %}>
 {% include icons/embed.html %}
 {% include header.html %}
 
