@@ -16,3 +16,6 @@ package = "netlify-plugin-html-validate"
 
 [[plugins]]
 package = "netlify-plugin-seo-lint"
+
+  [plugins.inputs]
+  internalLinksTrailingSlash = false
