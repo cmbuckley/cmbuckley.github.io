@@ -5,10 +5,10 @@
     "element-permitted-content": "warn",
     "element-required-attributes": "warn",
     "element-required-content": "warn",
-    "no-trailing-whitespace": "warn",
+    "no-trailing-whitespace": "off",
     "prefer-button": "warn",
     "prefer-native-element": "warn",
-    "void-style": "warn",
+    "void-style": "off",
     "wcag/h32": "warn"
   }
 }
