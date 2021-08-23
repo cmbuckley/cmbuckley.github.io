@@ -41,6 +41,10 @@ defaults:
       type: blog_categories
     values:
       layout: category
+  - scope:
+      path: blog/page
+    values:
+      sitemap: false
 
 collections:
   blog_categories:
