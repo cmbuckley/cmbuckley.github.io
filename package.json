@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "netlify-plugin-html-validate": "^1.1.1"
+  }
+}
