@@ -1,6 +1,23 @@
 {%- assign site_title = site.title | markdownify | strip_html | strip -%}
 {%- assign page_title = page.title | markdownify | strip_html | strip -%}
 {%- assign page_description = page.description | default: page.excerpt | markdownify | strip_html | strip | normalize_whitespace -%}
+{%- if page.layout == 'error' -%}
+  {%- assign lines = page.content | normalize_whitespace | split: '. ' -%}
+  {%- capture page_description -%}
+    {%- for line in lines -%}
+      {%- if line contains '? ' -%}
+        {%- assign sentences = line | split: '? ' -%}
+        {%- for sentence in sentences -%}
+          {{ sentence | capitalize }}
+          {%- unless forloop.last -%}? {% endunless -%}
+        {%- endfor -%}
+      {%- else -%}
+        {{ line | capitalize }}
+      {%- endif -%}
+      {%- unless forloop.last -%}. {% endunless -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+{%- endif -%}
 {%- if page_description.size > 120 -%}
   {%- assign splitters = '.;:!' | split: '' -%}
   {%- for char in splitters -%}
