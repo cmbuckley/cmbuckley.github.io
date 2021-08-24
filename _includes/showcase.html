@@ -11,7 +11,7 @@
 {%- endif -%}
 
 <{{ list }}>
-  {% for gh_page in gh_pages -%}{%- unless gh_page.name == site.github.repository_name -%}
+  {% for gh_page in gh_pages -%}{%- unless gh_page.name == site.github.repository_name or gh_page.topics contains 'noindex' -%}
   {%- if gh_page.homepage == '' or gh_page.homepage == nil or gh_page.homepage contains site.url -%}
 
   <{{ item }}>
@@ -34,7 +34,7 @@
 <h2>Portfolio</h2>
 <{{ list }}>
   {% for gh_page in gh_pages -%}{%- unless gh_page.name == site.github.repository_name -%}
-  {%- unless gh_page.homepage == '' or gh_page.homepage == nil or gh_page.homepage contains site.url -%}
+  {%- unless gh_page.homepage == '' or gh_page.homepage == nil or gh_page.homepage contains site.url or gh_page.topics contains 'noindex' -%}
 
   <{{ item }}>
     <a href="{{ gh_page.homepage }}">{{ gh_page.name | markdownify | remove: '<p>' | remove: '</p>' | strip }}</a>
