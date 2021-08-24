@@ -1,5 +1,9 @@
 {%- assign main_repo = site.github.public_repositories | where_exp:'r','r.name == site.github.repository_name' | first -%}
 {%- capture edit_link -%}{% github_edit_link "source" %}{%- endcapture -%}
+{%- if page.paginated and paginator.page > 1 -%}
+  {%- assign first_page = site.pages | where_exp: 'p','p.paginated == true' | sort: 'path' | first -%}
+  {%- assign edit_link = edit_link | replace: page.path, first_page.path -%}
+{%- endif -%}
 <footer>
     <div class="container">
         <p class="copy">&copy; <a href="{{ main_repo.html_url | replace: 'http:','https:' }}/blob/{{ main_repo.default_branch }}/LICENSE.md">{{ site.time | date: '%Y' }} Chris Buckley</a>. <span class="powered">Powered by <a href="https://jekyllrb.com">Jekyll</a> / <a href="https://pages.github.com/">GitHub Pages</a> ({{ edit_link | replace_first: '/edit/','/blob/' }})</span></p>
