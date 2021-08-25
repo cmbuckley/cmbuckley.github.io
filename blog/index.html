@@ -7,7 +7,7 @@ redirect_from:
   - blog/category/uncategorized/
   - blog/category/video/
 ---
-<h1 class="page__title">{% if paginator.page == 1 %}Recent {% endif %}Posts{% if paginator.page > 1 %} (Page {{ paginator.page }}){% endif %}</h1>
+<h1 class="page__title">{% if paginator.page == 1 %}Recent {% endif %}Blog Posts{% if paginator.page > 1 %} (Page {{ paginator.page }}){% endif %}</h1>
 {% include search.html %}
 <ul class="posts list--inline" role="feed">
   {% assign current = paginator.page | minus: 1 | times: paginator.per_page | plus: 1 -%}
