@@ -4,6 +4,7 @@ layout: post
 categories:
   - Computing
   - Play
+last_modified_at: 2021-08-25 10:38 +01:00
 ---
 I have re-installed Windows Live Messenger today, after attempting to get it working before and being a bit miffed. For one thing, the contact list seemed to have lost any control over showing display pictures as per MSN Messenger 7.5, and plugin control for Messenger Plus! Live was handled rather differently.
 
@@ -11,11 +12,11 @@ The second time round went better, but I still had to use A-Patch to remove the 
 
 However, my mood improved greatly when I found the button I had been looking for (it had been there all along, this is what happens when we don't explore):
 
-{% include figure.html img="/files/2006/11/wlm-1.png" caption="Before: no Display Pictures. Hey, it's 3am, there're usually more than 3 contacts online..." %}
+{% include figure.html img="/files/2006/11/wlm-1.png" alt="Messenger showing 3 people online, with no display pictures." caption="Before: no Display Pictures. Hey, it's 3am, there're usually more than 3 contacts online..." %}
 
-{% include figure.html img="/files/2006/11/wlm-2.png" caption="Look over here! Innocuous button hides useful options!" %}
+{% include figure.html img="/files/2006/11/wlm-2.png" alt="Messenger showing a context menu with Show Details option highlighted." caption="Look over here! Innocuous button hides useful options!" %}
 
-{% include figure.html img="/files/2006/11/wlm-3.png" caption="After: Woo --- thumbnails! Plus it shows the personal message and email address of each user." %}
+{% include figure.html img="/files/2006/11/wlm-3.png" alt="Messenger showing 3 people online, with display pictures." caption="After: Woo --- thumbnails! Plus it shows the personal message and email address of each user." %}
 
 Seems I'm not the only one who found this information useful:
 
