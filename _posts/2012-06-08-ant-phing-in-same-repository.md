@@ -3,8 +3,9 @@ title: Using Ant and Phing in the same repository
 layout: post
 categories:
   - Computing
+last_modified_at: 2021-08-25 12:11 +01:00
 ---
-Here's the scenario: you use Apache Ant for some of your automated build process, but you also have some tools in Phing. You run both `ant` and `phing` from your repository root. Because you use Ant most, the Ant targets are in `build.xml`, and Phing has to use `phing.xml`. Sure, you can run `phing -f phing.xml ...`, but where's the fun in that? Enter the following build file:
+Here's the scenario: you use Apache Ant for some of your build process, but you also have some tools in Phing. You run both `ant` and `phing` from your repository root. Because you use Ant most, the Ant targets are in `build.xml`, and Phing has to use `phing.xml`. Sure, you can run `phing -f phing.xml ...`, but where's the fun in that? Enter the following build file:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

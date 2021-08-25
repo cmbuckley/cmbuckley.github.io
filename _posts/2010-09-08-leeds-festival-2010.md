@@ -1,11 +1,11 @@
 ---
 title: Leeds Festival 2010
 layout: post
-description: Just recovered, so thought I'd post some ramblings for this year.
 categories:
   - Music
+last_modified_at: 2021-08-25 12:11 +01:00
 ---
-Just recovered, so thought I'd post some ramblings for this year. Various high points were: Colin; gin jam; Jacob and Alf shopping for nothing but sweets; the wind and its army of shopping bags; back on form with brie and crackers; staying at the main stage missing plenty of good bands; acting like we were 16 again; when gazebos attack; a night of rum leading to much destruction; that man's dressed all in red; wrestling ring during Limp Bizkit; breaking glasses again; general debauchery and merriment. Roll on next year!
+Just recovered from the festival, so thought I'd post some ramblings for this year. Various high points were: Colin; gin jam; Jacob and Alf shopping for nothing but sweets; the wind and its army of shopping bags; back on form with brie and crackers; staying at the main stage missing plenty of good bands; acting like we were 16 again; when gazebos attack; a night of rum leading to much destruction; that man's dressed all in red; wrestling ring during Limp Bizkit; breaking glasses again; general debauchery and merriment. Roll on next year!
 
 Friday              | Saturday          | Sunday
 --------------------|-------------------|-------------------------

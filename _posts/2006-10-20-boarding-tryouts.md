@@ -1,10 +1,10 @@
 ---
 title: Boarding Tryouts
-description: This evening was spent at the artificial ski slope at Silkworth Sports Complex in Sunderland.
 layout: post
 categories:
   - Nights Out
   - Play
+last_modified_at: 2021-08-25 12:11 +01:00
 ---
 This evening was spent at the artificial ski slope at Silkworth Sports Complex in Sunderland. It was supposed to be tryouts for the [DUSSC](https://www.dussc.co.uk), but didn't seem that organised: Upon arrival I purchased a membership card (for £5) that meant I got a discount --- except that it only applied to skiers. Thankfully the staff also thought I was a skier and charged me the cheaper skiers' price for entry! [Reg](https://pictures.scholesmafia.co.uk/index.php/?profile=88) managed to pay for both the membership card, only to then be told that he didn't need it, but was going to have to pay full boarding price...
 
