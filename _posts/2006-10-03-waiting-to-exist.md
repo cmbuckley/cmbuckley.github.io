@@ -1,11 +1,11 @@
 ---
 title: Waiting to Exist
-description: Headaches of university registration, and the inevitable solution.
+description: Headaches of waiting for university registration, and the inevitable solution.
 layout: post
 categories:
   - Academic
   - Nights Out
-last_modified_at: 2021-08-19 22:46 +01:00
+last_modified_at: 2021-08-25 12:11 +01:00
 ---
 After my induction meeting yesterday, I decided to go and get my registration form from the department, and sort out tuition fees and the like. At least, that was the plan...
 
