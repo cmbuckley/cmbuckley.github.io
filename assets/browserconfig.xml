@@ -4,7 +4,7 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square150x150logo src="{% include mainurl.html %}/assets/img/icons/favicon-150.png?m"/>
+            <square150x150logo src="{% include mainurl.html %}/assets/img/icons/favicon-150.png"/>
             <TileColor>#2c8654</TileColor>
         </tile>
     </msapplication>
