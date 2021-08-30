@@ -7,6 +7,7 @@ table {
     border: 1px solid $primary-color;
     border-spacing: 0;
     margin-bottom: 1.5em;
+    table-layout: fixed;
 
     caption {
         margin: 0 0 7px;
