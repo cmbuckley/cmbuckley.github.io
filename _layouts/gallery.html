@@ -26,7 +26,8 @@ layout: page
     {%- assign url=item | remove:'_thumb' %}
   {%- endif %}
 
-  {%- include figure.html figure=false url=url img=img video=video caption=caption %}
+  {%- assign anchor=item[0] | split: '/' | last | slugify -%}
+  {%- include figure.html figure=false url=url img=img video=video caption=caption anchor=anchor %}
 {%- endfor %}
 
 {%- if page.grid %}
