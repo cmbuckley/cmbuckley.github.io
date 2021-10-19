@@ -1,5 +1,5 @@
 {%- if include.caption != nil or include.figure != false %}
-<figure class="fl-{{ include.float | default: 'none' }}{% if include.float and page.float_small %} fl--small{% endif %}">
+<figure class="fl-{{ include.float | default: 'none' }}{% if include.float and page.float_small %} fl--small{% endif %}"{% if include.anchor %} id="v-{{ include.anchor }}"{% endif %}>
 {%- endif %}
 
 {%- if include.video -%}
