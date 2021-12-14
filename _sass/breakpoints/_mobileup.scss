@@ -59,6 +59,7 @@ MENU STYLING
 ***************/
 
 .nav-toggle {
+    @extend %screen-only;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-touch-callout: none;
     touch-action: manipulation;
@@ -76,12 +77,6 @@ MENU STYLING
 
     @media (prefers-reduced-motion: no-preference) {
         transition: all 0.2s ease-in-out;
-    }
-}
-
-@media print {
-    .nav-toggle {
-        display: none;
     }
 }
 
@@ -172,6 +167,7 @@ PAGE STYLES
 }
 
 .showcase-actions {
+    @extend %screen-only;
     margin-bottom: 1em;
     text-align: center;
 }
@@ -290,6 +286,10 @@ blockquote {
     }
 }
 
+.post__comments .reply {
+    @extend %screen-only;
+}
+
 form.reply {
     margin: 0 auto;
 }
@@ -306,6 +306,7 @@ form.reply {
     }
 
     .reversefootnote {
+        @extend %screen-only;
         font-family: monospace;
         font-size: 1.5em; // for hit area
     }
@@ -316,6 +317,7 @@ form.reply {
 POST NAV STYLING
 ***************/
 .post__nav {
+    @extend %screen-only;
     overflow: hidden;
 
     .prev, .next {
@@ -394,17 +396,21 @@ footer {
 
     .copy {
         font-size: .8em;
-    }
-
-    .copy {
         margin-bottom: 1rem;
 
         .powered {
-            display: block;
+            @media screen {
+                display: block;
+            }
+        }
+
+        .source-link {
+            @extend %screen-only;
         }
     }
 
     .footer-links {
+        @extend %screen-only;
         font-size: 1.3em;
 
         ul {
@@ -431,6 +437,7 @@ PAGINATION STYLING
 ***************/
 
 .pagination {
+    @extend %screen-only;
     padding-bottom: 3em;
 
     .button--outline {

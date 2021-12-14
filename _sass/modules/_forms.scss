@@ -44,6 +44,7 @@ textarea {
 }
 
 form {
+    @extend %screen-only;
     margin-bottom: $padding;
 
     // Wrap each form input/element in a field div
