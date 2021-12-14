@@ -48,6 +48,13 @@ a {
     }
 }
 
+@media print {
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
 
 /***************
 MENU STYLING

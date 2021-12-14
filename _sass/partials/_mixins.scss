@@ -25,6 +25,12 @@
     display: block;
 }
 
+%screen-only {
+    @media print {
+        display: none;
+    }
+}
+
 @keyframes loading {
     to {
         transform: rotate(1turn);

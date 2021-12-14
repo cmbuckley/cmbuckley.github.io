@@ -1,4 +1,4 @@
-<h2>Leave a Reply</h2>
+<h2 class="reply">Leave a Reply</h2>
 
 <form id="comments-form" class="reply xhr" method="post" action="{{ site.data.staticman[include.prop].url }}/v2/entry/{{ site.github.repository_nwo }}/{{ site.data.staticman[include.prop].branch }}/{{ include.prop }}">
   <input type="hidden" class="not-xhr" name="options[redirect]" value="{{ page.url | absolute_url }}#comment-posted">
