@@ -36,3 +36,33 @@ mark {
     @extend %loading;
     margin: 0 auto 1.5em;
 }
+
+/*@media print {
+    main {
+        counter-reset: links;
+        position: relative;
+    }
+
+    main a {
+        counter-increment: links;
+
+        &::after {
+            font-size: 50%;
+            vertical-align: super;
+            content: " [" counter(links) "]";
+        }
+
+        &::before {
+            content: "[" counter(links) "]: " attr(href);
+            position: absolute;
+            left: 0;
+        }
+
+        @for $a from 1 through 20 {
+            &:nth-of-type(#{$a})::before {
+                $b: $a * 1em;
+                bottom: -5em - $b;
+            }
+        }
+    }
+}*/
