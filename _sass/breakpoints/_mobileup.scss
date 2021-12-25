@@ -73,7 +73,7 @@ MENU STYLING
     padding: 0 .5em;
     text-decoration: none;
     position: absolute;
-    right: 2rem;
+    right: max(env(safe-area-inset-right, 0px), 2rem);
 
     @media (prefers-reduced-motion: no-preference) {
         transition: all 0.2s ease-in-out;
@@ -99,7 +99,7 @@ MENU STYLING
             a {
                 text-decoration: none;
                 display: block;
-                padding: 5px 2rem;
+                padding: 5px max(env(safe-area-inset-right, 0px), 2rem) 5px max(env(safe-area-inset-left, 0px), 2rem);
             }
         }
     }
@@ -198,7 +198,7 @@ HEADER STYLING
     .logo {
         margin: 0;
         float: left;
-        padding-left: 2rem;
+        padding-left: max(env(safe-area-inset-left, 0px), 2rem);
         font-size: 1em;
         line-height: 3em;
     }
