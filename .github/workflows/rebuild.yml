@@ -1,0 +1,22 @@
+name: Rebuild GitHub Pages sites
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 0 1 JAN *'
+jobs:
+  rebuild-pages:
+    name: Rebuild GitHub Pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger builds on matching repos
+        env:
+          TOPICS_TYPE: application/vnd.github.mercy-preview+json
+          BUILD_TYPE: application/vnd.github.v3+json
+          GH_USER: ${{ github.repository_owner }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          curl -sS -H "Accept: $TOPICS_TYPE" "$GITHUB_API_URL/users/$GH_USER/repos?per_page=100" \
+            | jq -r '.[] | select(.has_pages == true) | select(.fork == false) | select(.private == false) | select(any(.topics[]; contains("noindex")) | not) | .full_name' \
+            | while read repo; do
+              curl -sS -u $GH_USER:$GH_TOKEN -X POST -H "Accept: $BUILD_TYPE" $GITHUB_API_URL/repos/$repo/pages/builds
+            done
