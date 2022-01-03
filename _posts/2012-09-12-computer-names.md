@@ -13,6 +13,9 @@ Things got a little weird in the middle so I may have to go back and fill the ga
 [dirac](https://en.wikipedia.org/wiki/Paul_Dirac)
 :    Home desktop (decommissioned)
 
+[dirichlet](https://en.wikipedia.org/wiki/Peter_Gustav_Lejeune_Dirichlet)
+:    New VPS (the "successor to gauss")
+
 [euler](https://en.wikipedia.org/wiki/Leonhard_Euler)
 :    Netbook (retired, in a box somewhere)
 
