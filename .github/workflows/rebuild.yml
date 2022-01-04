@@ -18,5 +18,6 @@ jobs:
           curl -sS -H "Accept: $TOPICS_TYPE" "$GITHUB_API_URL/users/$GH_USER/repos?per_page=100" \
             | jq -r '.[] | select(.has_pages == true) | select(.fork == false) | select(.private == false) | select(any(.topics[]; contains("noindex")) | not) | .full_name' \
             | while read repo; do
+              echo "$repo:"
               curl -sS -u $GH_USER:$GH_TOKEN -X POST -H "Accept: $BUILD_TYPE" $GITHUB_API_URL/repos/$repo/pages/builds
             done
