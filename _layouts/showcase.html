@@ -12,11 +12,6 @@ class: showcase
     <a href="https://www.npmjs.com/package/{{ page.npm }}" class="button--outline">{% include icons/use.html icon="npm" %} View on npm</a>
     {%- endif %}
 
-    {%- if page.travis %}
-    <a href="https://travis-ci.com/{{ site.github.repository_nwo }}" class="showcase__status">
-      <img src="https://api.travis-ci.com/{{ site.github.repository_nwo }}.svg?branch={{ repo.default_branch }}" alt="Build status for {{ site.github.repository_nwo }}">
-    </a>
-    {%- endif %}
     {%- if page.build %}
     <a href="https://github.com/{{ site.github.repository_nwo }}/actions/workflows/{{ page.build }}" class="showcase__status">
       <img src="https://github.com/{{ site.github.repository_nwo }}/actions/workflows/{{ page.build }}/badge.svg" alt="Build status for {{ site.github.repository_nwo }}">
