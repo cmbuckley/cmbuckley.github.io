@@ -13,7 +13,7 @@ blog:
       type: date
       options:
         format: timestamp-seconds
-  branch: master
+  branch: main
   format: yaml
   commitMessage: "Add comment to {options.slug}"
   filename: "{@id}"
@@ -45,7 +45,7 @@ page:
       type: date
       options:
         format: timestamp-seconds
-  branch: master
+  branch: main
   format: yaml
   commitMessage: "Add comment to {options.slug}"
   filename: "{@id}"
