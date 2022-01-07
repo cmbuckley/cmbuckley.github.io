@@ -35,6 +35,6 @@ layout: page
     <label for="message">Message</label>
     <textarea name="message" id="message" required cols="30" rows="10" class="full-width"></textarea><br>
 
-    <button type="submit" class="button">Send"</button>
+    <button type="submit" class="button">Send</button>
   </form>
 </div>
