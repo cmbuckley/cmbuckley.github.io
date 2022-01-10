@@ -1,5 +1,3 @@
----
----
 (function (doc) {
     var posts = JSON.parse(document.getElementById('posts').innerHTML);
 
@@ -108,7 +106,10 @@
         var params = (new URL(doc.location)).searchParams,
             query = params.get('q');
 
-        if (!query) { return; }
+        if (!query) {
+            return doc.querySelector('ul.posts').remove();
+        }
+
         doc.getElementById('q').value = query;
         var results = searchIndex.search(query);
 
