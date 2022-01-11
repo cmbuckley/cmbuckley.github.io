@@ -9,8 +9,15 @@ $0 ~ "---" && ++count == 2 {
 '
 
 date="$(date +'%Y-%m-%d %H:%M %:z')"
+awk 2>&1 | grep -q includefile && inplace=1 || inplace=0
 
 while read -d $'\0' file; do
-    awk -i inplace -v date="$date" "$awkcmd" "$file"
+    if [ $inplace -eq 1 ]; then
+        awk -i inplace -v date="$date" "$awkcmd" "$file"
+    else
+        tmp=$(mktemp)
+        awk -v date="$date" "$awkcmd" "$file" > "$tmp"
+        mv "$tmp" "$file"
+    fi
     git add "$file" # @todo avoid committing any other changes
 done
