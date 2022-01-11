@@ -23,7 +23,7 @@ layout: page
     <dd><a class="key" href="https://keybase.io/{% include social.html id='keybase' %}/pgp_keys.asc">{{ pgp | replace: ' ', '&nbsp;' }}</a></dd>
     </dl>
   </div>
-  <form action="https://formcarry.com/s/HJ9BPYcTf" method="post">
+  <form class="contact__form" action="https://formcarry.com/s/HJ9BPYcTf" method="post">
     <input type="hidden" name="_gotcha" value="">
 
     <label for="name">Name</label>
