@@ -236,11 +236,9 @@ CONTACT PAGE STYLING
     float: left;
 }
 
-#contact {
-    form {
-        max-width: 48%;
-        width: 48%;
-        float: right;
-        margin-right: 0;
-    }
+.contact__form {
+    max-width: 48%;
+    width: 48%;
+    float: right;
+    margin-right: 0;
 }
