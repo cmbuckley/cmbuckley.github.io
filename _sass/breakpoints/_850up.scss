@@ -13,7 +13,7 @@ body {
 
     &:after {
         z-index: -1;
-        background: white;
+        background: $white;
         content: "";
         display: block;
         width: 100%;
@@ -158,7 +158,7 @@ POST STYLING
         margin-top: 2rem;
 
         &:before {
-            background: white;
+            background: $white;
             content: "";
             display: block;
             width: 100%;

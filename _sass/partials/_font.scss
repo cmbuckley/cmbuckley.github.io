@@ -1,13 +1,13 @@
 // Text Selection Styling
 ::-moz-selection {
     background: $primary-color;
-    color: white;
+    color: $white;
 }
 
 // these are separate because Chrome doesn't like them being on the same selector
 ::selection {
     background: $primary-color;
-    color: white;
+    color: $white;
 }
 
 body {
@@ -66,18 +66,18 @@ MENU STYLING
         border-bottom: 2px solid lighten($background-color, 5%);
 
         a {
-            color: white;
+            color: $white;
         }
     }
 }
 
 .nav-toggle {
     font-family: $serif;
-    color: white;
+    color: $white;
     background-color: $background-color;
 
     &:hover {
-        color: white;
+        color: $white;
         background-color: darken($background-color, 10%);
     }
 }
@@ -88,7 +88,7 @@ HEADER STYLING
 ***************/
 
 .header {
-    color: white;
+    color: $white;
     background-color: $background-color;
 
     .logo {
@@ -97,16 +97,16 @@ HEADER STYLING
         text-transform: uppercase;
 
         a {
-            color: white;
+            color: $white;
             text-decoration: none;
         }
     }
 
     nav a {
-        color: white;
+        color: $white;
 
         &:hover {
-            color: darken(white, 20%);
+            color: darken($white, 20%);
         }
     }
 }
@@ -176,7 +176,7 @@ POST NAV STYLING
         font-weight: 800;
 
         &.image {
-            color: white;
+            color: $white;
             text-shadow: 1px 1px 3px rgba(0,0,0,.8);
         }
     }
