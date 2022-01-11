@@ -41,10 +41,10 @@ LINK STYLING
 ***************/
 
 a {
-    color: $link-color;
+    color: $primary-color;
 
     &:hover {
-        color: darken($link-color, 15%);
+        color: darken($primary-color, 15%);
     }
 }
 
@@ -62,8 +62,8 @@ MENU STYLING
 
 .nav-collapse {
     ul li {
-        background: $background-color;
-        border-bottom: 2px solid lighten($background-color, 5%);
+        background: $primary-color;
+        border-bottom: 2px solid lighten($primary-color, 5%);
 
         a {
             color: $white;
@@ -74,11 +74,11 @@ MENU STYLING
 .nav-toggle {
     font-family: $serif;
     color: $white;
-    background-color: $background-color;
+    background-color: $primary-color;
 
     &:hover {
         color: $white;
-        background-color: darken($background-color, 10%);
+        background-color: darken($primary-color, 10%);
     }
 }
 
@@ -89,7 +89,7 @@ HEADER STYLING
 
 .header {
     color: $white;
-    background-color: $background-color;
+    background-color: $primary-color;
 
     .logo {
         font-family: $sans-serif;
