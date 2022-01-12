@@ -3,13 +3,13 @@ BUTTON DEFAULTS
 ***************/
 
 %btn {
-  background-color: $primary-color;
+  background-color: var(--color-primary);
   display: inline-block;
   position: relative;
   font-family: $serif;
   text-align: center;
   text-decoration: none;
-  color: $white;
+  color: var(--color-btn-fg);
   font-size: 1em;
   line-height: 1.2em;
   font-weight: normal;
@@ -22,9 +22,9 @@ BUTTON DEFAULTS
 
   // hovering on the btn
   &:not(:disabled):hover, &:not(:disabled):focus {
-    color: $white;
+    color: var(--color-btn-fg);
     text-decoration: none;
-    background-color: darken($primary-color, 10%);
+    background-color: var(--color-primary-hover);
   }
 
   // clicking on the button
@@ -47,34 +47,34 @@ BUTTON DEFAULTS
 
   &--secondary {
     @extend %btn;
-    background-color: $secondary-color;
+    background-color: var(--color-secondary);
 
     &:not(:disabled):hover {
-      background-color: darken($secondary-color, 10%);
+      background-color: var(--color-secondary-hover);
     }
   }
 
   &--tertiary {
     @extend %btn;
-    background-color: $tertiary-color;
+    background-color: var(--color-tertiary);
 
     &:not(:disabled):hover {
-      background-color: darken($tertiary-color, 10%);
+      background-color: var(--color-tertiary-hover);
     }
   }
 }
 
 
-// Outline Button (keep __ syntax until showcases updated)
-.button--outline, .button__outline {
+// Outline Button
+.button--outline {
   @extend %btn;
   background-color: transparent;
-  border: 3px solid $primary-color;
-  color: $primary-color;
+  border: 3px solid var(--color-primary);
+  color: var(--color-primary);
 
   &::not(:disabled):hover {
-    background-color: $primary-color;
-    color: $white;
+    background-color: var(--color-primary);
+    color: var(--color-btn-fg);
   }
 }
 

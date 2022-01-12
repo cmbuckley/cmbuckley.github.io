@@ -4,7 +4,7 @@ TABLE STYLES
 
 table {
     width: 100%;
-    border: 1px solid $primary-color;
+    border: 1px solid var(--color-primary);
     border-spacing: 0;
     margin-bottom: 1.5em;
     table-layout: fixed;
@@ -12,23 +12,23 @@ table {
     caption {
         margin: 0 0 7px;
         font-size: 0.75em;
-        color: $grey;
+        color: var(--color-caption);
         text-transform: uppercase;
         letter-spacing: 1px;
     }
 }
 
 tr {
-    border-bottom: 1px solid $primary-color;
+    border-bottom: 1px solid var(--color-primary);
 
     &:nth-child(even) {
-        background-color: $offwhite;
+        background-color: var(--color-table-bg-alt);
     }
 }
 
 td, th {
     padding: 2px 5px;
-    border-right: 1px solid $primary-color;
+    border-right: 1px solid var(--color-primary);
 
     &:last-child {
         border-right: 0;
@@ -36,7 +36,7 @@ td, th {
 }
 
 th {
-    color: darken($primary-color, 10%);
-    background-color: $offwhite;
-    border-bottom: 1px solid $primary-color;
+    color: var(--color-primary-fg);
+    background-color: var(--color-table-bg-alt);
+    border-bottom: 1px solid var(--color-primary);
 }

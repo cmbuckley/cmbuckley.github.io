@@ -1,34 +1,35 @@
 // Text Selection Styling
 ::-moz-selection {
-    background: $primary-color;
-    color: $white;
+    background: var(--color-primary);
+    color: var(--color-btn-fg);
 }
 
 // these are separate because Chrome doesn't like them being on the same selector
 ::selection {
-    background: $primary-color;
-    color: $white;
+    background: var(--color-primary);
+    color: var(--color-btn-fg);
 }
 
 body {
-    color: $blackish;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
     font-family: $serif;
 }
 
 figure {
     figcaption {
-        color: $grey;
+        color: var(--color-caption);
         font-style: italic;
     }
 }
 
 ins {
-    background-color: change-color($ok-color, $alpha: 0.5);
+    background-color: var(--color-ok-highlight);
     text-decoration: none;
 }
 
 del {
-    background-color: change-color($error-color, $alpha: 0.5);
+    background-color: var(--color-error-highlight);
 }
 
 dt {
@@ -41,10 +42,10 @@ LINK STYLING
 ***************/
 
 a {
-    color: $primary-color;
+    color: var(--color-primary);
 
     &:hover {
-        color: darken($primary-color, 15%);
+        color: var(--color-primary-hover);
     }
 }
 
@@ -62,23 +63,23 @@ MENU STYLING
 
 .nav-collapse {
     ul li {
-        background: $primary-color;
-        border-bottom: 2px solid lighten($primary-color, 5%);
+        background: var(--color-primary);
+        border-bottom: 2px solid var(--color-nav-separator);
 
         a {
-            color: $white;
+            color: var(--color-btn-fg);
         }
     }
 }
 
 .nav-toggle {
     font-family: $serif;
-    color: $white;
-    background-color: $primary-color;
+    color: var(--color-btn-fg);
+    background-color: var(--color-primary);
 
     &:hover {
-        color: $white;
-        background-color: darken($primary-color, 10%);
+        color: var(--color-btn-fg);
+        background-color: var(--color-primary-hover);
     }
 }
 
@@ -88,8 +89,8 @@ HEADER STYLING
 ***************/
 
 .header {
-    color: $white;
-    background-color: $primary-color;
+    color: var(--color-overlay-fg);
+    background-color: var(--color-primary);
 
     .logo {
         font-family: $sans-serif;
@@ -97,29 +98,29 @@ HEADER STYLING
         text-transform: uppercase;
 
         a {
-            color: $white;
+            color: var(--color-overlay-fg);
             text-decoration: none;
         }
     }
 
     nav a {
-        color: $white;
+        color: var(--color-btn-fg);
 
         &:hover {
-            color: darken($white, 20%);
+            color: var(--color-btn-fg-hover);
         }
     }
 }
 
 @media screen {
     .header .logo {
-        text-shadow: black 0px 0px 10px;
+        text-shadow: var(--color-overlay-shadow) 0px 0px 10px;
     }
 }
 
 @media print {
     .header .logo a {
-        color: black;
+        color: var(--color-fg);
     }
 }
 
@@ -128,7 +129,7 @@ HEADER STYLING
 POST STYLING
 ***************/
 .date, .meta, .note {
-    color: $subtle-color;
+    color: var(--color-meta);
     font-weight: 300;
 }
 
@@ -137,27 +138,27 @@ POST STYLING
 }
 
 blockquote {
-    color: $grey;
+    color: var(--color-caption);
 }
 
 .comments li {
-    background-color: $offwhite;
+    background-color: var(--color-comments-bg);
 
     &:target {
-        border-color: $primary-color;
-        box-shadow: 0 0 3px 0.2em scale-color($primary-color, $lightness: 75%);
+        border-color: var(--color-primary);
+        box-shadow: 0 0 3px 0.2em var(--color-comments-target);
     }
 
     &.author {
-        background-color: scale-color($primary-color, $lightness: 95%);
+        background-color: var(--color-comments-author-bg);
 
         .date {
-            color: $grey;
+            color: var(--color-comments-author-meta);
         }
     }
 
     .comment__link {
-        color: $grey;
+        color: var(--color-meta);
         text-decoration: none;
 
         &:hover {
@@ -176,8 +177,8 @@ POST NAV STYLING
         font-weight: 800;
 
         &.image {
-            color: $white;
-            text-shadow: 1px 1px 3px rgba(0,0,0,.8);
+            color: var(--color-overlay-fg);
+            text-shadow: 1px 1px 3px var(--color-overlay-shadow);
         }
     }
 }

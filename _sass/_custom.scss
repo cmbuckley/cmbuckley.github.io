@@ -14,18 +14,18 @@
 }
 
 .sitemap .last-modified {
-    color: #888;
+    color: var(--color-meta);
     white-space: nowrap;
     font-size: 70%;
 }
 
 mark {
-    background-color: rgba(90, 173, 128, 0.4);
+    background-color: var(--color-mark);
     color: inherit;
 }
 
 .key-focussed {
-    outline: 3px solid $primary-color;
+    outline: 3px solid var(--color-primary);
 }
 
 .sr-only {

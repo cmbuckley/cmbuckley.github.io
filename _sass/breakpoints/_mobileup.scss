@@ -60,7 +60,7 @@ MENU STYLING
 
 .nav-toggle {
     @extend %screen-only;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     touch-action: manipulation;
     cursor: context-menu;
@@ -213,7 +213,7 @@ POST STYLING
 ***************/
 blockquote {
     clear: both;
-    border-left: 2px solid #2e8b57;
+    border-left: 2px solid var(--color-primary);
     margin: 1em auto;
     padding: 0 1em;
     line-height: 1.8;
@@ -266,7 +266,7 @@ blockquote {
 
     li {
         list-style-type: none;
-        border: 1px solid #aaa;
+        border: 1px solid var(--color-comments-border);
         padding: 0.5em 0.75em;
         margin-bottom: 1em;
 
@@ -389,7 +389,7 @@ footer {
     clear: both;
 
     .container {
-        border-top: 4px solid darken($white, 15%);
+        border-top: 4px solid var(--color-separator);
         padding: .5em 0;
         max-width: 90%;
     }
@@ -471,7 +471,7 @@ POST LIST STYLING
             position: absolute;
             bottom: -2rem;
             left: 0;
-            background: darken($white, 10%);
+            background: var(--color-separator);
             height: 2px;
             width: 60px;
         }

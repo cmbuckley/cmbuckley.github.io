@@ -1,15 +1,6 @@
 // Solarized Dark high-contrast
 // Inspiration from https://maxchadwick.xyz/blog/syntax-highlighting-and-color-contrast-accessibility
 
-$code-background: #002b36;
-$code-default:    #93a1a1;
-$code-comment:    #759299;
-$code-keyword:    #859900;
-$code-name:       #3294da;
-$code-const:      #e9662f;
-$code-string:     #2aa198;
-$code-type:       #e8625f;
-$code-builtin:    #b58900;
 
 pre.highlight {
     white-space: pre;
@@ -17,76 +8,77 @@ pre.highlight {
     word-wrap: normal; // horizontal scrolling
     padding: 5px;
     margin: 0 0 2rem;
-    background: $code-background;
-    color: $code-default;
+    background: var(--color-code-bg);
+    color: var(--color-code-fg);
     font-size: 90%;
+    line-height: normal;
 
-    .err { color: $code-default; }
-    .c  { color: $code-comment; }
-    .g  { color: $code-default; }
-    .k  { color: $code-keyword; }
-    .l  { color: $code-default; }
-    .n  { color: $code-default; }
-    .o  { color: $code-keyword; }
-    .x  { color: $code-const; }
-    .p  { color: $code-default; }
-    .cm { color: $code-comment; }
-    .cp { color: $code-keyword; }
-    .c1 { color: $code-comment; }
-    .cs { color: $code-keyword; }
-    .gd { color: $code-string; }
-    .ge { color: $code-default; font-style: italic; }
-    .gr { color: $code-type; }
-    .gh { color: $code-const; }
-    .gi { color: $code-keyword; }
-    .go { color: $code-default; }
-    .gp { color: $code-default; }
-    .gs { color: $code-default; font-weight: bold; }
-    .gu { color: $code-const; }
-    .gt { color: $code-default; }
-    .kc { color: $code-const; }
-    .kd { color: $code-name; }
-    .kn { color: $code-keyword; }
-    .kp { color: $code-keyword; }
-    .kr { color: $code-keyword; }
-    .kt { color: $code-type; }
-    .ld { color: $code-default; }
-    .m  { color: $code-string; }
-    .s  { color: $code-string; }
-    .na { color: $code-builtin; }
-    .nb { color: $code-builtin; }
-    .nc { color: $code-name; }
-    .no { color: $code-const; }
-    .nd { color: $code-name; }
-    .ni { color: $code-const; }
-    .ne { color: $code-const; }
-    .nf { color: $code-name; }
-    .nl { color: $code-default; }
-    .nn { color: $code-default; }
-    .nx { color: $code-default; }
-    .py { color: $code-default; }
-    .nt { color: $code-keyword; }
-    .nv { color: $code-name; }
-    .ow { color: $code-keyword; }
-    .w  { color: $code-default; }
-    .mf { color: $code-string; }
-    .mh { color: $code-string; }
-    .mi { color: $code-string; }
-    .mo { color: $code-string; }
-    .sb { color: $code-comment; }
-    .sc { color: $code-string; }
-    .sd { color: $code-default; }
-    .s2 { color: $code-string; }
-    .se { color: $code-const; }
-    .sh { color: $code-default; }
-    .si { color: $code-string; }
-    .sx { color: $code-string; }
-    .sr { color: $code-type; }
-    .s1 { color: $code-string; }
-    .ss { color: $code-string; }
-    .bp { color: $code-name; }
-    .vc { color: $code-name; }
-    .vg { color: $code-name; }
-    .vi { color: $code-name; }
-    .il { color: $code-string; }
+    .err { color: var(--color-code-fg); }
+    .c  { color: var(--color-code-comment); }
+    .g  { color: var(--color-code-fg); }
+    .k  { color: var(--color-code-keyword); }
+    .l  { color: var(--color-code-fg); }
+    .n  { color: var(--color-code-fg); }
+    .o  { color: var(--color-code-keyword); }
+    .x  { color: var(--color-code-const); }
+    .p  { color: var(--color-code-fg); }
+    .cm { color: var(--color-code-comment); }
+    .cp { color: var(--color-code-keyword); }
+    .c1 { color: var(--color-code-comment); }
+    .cs { color: var(--color-code-keyword); }
+    .gd { color: var(--color-code-string); }
+    .ge { color: var(--color-code-fg); font-style: italic; }
+    .gr { color: var(--color-code-type); }
+    .gh { color: var(--color-code-const); }
+    .gi { color: var(--color-code-keyword); }
+    .go { color: var(--color-code-fg); }
+    .gp { color: var(--color-code-fg); }
+    .gs { color: var(--color-code-fg); font-weight: bold; }
+    .gu { color: var(--color-code-const); }
+    .gt { color: var(--color-code-fg); }
+    .kc { color: var(--color-code-const); }
+    .kd { color: var(--color-code-name); }
+    .kn { color: var(--color-code-keyword); }
+    .kp { color: var(--color-code-keyword); }
+    .kr { color: var(--color-code-keyword); }
+    .kt { color: var(--color-code-type); }
+    .ld { color: var(--color-code-fg); }
+    .m  { color: var(--color-code-string); }
+    .s  { color: var(--color-code-string); }
+    .na { color: var(--color-code-builtin); }
+    .nb { color: var(--color-code-builtin); }
+    .nc { color: var(--color-code-name); }
+    .no { color: var(--color-code-const); }
+    .nd { color: var(--color-code-name); }
+    .ni { color: var(--color-code-const); }
+    .ne { color: var(--color-code-const); }
+    .nf { color: var(--color-code-name); }
+    .nl { color: var(--color-code-fg); }
+    .nn { color: var(--color-code-fg); }
+    .nx { color: var(--color-code-fg); }
+    .py { color: var(--color-code-fg); }
+    .nt { color: var(--color-code-keyword); }
+    .nv { color: var(--color-code-name); }
+    .ow { color: var(--color-code-keyword); }
+    .w  { color: var(--color-code-fg); }
+    .mf { color: var(--color-code-string); }
+    .mh { color: var(--color-code-string); }
+    .mi { color: var(--color-code-string); }
+    .mo { color: var(--color-code-string); }
+    .sb { color: var(--color-code-comment); }
+    .sc { color: var(--color-code-string); }
+    .sd { color: var(--color-code-fg); }
+    .s2 { color: var(--color-code-string); }
+    .se { color: var(--color-code-const); }
+    .sh { color: var(--color-code-fg); }
+    .si { color: var(--color-code-string); }
+    .sx { color: var(--color-code-string); }
+    .sr { color: var(--color-code-type); }
+    .s1 { color: var(--color-code-string); }
+    .ss { color: var(--color-code-string); }
+    .bp { color: var(--color-code-name); }
+    .vc { color: var(--color-code-name); }
+    .vg { color: var(--color-code-name); }
+    .vi { color: var(--color-code-name); }
+    .il { color: var(--color-code-string); }
 }
