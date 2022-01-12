@@ -19,7 +19,7 @@ body {
         margin: 0 0 2rem;
     }
 
-    ul ul {
+    ul ul, ol ul, ol ol, ul ol {
         margin-bottom: 0;
     }
 }
