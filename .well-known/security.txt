@@ -1,0 +1,7 @@
+---
+---
+Contact: mailto:security@starsquare.co.uk
+Expires: {{ site.time | date: '%Y' }}-12-31T23:59:00.000Z
+Encryption: https://keybase.io/{% include social.html id='keybase' %}/pgp_keys.asc
+Preferred-Languages: en-GB
+Canonical: {{ '/.well-known/security.txt' | absolute_url }}
