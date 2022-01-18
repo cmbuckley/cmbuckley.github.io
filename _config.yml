@@ -15,6 +15,9 @@ markdown: kramdown
 highlighter: rouge
 paginate: 10
 
+include:
+  - .well-known
+
 exclude:
   - CNAME
   - Gemfile
