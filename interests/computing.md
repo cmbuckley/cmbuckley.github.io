@@ -9,7 +9,7 @@ image:
 last_modified_at: 2021-07-14 19:30 +01:00
 ---
 
-{% include figure.html img="/files/2012/05/amstrad_cpc_6128-300x267.jpg" url="/files/2012/05/amstrad_cpc_6128.jpg" alt="Amstrad CPC 6128 and monitor" float="right" %}
+{% include figure.html img="/files/2012/05/amstrad_cpc_6128.png" img_class="img--shadow" url="/files/2012/05/amstrad_cpc_6128.jpg" alt="Amstrad CPC 6128 and monitor" float="right" %}
 
 I have worked closely with computers since I was very young. My first computer was an Amstrad CPC 6128{% include break.html default="" xs=" (above)" s_up=" (right)" %}, with such games as _Arkanoid_, _Barry McGuigan World Championship Boxing_, _Chuckie Egg_, _Dizzy_ and _Michael Jackson's Moonwalker_ among others.
 
