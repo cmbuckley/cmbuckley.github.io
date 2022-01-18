@@ -4,20 +4,20 @@ COLOR VARIABLES
 
 // Better default colors
 // Cool
-$aqua:  #7FDBFF;
-$blue:  #0074D9;
-$navy:  #001F3F;
-$teal:  #39CCCC;
-$green: #2C8654;
-$olive: #3D9970;
-$lime:  #01FF70;
+$aqua:  #7fdbff;
+$blue:  #0074d9;
+$navy:  #001f3f;
+$teal:  #39cccc;
+$green: #2c8654;
+$olive: #3d9970;
+$lime:  #01ff70;
 // Warm
-$yellow:  #FFDC00;
-$orange:  #FF851B;
-$red:     #DE2D22;
-$fuchsia: #F012BE;
-$purple:  #B10DC9;
-$maroon:  #85144B;
+$yellow:  #ffdc00;
+$orange:  #ff851b;
+$red:     #de2d22;
+$fuchsia: #f012be;
+$purple:  #b10dc9;
+$maroon:  #85144b;
 // Gray Scale
 $white:    #fff;
 $offwhite: #f7f7f7;
@@ -26,17 +26,131 @@ $grey:     #5e5e5e;
 $blackish: #111;
 
 // Color variables
-$primary-color: #2C8654;
-$secondary-color: #233E5B;
+$primary-color: #2c8654;
+$secondary-color: #233e5b;
 $tertiary-color: #aaa;
-$link-color: $primary-color;
-$background-color: $primary-color;
 
-$error-color: $red; // Bad color for errors, validation etc.
-$warning-color: $orange; // Warning color for less serious warning messages.
-$ok-color: $green; // Good color for success etc.
-$info-color: $blue; // Information level color.
-$subtle-color: $silver; // Subtle color for subtle text
+$dark-primary-color: #5d823d;
+$dark-secondary-color: #233e5b;
+$dark-tertiary-color: #aaa;
+
+
+/***************
+THEMING
+***************/
+
+$theme: (
+    default: (
+        bg: $white,
+        fg: $blackish,
+        meta: $silver,
+        caption: $grey,
+
+        btn-fg: $white,
+        btn-fg-hover: darken($white, 20%),
+        overlay-fg: $white,
+        overlay-shadow: black,
+        nav-active: change-color($white, $alpha: 0.4),
+        nav-separator: lighten($primary-color, 5%),
+        separator: darken($white, 15%),
+
+        input-bg: #e6e6e6,
+        input-fg: #333,
+        loading: #e6e6e6,
+
+        comments-bg: $offwhite,
+        comments-border: $tertiary-color,
+        comments-target: scale-color($primary-color, $lightness: 75%),
+        comments-author-bg: scale-color($primary-color, $lightness: 95%),
+        comments-author-meta: $grey,
+
+        table-bg-alt: $offwhite,
+        mark: rgba(90, 173, 128, 0.4), // @todo was this from the primary color?
+
+        primary:   $primary-color,
+        secondary: $secondary-color,
+        tertiary:  $tertiary-color,
+
+        error:   $red,    // Bad color for errors, validation etc.
+        warning: $orange, // Warning color for less serious warning messages.
+        ok:      $green,  // Good color for success etc.
+        info:    $blue,   // Information level color.
+
+        code-bg:       #272822,
+        code-fg:       #f8f8f2,
+        code-comment:  #949076,
+        code-keyword:  #66d9ef,
+        code-literal:  #ae81ff,
+        code-name:     #a6e22e,
+        code-operator: #f94e8a,
+        code-string:   #e6db74,
+    ),
+    dark: (
+        bg: $blackish,
+        fg: darken($offwhite, 15%),
+        caption: $silver,
+
+        btn-fg: $blackish,
+        btn-fg-hover: black,
+        nav-separator: darken($dark-primary-color, 5%),
+
+        input-bg: #222,
+        input-fg: #999,
+        loading: #222,
+
+        comments-bg: #191a1c,
+        comments-border: $dark-tertiary-color,
+        comments-target: scale-color($dark-primary-color, $lightness: 75%),
+        comments-author-bg: scale-color($dark-primary-color, $lightness: -80%),
+        comments-author-meta: $grey,
+
+        table-bg-alt: #191a1c,
+        mark: change-color($dark-primary-color, $alpha: 0.3),
+
+        primary:   $dark-primary-color,
+        secondary: $dark-secondary-color,
+        tertiary:  $dark-tertiary-color,
+    ),
+);
+
+// recursive merge from https://pentzzsolt.medium.com/f91637f87b2e
+@function map-deep-merge($map1, $map2) {
+	$result: $map1;
+
+	@each $key, $value in $map2 {
+		@if (not map-has-key($result, $key)) or (type-of(map-get($result, $key)) != type-of($value)) or (not (type-of(map-get($result, $key)) == map and type-of($value) == map)) {
+			$result: map-merge($result, ($key: $value));
+		}
+		@else {
+			$result: map-merge($result, ($key: map-deep-merge(map-get($result, $key), $value)));
+		}
+	}
+
+	@return $result;
+}
+
+@each $message-type in 'error', 'warning', 'info', 'ok' {
+    $default-theme: map-get($theme, default);
+
+    $theme: map-deep-merge($theme, (default: (
+        #{$message-type}-bg: change-color(map-get($default-theme, $message-type), $alpha: 0.08),
+        #{$message-type}-highlight: change-color(map-get($default-theme, $message-type), $alpha: 0.5),
+        #{$message-type}-fg-hover: darken(map-get($default-theme, $message-type), 15%),
+    )));
+}
+
+@each $button-type in 'primary', 'secondary', 'tertiary' {
+    $default-theme: map-get($theme, default);
+    $dark-theme: map-get($theme, dark);
+
+    $theme: map-deep-merge($theme, (default: (
+        #{$button-type}-fg: darken(map-get($default-theme, $button-type), 10%),
+        #{$button-type}-hover: darken(map-get($default-theme, $button-type), 10%),
+    ), dark: (
+        #{$button-type}-fg: darken(map-get($dark-theme, $button-type), 10%),
+        #{$button-type}-hover: darken(map-get($dark-theme, $button-type), 10%),
+    )));
+}
 
 
 /***************
@@ -55,3 +169,22 @@ TYPE SETTINGS
 
 $sans-serif: "Open Sans", Helvetica, Arial, sans-serif;
 $serif: "PT Serif", Georgia, Times, serif;
+
+
+/***************
+ROOT VARIABLES
+***************/
+
+:root {
+    @each $key, $value in map-get($theme, default) {
+        --color-#{$key}: #{$value};
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        @each $key, $value in map-get($theme, dark) {
+            --color-#{$key}: #{$value};
+        }
+    }
+}

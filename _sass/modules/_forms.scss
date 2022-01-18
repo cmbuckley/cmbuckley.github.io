@@ -16,9 +16,9 @@ input[type=search],
 textarea {
     font-size: 18px;
     font-family: $serif;
-    color: #333;
-    background: #e6e6e6;
-    border: 1px solid #e6e6e6;
+    color: var(--color-input-fg);
+    background: var(--color-input-bg);
+    border: 1px solid var(--color-input-bg);
     border-radius: 4px;
     -webkit-appearance: none;
     padding: 5px;
@@ -28,11 +28,11 @@ textarea {
     margin-bottom: .5rem;
 
     &:focus {
-        border-color: $primary-color;
+        border-color: var(--color-primary);
     }
 
     .interacted &:invalid {
-        border-color: $error-color;
+        border-color: var(--color-error);
     }
 
     &.full-width {
@@ -40,7 +40,7 @@ textarea {
     }
 }
 textarea {
-    height: $line-height*3;
+    height: $line-height * 3;
 }
 
 form {
@@ -49,13 +49,13 @@ form {
 
     // Wrap each form input/element in a field div
     .field {
-        margin-bottom: $padding/2;
+        margin-bottom: $padding / 2;
     }
 
     // Notes go under the input fields
     .note {
         margin-top: 5px;
-        color: $subtle-color;
+        color: var(--color-meta);
     }
 
     // Required label
@@ -66,7 +66,7 @@ form {
     // Validation, add error class to the item div
     .error .reason {
         margin-top: 5px;
-        color: $error-color;
+        color: var(--color-error);
     }
 
     :disabled {
@@ -109,11 +109,11 @@ form {
     vertical-align: middle;
 
     .form--success & {
-        color: $ok-color;
+        color: var(--color-ok);
     }
 
     .form--error & {
-        color: $error-color;
+        color: var(--color-error);
     }
 
     .form--loading &::after {

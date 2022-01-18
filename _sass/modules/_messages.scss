@@ -1,31 +1,23 @@
 @mixin message($color) {
     padding: 0 0.3em;
-    color: $color;
-    border: 1px solid $color;
+    color: var(--color-#{$color});
+    border: 1px solid var(--color-#{$color});
     border-radius: 3px;
-    background-color: change-color($color, $alpha: 0.08);
+    background-color: var(--color-#{$color}-bg);
 
     a {
-        color: $color;
+        color: var(--color-#{$color});
     }
 
     a:hover {
-        color: darken($color, 15%);
+        color: var(--color-#{$color}-fg-hover);
     }
 }
 
-.error {
-    @include message($error-color);
-}
+$types: 'error', 'warning', 'info', 'ok';
 
-.warning {
-    @include message($warning-color);
-}
-
-.info {
-    @include message($info-color);
-}
-
-.ok {
-    @include message($ok-color);
+@each $type in $types {
+    .#{$type} {
+        @include message($type);
+    }
 }
