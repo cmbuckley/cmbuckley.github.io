@@ -76,15 +76,14 @@ $theme: (
         ok:      $green,  // Good color for success etc.
         info:    $blue,   // Information level color.
 
-        code-bg:      #002b36,
-        code-fg:      #93a1a1,
-        code-comment: #759299,
-        code-keyword: #859900,
-        code-name:    #3294da,
-        code-const:   #e9662f,
-        code-string:  #2aa198,
-        code-type:    #e8625f,
-        code-builtin: #b58900,
+        code-bg:       #272822,
+        code-fg:       #f8f8f2,
+        code-comment:  #949076,
+        code-keyword:  #66d9ef,
+        code-literal:  #ae81ff,
+        code-name:     #a6e22e,
+        code-operator: #f94e8a,
+        code-string:   #e6db74,
     ),
     dark: (
         bg: $blackish,
