@@ -87,7 +87,8 @@ $theme: (
     ),
     dark: (
         bg: $blackish,
-        fg: $offwhite,
+        fg: darken($offwhite, 15%),
+        caption: $silver,
 
         btn-fg: $blackish,
         btn-fg-hover: black,
