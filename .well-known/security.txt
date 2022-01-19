@@ -1,7 +1,8 @@
 ---
 ---
+{%- assign six_months = 86400 | times: 30 | times: 6 -%}
 Contact: mailto:security@starsquare.co.uk
-Expires: {{ site.time | date: '%Y' }}-12-31T23:59:00.000Z
+Expires: {{ site.time | date: '%s' | plus: six_months | date_to_xmlschema }}
 Encryption: https://keybase.io/{% include social.html id='keybase' %}/pgp_keys.asc
 Preferred-Languages: en-GB
-Canonical: {{ '/.well-known/security.txt' | absolute_url }}
+Canonical: {{ page.path | absolute_url }}
