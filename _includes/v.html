@@ -1,22 +1,24 @@
-?v=
+{%- unless site.suppress_fingerprints -%}
+  ?v=
 
-{%- assign fingerprints = 'icons: 95ce7b5b,scripts: f8313fa5,search: b74b56ab,style: 2ace51bb' | split: ',' -%}
-{%- assign found = false -%}
+  {%- assign fingerprints = 'icons: 95ce7b5b,scripts: f8313fa5,search: b74b56ab,style: 2ace51bb' | split: ',' -%}
+  {%- assign found = false -%}
 
-{%- if jekyll.environment == 'production' -%}
-  {%- for fingerprint in fingerprints -%}
-    {%- assign info = fingerprint | split: ': ' -%}
-    {%- if info[0] == include.id -%}
-      {%- assign found = true -%}
-      {{ info[1] }}
-    {%- endif -%}
-  {%- endfor -%}
-{%- endif -%}
-
-{%- unless found -%}
-  {%- if site.github -%}
-    r{{ site.github.build_revision | slice: 0,8 }}
-  {%- else -%}
-    {{ site.time | date: '%s' }}
+  {%- if jekyll.environment == 'production' -%}
+    {%- for fingerprint in fingerprints -%}
+      {%- assign info = fingerprint | split: ': ' -%}
+      {%- if info[0] == include.id -%}
+        {%- assign found = true -%}
+        {{ info[1] }}
+      {%- endif -%}
+    {%- endfor -%}
   {%- endif -%}
+
+  {%- unless found -%}
+    {%- if site.github -%}
+      r{{ site.github.build_revision | slice: 0,8 }}
+    {%- else -%}
+      {{ site.time | date: '%s' }}
+    {%- endif -%}
+  {%- endunless -%}
 {%- endunless -%}
