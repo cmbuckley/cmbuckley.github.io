@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // the list should be marked as hidden if the menu button is visible and not expanded
+        console.log('offsetParent', navButton.offsetParent);
         list.hidden = (navButton.offsetParent ? !nav.classList.contains('open') : false);
     }
 
