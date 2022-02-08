@@ -97,8 +97,9 @@ document.addEventListener('DOMContentLoaded', function () {
             if (toast) {
                 toast.innerText = '';
             } else {
-                toast = document.createElement('div');
+                toast = document.createElement('output');
                 toast.classList.add('form__notification');
+                toast.setAttribute('role', 'status');
                 form.appendChild(toast);
             }
 
