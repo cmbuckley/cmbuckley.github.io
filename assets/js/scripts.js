@@ -107,14 +107,14 @@ document.addEventListener('DOMContentLoaded', function () {
             xhr.addEventListener('load', function () {
                 form.classList.add('form--success');
                 form.classList.remove('interacted');
-                toast.innerText = 'Thanks for your post! It will appear here once it has been approved.';
+                toast.innerText = form.dataset.messageSuccess;
                 form.querySelectorAll('[type="submit"]').forEach(el => el.remove());
                 form.reset();
             });
 
             xhr.addEventListener('error', function () {
                 form.classList.add('form--error');
-                toast.innerText = 'The comment could not be posted.';
+                toast.innerText = form.dataset.messageError;
             });
 
             xhr.addEventListener('loadend', function () {
@@ -124,6 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             xhr.open(form.method, form.action);
             xhr.setRequestHeader('Content-Type', form.enctype);
+            xhr.setRequestHeader('Accept', 'application/json');
             xhr.send(Array.from(new FormData(form), e => e.map(encodeURIComponent).join('=')).join('&'));
         });
     });

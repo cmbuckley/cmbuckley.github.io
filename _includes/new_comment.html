@@ -1,6 +1,6 @@
 <h2 class="reply">Leave a Reply</h2>
 
-<form id="comments-form" class="reply xhr" method="post" action="{{ site.data.staticman[include.prop].url }}/v2/entry/{{ site.github.repository_nwo }}/{{ site.data.staticman[include.prop].branch }}/{{ include.prop }}">
+<form id="comments-form" class="reply xhr" method="post" action="{{ site.data.staticman[include.prop].url }}/v2/entry/{{ site.github.repository_nwo }}/{{ site.data.staticman[include.prop].branch }}/{{ include.prop }}" data-message-success="Thanks for your post! It will appear here once it has been approved." data-message-error="The comment could not be posted.">
   <input type="hidden" class="not-xhr" name="options[redirect]" value="{{ page.url | absolute_url }}#comment-posted">
   <input type="hidden" name="options[title]" value="{{ page.title | escape }}">
   <input type="hidden" name="options[slug]" value="{{ include.slug }}">
