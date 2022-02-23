@@ -4,7 +4,7 @@ The [original Jekyll theme](https://github.com/brianmaierjr/long-haul) is also l
 
 The MIT Licence (MIT)
 
-Copyright (c) 2018-2019 Chris Buckley
+Copyright (c) 2018 Chris Buckley
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
