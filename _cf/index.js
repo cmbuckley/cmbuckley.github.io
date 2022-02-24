@@ -1,0 +1,110 @@
+let nonce = Math.random().toString(36).substring(7)
+
+let csp = {
+    'default-src': "'self'",
+    'script-src': [
+        "'self'",
+        "'unsafe-hashes'",
+        "'strict-dynamic'",
+        `'nonce-${nonce}'`,
+        "'sha256-MhtPZXr7+LpJUY5qtMutB+qWfQtMaPccfe7QXtCcEYc='", // CSS print inline
+    ],
+    'style-src': [
+        "'self'",
+        "'unsafe-inline'",
+        'https://fonts.googleapis.com',
+    ],
+    'img-src': [
+        "'self'",
+        'https://res.cloudinary.com',
+        'https://github.com/cmbuckley/',
+        'https://www.gravatar.com',
+        'https://www.herokucdn.com/',
+        'data:',
+    ],
+    'font-src': [
+        'https://fonts.gstatic.com',
+    ],
+    'object-src': "'none'",
+    'connect-src': [
+        "'self'",
+        'https://staticman.cmbuckley.co.uk',
+    ],
+    'media-src': [
+        "'self'",
+        'https://res.cloudinary.com'
+    ],
+    'frame-src': [
+        "'self'",
+        'https://www.youtube.com',
+        'https://www.google.com',
+    ],
+    'form-action': [
+        "'self'",
+        'https://formcarry.com',
+        'https://api.staticman.net/',
+    ],
+    'frame-ancestors': "'none'",
+    'report-uri': 'https://cmbuckley.report-uri.com/r/d/csp/reportOnly',
+}
+
+let cspHeader = Object.keys(csp)
+    .map(d => d + ' ' + (csp[d].join ? csp[d].join(' ') : csp[d]))
+    .join('; ')
+
+let securityHeaders = {
+    'Content-Security-Policy': 'upgrade-insecure-requests',
+    'Content-Security-Policy-Report-Only': cspHeader,
+    'X-Xss-Protection': '1; mode=block',
+    'X-Frame-Options': 'DENY',
+    'X-Content-Type-Options': 'nosniff',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Permissions-Policy': 'camera=(), geolocation=(), microphone=(), payment=()',
+    'X-Clacks-Overhead': 'GNU Terry Pratchett',
+}
+
+let sanitiseHeaders = {
+    'Server': 'cmbuckley.co.uk',
+    'Strict-Transport-Security': 'max-age=31536000',
+}
+
+let removeHeaders = [
+    'Access-Control-Allow-Origin',
+    'Public-Key-Pins',
+    'X-Powered-By',
+    'X-AspNet-Version',
+]
+
+addEventListener('fetch', event => {
+    event.respondWith(addSecurity(event.request))
+})
+
+async function addSecurity(req) {
+    let response = await fetch(req)
+    let newHdrs = new Headers(response.headers)
+
+    if (newHdrs.has('Content-Type') && !newHdrs.get('Content-Type').includes('text/html')) {
+        return new Response(response.body, {
+            status:     response.status,
+            statusText: response.statusText,
+            headers:    newHdrs
+        })
+    }
+
+    let setHeaders = Object.assign({}, securityHeaders, sanitiseHeaders)
+    let newBody = (await response.text()).replace(/nonce=""/gm, `nonce="${nonce}"`)
+
+    Object.keys(setHeaders).forEach(name => {
+        newHdrs.set(name, setHeaders[name]);
+    })
+
+    removeHeaders.forEach(name => {
+        newHdrs.delete(name)
+    })
+
+    return new Response(newBody, {
+        status:     response.status,
+        statusText: response.statusText,
+        headers:    newHdrs
+    })
+}
