@@ -1,0 +1,6 @@
+name = "security-headers"
+type = "javascript"
+usage_model = "bundled"
+workers_dev = true
+route = "cmbuckley.co.uk/*"
+compatibility_date = "2022-02-24"
