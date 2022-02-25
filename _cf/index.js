@@ -24,6 +24,7 @@ const csp = {
     ],
     'font-src': [
         'https://fonts.gstatic.com',
+        'about:', // https://github.com/mathjax/MathJax/issues/256#issuecomment-37990603
     ],
     'object-src': "'none'",
     'connect-src': [
