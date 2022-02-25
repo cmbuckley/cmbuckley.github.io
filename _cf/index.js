@@ -1,6 +1,6 @@
-let nonce = Math.random().toString(36).substring(7)
+const nonce = Math.random().toString(36).substring(7)
 
-let csp = {
+const csp = {
     'default-src': "'self'",
     'script-src': [
         "'self'",
@@ -48,11 +48,11 @@ let csp = {
     'report-uri': 'https://cmbuckley.report-uri.com/r/d/csp/reportOnly',
 }
 
-let cspHeader = Object.keys(csp)
+const cspHeader = Object.keys(csp)
     .map(d => d + ' ' + (csp[d].join ? csp[d].join(' ') : csp[d]))
     .join('; ')
 
-let securityHeaders = {
+const securityHeaders = {
     'Content-Security-Policy': 'upgrade-insecure-requests',
     'Content-Security-Policy-Report-Only': cspHeader,
     'X-Xss-Protection': '1; mode=block',
@@ -63,25 +63,41 @@ let securityHeaders = {
     'X-Clacks-Overhead': 'GNU Terry Pratchett',
 }
 
-let sanitiseHeaders = {
+const sanitiseHeaders = {
     'Server': 'cmbuckley.co.uk',
     'Strict-Transport-Security': 'max-age=31536000',
 }
 
-let removeHeaders = [
+const removeHeaders = [
     'Access-Control-Allow-Origin',
     'Public-Key-Pins',
     'X-Powered-By',
     'X-AspNet-Version',
 ]
 
+const redirects = {
+    '/security.txt': '/.well-known/security.txt',
+}
+
 addEventListener('fetch', event => {
-    event.respondWith(addSecurity(event.request))
+    event.respondWith(handleRequest(event.request))
 })
 
+async function handleRequest(req) {
+    const requestUrl = new URL(req.url)
+
+    if (redirects[requestUrl.pathname]) {
+        let dest = redirects[requestUrl.pathname]
+        if (dest[0] == '/') { dest = requestUrl.origin + dest }
+        return Response.redirect(dest, 302)
+    }
+
+    return addSecurity(req)
+}
+
 async function addSecurity(req) {
-    let response = await fetch(req)
-    let newHdrs = new Headers(response.headers)
+    const response = await fetch(req)
+    const newHdrs = new Headers(response.headers)
 
     if (newHdrs.has('Content-Type') && !newHdrs.get('Content-Type').includes('text/html')) {
         return new Response(response.body, {
@@ -91,8 +107,8 @@ async function addSecurity(req) {
         })
     }
 
-    let setHeaders = Object.assign({}, securityHeaders, sanitiseHeaders)
-    let newBody = (await response.text()).replace(/nonce=""/gm, `nonce="${nonce}"`)
+    const setHeaders = Object.assign({}, securityHeaders, sanitiseHeaders)
+    const newBody = (await response.text()).replace(/nonce=""/gm, `nonce="${nonce}"`)
 
     Object.keys(setHeaders).forEach(name => {
         newHdrs.set(name, setHeaders[name]);
