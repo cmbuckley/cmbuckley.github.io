@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.addEventListener('keyup', function (e) {
             if (!e.ctrlKey && !e.altKey && !e.metaKey) {
                 // focus search box with "/"
-                if (e.key == '/') {
+                if (e.key == '/' && document.activeElement != search) {
                     search.focus();
                     if (search.select) {
                         search.select();
