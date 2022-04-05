@@ -14,14 +14,15 @@
     <a href="{{ video_prefix }}/{{ include.video }}.mp4">MP4</a> or
     <a href="{{ video_prefix }}/{{ include.video }}.ogv">Vorbis</a> format.
   </video>
-{% elsif include.img %}
+{% elsif include.img or include.object %}
    {% if include.url %}<a href="{{ include.url }}">{%- endif -%}
-   <img src="{{ include.img }}" {% if include.img_class %}class="{{ include.img_class }}" {% endif -%}
+   {%- if include.img %}<img src="{{ include.img }}" {% else -%}<object data="{{ include.object }}" {% endif -%}
+   {% if include.img_class %}class="{{ include.img_class }}" {% endif -%}
      alt="{% if include.alt -%}
        {{ include.alt }}
      {%- else -%}
        {%- if include.url %}{{ include.caption | default: 'View larger image' }}{% endif -%}
-     {%- endif %}">
+     {%- endif %}">{% if include.object %}</object>{% endif %}
    {%- if include.url -%}</a>{%- endif -%}
 {%- endif -%}
 {%- if include.caption -%}
