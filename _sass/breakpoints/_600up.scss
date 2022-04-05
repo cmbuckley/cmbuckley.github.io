@@ -13,7 +13,7 @@ figure {
         margin: 0 40px 1em 0;
     }
 
-    &.fl-none img {
+    &.fl-none img, &.fl-none object {
         max-width: 50%;
     }
 
