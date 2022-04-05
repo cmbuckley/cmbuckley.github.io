@@ -8,6 +8,7 @@ image:
     src: /files/2020/04/headset.jpg
     alt: Homemade headset connected to a PS4 controller
 allow_comments: true
+last_modified_at: 2022-04-05 14:32 +00:00
 ---
 
 I've never been particularly good at multiplayer games, partly because I don't play them enough to get better! But I've joined some friends in a few games of _Fortnite_ over the past couple of days as one of our ways to stay in touch.
@@ -16,7 +17,7 @@ To play the game properly, I needed a headset to chat with the squad. I tried to
 
 I discovered that the reason my other headsets hadn't worked was because there are [different standards](https://en.wikipedia.org/wiki/Phone_connector_(audio)#TRRS_standards) for wiring phone connectors; iPhones are wired for the CTIA standard and PS4s are wired for the OMTP standard:
 
-{% include figure.html img="/files/2020/04/trrs.svg" caption="Conflicting standards between iPhone and PS4 headsets" alt="A 4-conductor phone connector with labels identifying the rings for two conflicting standards. From tip to base, the OMTP standard uses left audio, right audio, microphone and ground. The CTIA standard flips the microphone and ground connectors." %}
+{% include figure.html object="/files/2020/04/trrs.svg" caption="Conflicting standards between iPhone and PS4 headsets" alt="A 4-conductor phone connector with labels identifying the rings for two conflicting standards. From tip to base, the OMTP standard uses left audio, right audio, microphone and ground. The CTIA standard flips the microphone and ground connectors." %}
 
 I didn't have any spare 4-conductor jacks, but I have an audio jack to 3 RCA sockets, and that was a start. All I needed was some compatible devices!
 
