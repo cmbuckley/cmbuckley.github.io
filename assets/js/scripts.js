@@ -200,4 +200,21 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    // deep link into Facebook app if possible
+    let fbLinks = document.querySelectorAll('a[data-fb-profile]');
+    if (fbLinks) {
+        function fbAppLink(id) {
+            // purposefully simple, caveats here: https://stackoverflow.com/a/19883965/283078
+            if (navigator.platform == 'Android') { return 'fb://page/' + id; }
+            if (/^iP(ad|hone)/.test(navigator.platform)) { return 'fb://profile/' + id; }
+        }
+
+        fbLinks.forEach(a => a.addEventListener('click', e => {
+            let appLink = fbAppLink(e.target.dataset.fbProfile);
+            if (appLink && window.open(appLink)) {
+                e.preventDefault();
+            }
+        }));
+    }
 });
