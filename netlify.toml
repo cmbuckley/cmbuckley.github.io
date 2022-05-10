@@ -2,7 +2,7 @@
 command = "printf \"url: %s\" \"$DEPLOY_PRIME_URL\" > _preview.yml; jekyll build --config _config.yml,_preview.yml && rspec"
 
 [context.deploy-preview]
-command = "printf \"url: %s\" \"$DEPLOY_PRIME_URL\" > _preview.yml; jekyll build --config _config.yml,_preview.yml && rspec"
+command = "printf \"url: %s\" \"https://staging-$REVIEW_ID.cmbuckley.co.uk\" > _preview.yml; jekyll build --config _config.yml,_preview.yml && rspec"
 
 [build]
 command = "jekyll build --config _config.yml,_staging.yml && rspec"
