@@ -206,7 +206,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (fbLinks) {
         function fbAppLink(id) {
             // purposefully simple, caveats here: https://stackoverflow.com/a/19883965/283078
-            if (navigator.platform == 'Android') { return 'fb://page/' + id; }
             if (/^iP(ad|hone)/.test(navigator.platform)) { return 'fb://profile/' + id; }
         }
 
