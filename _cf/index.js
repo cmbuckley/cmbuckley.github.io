@@ -87,6 +87,11 @@ addEventListener('fetch', event => {
 async function handleRequest(req) {
     const requestUrl = new URL(req.url)
 
+    if (match = requestUrl.hostname.match(/^staging-(\d+)\./)) {
+        requestUrl.hostname = `deploy-preview-${match[1]}--cmbuckley.netlify.app`
+        return addSecurity(req, requestUrl)
+    }
+
     if (redirects[requestUrl.pathname]) {
         let dest = redirects[requestUrl.pathname]
         if (dest[0] == '/') { dest = requestUrl.origin + dest }
@@ -96,8 +101,8 @@ async function handleRequest(req) {
     return addSecurity(req)
 }
 
-async function addSecurity(req) {
-    const response = await fetch(req)
+async function addSecurity(req, url) {
+    const response = await fetch(url || req.url, req)
     const newHdrs = new Headers(response.headers)
 
     if (newHdrs.has('Content-Type') && !newHdrs.get('Content-Type').includes('text/html')) {

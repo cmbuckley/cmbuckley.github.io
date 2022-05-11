@@ -1,8 +1,28 @@
 [context.branch-deploy]
 command = "printf \"url: %s\" \"$DEPLOY_PRIME_URL\" > _preview.yml; jekyll build --config _config.yml,_preview.yml && rspec"
 
+  [[context.branch-deploy.plugins]]
+  package = "netlify-plugin-seo-lint"
+
+    [context.branch-deploy.plugins.inputs]
+    internalLinksTrailingSlash = false
+
 [context.deploy-preview]
-command = "printf \"url: %s\" \"$DEPLOY_PRIME_URL\" > _preview.yml; jekyll build --config _config.yml,_preview.yml && rspec"
+command = "printf \"url: %s\" \"https://staging-$REVIEW_ID.cmbuckley.co.uk\" > _preview.yml; jekyll build --config _config.yml,_preview.yml && rspec"
+
+  [[context.deploy-preview.plugins]]
+  package = "netlify-plugin-seo-lint"
+
+    [context.deploy-preview.plugins.inputs]
+    host = "https://staging-$REVIEW_ID.cmbuckley.co.uk"
+    hostExpansion = true
+    internalLinksTrailingSlash = false
+
+[[context.production.plugins]]
+package = "netlify-plugin-seo-lint"
+
+  [context.production.plugins.inputs]
+  internalLinksTrailingSlash = false
 
 [build]
 command = "jekyll build --config _config.yml,_staging.yml && rspec"
@@ -13,9 +33,3 @@ package = "netlify-plugin-html-validate"
   [plugins.inputs]
   ext = "html"
   config = ".htmlvalidate.json"
-
-[[plugins]]
-package = "netlify-plugin-seo-lint"
-
-  [plugins.inputs]
-  internalLinksTrailingSlash = false
