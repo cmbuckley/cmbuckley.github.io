@@ -1,0 +1,17 @@
+name: Netlify deploy-preview success
+on:
+  workflow_dispatch:
+    inputs:
+      issue:
+        description: Issue number
+jobs:
+  notify:
+    name: Notify about deployment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create comment
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          issue-number: ${{ github.event.inputs.issue }}
+          body: >
+            Your deploy preview can be found at https://staging-${{ github.event.inputs.issue }}.cmbuckley.co.uk.
