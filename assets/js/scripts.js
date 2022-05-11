@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         fbLinks.forEach(a => a.addEventListener('click', e => {
-            let appLink = fbAppLink(e.target.dataset.fbProfile);
+            let appLink = fbAppLink(a.dataset.fbProfile);
             if (appLink && window.open(appLink)) {
                 e.preventDefault();
             }
