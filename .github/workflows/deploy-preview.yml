@@ -9,9 +9,18 @@ jobs:
     name: Notify about deployment
     runs-on: ubuntu-latest
     steps:
+      - name: Find Comment
+        uses: peter-evans/find-comment@v2
+        id: find-comment
+        with:
+          issue-number: ${{ github.event.inputs.issue }}
+          comment-author: 'github-actions[bot]'
+          body-includes: Your deploy preview
       - name: Create comment
         uses: peter-evans/create-or-update-comment@v2
         with:
           issue-number: ${{ github.event.inputs.issue }}
+          comment-id: ${{ steps.find-comment.outputs.comment-id }}
+          edit-mode: replace
           body: >
             Your deploy preview can be found at https://staging-${{ github.event.inputs.issue }}.cmbuckley.co.uk.
