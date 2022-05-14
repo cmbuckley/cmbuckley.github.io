@@ -33,3 +33,9 @@ package = "netlify-plugin-html-validate"
   [plugins.inputs]
   ext = "html"
   config = ".htmlvalidate.json"
+
+[[headers]]
+for = "/*"
+
+  [headers.values]
+  X-Robots-Tag = "noindex, nofollow"
