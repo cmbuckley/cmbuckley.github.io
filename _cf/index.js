@@ -98,6 +98,10 @@ async function handleRequest(req) {
         return Response.redirect(dest, 302)
     }
 
+    if (requestUrl.hostname.match(/scripts\.cmbuckley\.co\.uk$/)) {
+        return await fetch(req)
+    }
+
     return addSecurity(req)
 }
 
