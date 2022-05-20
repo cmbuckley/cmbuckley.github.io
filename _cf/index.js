@@ -76,6 +76,11 @@ const removeHeaders = [
     'X-AspNet-Version',
 ]
 
+const trustOrigin = [
+    'Content-Security-Policy',
+    'Content-Security-Policy-Report-Only',
+]
+
 const redirects = {
     '/security.txt': '/.well-known/security.txt',
 }
@@ -121,7 +126,9 @@ async function addSecurity(req, url) {
     const newBody = (await response.text()).replace(/nonce=""/gm, `nonce="${nonce}"`)
 
     Object.keys(setHeaders).forEach(name => {
-        newHdrs.set(name, setHeaders[name]);
+        if (!trustOrigin.includes(name) || !newHdrs.has(name)) {
+            newHdrs.set(name, setHeaders[name]);
+        }
     })
 
     removeHeaders.forEach(name => {
