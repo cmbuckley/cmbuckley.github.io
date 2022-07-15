@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let style = document.createElement('style'),
         nav = document.querySelector('.nav-collapse'),
-        navButton = document.createElement('button');
+        navButton = document.createElement('button'),
+        navButtonStyle = getComputedStyle(navButton);
 
     // add max-height style for menu transition
     function updateMenu() {
@@ -24,8 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // the list should be marked as hidden if the menu button is visible and not expanded
-        console.log('offsetParent', navButton.offsetParent);
-        list.hidden = (navButton.offsetParent ? !nav.classList.contains('open') : false);
+        list.hidden = (navButtonStyle.display == 'block' ? !nav.classList.contains('open') : false);
     }
 
     // add nav toggle button before the nav
