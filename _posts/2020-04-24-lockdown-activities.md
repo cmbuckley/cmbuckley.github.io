@@ -24,4 +24,4 @@ Productivity aside, I've been doing my best to take time for friends and family 
 
 As with everything, but especially in times of stress, I think it's important to remember that we don't have control over the adversity that we face, but we do have control over the way we respond.[^1] Stay safe, look out for each other, and we'll see you all on the other side. ❤️
 
-[^1]: This is the message of many motivational talks and management coaches, but this particular line came from [Chad Williams](https://www.youtube.com/watch?v=th3aU44AAiU). For another great Navy SEAL speech, see [this speech by Admiral William H McRaven](https://www.youtube.com/watch?v=3sK3wJAxGfs) from UT Austin in 2014.
+[^1]: This is the message of many motivational talks and management coaches, but this particular line came from [Chad Williams](https://youtu.be/A_C4OxGBkxM). For another great Navy SEAL speech, see [this speech by Admiral William H McRaven](https://www.youtube.com/watch?v=3sK3wJAxGfs) from UT Austin in 2014.
