@@ -1,4 +1,6 @@
-The text content of this project is licensed under the [Creative Commons Attribution 4.0 Unported licence](https://creativecommons.org/licenses/by/4.0/), and the underlying source code used to format and display that content is licensed under the MIT licence.
+# Source Code
+
+The underlying source code used to format and display the text content is licensed under the [MIT licence](https://opensource.org/licenses/MIT).
 
 The [original Jekyll theme](https://github.com/brianmaierjr/long-haul) is also licenced under the MIT licence by [Brian Maier Jr](https://brianmaierjr.com/).
 
@@ -23,3 +25,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+# Text Content
+
+The text content of this project is licensed under the [Creative Commons Attribution 4.0 Unported licence](https://creativecommons.org/licenses/by/4.0/).
