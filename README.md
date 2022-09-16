@@ -17,6 +17,6 @@ This is my personal Web site, built using [Jekyll](https://jekyllrb.com) and pow
 
 ## Licence
 
-The text content of this project is [licensed under the Creative Commons Attribution 4.0 Unported licence](LICENSE-CONTENT.md), and the underlying source code used to format and display that content is [licensed under the MIT licence](LICENSE.md).
+The text content of this project is [licensed under the Creative Commons Attribution 4.0 Unported licence](LICENCE), and the underlying source code used to format and display that content is [licensed under the MIT licence](LICENCE-CODE).
 
 The [original Jekyll theme](https://github.com/brianmaierjr/long-haul) is also licensed under the MIT licence by [Brian Maier Jr](https://brianmaierjr.com/).
