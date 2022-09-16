@@ -2,6 +2,22 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{% include mainurl.html %}/assets/css/style.css{% include v.html id='style' %}">
+    {% if page.style -%}
+      {% for style in page.style -%}
+        <link rel="stylesheet" href="{{ style | relative_url }}{% include v.html %}">
+      {%- endfor %}
+    {% endif -%}
+
+    {%- if page.layout == 'post' %}{% assign preload = 'blog' %}{% endif %}
+    {%- if page.allow_comments %}{% assign preload = 'page' %}{% endif %}
+    {% if preload -%}
+      <link rel="preload" href="{{ site.data.staticman[preload].url }}" as="fetch" crossorigin>
+    {% endif -%}
+    {% include google_fonts.html defer=true %}
+    <noscript>{% include google_fonts.html %}</noscript>
     {% include seo.html %}
     <link rel="shortcut icon" href="{% include mainurl.html %}/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="{% include mainurl.html %}/assets/img/icons/favicon-16.png">
@@ -11,20 +27,4 @@
     <link rel="manifest" href="{% include mainurl.html %}/assets/site.webmanifest">
     <meta name="msapplication-config" content="{% include mainurl.html %}/assets/browserconfig.xml">
     <meta name="theme-color" content="#2c8654">
-
-    <link rel="stylesheet" href="{% include mainurl.html %}/assets/css/style.css{% include v.html id='style' %}">
-    {% if page.style -%}
-      {% for style in page.style -%}
-        <link rel="stylesheet" href="{{ style | relative_url }}{% include v.html %}">
-      {%- endfor %}
-    {% endif -%}
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    {%- if page.layout == 'post' %}{% assign preload = 'blog' %}{% endif %}
-    {%- if page.allow_comments %}{% assign preload = 'page' %}{% endif %}
-    {% if preload -%}
-      <link rel="preload" href="{{ site.data.staticman[preload].url }}" as="fetch" crossorigin>
-    {% endif -%}
-    {% include google_fonts.html defer=true %}
-    <noscript>{% include google_fonts.html %}</noscript>
 </head>

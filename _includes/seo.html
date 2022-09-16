@@ -40,8 +40,8 @@
 {{ page.image.meta.src | default: '/assets/img/tiki-square.jpg' }}
 {%- endcapture -%}
 
-    <meta content="{{ page_description | default: site_description }}" name="description">
     <title>{{ page_title | prepend: title_pagination }}{% unless page.supress_site_title %}{% if page.title %} • {% endif %}{{ site_title }}{% endunless %}</title>
+    <meta content="{{ page_description | default: site_description }}" name="description">
 
     <meta content="{{ site_title }}" property="og:site_name">
     <meta content="{{ page_title | default: site_title | prepend: title_pagination }}" property="og:title">
