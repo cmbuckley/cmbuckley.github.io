@@ -14,3 +14,9 @@ This is my personal Web site, built using [Jekyll](https://jekyllrb.com) and pow
 * [Staticman](https://staticman.net/)
 * [FormCarry](https://formcarry.com/)
 * [Cloudflare Workers](https://www.cloudflare.com/en-gb/products/cloudflare-workers/)
+
+## Licence
+
+The text content of this project is [licensed under the Creative Commons Attribution 4.0 Unported licence](LICENSE-CONTENT.md), and the underlying source code used to format and display that content is [licensed under the MIT licence](LICENSE.md).
+
+The [original Jekyll theme](https://github.com/brianmaierjr/long-haul) is also licensed under the MIT licence by [Brian Maier Jr](https://brianmaierjr.com/).
