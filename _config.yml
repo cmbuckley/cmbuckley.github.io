@@ -21,7 +21,8 @@ include:
 exclude:
   - CNAME
   - Gemfile
-  - LICENSE
+  - LICENCE
+  - LICENCE-CODE
   - README.md
   - TODO
   - staticman.yml
