@@ -18,3 +18,16 @@ jobs:
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CLOUDFLARE_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
+      - name: Deploy netlify-deployment-status Cloudflare Worker
+        uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          workingDirectory: _cf/netlify-deployment-status
+        secrets: |
+          JWS_SECRET
+          GH_TOKEN
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
+          JWS_SECRET: ${{ secrets.CF_NETLIFY_JWS_SECRET }}
+          GH_TOKEN: ${{ secrets.CF_NETLIFY_GH_TOKEN }}

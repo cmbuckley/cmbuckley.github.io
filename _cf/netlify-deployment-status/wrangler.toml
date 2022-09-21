@@ -1,0 +1,3 @@
+name = "netlify-deployment-status"
+usage_model = "bundled"
+compatibility_date = "2022-02-24"
