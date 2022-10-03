@@ -8,6 +8,9 @@ jobs:
   notify:
     name: Notify about deployment
     runs-on: ubuntu-latest
+    environment:
+      name: staging foo
+      url: https://staging-foo.cmbuckley.co.uk
     steps:
       - name: Find Comment
         uses: peter-evans/find-comment@v2
