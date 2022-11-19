@@ -23,14 +23,16 @@ layout: page
     <dd><a class="key" href="https://keybase.io/{% include social.html id='keybase' %}/pgp_keys.asc">{{ pgp | replace: ' ', '&nbsp;' }}</a></dd>
     </dl>
   </div>
-  <form class="contact__form xhr" action="https://formcarry.com/s/LXKxlqlYQz" method="post" data-message-success="Thanks! Your message was sent." data-message-error="Sorry, your message could not be sent.">
-    <input type="hidden" name="_gotcha" value="">
+  <form class="contact__form xhr" action="https://api.staticforms.xyz/submit" method="post" data-message-success="Thanks! Your message was sent." data-message-error="Sorry, your message could not be sent.">
+    <input type="hidden" name="accessKey" value="fc2898af-a0f2-4fdb-a1b4-73ff54f7c1b5">
+    <input type="hidden" class="not-xhr" name="redirectTo" value="{{ page.url | absolute_url }}">
+    <input type="text" name="honeypot" class="hp">
 
     <label for="name">Name</label>
     <input type="text" id="name" name="name" required autocomplete="name" autocapitalize="words" class="full-width"><br>
 
     <label for="email">Email Address</label>
-    <input type="email" id="email" name="_replyto" required autocomplete="email" class="full-width"><br>
+    <input type="email" id="email" name="email" required autocomplete="email" class="full-width"><br>
 
     <label for="message">Message</label>
     <textarea name="message" id="message" required cols="30" rows="10" class="full-width"></textarea><br>
