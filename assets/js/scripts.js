@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
             xhr.open(form.method, form.action);
             xhr.setRequestHeader('Content-Type', form.enctype);
             xhr.setRequestHeader('Accept', 'application/json');
-            xhr.send(Array.from(new FormData(form), e => e.map(encodeURIComponent).join('=')).join('&'));
+            xhr.send(new URLSearchParams(new FormData(form)).toString());
         });
     });
 
