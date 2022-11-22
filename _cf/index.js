@@ -133,15 +133,15 @@ async function addSecurity(req, url) {
         }
     })
 
+    removeHeaders.forEach(name => {
+        newHdrs.delete(name)
+    })
+
     if (new URL(url || req.url).hostname == 'forms.cmbuckley.co.uk') {
         if (/cmbuckley\.co\.uk$/.test(req.headers.get('Origin') || '')) {
             newHdrs.set('Access-Control-Allow-Origin', req.headers.get('Origin'))
         }
     }
-
-    removeHeaders.forEach(name => {
-        newHdrs.delete(name)
-    })
 
     return new Response(newBody, {
         status:     response.status,
