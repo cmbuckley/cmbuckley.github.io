@@ -29,6 +29,7 @@ const csp = {
     'object-src': "'none'",
     'connect-src': [
         "'self'",
+        'https://contact.cmbuckley.co.uk',
         'https://staticman.cmbuckley.co.uk',
     ],
     'media-src': [
@@ -42,6 +43,7 @@ const csp = {
     ],
     'form-action': [
         "'self'",
+        'https://contact.cmbuckley.co.uk',
         'https://formcarry.com',
         'https://api.staticman.net/',
     ],
