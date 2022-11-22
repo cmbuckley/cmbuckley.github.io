@@ -2,6 +2,7 @@
 title: Contact Me
 description: Contact Chris Buckley via email or social media. Includes PGP keys for private messages.
 layout: page
+form_name: Contact Form
 ---
 
 <div id="contact">
@@ -23,10 +24,14 @@ layout: page
     <dd><a class="key" href="https://keybase.io/{% include social.html id='keybase' %}/pgp_keys.asc">{{ pgp | replace: ' ', '&nbsp;' }}</a></dd>
     </dl>
   </div>
-  <form name="Contact Form" class="contact__form xhr" method="post"
+  <form name="{{ page.form_name }}" class="contact__form xhr" method="post"
     {%- if site.formurl == 'netlify' %} data-netlify="true"
     {%- else %} action="{{ site.formurl }}{{ page.url }}"
     {%- endif %} data-message-success="Thanks! Your message was sent." data-message-error="Sorry, your message could not be sent.">
+    {% unless site.formurl == 'netlify' -%}
+      <input type="hidden" name="form-name" value="{{ page.form_name }}" />
+    {% endunless -%}
+
     <label for="name">Name</label>
     <input type="text" id="name" name="name" required autocomplete="name" autocapitalize="words" class="full-width"><br>
 
