@@ -24,8 +24,8 @@ layout: page
     </dl>
   </div>
   <form name="Contact Form" class="contact__form xhr" method="post"
-    {%- if site.contacturl == 'netlify' %} data-netlify="true"
-    {%- else %} action="{{ site.contacturl }}"
+    {%- if site.formurl == 'netlify' %} data-netlify="true"
+    {%- else %} action="{{ site.formurl }}{{ page.url }}"
     {%- endif %} data-message-success="Thanks! Your message was sent." data-message-error="Sorry, your message could not be sent.">
     <label for="name">Name</label>
     <input type="text" id="name" name="name" required autocomplete="name" autocapitalize="words" class="full-width"><br>
