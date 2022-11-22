@@ -129,9 +129,15 @@ async function addSecurity(req, url) {
 
     Object.keys(setHeaders).forEach(name => {
         if (!trustOrigin.includes(name) || !newHdrs.has(name)) {
-            newHdrs.set(name, setHeaders[name]);
+            newHdrs.set(name, setHeaders[name])
         }
     })
+
+    if (new URL(url || req.url).hostname == 'forms.cmbuckley.co.uk') {
+        if (/cmbuckley\.co\.uk$/.test(req.headers.get('Origin') || '')) {
+            newHdrs.set('Access-Control-Allow-Origin', req.headers.get('Origin'))
+        }
+    }
 
     removeHeaders.forEach(name => {
         newHdrs.delete(name)
