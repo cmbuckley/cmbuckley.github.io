@@ -1,4 +1,5 @@
 name = "security-headers"
+main = "index.js"
 type = "javascript"
 usage_model = "bundled"
 workers_dev = true
