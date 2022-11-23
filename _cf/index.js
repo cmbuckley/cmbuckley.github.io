@@ -29,7 +29,6 @@ const csp = {
     'object-src': "'none'",
     'connect-src': [
         "'self'",
-        'https://forms.cmbuckley.co.uk',
         'https://staticman.cmbuckley.co.uk',
     ],
     'media-src': [
@@ -43,7 +42,6 @@ const csp = {
     ],
     'form-action': [
         "'self'",
-        'https://forms.cmbuckley.co.uk',
         'https://formcarry.com',
         'https://api.staticman.net/',
     ],
@@ -99,6 +97,11 @@ async function handleRequest(req) {
         return addSecurity(req, requestUrl)
     }
 
+    if (req.method == 'POST') {
+        requestUrl.hostname = 'cmbuckley.netlify.app'
+        return addSecurity(req, requestUrl)
+    }
+
     if (redirects[requestUrl.pathname]) {
         let dest = redirects[requestUrl.pathname]
         if (dest[0] == '/') { dest = requestUrl.origin + dest }
@@ -115,9 +118,10 @@ async function handleRequest(req) {
 async function addSecurity(req, url) {
     const response = await fetch(url || req.url, req)
     const newHdrs = new Headers(response.headers)
+    const body = (req.method == 'POST' && !response.ok ? '' : response.body);
 
     if (newHdrs.has('Content-Type') && !newHdrs.get('Content-Type').includes('text/html')) {
-        return new Response(response.body, {
+        return new Response(body, {
             status:     response.status,
             statusText: response.statusText,
             headers:    newHdrs
@@ -136,12 +140,6 @@ async function addSecurity(req, url) {
     removeHeaders.forEach(name => {
         newHdrs.delete(name)
     })
-
-    if (new URL(url || req.url).hostname == 'forms.cmbuckley.co.uk') {
-        if (/cmbuckley\.co\.uk$/.test(req.headers.get('Origin') || '')) {
-            newHdrs.set('Access-Control-Allow-Origin', req.headers.get('Origin'))
-        }
-    }
 
     return new Response(newBody, {
         status:     response.status,
