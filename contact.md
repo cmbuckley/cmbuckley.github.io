@@ -24,10 +24,8 @@ form_name: Contact Form
     <dd><a class="key" href="https://keybase.io/{% include social.html id='keybase' %}/pgp_keys.asc">{{ pgp | replace: ' ', '&nbsp;' }}</a></dd>
     </dl>
   </div>
-  <form name="{{ page.form_name }}" class="contact__form xhr" method="post"
-    {%- if site.formurl == 'netlify' %} data-netlify="true"
-    {%- else %} action="{{ site.formurl }}{{ page.url }}"
-    {%- endif %} data-message-success="Thanks! Your message was sent." data-message-error="Sorry, your message could not be sent.">
+  <form {% if site.netlify_form %}data-netlify="true" {% endif -%}
+    name="{{ page.form_name }}" class="contact__form xhr" method="post" data-message-success="Thanks! Your message was sent." data-message-error="Sorry, your message could not be sent.">
     {% unless site.formurl == 'netlify' -%}
       <input type="hidden" name="form-name" value="{{ page.form_name }}" />
     {% endunless -%}
