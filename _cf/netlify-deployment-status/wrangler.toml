@@ -1,0 +1,6 @@
+name = "netlify-deployment-status"
+main = "index.js"
+type = "javascript"
+usage_model = "bundled"
+workers_dev = true
+compatibility_date = "2022-12-06"
