@@ -8,13 +8,16 @@ jobs:
   cloudflare-worker:
     name: Deploy Cloudflare Worker
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        worker: security-headers
     steps:
       - uses: actions/checkout@v3
-      - name: Deploy Cloudflare Worker
+      - name: Deploy Cloudflare Worker (${{ matrix.worker }})
         uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          workingDirectory: _cf
+          workingDirectory: _cf/${{ matrix.worker }}
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
