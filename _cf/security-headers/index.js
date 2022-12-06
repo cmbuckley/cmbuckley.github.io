@@ -97,7 +97,7 @@ async function handleRequest(req) {
         return addSecurity(req, requestUrl)
     }
 
-    if (req.method == 'POST') {
+    if (req.method == 'POST' && requestUrl.hostname == 'cmbuckley.co.uk') {
         requestUrl.hostname = 'cmbuckley.netlify.app'
         return addSecurity(req, requestUrl)
     }
@@ -118,7 +118,7 @@ async function handleRequest(req) {
 async function addSecurity(req, url) {
     const response = await fetch(url || req.url, req)
     const newHdrs = new Headers(response.headers)
-    const body = (req.method == 'POST' && !response.ok ? '' : response.body);
+    const body = (req.method == 'POST' && url && !response.ok ? '' : response.body);
 
     if (newHdrs.has('Content-Type') && !newHdrs.get('Content-Type').includes('text/html')) {
         return new Response(body, {
