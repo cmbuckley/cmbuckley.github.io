@@ -1,5 +1,5 @@
 {
-    "main": "index.js"
+    "main": "index.js",
     "dependencies": {
       "mathjax": "3.2.2"
     }

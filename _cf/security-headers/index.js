@@ -1,4 +1,4 @@
-const mathjaxVersion = require('./package.json').dependencies.mathjax
+import { dependencies } from './package.json'
 const nonce = Math.random().toString(36).substring(7)
 
 const csp = {
@@ -25,7 +25,7 @@ const csp = {
     ],
     'font-src': [
         'https://fonts.gstatic.com',
-        `https://cdnjs.cloudflare.com/ajax/libs/mathjax/${mathjaxVersion}/`,
+        `https://cdnjs.cloudflare.com/ajax/libs/mathjax/${dependencies.mathjax}/`,
         'about:', // https://github.com/mathjax/MathJax/issues/256#issuecomment-37990603
     ],
     'object-src': "'none'",
