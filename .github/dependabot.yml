@@ -10,3 +10,9 @@ updates:
       interval: daily
     ignore:
       - update-types: ["version-update:semver-patch"]
+  - package-ecosystem: npm
+    directory: /_cf/security-headers
+    schedule:
+      interval: daily
+    ignore:
+      - update-types: ["version-update:semver-patch"]
