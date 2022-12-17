@@ -19,8 +19,9 @@ const csp = {
         "'self'",
         'https://res.cloudinary.com',
         'https://github.com/cmbuckley/',
-        'https://www.gravatar.com',
-        'https://www.herokucdn.com/',
+        'https://www.gravatar.com', // blog
+        'https://www.herokucdn.com/', // letterboxd-ics
+        'https://raw.githubusercontent.com/cj1128/emoji-images/', // charcopy
         'data:',
     ],
     'font-src': [
