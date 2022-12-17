@@ -29,7 +29,9 @@ const csp = {
         `https://cdnjs.cloudflare.com/ajax/libs/mathjax/${dependencies.mathjax}/`,
         'about:', // https://github.com/mathjax/MathJax/issues/256#issuecomment-37990603
     ],
-    'object-src': "'none'",
+    'object-src': [
+        "'self'",
+    ],
     'connect-src': [
         "'self'",
         'https://staticman.cmbuckley.co.uk',
