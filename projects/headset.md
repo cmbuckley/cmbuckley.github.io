@@ -8,7 +8,8 @@ image:
     src: /files/2020/04/headset.jpg
     alt: Homemade headset connected to a PS4 controller
 allow_comments: true
-last_modified_at: 2022-04-05 14:32 +00:00
+shortlink: headset
+last_modified_at: 2022-12-29 21:09 +00:00
 ---
 
 I've never been particularly good at multiplayer games, partly because I don't play them enough to get better! But I've joined some friends in a few games of _Fortnite_ over the past couple of days as one of our ways to stay in touch.
