@@ -9,7 +9,8 @@ image:
   meta:
     src: /files/2015/05/2-fl.png
     alt: Rubik's cube with finished first layer
-last_modified_at: 2021-08-25 10:38 +01:00
+shortlink: rubik
+last_modified_at: 2022-12-29 21:09 +00:00
 ---
 A number of people have been solving Rubik's cubes at work recently, and although there are numerous guides out there I can't seem to find one that matches my approach for every step.
 
