@@ -34,7 +34,7 @@ form_name: Contact Form
     <input type="text" id="name" name="name" required autocomplete="name" autocapitalize="words" class="full-width"><br>
 
     <label for="email">Email Address</label>
-    <input type="email" id="email" name="email" required autocomplete="email" class="full-width"><br>
+    <input type="email" id="email" name="email" required autocomplete="email" class="full-width" spellcheck="false"><br>
 
     <label for="message">Message</label>
     <textarea name="message" id="message" required cols="30" rows="10" class="full-width"></textarea><br>
