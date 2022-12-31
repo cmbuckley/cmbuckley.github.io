@@ -25,6 +25,8 @@ exclude:
   - LICENCE-CODE
   - README.md
   - TODO
+  - netlify.toml
+  - package.json
   - staticman.yml
   - vendor
   - node_modules
