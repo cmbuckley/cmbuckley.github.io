@@ -97,6 +97,8 @@ HEADER STYLING
                     padding: 0 .25em;
                 }
 
+                // lack of support for :has
+                // &:has([aria-current])
                 &.current {
                     padding-bottom: .25em;
                     border-bottom: 4px solid var(--color-nav-active);
