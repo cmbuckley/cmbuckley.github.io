@@ -17,6 +17,9 @@ form_name: Contact Form
     <dt>Email address / Google Talk:</dt>
     <dd class="email">{% include social.html id='email' %}</dd>
 
+    <dt>vcf:</dt>
+    <dd class="email"><a href="/assets/chris-buckley.vcf">4</a></dd>
+
     <dt>PGP key:</dt>
     {%- capture pgp -%}
     {%- include social.html id='pgp' -%}
