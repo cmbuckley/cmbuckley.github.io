@@ -45,6 +45,12 @@ figure {
     }
 }
 
+samp {
+    border-radius: 3px;
+    background-color: var(--color-input-bg);
+    padding: 2px 3px 1px;
+}
+
 // Layout
 .container {
     max-width: 610px;
