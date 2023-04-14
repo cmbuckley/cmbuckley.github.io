@@ -3,7 +3,7 @@ title: Detecting Character Encoding
 description: How I make a best guess at the character encoding of a file using its contents.
 categories:
   - Computing
-last_modified_at: 2021-08-19 22:46 +01:00
+last_modified_at: 2023-04-14 23:29 +00:00
 ---
 
 I occasionally find myself having to determine the character encoding of a file, either for foreign-language content or other data files that don't identify their encoding.
@@ -19,10 +19,10 @@ Here, I can see that the ł has been interpreted in UTF-8 as ³. If I didn't kno
 
 Now that I have identified a non-ASCII character, I can look at the byte representation:
 
-> Napisy zosta`<b3>`y specjalnie dopasowane do Twojej wersji filmu.
+> Napisy zosta<samp>&lt;b3&gt;</samp>y specjalnie dopasowane do Twojej wersji filmu.
 {:lang="pl"}
 
-Now I know that ł is encoded as `b3` in this file. Looking at the [encodings of ł in different character sets](http://www.fileformat.info/info/unicode/char/0142/charset_support.htm), I can see that ISO-8859-2 encodes ł in this way. So running the file through `iconv -f ISO-8859-2 -t UTF-8` should give me what I want:
+Now I know that ł is encoded as <samp>b3</samp> in this file. Looking at the [encodings of ł in different character sets](http://www.fileformat.info/info/unicode/char/0142/charset_support.htm), I can see that ISO-8859-2 encodes ł in this way. So running the file through `iconv -f ISO-8859-2 -t UTF-8` should give me what I want:
 
 > Napisy zostały specjalnie dopasowane do Twojej wersji filmu.
 {:lang="pl"}
