@@ -50,4 +50,4 @@ Things got a little weird in the middle so I may have to go back and fill the ga
 :    Home Assistant Pi
 
 [young](https://en.wikipedia.org/wiki/Grace_Chisholm_Young)
-:    Media Player Pi
+:    Network Controller Pi
