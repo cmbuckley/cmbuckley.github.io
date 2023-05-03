@@ -20,7 +20,7 @@
       <img class="avatar" src="https://www.gravatar.com/avatar/{{ comment.email | default: 0 }}?d=mm" alt="Avatar for {{ comment.name | escape }}">
       <cite>{{ comment.name }}</cite>
       <p><a class="comment__link" href="#c-{{ comment._id }}"><time class="date" datetime="{{ comment.date | date_to_xmlschema }}">{{ comment.date | date: site.data.global.format.datetime | strip }}</time></a></p>
-      <p class="comment">{{ comment.comment | markdownify | remove: '<p>' | remove: '</p>' | trim }}</p>
+      <p class="comment">{{ comment.comment | markdownify | remove: '<p>' | remove: '</p>' | trim | replace: '<a ', '<a rel="nofollow noopener noreferrer" ' }}</p>
     </li>
     {% endfor -%}
   </ol>
