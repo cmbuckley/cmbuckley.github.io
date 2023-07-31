@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
     navButton.setAttribute('aria-expanded', 'false');
     navButton.classList.add('nav-toggle');
     navButton.innerText = nav.getAttribute('aria-label');
+    navButton.setAttribute('aria-controls', 'nav');
+    nav.setAttribute('id', 'nav');
     nav.removeAttribute('aria-label');
     nav.setAttribute('aria-labelledby', 'nav-toggle');
     nav.parentNode.insertBefore(navButton, nav);
