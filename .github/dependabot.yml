@@ -4,15 +4,23 @@ updates:
     directory: /
     schedule:
       interval: daily
+    ignore:
+      - update-types:
+          - "version-update:semver-patch"
+          - "version-update:semver-minor"
   - package-ecosystem: npm
     directory: /
     schedule:
       interval: daily
     ignore:
-      - update-types: ["version-update:semver-patch"]
+      - update-types:
+          - "version-update:semver-patch"
+          - "version-update:semver-minor"
   - package-ecosystem: npm
     directory: /_cf/security-headers
     schedule:
       interval: daily
     ignore:
-      - update-types: ["version-update:semver-patch"]
+      - update-types:
+          - "version-update:semver-patch"
+          - "version-update:semver-minor"
