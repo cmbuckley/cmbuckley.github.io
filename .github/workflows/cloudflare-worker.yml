@@ -12,7 +12,7 @@ jobs:
       matrix:
         worker: [security-headers, netlify-deployment-status]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Deploy Cloudflare Worker (${{ matrix.worker }})
         uses: cloudflare/wrangler-action@v3
         with:
