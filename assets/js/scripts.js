@@ -134,15 +134,18 @@ document.addEventListener('DOMContentLoaded', function () {
     // media metadata
     if ('mediaSession' in navigator) {
         function updateMediaSession(e) {
-            let size = 192;
+            const poster = e.target.getAttribute('poster'),
+                sizes = [128, 192];
 
             navigator.mediaSession.metadata = new MediaMetadata({
                 title:   e.target.parentNode.querySelector('figcaption').innerText,
-                artwork: [{
-                    src:   e.target.getAttribute('poster').replace('so_0', ['c_thumb,h_', ',so_0,w_', ''].join(size)),
+                album:   document.querySelector('h1').innerText,
+                artist:  'Chris Buckley',
+                artwork: sizes.map(size => ({
+                    src:   poster.replace('so_0', ['c_thumb,h_', ',so_0,w_', ''].join(size)),
                     sizes: [size, size].join('x'),
                     type:  'image/jpg',
-                }],
+                })),
             });
         }
 
