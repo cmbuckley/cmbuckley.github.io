@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
-        document.querySelectorAll('video').forEach(function (video) {
+        document.querySelectorAll('video:has(+figcaption)').forEach(function (video) {
             video.addEventListener('play', updateMediaSession);
             video.addEventListener('pause', updateMediaSession);
         });
