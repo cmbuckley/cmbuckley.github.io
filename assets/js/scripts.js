@@ -134,13 +134,18 @@ document.addEventListener('DOMContentLoaded', function () {
     // media metadata
     if ('mediaSession' in navigator) {
         function updateMediaSession(e) {
-            const poster = e.target.getAttribute('poster'),
+
+            const metaProps = [...document.querySelectorAll('meta[property^="og:"]')].reduce((ms, m) => {
+                    ms[m.getAttribute('property')] = m.content;
+                    return ms;
+                }, {}),
+                poster = e.target.getAttribute('poster'),
                 sizes = [128, 192];
 
             navigator.mediaSession.metadata = new MediaMetadata({
                 title:   e.target.parentNode.querySelector('figcaption').innerText,
-                album:   document.querySelector('h1').innerText,
-                artist:  'Chris Buckley',
+                album:   metaProps['og:title'],
+                artist:  metaProps['og:site_name'],
                 artwork: sizes.map(size => ({
                     src:   poster.replace('so_0', ['c_thumb,h_', ',so_0,w_', ''].join(size)),
                     sizes: [size, size].join('x'),
