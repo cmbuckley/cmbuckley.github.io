@@ -4,16 +4,13 @@ updates:
     directory: /
     schedule:
       interval: daily
-    ignore:
-      - update-types:
-          - "version-update:semver-patch"
-          - "version-update:semver-minor"
   - package-ecosystem: npm
     directory: /
     schedule:
       interval: daily
     ignore:
-      - update-types:
+      - dependency-name: "*"
+        update-types:
           - "version-update:semver-patch"
           - "version-update:semver-minor"
   - package-ecosystem: npm
@@ -21,6 +18,7 @@ updates:
     schedule:
       interval: daily
     ignore:
-      - update-types:
+      - dependency-name: "*"
+        update-types:
           - "version-update:semver-patch"
           - "version-update:semver-minor"
