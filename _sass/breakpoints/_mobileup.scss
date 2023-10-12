@@ -143,6 +143,14 @@ LIST STYLING
     margin: 0;
 }
 
+.list--flex {
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 0;
+    margin: 0;
+    gap: 2px;
+}
+
 dt {
     margin-top: 1.5rem;
 
@@ -421,6 +429,7 @@ footer {
 
         ul {
             text-align: center;
+            justify-content: center;
 
             li {
                 display: inline-block;
