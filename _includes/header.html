@@ -2,7 +2,7 @@
     <div class="container">
         {% if page.url == '/' and site.baseurl == '' %}{% assign tag='h1' %}{% else %}{% assign tag='div' %}{% endif -%}
         <{{ tag }} class="logo">
-            <a href="/"{% if page.layout == 'post' %} rel="author"
+            <a href="{{ site.url }}"{% if page.layout == 'post' %} rel="author"
             {%- endif %}>{{ site.title | markdownify | remove:'<p>' | remove:'</p>' | strip }}</a>
         </{{ tag }}>
         <nav class="nav-collapse" aria-label="Menu">
