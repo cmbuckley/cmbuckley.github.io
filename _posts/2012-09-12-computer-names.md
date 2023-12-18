@@ -3,7 +3,7 @@ title: Computer Names
 description: My alphabetical mathematical computer naming convention.
 categories:
   - Computing
-last_modified_at: 2022-01-03 18:51 +00:00
+last_modified_at: 2023-12-18 18:11 +00:00
 ---
 
 I started this list at _D_ because this home desktop was the fourth computer I or my family owned, starting with the [Amstrad](/interests/computing/), and it seemed like they deserved a gap to be left for them!
@@ -34,11 +34,14 @@ Things got a little weird in the middle so I may have to go back and fill the ga
 [pythagoras](https://en.wikipedia.org/wiki/Pythagoras)
 :    Work desktop (retired thanks to corporate security policies)
 
+[ramanujan](https://en.wikipedia.org/wiki/Srinivasa_Ramanujan)
+:    Apple TV 4K
+
 [riemann](https://en.wikipedia.org/wiki/Bernhard_Riemann)
-:    Apple TV (retired, in a box somewhere)
+:    Apple TV (retired)
 
 [sagan](https://en.wikipedia.org/wiki/Carl_Sagan)
-:    Apple TV
+:    Apple TV HD
 
 [taniyama](https://en.wikipedia.org/wiki/Yutaka_Taniyama)
 :    MacBook Pro
