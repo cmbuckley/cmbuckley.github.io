@@ -52,6 +52,18 @@
       <meta content="website" property="og:type">
     {% endif -%}
 
+    {% if page.og_type == 'profile' -%}
+    <script type="application/ld+json">{
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Chris Buckley",
+        "image": "{{ site.url }}/assets/img/headshot.jpg"
+      }
+    }</script>
+    {% endif -%}
+
     <meta content="{{ page_description | default: site_description }}" property="og:description">
     {% if page.url -%}
       <meta content="{{ page.url | replace:'index.html','' | absolute_url }}" property="og:url">
