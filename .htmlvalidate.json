@@ -1,7 +1,7 @@
 {
   "rules": {
     "attribute-allowed-values": "warn",
-    "attribute-boolean-style": "warn",
+    "attribute-boolean-style": "off",
     "element-permitted-content": "warn",
     "element-required-attributes": "warn",
     "element-required-content": "warn",

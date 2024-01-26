@@ -57,7 +57,7 @@ So, here's how it works:
 
 **Driving:**
 
-[Anti-Flag](http://www.anti-flag.com/) --- Their System Doesn't Work For You
+[Anti-Flag](https://en.wikipedia.org/wiki/Anti-Flag) --- Their System Doesn't Work For You
 
 **Flashback:**
 
