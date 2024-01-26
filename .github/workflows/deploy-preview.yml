@@ -17,7 +17,7 @@ jobs:
           comment-author: 'github-actions[bot]'
           body-includes: Your deploy preview
       - name: Create comment
-        uses: peter-evans/create-or-update-comment@v3
+        uses: peter-evans/create-or-update-comment@v4
         with:
           issue-number: ${{ github.event.inputs.issue }}
           comment-id: ${{ steps.find-comment.outputs.comment-id }}
