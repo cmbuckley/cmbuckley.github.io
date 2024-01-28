@@ -36,6 +36,9 @@ plugins:
   - jekyll-paginate
   - jekyll-redirect-from
 
+jekyll_compose:
+  auto_open: true
+
 sass:
   style: compressed
 

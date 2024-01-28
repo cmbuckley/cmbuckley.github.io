@@ -15,6 +15,14 @@ This is my personal Web site, built using [Jekyll](https://jekyllrb.com) and pow
 * [FormCarry](https://formcarry.com/)
 * [Cloudflare Workers](https://www.cloudflare.com/en-gb/products/cloudflare-workers/)
 
+## Creating a Post
+
+The [Jekyll::Compose](https://github.com/jekyll/jekyll-compose) plugin can be used to create posts:
+
+```bash
+bundle exec jekyll post "Post Title"
+```
+
 ## Licence
 
 The text content of this project is [licensed under the Creative Commons Attribution 4.0 Unported licence](LICENCE), and the underlying source code used to format and display that content is [licensed under the MIT licence](LICENCE-CODE).
