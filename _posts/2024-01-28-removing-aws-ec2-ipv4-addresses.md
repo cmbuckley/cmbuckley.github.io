@@ -6,7 +6,7 @@ image:
   meta:
     src: /files/2024/01/eic.png
     alt: User connecting to an EC2 instance via an EIC endpoint
-last_modified_at: 2024-01-29 15:14 +00:00
+last_modified_at: 2024-01-29 22:56 +00:00
 ---
 
 In July 2023, [AWS announced they will charge for IPv4 addresses][1] starting 1&nbsp;February 2024. The new charge will be the same as the existing charge for an idle IP: $0.005 per hour; slightly over $40 per year per IP address. If you're running some small T2 or T3 instances for general-purpose workloads, this could increase your monthly cost somewhere between 20--40%. The EC2 free tier will include 750 hours of usage for 12 months, so a single IPv4 address should be pretty much free for that time, but if you've exhausted the free tier or have multiple IP addresses, this charge will start to appear very soon.
@@ -61,7 +61,7 @@ I use Cloudflare in front of most services, including this development server, s
 
 When AWS announced the IPv4 charges, they also launched [EC2 Instance Connect (EIC) endpoint][4] which can be used to tunnel traffic to EC2 instances. The best part is this EIC endpoint is completely free, though make sure to set it up in the same subnet as the EC2 instance to avoid data transfer costs.
 
-{% include figure.html object="/files/2024/01/eic.svg" figsize="large" caption="User connecting to an EC2 instance via an EIC endpoint." %}
+{% include figure.html object="/files/2024/01/eic.svg" figsize="large" caption="User connecting to an EC2 instance via an EIC endpoint." alt="An AWS architecture showing an authenticated user connecting to an EC2 instance via the EIC service. The instance is in a public subnet with an EIC endpoint." %}
 
 The first step is to create the resource:
 
