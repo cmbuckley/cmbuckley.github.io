@@ -2,8 +2,8 @@
 <figure class="fl-{{ include.float | default: 'none' }}{% if include.float and page.float_small %} fl--small{% endif %} fig--{{ include.figsize | default: 'std' }}"{% if include.anchor %} id="v-{{ include.anchor }}"{% endif %}>
 {%- endif %}
 
-{%- if include.video -%}
-  {% assign video_prefix="https://res.cloudinary.com/cmbuckley/video/upload" %}
+{%- if include.video %}
+  {%- assign video_prefix="https://res.cloudinary.com/cmbuckley/video/upload" %}
   <video controls poster="{{ video_prefix }}/{{ include.caption.thumb | default: 'so_0/' | replace: 'default', '' }}v1/{{ include.video }}.jpg">
     <source src="{{ video_prefix }}/{{ include.video }}.webm" type="video/webm">
     <source src="{{ video_prefix }}/{{ include.video }}.mp4" type="video/mp4">
@@ -14,20 +14,22 @@
     <a href="{{ video_prefix }}/{{ include.video }}.mp4">MP4</a> or
     <a href="{{ video_prefix }}/{{ include.video }}.ogv">Vorbis</a> format.
   </video>
-{% elsif include.img or include.object %}
-   {% if include.url %}<a href="{{ include.url }}">{%- endif -%}
-   {%- if include.img %}<img src="{{ include.img }}" {% else -%}<object data="{{ include.object }}" {% endif -%}
-   {% if include.img_class %}class="{{ include.img_class }}" {% endif -%}
-     alt="{% if include.alt -%}
-       {{ include.alt }}
-     {%- else -%}
-       {%- if include.url %}{{ include.caption | default: 'View larger image' }}{% endif -%}
-     {%- endif %}">{% if include.object %}</object>{% endif %}
-   {%- if include.url -%}</a>{%- endif -%}
-{%- endif -%}
-{%- if include.caption -%}
+{%- elsif include.img or include.object %}
+  {% if include.url %}<a href="{{ include.url }}">{%- endif -%}
+    {%- if include.img %}<img src="{{ include.img }}"
+    {%- else %}<object role="img" data="{{ include.object }}"
+    {%- endif %}
+      {%- if include.img_class %} class="{{ include.img_class }}"{% endif %}
+      {%- if include.img %} alt{% else %} aria-label{% endif %}="
+        {%- if include.alt %}{{ include.alt }}
+        {%- elsif include.url %}{{ include.caption | default: 'View larger image' }}
+        {%- endif -%}
+    ">{% if include.object %}</object>{%- endif %}
+  {%- if include.url %}</a>{% endif %}
+{%- endif %}
+{%- if include.caption %}
   <figcaption>{{ include.caption.caption | default: include.caption | markdownify | remove:'<p>' | remove: '</p>' | strip }}</figcaption>
-{% endif %}
+{%- endif %}
 
 {%- if include.caption != nil or include.figure != false %}
 </figure>
