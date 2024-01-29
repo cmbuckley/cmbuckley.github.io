@@ -59,8 +59,11 @@ CODE STYLING
 }
 
 pre.highlight {
-    max-height: 30em;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
+
+    .overflow  & {
+        max-height: 30em;
+    }
 }

@@ -9,7 +9,7 @@ image:
   meta:
     src: /projects/laptop/photos/img_0202.jpg
     alt: The inside of the finished picture frame
-last_modified_at: 2021-03-11 00:42 +00:00
+last_modified_at: 2024-01-29 18:08 +00:00
 ---
 
 {% include figure.html url="/projects/laptop/photos/img_0015.jpg" img="/projects/laptop/photos/img_0015_thumb.jpg" caption="The finished product" float="right" %}
@@ -182,7 +182,8 @@ Private Sub tmrPause_Timer()
             Case "delay"
                 tmrPause.Interval = (CInt(sActionCommand)) * 1000
 
-                If bDebug Then Print "Changing timer interval to " & (CInt(sActionCommand)) * 1000
+                If bDebug Then Print "Changing timer interval to " _
+                    & (CInt(sActionCommand)) * 1000
             Case "kill"
                 RestorePreviousHandler
                 Shell sIrfanPath & "/killmesoftly"
@@ -231,7 +232,8 @@ End Function
 
 Function FileExists(sPathName As String) As Boolean ' checks if a file exists
     If Len(sPathName) > 0 Then ' checks filename entered
-        FileExists = (Len(Dir(sPathName)) > 0) ' dir function returns directory if file exists
+        ' dir function returns directory if file exists
+        FileExists = (Len(Dir(sPathName)) > 0)
     Else: FileExists = False
     End If
 End Function
@@ -271,6 +273,7 @@ Sub RestorePreviousHandler()
     Close #lFileHandle
 End Sub
 ```
+{:.overflow}
 
 {% include figure.html url="/projects/laptop/photos/img_0153.jpg" img="/projects/laptop/photos/img_0153_thumb.jpg" caption="Debug mode running" float="right" %}
 
