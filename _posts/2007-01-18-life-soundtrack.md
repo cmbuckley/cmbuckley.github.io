@@ -3,7 +3,7 @@ title: Life Soundtrack
 layout: post
 categories:
   - Play
-last_modified_at: 2021-08-19 22:47 +01:00
+last_modified_at: 2024-01-29 15:14 +00:00
 ---
 If your life was film what would the soundtrack be?
 
@@ -25,7 +25,7 @@ So, here's how it works:
 
 **First day at school:**
 
-[Captain](https://myspace.com/captaintheband) --- Build A Life
+[Captain](https://en.wikipedia.org/wiki/Captain_(band)) --- Build A Life
 
 **Falling in love:**
 
