@@ -13,7 +13,7 @@ figure {
         margin: 0 40px 1em 0;
     }
 
-    &.fl-none img, &.fl-none object {
+    &.fl-none.fig--std :is(img, object) {
         max-width: 50%;
     }
 
