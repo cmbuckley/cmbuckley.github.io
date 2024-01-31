@@ -2,7 +2,9 @@ import { dependencies } from './package.json'
 const nonce = Math.random().toString(36).substring(7)
 
 const csp = {
-    'default-src': "'self'",
+    'default-src': [
+        "'self'",
+    ],
     'script-src': [
         "'self'",
         "'unsafe-hashes'",
@@ -54,13 +56,8 @@ const csp = {
     'report-uri': 'https://cmbuckley.report-uri.com/r/d/csp/reportOnly',
 }
 
-const cspHeader = Object.keys(csp)
-    .map(d => d + ' ' + (csp[d].join ? csp[d].join(' ') : csp[d]))
-    .join('; ')
-
 const securityHeaders = {
     'Content-Security-Policy': 'upgrade-insecure-requests',
-    'Content-Security-Policy-Report-Only': cspHeader,
     'X-Xss-Protection': '1; mode=block',
     'X-Frame-Options': 'DENY',
     'X-Content-Type-Options': 'nosniff',
@@ -88,6 +85,25 @@ const trustOrigin = [
 
 const redirects = {
     '/security.txt': '/.well-known/security.txt',
+}
+
+function getSecurityHeaders(req) {
+    const requestUrl = new URL(req.url)
+
+    if (requestUrl.hostname.match(/^staging-(\d+)\./)) {
+        csp['script-src'].push('https://netlify-cdp-loader.netlify.app');
+        csp['frame-src'].push('https://app.netlify.com');
+    }
+
+    if (requestUrl.hostname == 'test.cmbuckley.co.uk') {
+        ['default', 'script', 'style', 'img'].forEach(type => csp[`${type}-src`].push('https://cmbuckley.co.uk'));
+    }
+
+    securityHeaders['Content-Security-Policy-Report-Only'] = Object.keys(csp)
+        .map(d => d + ' ' + (csp[d].join ? csp[d].join(' ') : csp[d]))
+        .join('; ')
+
+    return securityHeaders;
 }
 
 addEventListener('fetch', event => {
@@ -133,7 +149,7 @@ async function addSecurity(req, url) {
         })
     }
 
-    const setHeaders = Object.assign({}, securityHeaders, sanitiseHeaders)
+    const setHeaders = Object.assign({}, getSecurityHeaders(req), sanitiseHeaders)
     const newBody = (await response.text()).replace(/nonce=""/gm, `nonce="${nonce}"`)
 
     Object.keys(setHeaders).forEach(name => {
