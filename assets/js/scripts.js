@@ -215,14 +215,21 @@ document.addEventListener('DOMContentLoaded', function () {
     let fbLinks = document.querySelectorAll('a[data-fb-profile]');
     if (fbLinks) {
         function fbAppLink(id) {
-            // purposefully simple, caveats here: https://stackoverflow.com/a/19883965/283078
-            if (/^iP(ad|hone)/.test(navigator.platform)) { return 'fb://profile/' + id; }
+            if (/^iP(ad|hone)/.test(navigator.platform)) {
+                return 'https://m.facebook.com/profile.php/?id=' + id;
+            }
         }
 
         fbLinks.forEach(a => a.addEventListener('click', e => {
             let appLink = fbAppLink(a.dataset.fbProfile);
-            if (appLink && window.open(appLink)) {
-                e.preventDefault();
+
+            if (appLink) {
+                if (appLink.startsWith('https://')) {
+                    e.preventDefault();
+                    window.location.href = appLink;
+                } else if (window.open(appLink)) {
+                    e.preventDefault();
+                }
             }
         }));
     }
