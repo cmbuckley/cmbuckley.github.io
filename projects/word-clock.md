@@ -9,7 +9,7 @@ script:
 ---
 
 <div id="clock">
-<span class="it">it</span>·<span class="is">is</span>·<span class="half">h<span class="quarter">a</span>lf</span><span class="n10from">ten</span><br>
+<span class="is">it</span>·<span class="is">is</span>·<span class="half">h<span class="quarter">a</span>lf</span><span class="n10from">ten</span><br>
 <span class="quarter">quarter</span><span class="n20from n25from">twenty</span><br>
 <span class="n25from n5from">five</span>·<span class="minutes">minutes</span>·<br>
 <span class="half past">pas<span class="to">t</span></span><span class="to">o</span>·<span id="sec">♥</span>·<span class="n7">seven</span><br>
