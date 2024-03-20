@@ -163,9 +163,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // search keyboard navigation
     if (search = document.querySelector('input[type="search"]')) {
         document.addEventListener('keyup', function (e) {
-            if (!e.ctrlKey && !e.altKey && !e.metaKey) {
+            if (!e.ctrlKey && !e.altKey && !e.metaKey && document.activeElement != search) {
                 // focus search box with "/"
-                if (e.key == '/' && document.activeElement != search) {
+                if (e.key == '/') {
                     search.focus();
                     if (search.select) {
                         search.select();
