@@ -10,7 +10,7 @@ image:
     src: /files/2015/05/2-fl.png
     alt: Rubik's cube with finished first layer
 shortlink: rubik
-last_modified_at: 2022-12-29 21:09 +00:00
+last_modified_at: 2024-03-20 00:19 +00:00
 ---
 A number of people have been solving Rubik's cubes at work recently, and although there are numerous guides out there I can't seem to find one that matches my approach for every step.
 
@@ -61,7 +61,7 @@ You should now have the first two layers, with the final layer unsolved. The las
 
 At this point, I flip the cube over again so the white face is on top, but I'll often be glancing at the bottom face to see what stage it's at. All the diagrams in the next steps assume you're looking at the cube as follows:
 
-{% include figure.html img="/files/2015/05/4-faces.png" alt="Rubik's cube with labelled faces for final layer" %}
+{% include figure.html object="/files/2015/05/4-faces.svg" alt="Rubik's cube with labelled faces for final layer" %}
 
 First, pick one of the corner cubies to be in the right place. If one of them is in the correct orientation (e.g. yellow is correctly on the yellow face), then pick that one, as it'll save time in the next step. There are only two outcomes (the first 2 are mirrors of each other). Note also that flipping the back 2 cubies is almost identical to the second permutation of 3 cubies, with a leading _**D**_ move.
 
