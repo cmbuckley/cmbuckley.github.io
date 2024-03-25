@@ -14,23 +14,19 @@
       fill: #aaa;
     }
 
-    .d5 {
+    .d1, .d5 {
       fill: var(--yellow);
     }
 
-    text {
-      font-size: 72px;
-      font-weight: bold;
-      font-family: sans-serif;
+    .faces {
+      fill: var(--yellow);
+      stroke: var(--bg);
+      stroke-width: 3;
     }
 
     @media (prefers-color-scheme: dark) {
       :root {
         --bg: #333;
-      }
-
-      text.outer {
-        fill: #d1d1d1;
       }
     }
   </style>
@@ -44,9 +40,7 @@
   <rect class="d7" width="159.6" height="163.6" rx="6" ry="6" x="81.2839" y="453.0874" />
   <rect class="d8" width="159.6" height="163.6" rx="6" ry="6" x="267.7839" y="453.0874" />
   <rect class="d9" width="159.6" height="163.6" rx="6" ry="6" x="454.2839" y="453.0874" />
-  <text class="label" x="320.6847" y="374.2449">D</text>
-  <text class="label outer" x="320.6847" y="696.0164">B</text>
-  <text class="label outer" x="645.5808" y="374.2449">R</text>
-  <text class="label outer" x="-0.9168" y="374.2449">L</text>
-  <text class="label outer" x="320.6847" y="53.5188">F</text>
+  <rect class="faces fr" width="161" height="21" rx="6" ry="4" x="454" y="39" />
+  <rect class="faces bl" width="161" height="21" rx="6" ry="4" x="81" y="639" />
+  <rect class="faces rb" width="21" height="161" rx="6" ry="4" x="639" y="455" />
 </svg>

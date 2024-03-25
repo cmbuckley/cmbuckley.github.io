@@ -255,6 +255,10 @@ blockquote {
 
     img {
         margin-bottom: 2rem;
+
+        &:has(+figcaption) {
+            margin-bottom: 0.7rem;
+        }
     }
 
     div.highlighter-rouge {
