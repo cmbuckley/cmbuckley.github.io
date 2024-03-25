@@ -24,6 +24,25 @@
       font-family: sans-serif;
     }
 
+    line {
+      stroke-width: 5;
+      stroke: black;
+    }
+
+    .corners {
+      marker-end: url(#arrow);
+    }
+
+    .edges {
+      marker-end: url(#arrow);
+    }
+
+    .faces {
+      fill: var(--yellow);
+      stroke: var(--bg);
+      stroke-width: 3;
+    }
+
     @media (prefers-color-scheme: dark) {
       :root {
         --bg: #333;
@@ -34,6 +53,11 @@
       }
     }
   </style>
+  <defs>
+    <marker orient="auto-start-reverse" id="arrow" style="overflow:visible">
+      <path d="M 8.7 4 L -2.2 0 L 8.7 -4 c -1.7 2.4 -1.7 5.6 -0 8 z" transform="translate(-1.1 0) rotate(180)" />
+    </marker>
+  </defs>
   <path class="bg" d="m 75.5168 70.5086 c -4.432 0 -8 3.568 -8 8 l 0 171.1563 c 0 3.324 2.0017 6.1638 4.875 7.375 c -2.8733 1.2112 -4.875 4.051 -4.875 7.375 l 0 171.1563 c 0 2.9317 1.5353 5.482 3.875 6.875 c -2.3319 1.3948 -3.875 3.9492 -3.875 6.875 l 0 171.125 c 0 4.432 3.568 8 8 8 l 171.125 0 c 3.6472 0 6.7174 -2.4244 7.6875 -5.75 c 0.9701 3.3256 4.0403 5.75 7.6875 5.75 l 171.125 0 c 3.6472 0 6.7174 -2.4244 7.6875 -5.75 c 0.9701 3.3256 4.0403 5.75 7.6875 5.75 l 171.125 0 c 4.432 0 8 -3.568 8 -8 l 0 -171.125 c 0 -2.9258 -1.5431 -5.4802 -3.875 -6.875 c 2.3397 -1.393 3.875 -3.9433 3.875 -6.875 l 0 -171.1563 c 0 -3.324 -2.0017 -6.1638 -4.875 -7.375 c 2.8733 -1.2112 4.875 -4.051 4.875 -7.375 l 0 -171.1563 c 0 -4.432 -3.568 -8 -8 -8 l -171.125 0 c -3.6472 0 -6.7174 2.4244 -7.6875 5.75 c -0.9701 -3.3256 -4.0403 -5.75 -7.6875 -5.75 l -171.125 0 c -3.6472 0 -6.7174 2.4244 -7.6875 5.75 c -0.9701 -3.3256 -4.0403 -5.75 -7.6875 -5.75 l -171.125 0 z" />
   <rect class="d1" width="159.6" height="163.6" rx="6" ry="6" x="81.2839" y="82.2942" />
   <rect class="d2" width="159.6" height="163.6" rx="6" ry="6" x="267.7839" y="82.2942" />
@@ -49,4 +73,22 @@
   <text class="label outer" x="645.5808" y="374.2449">R</text>
   <text class="label outer" x="-0.9168" y="374.2449">L</text>
   <text class="label outer" x="320.6847" y="53.5188">F</text>
+  <line class="corners ccw" x1="117" y1="132" x2="117" y2="565" />
+  <line class="corners ccw revcw" x1="131" y1="578" x2="564" y2="578" />
+  <line class="corners ccw" x1="593" y1="574" x2="137" y2="129" />
+  <line class="corners cw" x1="578" y1="132" x2="578" y2="565" />
+  <line class="corners cw" x1="102" y1="574" x2="558" y2="129" />
+  <line class="corners cw swap" x1="564" y1="578" x2="131" y2="578" />
+  <line class="corners swap" x1="135" y1="514" x2="568" y2="514" />
+  <rect class="faces fl" width="161" height="21" rx="6" ry="4" x="81" y="39" />
+  <rect class="faces fr" width="161" height="21" rx="6" ry="4" x="454" y="39" />
+  <rect class="faces bl" width="161" height="21" rx="6" ry="4" x="81" y="639" />
+  <rect class="faces br" width="161" height="21" rx="6" ry="4" x="454" y="639" />
+  <rect class="faces lf" width="21" height="161" rx="6" ry="4" x="36" y="85" />
+  <rect class="faces lb" width="21" height="161" rx="6" ry="4" x="36" y="455" />
+  <rect class="faces rf" width="21" height="161" rx="6" ry="4" x="639" y="85" />
+  <rect class="faces rb" width="21" height="161" rx="6" ry="4" x="639" y="455" />
+  <line class="edges" x1="131.5" y1="310" x2="564.5" y2="310" />
+  <line class="edges" x1="571.5" y1="330.5" x2="358" y2="587" />
+  <line class="edges" x1="336" y1="585" x2="123.5" y2="328" />
 </svg>
