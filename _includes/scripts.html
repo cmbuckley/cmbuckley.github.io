@@ -1,6 +1,10 @@
 {% if page.script -%}
   {% for script in page.script -%}
-    <script nonce="" src="{{ script | relative_url }}{% include v.html %}"></script>
+    <script nonce="" src="{% if script contains '://' -%}
+      {{ script }}
+    {%- else -%}
+      {{ script | relative_url }}{% include v.html %}
+    {%- endif %}"></script>
   {% endfor -%}
 {% endif -%}
 
