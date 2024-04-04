@@ -3,7 +3,7 @@ title: Computer Names
 description: My alphabetical mathematical computer naming convention.
 categories:
   - Computing
-last_modified_at: 2023-12-18 18:11 +00:00
+last_modified_at: 2024-04-04 12:31 +00:00
 ---
 
 I started this list at _D_ because this home desktop was the fourth computer I or my family owned, starting with the [Amstrad](/interests/computing/), and it seemed like they deserved a gap to be left for them!
@@ -23,13 +23,16 @@ Things got a little weird in the middle so I may have to go back and fill the ga
 :    Home desktop (decommissioned)
 
 [gauss](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss)
-:    VPS
+:    VPS (decommissioned)
 
 [hardy](https://en.wikipedia.org/wiki/G._H._Hardy)
 :    Home desktop
 
 [newton](https://en.wikipedia.org/wiki/Isaac_Newton)
-:    MacBook Pro (retired, gifted to family, still just about runs)
+:    MacBook Pro (retired)
+
+[mersenne](https://en.wikipedia.org/wiki/Marin_Mersenne)
+:    MacBook Air
 
 [pythagoras](https://en.wikipedia.org/wiki/Pythagoras)
 :    Work desktop (retired thanks to corporate security policies)
@@ -44,7 +47,7 @@ Things got a little weird in the middle so I may have to go back and fill the ga
 :    Apple TV HD
 
 [taniyama](https://en.wikipedia.org/wiki/Yutaka_Taniyama)
-:    MacBook Pro
+:    MacBook Pro (retired)
 
 [voltaire](https://en.wikipedia.org/wiki/Voltaire)
 :    DiskStation NAS
