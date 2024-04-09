@@ -1,8 +1,12 @@
 ---
 title: Deep Links to GitHub Actions Job Logs
+description: >
+  How to link directly to the logs for a specific GitHub Actions
+  workflow job, and even expand the logs for a chosen step.
 date: 2024-04-09 18:37 +0100
 categories:
   - Computing
+last_modified_at: 2024-04-10 08:45 +00:00
 ---
 
 In GitHub Actions, you can rather easily create a link to the current workflow run:
@@ -14,8 +18,8 @@ ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id
 {% endraw %}
 
 However, it's not as easy to link to the specific job within that workflow run.
-The variable `{% raw %}${{ github.job }}{% endraw %}` contains the job ID,
-which is the key from your workflow:
+The variable `{% raw %}${{ github.job }}{% endraw %}` says it contains a job ID,
+but in this case it means the key from your workflow:
 
 {% raw %}
 ```yaml
@@ -43,7 +47,6 @@ jobs:
         run: |
           gh run view ${{ github.run_id }} --json jobs --jq '
             .jobs[] | select(.name == "Run Tests") | .url'
-          # https://github.com/user/repo/actions/runs/123/job/456
 ```
 {% endraw %}
 
@@ -124,7 +127,7 @@ jobs:
 
 If you run this example, you might find that the URL step happens so quickly
 after the test step that the API response doesn't contain the previous step's
-result yet. You can either perform the API call a little later in the job, or
-add a small `sleep` before calling the API.
+result yet. You can either perform the API call a little later in the job, in
+a separate dependent job, or add a small `sleep` before calling the API.
 
 _Inspired by [Grant G's answer on Stack Overflow](https://stackoverflow.com/a/76681922/283078)._
