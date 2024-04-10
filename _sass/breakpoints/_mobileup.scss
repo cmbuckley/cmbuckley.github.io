@@ -45,6 +45,10 @@ figure {
     }
 }
 
+code, kbd, samp {
+    font-size: 0.9em;
+}
+
 samp {
     border-radius: 3px;
     background-color: var(--color-input-bg);
