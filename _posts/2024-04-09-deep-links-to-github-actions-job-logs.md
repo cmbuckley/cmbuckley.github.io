@@ -6,7 +6,7 @@ description: >
 date: 2024-04-09 18:37 +0100
 categories:
   - Computing
-last_modified_at: 2024-04-10 08:45 +00:00
+last_modified_at: 2024-04-10 12:14 +00:00
 ---
 
 In GitHub Actions, you can rather easily create a link to the current workflow run:
@@ -17,8 +17,8 @@ ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id
 ```
 {% endraw %}
 
-However, it's not as easy to link to the specific job within that workflow run.
-The variable `{% raw %}${{ github.job }}{% endraw %}` says it contains a job ID,
+However, it's not as easy to link to a specific job within that workflow run.
+The variable {% raw %}`${{`&nbsp;`github.job`&nbsp;`}}`{% endraw %} says it contains a job ID,
 but in this case it means the key from your workflow:
 
 {% raw %}
