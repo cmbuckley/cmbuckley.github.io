@@ -3,7 +3,7 @@ title: Life Soundtrack
 layout: post
 categories:
   - Play
-last_modified_at: 2024-01-29 15:14 +00:00
+last_modified_at: 2024-07-22 18:56 +00:00
 ---
 If your life was film what would the soundtrack be?
 
@@ -85,6 +85,6 @@ So, here's how it works:
 
 **End credits:**
 
-[Primal Scream](https://store.primalscream.net/) --- Leaves
+[Primal Scream](https://www.primalscream.net/) --- Leaves
 
 So many of those were entirely appropriate! With my stupidly large music collection I wasn't expecting results half that good!
