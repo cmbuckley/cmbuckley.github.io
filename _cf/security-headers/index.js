@@ -85,6 +85,7 @@ const trustOrigin = [
 
 const redirects = {
     '/security.txt': '/.well-known/security.txt',
+    '/graphics/mosaic.jpg': '/assets/img/graphics/mosaic.jpg',
 }
 
 function getSecurityHeaders(req) {
