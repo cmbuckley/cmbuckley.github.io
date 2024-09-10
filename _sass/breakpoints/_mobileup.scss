@@ -10,7 +10,8 @@ html {
     box-sizing: inherit;
 }
 
-@supports (not selector(::-webkit-scrollbar)) {
+// workaround Sass handling of @supports
+@supports #{'\not selector(*::-webkit-scrollbar)'} {
     html {
         scrollbar-width: thin;
         scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
