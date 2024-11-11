@@ -15,38 +15,38 @@
         <div class="footer-links">
             <ul class="list--flex">
                 <li><a rel="me" href="https://github.com/{% include social.html id='github' %}" title="{% include social.html id='github' %} on GitHub">
-                  {% include icons/use.html icon="github" %}<span class="sr-only">GitHub</span>
+                  {% include icons/use.html icon="github" text="GitHub" %}
                 </a></li>
                 <li><a rel="me" href="https://www.linkedin.com/in/{% include social.html id='linkedin' %}" title="{% include social.html id='linkedin' %} on LinkedIn">
-                  {% include icons/use.html icon="linkedin-square" %}<span class="sr-only">LinkedIn</span>
+                  {% include icons/use.html icon="linkedin-square" text="LinkedIn" %}
                 </a></li>
                 <li><a rel="me" href="https://hackerone.com/{% include social.html id='hackerone' %}" title="{% include social.html id='hackerone' %} on HackerOne">
-                  {% include icons/use.html icon="hackerone" %}<span class="sr-only">HackerOne</span>
+                  {% include icons/use.html icon="hackerone" text="HackerOne" %}
                 </a></li>
                 <li><a rel="me" href="mailto:{% include social.html id='email' %}" title="Email">
-                  {% include icons/use.html icon="envelope" %}<span class="sr-only">Email</span>
+                  {% include icons/use.html icon="envelope" text="Email" %}
                 </a></li>
                 <li><a rel="me" href="https://twitter.com/{% include social.html id='x' %}" title="@{% include social.html id='x' %} on X">
-                  {% include icons/use.html icon="x" %}<span class="sr-only">X</span>
+                  {% include icons/use.html icon="x" text="X" %}
                 </a></li>
                 <li><a rel="me" href="https://www.facebook.com/{% include social.html id='facebook' %}" title="{% include social.html id='facebook' %} on Facebook" data-fb-profile="{% include social.html id='fbid' %}">
-                  {% include icons/use.html icon="facebook-official" %}<span class="sr-only">Facebook</span>
+                  {% include icons/use.html icon="facebook-official" text="Facebook" %}
                 </a></li>
                 <li><a rel="me" href="https://instagr.am/{% include social.html id='instagram' %}" title="@{% include social.html id='instagram' %} on Instagram">
-                  {% include icons/use.html icon="instagram" %}<span class="sr-only">Instagram</span>
+                  {% include icons/use.html icon="instagram" text="Instagram" %}
                 </a></li>
                 {%- capture mastodon %}{% include social.html id='mastodon' %}{% endcapture %}
                 <li><a rel="me" href="https://{{ mastodon | split: '@' | last }}/@{{ mastodon | split: '@' | first }}" title="@{{ mastodon }} on Mastodon">
-                  {% include icons/use.html icon="mastodon" %}<span class="sr-only">Mastodon</span>
+                  {% include icons/use.html icon="mastodon" text="Mastodon" %}
                 </a></li>
                 <li><a rel="me" href="https://{% include social.html id='bsky' %}" title="@{% include social.html id='bsky' %} on Bluesky">
-                  {% include icons/use.html icon="bluesky" %}<span class="sr-only">Bluesky</span>
+                  {% include icons/use.html icon="bluesky" text="Bluesky" %}
                 </a></li>
                 <li><a href="{% include social.html id='amazon' %}" title="Amazon Wishlist">
-                  {% include icons/use.html icon="amazon" %}<span class="sr-only">Amazon Wishlist</span>
+                  {% include icons/use.html icon="amazon" text="Amazon Wishlist" %}
                 </a></li>
                 <li><a href="{{ site.url }}/site-map/" title="Site Map">
-                  {% include icons/use.html icon="sitemap" %}<span class="sr-only">Site Map</span>
+                  {% include icons/use.html icon="sitemap" text="Site Map" %}
                 </a></li>
             </ul>
         </div>

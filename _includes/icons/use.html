@@ -6,3 +6,7 @@
 {%- endunless -%}
 
 #i-{{ include.icon }}"></use></svg>
+
+{%- if include.text -%}
+<span class="sr-only">{{ include.text }}</span>
+{%- endif %}
