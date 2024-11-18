@@ -53,7 +53,7 @@ const csp = {
         'https://api.staticman.net/',
     ],
     'frame-ancestors': "'none'",
-    'report-uri': 'https://cmbuckley.report-uri.com/r/d/csp/reportOnly',
+    'report-uri': 'https://o4505875414777856.ingest.us.sentry.io/api/4508321253556224/security/?sentry_key=3379f07ad4facf6a5d862d7d856eee9a',
 }
 
 const securityHeaders = {
