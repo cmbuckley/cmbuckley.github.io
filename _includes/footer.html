@@ -39,7 +39,7 @@
                 <li><a rel="me" href="https://{{ mastodon | split: '@' | last }}/@{{ mastodon | split: '@' | first }}" title="@{{ mastodon }} on Mastodon">
                   {% include icons/use.html icon="mastodon" %}<span class="sr-only">Mastodon</span>
                 </a></li>
-                <li><a rel="me" href="https://{% include social.html id='bsky' %}" title="@{% include social.html id='bsky' %} on Bluesky">
+                <li><a rel="me" href="https://bsky.app/profile/{% include social.html id='bsky' %}" title="@{% include social.html id='bsky' %} on Bluesky">
                   {% include icons/use.html icon="bluesky" %}<span class="sr-only">Bluesky</span>
                 </a></li>
                 <li><a href="{% include social.html id='amazon' %}" title="Amazon Wishlist">
