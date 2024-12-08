@@ -3,11 +3,53 @@ GLOBAL STYLES
 ***************/
 
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+// workaround Sass handling of @supports
+@supports #{'\not selector(*::-webkit-scrollbar)'} {
+    html {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+    }
+}
+
+::-webkit-scrollbar {
+    height: 16px;
+    width: 16px;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track {
+    background-color: rgba(175,175,175,0.1);
+
+    &:hover {
+        background-color: rgba(175,175,175,0.2);
+    }
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0);
+    border-radius: 16px;
+    border: 5px solid transparent;
+    background-clip: padding-box;
+}
+
+:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(175,175,175,0.6);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(175,175,175,0.8);
+    border-width: 4px;
 }
 
 body {
