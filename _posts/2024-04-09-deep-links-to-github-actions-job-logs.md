@@ -6,7 +6,7 @@ description: >
 date: 2024-04-09 18:37 +0100
 categories:
   - Computing
-last_modified_at: 2024-04-10 12:14 +00:00
+last_modified_at: 2024-12-10 22:48 +00:00
 ---
 
 In GitHub Actions, you can rather easily create a link to the current workflow run:
@@ -100,9 +100,9 @@ gh run view ${{ github.run_id }} --json jobs --jq '
 ## Expanding the logs for a specific step
 
 Within the job there are a number of ordered steps. To expand the logs for a
-specific step, pass the `?check_suite_focus` query string param as well as a
-fragment like `#step:x:y`, corresponding to the step number and line number.
-The step number is based on the order, so you can use the API for that too:
+specific step, add a fragment like `#step:x:y`, corresponding to the step
+number and line number. The step number is based on the order, so you can use
+the API for that too:
 
 {% raw %}
 ```yaml
@@ -121,7 +121,7 @@ jobs:
           gh run view ${{ github.run_id }} --json jobs --jq '
             .jobs[] | select(.name == "Run Tests")
             | (.url + (.steps[] | select(.name == "Run Test Script")
-              | "?check_suite_focus#step:\(.number):1"))'
+              | "#step:\(.number):1"))'
 ```
 {% endraw %}
 
@@ -130,4 +130,6 @@ after the test step that the API response doesn't contain the previous step's
 result yet. You can either perform the API call a little later in the job, in
 a separate dependent job, or add a small `sleep` before calling the API.
 
-_Inspired by [Grant G's answer on Stack Overflow](https://stackoverflow.com/a/76681922/283078)._
+_Inspired by [Grant G's answer on Stack Overflow](https://stackoverflow.com/a/76681922/283078).
+Expanding the logs for a step used to require the `check_suite_focus` query
+string param, but this lo longer seems to be needed._
