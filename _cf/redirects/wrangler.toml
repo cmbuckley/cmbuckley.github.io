@@ -1,0 +1,9 @@
+name = "redirects"
+main = "index.js"
+workers_dev = true
+routes = [
+  { zone_name = "cmbuckley.co.uk",    pattern = "blog.cmbuckley.co.uk/*" },
+  { zone_name = "scholesmafia.co.uk", pattern = "video.scholesmafia.co.uk/*" },
+  { zone_name = "starsquare.co.uk",   pattern = "starsquare.co.uk/*" },
+]
+compatibility_date = "2024-12-13"

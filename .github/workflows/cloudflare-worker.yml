@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        worker: [security-headers, netlify-deployment-status]
+        worker: [security-headers, netlify-deployment-status, redirects]
     steps:
       - uses: actions/checkout@v4
       - name: Deploy Cloudflare Worker (${{ matrix.worker }})
