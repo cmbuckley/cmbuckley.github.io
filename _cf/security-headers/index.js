@@ -84,6 +84,7 @@ const trustOrigin = [
 ]
 
 const redirects = {
+    '/cv/cv.pdf': '/cv/chris-buckley-cv.pdf',
     '/security.txt': '/.well-known/security.txt',
     '/graphics/mosaic.jpg': '/assets/img/graphics/mosaic.jpg',
 }
