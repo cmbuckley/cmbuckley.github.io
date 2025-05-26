@@ -40,7 +40,12 @@ posts.each do |post|
                     skip "got SSL error for #{link[0]}, hopefully temporary"
                 end
 
-                expect(['200', '301', '302', '303', '307']).to include(response.code), "got #{response.code} for #{link[0]}"
+                begin
+                    expect(['200', '301', '302', '303', '307']).to include(response.code), "got #{response.code} for #{link[0]}"
+                rescue
+                    print response.body
+                    fail
+                end
             end
         end
     end
