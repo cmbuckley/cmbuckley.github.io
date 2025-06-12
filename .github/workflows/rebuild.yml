@@ -10,14 +10,12 @@ jobs:
     steps:
       - name: Trigger builds on matching repos
         env:
-          TOPICS_TYPE: application/vnd.github.mercy-preview+json
-          BUILD_TYPE: application/vnd.github.v3+json
           GH_USER: ${{ github.repository_owner }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          curl -sS -H "Accept: $TOPICS_TYPE" "$GITHUB_API_URL/users/$GH_USER/repos?per_page=100" \
-            | jq -r '.[] | select(.has_pages == true) | select(.fork == false) | select(.private == false) | select(any(.topics[]; contains("noindex")) | not) | .full_name' \
+          gh api users/$GH_USER/repos -X GET -f type=public --paginate -q \
+          '.[] | select(.has_pages == true and .fork == false and (any(.topics[]; contains("noindex")) | not)) | .url' \
             | while read repo; do
               echo "$repo:"
-              curl -sS -u $GH_USER:$GH_TOKEN -X POST -H "Accept: $BUILD_TYPE" $GITHUB_API_URL/repos/$repo/pages/builds
+              gh api $repo/pages/builds -X POST
             done
