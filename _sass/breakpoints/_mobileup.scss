@@ -484,6 +484,14 @@ POST LIST STYLING
 }
 
 .posts {
+    .post:focus-within {
+        outline: 3px solid var(--color-primary);
+    }
+
+    .post__link:focus {
+        outline: none;
+    }
+
     .post--excerpt {
         margin-bottom: 4rem;
         position: relative;

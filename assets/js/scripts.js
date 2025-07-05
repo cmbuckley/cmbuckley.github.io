@@ -176,29 +176,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // scrolling with J/K keys
                 if (e.key == 'j' || e.key == 'k') {
-                    let inFocus = document.querySelector('.search-results .key-focussed'),
+                    let inFocus = document.querySelector('.posts .post:focus-within'),
                         spec = {sibling: {j: 'next', k: 'previous'}, child: {j: 'first', k: 'last'}},
                         toFocus;
 
                     if (inFocus) {
-                        inFocus.classList.remove('key-focussed');
                         toFocus = inFocus[spec.sibling[e.key] + 'ElementSibling'];
                     } else {
-                        toFocus = document.querySelector('.search-results')[spec.child[e.key] + 'ElementChild'];
+                        toFocus = document.querySelector('.posts')[spec.child[e.key] + 'ElementChild'];
                     }
 
                     if (toFocus) {
-                        toFocus.classList.add('key-focussed');
                         toFocus.scrollIntoView({behavior: 'smooth', block: 'center'});
-                    }
-                }
-
-                // visit the selected result
-                if (e.key == 'Enter') {
-                    let inFocus = document.querySelector('.search-results .key-focussed');
-
-                    if (inFocus) {
-                        inFocus.querySelector('a').click();
+                        toFocus.querySelector('.post__link').focus();
                     }
                 }
             }

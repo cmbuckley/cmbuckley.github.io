@@ -24,10 +24,6 @@ mark {
     color: inherit;
 }
 
-.key-focussed {
-    outline: 3px solid var(--color-primary);
-}
-
 .sr-only {
     @extend %sr-only;
 }
