@@ -45,6 +45,15 @@ figure {
     }
 }
 
+.pfp {
+    float: right;
+    width: 34%;
+    shape-outside: circle(50%);
+    //shape-margin: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 code, kbd, samp {
     font-size: 0.9em;
 }
