@@ -6,10 +6,20 @@ image:
   meta:
     src: /files/2024/01/eic.png
     alt: User connecting to an EC2 instance via an EIC endpoint
-last_modified_at: 2024-01-29 22:56 +00:00
+last_modified_at: 2025-08-02 20:46 +00:00
 ---
 
 In July 2023, [AWS announced they will charge for IPv4 addresses][1] starting 1&nbsp;February 2024. The new charge will be the same as the existing charge for an idle IP: $0.005 per hour; slightly over $40 per year per IP address. If you're running some small T2 or T3 instances for general-purpose workloads, this could increase your monthly cost somewhere between 20--40%. The EC2 free tier will include 750 hours of usage for 12 months, so a single IPv4 address should be pretty much free for that time, but if you've exhausted the free tier or have multiple IP addresses, this charge will start to appear very soon.
+
+# Caveats
+
+Firstly, there are a few reasons why this might not be worthwhile/beneficial/possible:
+
+* Load balancer / NAT gateway
+* No outbound IPv4 access - this is likely to be the biggie. Without using a NAT gateway or other
+
+AWS CLI - STS and others
+GitHub! (though hopefully changing soon)
 
 I use a t2.micro instance as a sandbox environment, which allows HTTPS and SSH access. This has a public IPv4 address, so we need to add some IPv6 addresses to this instance. I'm using Terraform to define the infrastructure so I followed [Mattias Holmlund's post][2] to set up IPv6:
 
@@ -25,6 +35,16 @@ I use a t2.micro instance as a sandbox environment, which allows HTTPS and SSH a
 +  ipv6_cidr_block                 = cidrsubnet(aws_vpc.default.ipv6_cidr_block, 8, 0)
    cidr_block                      = cidrsubnet(aws_vpc.default.cidr_block, 4, 0)
  }
+
+ resource "aws_security_group_rule" "ingress_https" {
+   security_group_id = aws_security_group.default.id
+   type              = "ingress"
+   protocol          = "tcp"
+   from_port         = 443
+   to_port           = 443
+   cidr_blocks       = ["0.0.0.0/0"]
++  ipv6_cidr_blocks  = ["::/0"]
+ }
 +
 +resource "aws_route" "default_ipv6" {
 +  route_table_id              = aws_route_table.default.id
@@ -33,7 +53,21 @@ I use a t2.micro instance as a sandbox environment, which allows HTTPS and SSH a
 +}
 ```
 
-This is a development server, but because I tend to have a few unformed ideas on the go, it's definitely more "pet" than "cattle" from an infrastructure perspective. Because I wanted to add an IPv6 address without destroying/replacing the instance, I also had to follow [Colin Barker's advice][3] to add the address by creating a temporary `aws_network_interface` resource and importing the primary ENI into Terraform state:
+This is a development server, but because I tend to have a few unformed ideas on the go, it's definitely more "pet" than "cattle" from an infrastructure perspective. Because I wanted to add an IPv6 address without destroying/replacing the instance, I also had to follow [Colin Barker's advice][3] to add the address and import the primary ENI into Terraform state:
+
+```
+resource "aws_network_interface" "primary" {
+  subnet_id       = aws_subnet.public.id
+  security_groups = [aws_security_group.default.id]
+
+  private_ip_list_enabled   = false
+
+  attachment {
+    instance     = aws_instance.sandbox.id
+    device_index = 1
+  }
+}
+```
 
 ```bash
 terraform import aws_network_interface.temp $(
@@ -152,10 +186,43 @@ Match host="i-*"
     ProxyCommand aws ec2-instance-connect open-tunnel --instance-id %h --profile ssh
 ```
 
-And there you have it! A fully IPv6-enabled VPC and EC2 instance, with a completely free and seamless fallback for IPv4-only clients.
+And there you have it! A fully IPv6-enabled VPC and EC2 instance, with a completely free and seamless fallback for IPv4-only clients. Now we need to actually remove the IPv4 addresses.
+
+There are a few different approaches depending on how the address was assigned in the first place, but I have IPs auto assigned via the subnet, so let's remove that:
+
+```diff
+ resource "aws_subnet" "public" {
+   vpc_id                          = aws_vpc.default.id
+-  map_public_ip_on_launch         = true
+   assign_ipv6_address_on_creation = true
+   ipv6_cidr_block                 = cidrsubnet(aws_vpc.default.ipv6_cidr_block, 8, 0)
+   cidr_block                      = cidrsubnet(aws_vpc.default.cidr_block, 4, 0)
+ }
+```
+
+Because this isn't an Elastic IP I can't simply dissociate the IP address, so to avoid destroying the instance again I need to do something similar to earlier where I attached the IPv6 address, following [CyclingDave's Stack Overflow answer][6]. Assign a new network interface and Elastic IP:
+
+```terraform
+resource "aws_network_interface" "temp" {
+  subnet_id = aws_subnet.public.id
+
+  attachment {
+    instance     = aws_instance.sandbox.id
+    device_index = 1
+  }
+}
+
+resource "aws_eip" "temp" {
+  instance = aws_instance.sandbox.id
+  domain   = "vpc"
+}
+```
+
+Now, in the AWS Console,
 
 [1]: https://aws.amazon.com/blogs/aws/new-aws-public-ipv4-address-charge-public-ip-insights/
 [2]: https://mattias.holmlund.se/2017/09/setting-up-ipv6-on-aws-with-terraform/
 [3]: https://colinbarker.me.uk/blog/2023-03-04-enabling-ipv6-on-aws-using-terraform-ec2-part-2/
 [4]: https://aws.amazon.com/blogs/compute/secure-connectivity-from-public-to-private-introducing-ec2-instance-connect-endpoint-june-13-2023/
 [5]: https://github.com/answerdigital/terraform-modules/tree/main/modules/aws/sso_account_assignment
+[6]: https://stackoverflow.com/a/54153371/283078
