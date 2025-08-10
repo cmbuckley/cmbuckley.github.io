@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "mathjax": "3.2.2"
+    "mathjax": "4.0.0"
   },
   "devDependencies": {
     "netlify-plugin-html-validate": "^1.1.1",
