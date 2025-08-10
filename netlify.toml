@@ -27,6 +27,9 @@ package = "netlify-plugin-seo-lint"
 [build]
 command = "jekyll build --config _config.yml,_staging.yml && rspec"
 
+  [build.environment]
+  RUBY_VERSION = "3.3.9"
+
 [[plugins]]
 package = "netlify-plugin-html-validate"
 
