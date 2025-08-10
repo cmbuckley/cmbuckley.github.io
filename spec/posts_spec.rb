@@ -31,7 +31,7 @@ posts.each do |post|
         post_content = File.read(post)
         post_content.scan(/^!?\[(?:\[[^\[\]]*\]|\\[\[\]]?|`[^`]*`|[^\[\]\\])*?\]\(\s*(<(?:\\[<>]?|[^\s<>\\])*>|(?:\\[()]?|\([^\s\x00-\x1f()\\]*\)|[^\s\x00-\x1f()\\])*?(?:\s+=(?:[\w%]+)?x(?:[\w%]+)?)?)(?:\s+(?:"(?:\\"?|[^"\\])*"|'(?:\\'?|[^'\\])*'|\((?:\\\)?|[^)\\])*\)))?\s*\)/).each do |link|
             unless link[0].chars.first == '/'
-                uri = URI.parse(URI.escape(link[0]))
+                uri = URI.parse(URI::Parser.new.escape(link[0]))
                 skip 'pictures links not tested yet' if uri.host == 'pictures.scholesmafia.co.uk'
 
                 begin
