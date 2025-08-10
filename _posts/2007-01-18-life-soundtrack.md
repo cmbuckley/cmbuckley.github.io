@@ -17,11 +17,11 @@ So, here's how it works:
 
 **Opening credits:**
 
-[The Streets](https://www.thestreetsmusic.co.uk/) --- Fit But You Know It
+[The Streets](https://www.thestreets.co.uk/) --- Fit But You Know It
 
 **Waking up:**
 
-[Bryan Adams](https://www.bryanadams.com/) --- Vanishing
+[Bryan Adams](https://en.wikipedia.org/wiki/Bryan_Adams) --- Vanishing
 
 **First day at school:**
 
@@ -37,7 +37,7 @@ So, here's how it works:
 
 **Breaking up:**
 
-[Scissor Sisters](https://www.facebook.com/scissorsisters) --- Better Luck
+[Scissor Sisters](https://www.scissorsisters.com/) --- Better Luck
 
 **Prom:**
 
@@ -45,15 +45,15 @@ So, here's how it works:
 
 **Life:**
 
-[The Beach Boys](https://www.thebeachboys.com/) --- Then I Kissed Her
+[The Beach Boys](https://thebeachboys.com/) --- Then I Kissed Her
 
 **Making babies:**
 
-[The Mighty Mighty Bosstones](http://www.bosstonesmusic.com/) --- The Impression That I Get
+[The Mighty Mighty Bosstones](https://www.bosstonesmusic.com/) --- The Impression That I Get
 
 **Mental breakdown:**
 
-[NOFX](https://www.nofxofficialwebsite.com/) --- Bottles To The Ground
+[NOFX](https://www.nofx.org/) --- Bottles To The Ground
 
 **Driving:**
 
@@ -61,7 +61,7 @@ So, here's how it works:
 
 **Flashback:**
 
-[Def Leppard](https://www.defleppard.com/) --- Photograph
+[Def Leppard](https://defleppard.com/) --- Photograph
 
 **Getting back together:**
 
@@ -77,11 +77,11 @@ So, here's how it works:
 
 **Death scene:**
 
-[Lynyrd Skynyrd](http://lynyrdskynyrd.com/) --- Down South Jukin'
+[Lynyrd Skynyrd](https://lynyrdskynyrd.com/) --- Down South Jukin'
 
 **Funeral song:**
 
-[Nelly Furtado](https://nellyfurtado.com/) --- Maneater
+[Nelly Furtado](https://www.nellyfurtado.com/) --- Maneater
 
 **End credits:**
 
