@@ -28,8 +28,7 @@ const csp = {
     ],
     'font-src': [
         'https://fonts.gstatic.com',
-        `https://cdnjs.cloudflare.com/ajax/libs/mathjax/${dependencies.mathjax}/`,
-        'about:', // https://github.com/mathjax/MathJax/issues/256#issuecomment-37990603
+        'https://cdn.jsdelivr.net/npm/mathjax@4/',
     ],
     'object-src': [
         "'self'",
