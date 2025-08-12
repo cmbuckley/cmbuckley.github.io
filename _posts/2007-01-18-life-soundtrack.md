@@ -41,7 +41,7 @@ So, here's how it works:
 
 **Prom:**
 
-[The Stimulagos](http://cdtrrracks.com/The%20Stimulagos/) --- Contradictions
+[The Stimulagos](https://www.cylist.com/List/405882039/the-stimulagos-put-my-finger-on-it-cd-track-listing) --- Contradictions
 
 **Life:**
 
