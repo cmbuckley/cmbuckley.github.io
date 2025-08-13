@@ -4,6 +4,7 @@ on:
     inputs:
       issue:
         description: Issue number
+
 jobs:
   notify:
     name: Notify about deployment
@@ -11,11 +12,23 @@ jobs:
     environment:
       name: staging-${{ github.event.inputs.issue }}
       url: ${{ steps.set-url.outputs.url }}
+
     steps:
+      - name: Get PR head ref
+        id: get-ref
+        run: |
+          echo "ref=$(gh pr view ${{ github.event.inputs.issue }} --json headRefOid -q .headRefOid)" >> $GITHUB_OUTPUT
+
+      # checkout the repo so we tag the correct deployment on the environment
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ steps.get-ref.outputs.ref }}
+
       - name: Set environment URL
         id: set-url
         run: |
           echo "url=https://staging-${{ github.event.inputs.issue }}.cmbuckley.co.uk" >> $GITHUB_OUTPUT
+
       - name: Find Comment
         uses: peter-evans/find-comment@v3
         id: find-comment
@@ -23,6 +36,7 @@ jobs:
           issue-number: ${{ github.event.inputs.issue }}
           comment-author: 'github-actions[bot]'
           body-includes: Your deploy preview
+
       - name: Create comment
         uses: peter-evans/create-or-update-comment@v4
         with:
