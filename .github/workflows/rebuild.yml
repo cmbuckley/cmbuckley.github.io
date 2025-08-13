@@ -11,7 +11,7 @@ jobs:
       - name: Trigger builds on matching repos
         env:
           GH_USER: ${{ github.repository_owner }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN_REBUILD }}
         run: |
           gh api users/$GH_USER/repos -X GET -f type=public --paginate -q \
           '.[] | select(.has_pages == true and .fork == false and (any(.topics[]; contains("noindex")) | not)) | .url' \
