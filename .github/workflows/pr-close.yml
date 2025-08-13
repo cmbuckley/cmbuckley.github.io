@@ -1,0 +1,16 @@
+name: PR Close
+on:
+  pull_request:
+    types: closed
+    branches: main
+
+jobs:
+  delete-env:
+    name: Delete Environment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete environment
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_DEL_ENV }}
+        run: |
+          gh api -X DELETE repos/${{ github.repository }}/environments/staging-${{ github.event.number }}
