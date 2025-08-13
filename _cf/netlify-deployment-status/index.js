@@ -108,7 +108,8 @@ async function handleRequest(request) {
         body: JSON.stringify({
           ref: "main",
           inputs: {
-            issue: payload.review_id.toString()
+            issue: payload.review_id.toString(),
+            log: `${payload.admin_url}/deploys/${payload.id}`,
           }
         })
       })

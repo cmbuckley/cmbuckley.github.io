@@ -4,30 +4,50 @@ on:
     inputs:
       issue:
         description: Issue number
+      log:
+        description: Netlify log URL
+
 jobs:
   notify:
     name: Notify about deployment
     runs-on: ubuntu-latest
-    environment:
-      name: staging-${{ github.event.inputs.issue }}
-      url: ${{ steps.set-url.outputs.url }}
     steps:
-      - name: Set environment URL
-        id: set-url
+      - name: Create deployment
+        id: deployment
         run: |
-          echo "url=https://staging-${{ github.event.inputs.issue }}.cmbuckley.co.uk" >> $GITHUB_OUTPUT
+          ref=$(gh pr view ${{ github.event.inputs.issue }} --json headRefOid -q .headRefOid)
+          env=staging-${{ github.event.inputs.issue }}
+          url=https://$env.cmbuckley.co.uk
+          echo "url=$url" >> $GITHUB_OUTPUT
+
+          # create environment, deployment and success status
+          gh api -X PUT repos/${{ github.repository }}/environments/$env
+          deployment=$(gh api repos/${{ github.repository }}/deployments \
+            -f ref=$ref \
+            -f environment=$env \
+            -f required_contexts[]=netlify/${{ github.owner }}/deploy-preview -q .id)
+          gh api -X POST repos/${{ github.repository }}/deployments/$deployment/statuses \
+            -f state=success \
+            -f environment_url=$url
+
       - name: Find Comment
         uses: peter-evans/find-comment@v3
         id: find-comment
         with:
           issue-number: ${{ github.event.inputs.issue }}
           comment-author: 'github-actions[bot]'
-          body-includes: Your deploy preview
+          body-includes: Deploy Preview ready
+
       - name: Create comment
         uses: peter-evans/create-or-update-comment@v4
         with:
           issue-number: ${{ github.event.inputs.issue }}
           comment-id: ${{ steps.find-comment.outputs.comment-id }}
           edit-mode: replace
-          body: >
-            Your deploy preview can be found at ${{ steps.set-url.outputs.url }}.
+          body: |
+            ### <span aria-hidden="true">✅</span> Deploy Preview ready!
+
+            |      Name      | Link                                |
+            |----------------|-------------------------------------|
+            | Deploy Preview | ${{ steps.deployment.outputs.url }} |
+            | Deploy Log     | ${{ github.event.inputs.log }}      |
