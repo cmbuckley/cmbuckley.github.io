@@ -8,7 +8,14 @@ jobs:
   notify:
     name: Notify about deployment
     runs-on: ubuntu-latest
+    environment:
+      name: staging-${{ github.event.inputs.issue }}
+      url: ${{ steps.set-url.outputs.url }}
     steps:
+      - name: Set environment URL
+        id: set-url
+        run: |
+          echo "url=https://staging-${{ github.event.inputs.issue }}.cmbuckley.co.uk" >> $GITHUB_OUTPUT
       - name: Find Comment
         uses: peter-evans/find-comment@v3
         id: find-comment
@@ -23,4 +30,4 @@ jobs:
           comment-id: ${{ steps.find-comment.outputs.comment-id }}
           edit-mode: replace
           body: >
-            Your deploy preview can be found at https://staging-${{ github.event.inputs.issue }}.cmbuckley.co.uk.
+            Your deploy preview can be found at ${{ steps.set-url.outputs.url }}.
