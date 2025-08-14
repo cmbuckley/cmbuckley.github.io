@@ -1,0 +1,15 @@
+name: PR Open
+on:
+  pull_request:
+    types: opened
+    branches: main
+
+jobs:
+  create-env:
+    name: Create Environment
+    runs-on: ubuntu-latest
+    environment:
+      name: staging-${{ github.event.number }}
+      url: https://staging-${{ github.event.number }}.cmbuckley.co.uk
+    steps:
+      - run: true
