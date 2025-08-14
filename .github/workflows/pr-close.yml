@@ -11,6 +11,6 @@ jobs:
     steps:
       - name: Delete environment
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN_DEL_ENV }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN_MANAGE_ENVS }}
         run: |
           gh api -X DELETE repos/${{ github.repository }}/environments/staging-${{ github.event.number }}
