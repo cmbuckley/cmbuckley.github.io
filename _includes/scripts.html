@@ -10,6 +10,11 @@
 
 <script defer="defer" nonce="" src="{% include mainurl.html %}/assets/js/scripts.js{% include v.html id='scripts' %}"></script>
 {%- if page.maths -%}
+<style>
+mjx-help { display: none !important; }
+.mjx-selected { outline: none !important; }
+</style>
+<script defer="defer" nonce="" src="{% include mainurl.html %}/assets/js/maths.js{% include v.html id='maths' %}"></script>
 <script defer="defer" nonce="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 {%- endif -%}
 {%- if page.search -%}
