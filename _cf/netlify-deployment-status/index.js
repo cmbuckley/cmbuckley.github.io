@@ -93,16 +93,8 @@ async function handleRequest(request) {
       .replace('//github.com', '//api.github.com/repos')
       .replace(/pull\/\d+$/, '');
 
-    const ref = payload.commit_ref;
-    if (!ref) {
-      const branchData = await fetch(apiUrl + 'branches/' + payload.branch)
-        .then(r => r.json());
-
-      ref = branchData.commit.sha;
-    }
-
     if (!payload.review_id) { return error("Missing PR number") }
-    console.log(`Dispatching to ${apiUrl} with ref ${ref} and issue ${payload.review_id}`);
+    console.log(`Dispatching to ${apiUrl} with branch [${payload.branch}] and issue ${payload.review_id}`);
 
     try {
       workflowDispatch = await fetch(apiUrl + 'actions/workflows/deploy-preview.yml/dispatches', {
@@ -114,7 +106,7 @@ async function handleRequest(request) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          ref || 'main',
+          ref: payload.branch || 'main',
           inputs: {
             issue: payload.review_id.toString(),
             log: `${payload.admin_url}/deploys/${payload.id}`,
