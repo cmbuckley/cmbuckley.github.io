@@ -93,7 +93,7 @@ async function handleRequest(request) {
       .replace('//github.com', '//api.github.com/repos')
       .replace(/pull\/\d+$/, '');
 
-    const ref = payload.commit_ref;
+    let ref = payload.commit_ref;
     if (!ref) {
       const branchData = await fetch(apiUrl + 'branches/' + payload.branch)
         .then(r => r.json());
@@ -114,7 +114,7 @@ async function handleRequest(request) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          ref || 'main',
+          ref: ref || 'main',
           inputs: {
             issue: payload.review_id.toString(),
             log: `${payload.admin_url}/deploys/${payload.id}`,
