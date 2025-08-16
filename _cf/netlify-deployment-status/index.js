@@ -125,7 +125,7 @@ async function handleRequest(request) {
         return error(err)
     }
 
-    console.log('GitHub response:', workflowDispatch)
+    console.log('GitHub response:', workflowDispatch.body)
     return new Response(workflowDispatch.body, {
       status: (workflowDispatch.ok ? 200 : 503),
       headers: workflowDispatch.headers,
