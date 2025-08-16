@@ -102,7 +102,7 @@ async function handleRequest(request) {
     }
 
     if (!payload.review_id) { return error("Missing PR number") }
-    console.log('Dispatching to ' + apiUrl + ' with issue ' + payload.review_id);
+    console.log(`Dispatching to ${apiUrl} with ref ${ref} and issue ${payload.review_id}`);
 
     try {
       workflowDispatch = await fetch(apiUrl + 'actions/workflows/deploy-preview.yml/dispatches', {
