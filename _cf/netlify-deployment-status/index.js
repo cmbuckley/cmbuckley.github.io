@@ -94,7 +94,7 @@ async function handleRequest(request) {
       .replace(/pull\/\d+$/, '');
 
     if (!payload.review_id) { return error("Missing PR number") }
-    console.log(`Dispatching to ${apiUrl} with branch [${payload.branch}] and issue ${payload.review_id}`);
+    console.log(`Dispatching to ${apiUrl} with issue ${payload.review_id}`);
 
     try {
       workflowDispatch = await fetch(apiUrl + 'actions/workflows/deploy-preview.yml/dispatches', {
@@ -106,7 +106,7 @@ async function handleRequest(request) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          ref: payload.branch || 'main',
+          ref: `pull/${payload.review_id}/head`,
           inputs: {
             issue: payload.review_id.toString(),
             log: `${payload.admin_url}/deploys/${payload.id}`,
@@ -117,7 +117,7 @@ async function handleRequest(request) {
         return error(err)
     }
 
-    console.log('GitHub response:', workflowDispatch.body)
+    console.log('GitHub response:', await workflowDispatch.body.clone().text())
     return new Response(workflowDispatch.body, {
       status: (workflowDispatch.ok ? 200 : 503),
       headers: workflowDispatch.headers,
