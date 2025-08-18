@@ -1,33 +1,73 @@
-name: Netlify deploy-preview success
+name: Netlify deploy-preview
 on:
   workflow_dispatch:
     inputs:
       issue:
         description: Issue number
+        required: true
+        type: number
+      status:
+        description: Deployment status
+        required: true
+        type: choice
+        options:
+          - in_progress
+          - failure
+          - success
       log:
         description: Netlify log URL
+        required: true
+        type: string
 
 jobs:
   notify:
     name: Notify about deployment
     runs-on: ubuntu-latest
-    environment:
-      name: staging-${{ github.event.inputs.issue }}
-      url: ${{ steps.get-url.outputs.url }}
-
     steps:
-      - name: Get deployment URL
-        id: get-url
+      - name: Create deployment
+        id: deployment
+        env:
+          GH_REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN_MANAGE_ENVS }}
         run: |
-          echo "url=https://staging-${{ github.event.inputs.issue }}.cmbuckley.co.uk" >> $GITHUB_OUTPUT
+          ref=$(gh pr view ${{ github.event.inputs.issue }} --json headRefOid -q .headRefOid)
+          env=staging-${{ github.event.inputs.issue }}
+          url=https://$env.cmbuckley.co.uk
+          echo "url=$url" >> $GITHUB_OUTPUT
+
+          # create environment, deployment and success status
+          gh api -X PUT repos/{owner}/{repo}/environments/$env
+          deployment=$(gh api repos/{owner}/{repo}/deployments \
+            -f ref=$ref \
+            -f environment=$env \
+            -F required_contexts[]=netlify/{owner}/deploy-preview -q .id)
+          gh api -X POST repos/{owner}/{repo}/deployments/$deployment/statuses \
+            -f state=success \
+            -f environment_url=$url
+
+      - name: Get comment text
+        id: get-text
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const status = github.events.inputs.status,
+              data = {
+                in_progress: ['👷', 'in progress', false],
+                failure:     ['❌', 'failed', false],
+                success:     ['✅', 'ready', true],
+              };
+
+            core.setOutput('emoji', data[status][0]);
+            core.setOutput('title', data[status][1]);
+            core.setOutput('preview', data[status][2]);
 
       - name: Find Comment
-        uses: peter-evans/find-comment@v3
         id: find-comment
+        uses: peter-evans/find-comment@v3
         with:
           issue-number: ${{ github.event.inputs.issue }}
           comment-author: 'github-actions[bot]'
-          body-includes: Deploy Preview ready
+          body-includes: Deploy Preview
 
       - name: Create comment
         uses: peter-evans/create-or-update-comment@v4
@@ -36,9 +76,9 @@ jobs:
           comment-id: ${{ steps.find-comment.outputs.comment-id }}
           edit-mode: replace
           body: |
-            ### <span aria-hidden="true">✅</span> Deploy Preview ready!
+            ### <span aria-hidden="true">${{ steps.get-text.outputs.emoji }}</span> Deploy Preview ${{ steps.get-text.outputs.title }}!
 
-            |      Name      | Link                             |
-            |----------------|----------------------------------|
-            | Deploy Preview | ${{ steps.get-url.outputs.url }} |
-            | Deploy Log     | ${{ github.event.inputs.log }}   |
+            |      Name      | Link |
+            |----------------|------|
+            ${{ steps.get-text.outputs.preview && format('| Deploy Preview | {0} |\n', steps.deployment.outputs.url) || ''}}
+            | Deploy Log     | ${{ github.event.inputs.log }} |

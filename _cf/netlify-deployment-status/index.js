@@ -88,14 +88,14 @@ async function handleRequest(request) {
   if (!payload) { return error("Must POST JSON") }
   console.log('Payload:', payload)
 
-  if (payload.context == "deploy-preview" && payload.state == "ready") {
+  if (payload.context == "deploy-preview") {
     const apiUrl = (payload.review_url || "")
       .replace('//github.com', '//api.github.com/repos')
       .replace(/pull\/\d+$/, '');
     let workflowDispatch;
 
     if (!payload.review_id) { return error("Missing PR number") }
-    console.log(`Dispatching to ${apiUrl} with issue ${payload.review_id}`);
+    console.log(`Dispatching to ${apiUrl} with issue ${payload.review_id} and status ${payload.state}`);
 
     try {
       workflowDispatch = await fetch(apiUrl + 'actions/workflows/deploy-preview.yml/dispatches', {
@@ -107,9 +107,10 @@ async function handleRequest(request) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          ref: `pull/${payload.review_id}/head`,
+          ref: 'main',
           inputs: {
             issue: payload.review_id.toString(),
+            status: {building: 'in_progress', ready: 'success', error: 'failure'}[payload.state],
             log: `${payload.admin_url}/deploys/${payload.id}`,
           }
         })
