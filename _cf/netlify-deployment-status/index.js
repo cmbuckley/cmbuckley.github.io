@@ -92,6 +92,7 @@ async function handleRequest(request) {
     const apiUrl = (payload.review_url || "")
       .replace('//github.com', '//api.github.com/repos')
       .replace(/pull\/\d+$/, '');
+    let workflowDispatch;
 
     if (!payload.review_id) { return error("Missing PR number") }
     console.log(`Dispatching to ${apiUrl} with issue ${payload.review_id}`);
@@ -117,7 +118,7 @@ async function handleRequest(request) {
         return error(err)
     }
 
-    console.log('GitHub response:', await workflowDispatch.body.clone().text())
+    console.log('GitHub response:', await workflowDispatch.clone().json())
     return new Response(workflowDispatch.body, {
       status: (workflowDispatch.ok ? 200 : 503),
       headers: workflowDispatch.headers,
