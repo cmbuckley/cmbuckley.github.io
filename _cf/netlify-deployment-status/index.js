@@ -107,7 +107,7 @@ async function handleRequest(request) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          ref: `pull/${payload.review_id}/head`,
+          ref: 'main',
           inputs: {
             issue: payload.review_id.toString(),
             log: `${payload.admin_url}/deploys/${payload.id}`,
