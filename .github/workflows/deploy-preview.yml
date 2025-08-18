@@ -11,15 +11,21 @@ jobs:
   notify:
     name: Notify about deployment
     runs-on: ubuntu-latest
-    environment:
-      name: staging-${{ github.event.inputs.issue }}
-      url: ${{ steps.get-url.outputs.url }}
-
     steps:
       - name: Get deployment URL
         id: get-url
         run: |
           echo "url=https://staging-${{ github.event.inputs.issue }}.cmbuckley.co.uk" >> $GITHUB_OUTPUT
+
+      - name: Create deployment
+        uses: chrnorm/deployment-action@v2
+        with:
+          token: ${{ github.token }}
+          environment: staging-${{ github.event.inputs.issue }}
+          environment-url: ${{ steps.get-url.outputs.url }}
+          ref: pull/${{ github.event.inputs.issue }}/head
+          required-contexts: netlify/${{ github.repository_owner }}/deploy-preview
+          transient-environment: true
 
       - name: Find Comment
         uses: peter-evans/find-comment@v3
