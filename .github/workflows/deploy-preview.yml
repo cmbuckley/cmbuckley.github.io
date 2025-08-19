@@ -30,17 +30,18 @@ jobs:
           GH_REPO: ${{ github.repository }}
           GH_TOKEN: ${{ secrets.GH_TOKEN_MANAGE_ENVS }}
         run: |
-          ref=$(gh pr view ${{ github.event.inputs.issue }} --json headRefOid -q .headRefOid)
+          ref=$(gh pr view ${{ github.event.inputs.issue }} --json potentialMergeCommit -q .potentialMergeCommit.oid)
           env=staging-${{ github.event.inputs.issue }}
           url=https://$env.cmbuckley.co.uk
           echo "url=$url" >> $GITHUB_OUTPUT
 
           # create environment, deployment and success status
           gh api -X PUT repos/{owner}/{repo}/environments/$env
-          deployment=$(gh api repos/{owner}/{repo}/deployments \
+          deployment=$(gh api repos/{owner}/{repo}/deployments -q .id \
             -f ref=$ref \
             -f environment=$env \
-            -F required_contexts[]=netlify/{owner}/deploy-preview -q .id)
+            -F auto_merge=false
+            -F required_contexts[]=netlify/{owner}/deploy-preview)
           gh api -X POST repos/{owner}/{repo}/deployments/$deployment/statuses \
             -f state=success \
             -f environment_url=$url
