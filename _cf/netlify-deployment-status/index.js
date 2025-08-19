@@ -111,6 +111,7 @@ async function handleRequest(request) {
           inputs: {
             issue: payload.review_id.toString(),
             status: {building: 'in_progress', ready: 'success', error: 'failure'}[payload.state],
+            deploy_id: payload.id,
             log: `${payload.admin_url}/deploys/${payload.id}`,
           }
         })
