@@ -20,6 +20,12 @@ on:
         type: string
 
 jobs:
+  debug:
+    name: Debug inputs
+    runs-on: ubuntu-latest
+    steps:
+      - run: jq . <<< '${{ toJSON(github.event.inputs) }}'
+
   notify:
     name: Notify about deployment
     runs-on: ubuntu-latest
