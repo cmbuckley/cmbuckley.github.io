@@ -14,6 +14,10 @@ on:
           - in_progress
           - failure
           - success
+      deploy_id:
+        description: Netlify deploy ID
+        required: true
+        type: string
       log:
         description: Netlify log URL
         required: true
@@ -35,21 +39,35 @@ jobs:
         env:
           GH_REPO: ${{ github.repository }}
           GH_TOKEN: ${{ secrets.GH_TOKEN_MANAGE_ENVS }}
+          ISSUE: ${{ github.event.inputs.issue }}
+          STATUS: ${{ github.event.inputs.status }}
+          DEPLOY: ${{ github.event.inputs.deploy_id }}
         run: |
-          ref=$(gh pr view ${{ github.event.inputs.issue }} --json potentialMergeCommit -q .potentialMergeCommit.oid)
-          env=staging-${{ github.event.inputs.issue }}
+          ref=$(gh pr view $ISSUE --json potentialMergeCommit -q .potentialMergeCommit.oid)
+          env=staging-$ISSUE
           url=https://$env.cmbuckley.co.uk
           echo "url=$url" >> $GITHUB_OUTPUT
 
-          # create environment, deployment and success status
-          gh api -X PUT repos/{owner}/{repo}/environments/$env
-          deployment=$(gh api repos/{owner}/{repo}/deployments -q .id \
+          # create environment unless it exists already
+          gh api --silent repos/{owner}/{repo}/environments/$env 2>/dev/null \
+            || gh api -X PUT repos/{owner}/{repo}/environments/$env
+
+          # find deployment for this Netlify ID
+          deployment=$(gh api repos/{owner}/{repo}/deployments?environment=$env \
+            -q "map(select(.payload.deploy == $DEPLOY)) | first.id")
+
+          # create deployment if it doesn't exist
+          [ -z "$deployment" ] && deployment=$(gh api repos/{owner}/{repo}/deployments -q .id \
             -f ref=$ref \
             -f environment=$env \
             -F auto_merge=false
             -F required_contexts[]=netlify/{owner}/deploy-preview)
+            -f payload[deploy]=$DEPLOY
+            -f 'description=Deploy by Netlify'
+
+          # set status of the deployment
           gh api -X POST repos/{owner}/{repo}/deployments/$deployment/statuses \
-            -f state=success \
+            -f state=$STATUS \
             -f environment_url=$url
 
       - name: Get comment text
