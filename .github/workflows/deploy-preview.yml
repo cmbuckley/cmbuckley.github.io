@@ -63,9 +63,9 @@ jobs:
           [ -z "$deployment" ] && deployment=$(gh api repos/{owner}/{repo}/deployments -q .id \
             -f ref=$ref \
             -f environment=$env \
-            -F auto_merge=false
-            -F required_contexts[]=netlify/{owner}/deploy-preview)
-            -f payload[deploy]=$DEPLOY
+            -F auto_merge=false \
+            -F required_contexts[]=netlify/{owner}/deploy-preview) \
+            -f payload[deploy]=$DEPLOY \
             -f 'description=Deploy by Netlify'
 
           # set status of the deployment
