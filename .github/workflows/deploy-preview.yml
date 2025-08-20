@@ -78,7 +78,7 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const status = github.events.inputs.status,
+            const status = context.payload.inputs.status,
               data = {
                 in_progress: ['👷', 'in progress', false],
                 failure:     ['❌', 'failed', false],
