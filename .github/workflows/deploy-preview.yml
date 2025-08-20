@@ -28,7 +28,8 @@ jobs:
     name: Debug inputs
     runs-on: ubuntu-latest
     steps:
-      - run: jq . <<< '${{ toJSON(github.event.inputs) }}'
+      - name: Debug inputs
+        run: jq . <<< '${{ toJSON(github.event.inputs) }}'
 
   notify:
     name: Notify about deployment
@@ -44,6 +45,8 @@ jobs:
           DEPLOY: ${{ github.event.inputs.deploy_id }}
         run: |
           ref=$(gh pr view $ISSUE --json potentialMergeCommit -q .potentialMergeCommit.oid)
+          [ -z "$ref" ] && { echo "No merge commit for PR $ISSUE"; exit; }
+
           env=staging-$ISSUE
           url=https://$env.cmbuckley.co.uk
           echo "url=$url" >> $GITHUB_OUTPUT
