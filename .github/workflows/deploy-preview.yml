@@ -44,6 +44,7 @@ jobs:
           STATUS: ${{ github.event.inputs.status }}
           DEPLOY: ${{ github.event.inputs.deploy_id }}
         run: |
+          set -e ${RUNNER_DEBUG:+-x}
           ref=$(gh pr view $ISSUE --json potentialMergeCommit -q .potentialMergeCommit.oid)
           [ -z "$ref" ] && { echo "No merge commit for PR $ISSUE"; exit; }
 
