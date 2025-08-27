@@ -64,7 +64,7 @@ jobs:
             -f ref=$ref \
             -f environment=$env \
             -F auto_merge=false \
-            $([ $STATUS == 'success' ] && echo '-F required_contexts[]=netlify/{owner}/deploy-preview') \
+            -F required_contexts[]$([ $STATUS == 'success' ] && echo '=netlify/{owner}/deploy-preview') \
             -f payload[deploy]=$DEPLOY \
             -f 'description=Deploy by Netlify')
 
