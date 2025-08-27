@@ -45,12 +45,11 @@ jobs:
           DEPLOY: ${{ github.event.inputs.deploy_id }}
         run: |
           set -e ${RUNNER_DEBUG:+-x}
-          ref=$(gh pr view $ISSUE --json potentialMergeCommit -q .potentialMergeCommit.oid)
-          [ -z "$ref" ] && { echo "No merge commit for PR $ISSUE"; exit; }
 
           env=staging-$ISSUE
           url=https://$env.cmbuckley.co.uk
           echo "url=$url" >> $GITHUB_OUTPUT
+          ref=$(gh pr view $ISSUE --json headRefOid -q .headRefOid)
 
           # create environment unless it exists already
           gh api --silent repos/{owner}/{repo}/environments/$env 2>/dev/null \
