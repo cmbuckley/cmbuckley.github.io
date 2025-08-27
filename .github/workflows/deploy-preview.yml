@@ -65,9 +65,9 @@ jobs:
             -f ref=$ref \
             -f environment=$env \
             -F auto_merge=false \
-            -F required_contexts[]=netlify/{owner}/deploy-preview) \
+            $([ $STATUS == 'success' ] && echo '-F required_contexts[]=netlify/{owner}/deploy-preview') \
             -f payload[deploy]=$DEPLOY \
-            -f 'description=Deploy by Netlify'
+            -f 'description=Deploy by Netlify')
 
           # set status of the deployment
           gh api -X POST repos/{owner}/{repo}/deployments/$deployment/statuses \
