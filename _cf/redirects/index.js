@@ -14,6 +14,7 @@ const redirectUrls = {
     default:   'https://cmbuckley.co.uk/videos/',
   },
   'starsquare.co.uk': {
+    '/security.txt':             '/.well-known/security.txt',
     '/images/checkerboard':      '/images/checkerboard.png',
     '/images/transparent':       '/images/transparent.png',
     '/code/php/bugs/55348.phps': 'https://gist.github.com/cmbuckley/1165020',
