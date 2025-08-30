@@ -11,7 +11,7 @@ image:
     src: /files/2007/08/road-real.jpg
     alt: Model of a catenary road
 shortlink: bswcr
-last_modified_at: 2025-08-29 19:17 +00:00
+last_modified_at: 2025-08-30 22:28 +00:00
 ---
 The other day [Paul](https://pictures.scholesmafia.co.uk/index.php/?profile=150) told me that square wheels (and, indeed, any regular polygon except a triangle) can {% include archive.html url="http://www.maa.org/mathland/mathtrek_04_05_04.html" text="ride on a road constructed of inverted catenaries" %}. A catenary is the curve made by a telegraph wire when stretched between two poles --- a cable hanging under its own weight.
 
@@ -21,7 +21,9 @@ A little bit of thinking about the road makes you realise that the length of the
 
 $$ h = \frac{s}{2} (\sqrt{2} - 1) $$
 
-This is because the centre of the square, the axle, must remain at a constant height from the ground for a smooth ride.
+This is because the centre of the square, the axle, must remain at a constant height from the ground for a smooth ride:
+
+{% include figure.html object="/files/2007/08/catenary-wheel.svg" figsize="large" alt="Square wheels on a catenary road. The first square sits on the vertex of a catenary with a line from the centre to where the edge meets the vertex labelled s/2. The second square is at 45 degrees between two catenaries, and there is a line from the centre to where the corner meets the catenaries labelled s√2/2." %}
 
 Anyway, armed with this information, I spent this afternoon making a real-life version of this. I used some string to mark out a catenary of the right size, and used it as a template on two bits of plywood. A fair bit of jigsawing and filing later, I had this:
 
