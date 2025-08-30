@@ -4,6 +4,7 @@ fingerprints=_data/fingerprints.yml
 
 files=(
     "icons:assets/img/icons/icons.svg"
+    "maths:assets/js/maths.js"
     "scripts:assets/js/scripts.js"
     "search:assets/js/search.js"
     "style:assets/css/style.css"
