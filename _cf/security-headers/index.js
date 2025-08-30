@@ -28,7 +28,7 @@ const csp = {
     ],
     'font-src': [
         'https://fonts.gstatic.com',
-        'https://cdn.jsdelivr.net/npm/mathjax@4/',
+        'https://cdn.jsdelivr.net/npm/@mathjax/',
     ],
     'object-src': [
         "'self'",
@@ -36,6 +36,7 @@ const csp = {
     'connect-src': [
         "'self'",
         'https://staticman.cmbuckley.co.uk',
+        `https://cdn.jsdelivr.net/npm/mathjax@4/`,
     ],
     'media-src': [
         "'self'",
