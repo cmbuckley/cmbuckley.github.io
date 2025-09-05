@@ -75,7 +75,7 @@ jobs:
 
       - name: Get comment text
         id: get-text
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const status = context.payload.inputs.status,
