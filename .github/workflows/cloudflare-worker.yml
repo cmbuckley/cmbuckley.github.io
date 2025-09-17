@@ -3,14 +3,36 @@ on:
   push:
     branches: main
     paths:
+      - '.github/**'
       - '_cf/**'
+
 jobs:
-  cloudflare-worker:
-    name: Deploy Cloudflare Worker
+  get-workers:
+    name: Get Cloudflare Workers
     runs-on: ubuntu-latest
+    outputs:
+      workers: ${{ steps.get-workers.outputs.workers }}
+    steps:
+      - uses: actions/checkout@v5
+      - name: Get workers
+        id: get-workers
+        run: |
+          workers=$(find _cf -mindepth 1 -maxdepth 1 -type d |
+            xargs -n1 basename | jq -MRnc '[inputs]')
+          echo "workers=$workers" >> $GITHUB_OUTPUT
+
+  cloudflare-worker:
+    name: Deploy Cloudflare Workers
+    runs-on: ubuntu-latest
+    needs: get-workers
     strategy:
       matrix:
-        worker: [security-headers, netlify-deployment-status, redirects]
+        worker: ${{ fromJSON(needs.get-workers.outputs.workers) }}
+        include:
+          - worker: netlify-deployment-status
+            secrets: |
+              NETLIFY_GH_TOKEN
+              NETLIFY_JWS_SECRET
     steps:
       - uses: actions/checkout@v5
       - name: Deploy Cloudflare Worker (${{ matrix.worker }})
@@ -19,3 +41,7 @@ jobs:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           workingDirectory: _cf/${{ matrix.worker }}
+          secrets: ${{ matrix.secrets }}
+        env:
+          NETLIFY_GH_TOKEN: ${{ secrets.NETLIFY_GH_TOKEN }}
+          NETLIFY_JWS_SECRET: ${{ secrets.NETLIFY_JWS_SECRET }}
