@@ -39,7 +39,7 @@ async function checkSignature(token, body) {
   const tokenData = token.split(".")
   if (tokenData.length != 3) { return "Malformed JWS token" }
 
-  const secret = uintArray(JWS_SECRET)
+  const secret = uintArray(NETLIFY_JWS_SECRET)
   const key = await crypto.subtle.importKey("raw", secret, {
     name: "HMAC",
     hash: {name: "SHA-256"},
@@ -101,7 +101,7 @@ async function handleRequest(request) {
       workflowDispatch = await fetch(apiUrl + 'actions/workflows/deploy-preview.yml/dispatches', {
         method: "POST",
         headers: {
-          "Authorization": "Bearer " + GH_TOKEN,
+          "Authorization": "Bearer " + NETLIFY_GH_TOKEN,
           "User-Agent": "NetlifyDeploy/0.1.0",
           "Accept": "application/vnd.github.v3+json",
           "Content-Type": "application/json",
