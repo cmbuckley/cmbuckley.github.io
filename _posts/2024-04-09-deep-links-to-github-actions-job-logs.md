@@ -6,7 +6,7 @@ description: >
 date: 2024-04-09 18:37 +0100
 categories:
   - Computing
-last_modified_at: 2024-12-10 22:48 +00:00
+last_modified_at: 2025-09-19 11:31 +00:00
 ---
 
 In GitHub Actions, you can rather easily create a link to the current workflow run:
@@ -132,4 +132,4 @@ a separate dependent job, or add a small `sleep` before calling the API.
 
 _Inspired by [Grant G's answer on Stack Overflow](https://stackoverflow.com/a/76681922/283078).
 Expanding the logs for a step used to require the `check_suite_focus` query
-string param, but this lo longer seems to be needed._
+string param, but this no longer seems to be needed._
