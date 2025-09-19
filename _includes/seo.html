@@ -83,8 +83,8 @@
     <meta content="{{ page.image.meta.alt | default: 'Chris on the Tiki Trail in Queenstown, NZ' | smartify }}" property="og:image:alt">
 
     {% if page.image.meta.large %}<meta content="summary_large_image" name="twitter:card">{% endif %}
-    <meta content="@{% include social.html id='twitter' %}" name="twitter:site">
-    <meta content="@{% include social.html id='twitter' %}" name="twitter:creator">
+    <meta content="@{% include social.html id='x' %}" name="twitter:site">
+    <meta content="@{% include social.html id='x' %}" name="twitter:creator">
     {% if page.title -%}
       <meta content="{{ page_title | prepend: title_pagination }}" name="twitter:title">
     {% else -%}
