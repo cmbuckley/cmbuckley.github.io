@@ -1,4 +1,7 @@
 window.MathJax = {
+  tex: {
+    inlineMath: {'[+]': [['$', '$']]},
+  },
   options: {
     makeCollapsible: false,
     a11y: {
