@@ -21,7 +21,7 @@ $maroon:  #85144b;
 // Gray Scale
 $white:    #fff;
 $offwhite: #f7f7f7;
-$silver:   #767676;
+$silver:   #7d7d7d;
 $grey:     #5e5e5e;
 $blackish: #111;
 
@@ -30,8 +30,8 @@ $primary-color: #2c8654;
 $secondary-color: #233e5b;
 $tertiary-color: #aaa;
 
-$dark-primary-color: #5d823d;
-$dark-secondary-color: #233e5b;
+$dark-primary-color: #669245;
+$dark-secondary-color: #1f7ce0;
 $dark-tertiary-color: #aaa;
 
 
@@ -88,6 +88,7 @@ $theme: (
     dark: (
         bg: $blackish,
         fg: darken($offwhite, 15%),
+        meta: lighten($silver, 10%),
         caption: #a1a1a1,
 
         btn-fg: $blackish,
@@ -102,7 +103,7 @@ $theme: (
         comments-border: $dark-tertiary-color,
         comments-target: scale-color($dark-primary-color, $lightness: 75%),
         comments-author-bg: scale-color($dark-primary-color, $lightness: -80%),
-        comments-author-meta: $grey,
+        comments-author-meta: lighten($silver, 10%),
 
         table-bg-alt: #191a1c,
         mark: change-color($dark-primary-color, $alpha: 0.3),
@@ -147,8 +148,8 @@ $theme: (
         #{$button-type}-fg: darken(map-get($default-theme, $button-type), 10%),
         #{$button-type}-hover: darken(map-get($default-theme, $button-type), 10%),
     ), dark: (
-        #{$button-type}-fg: darken(map-get($dark-theme, $button-type), 10%),
-        #{$button-type}-hover: darken(map-get($dark-theme, $button-type), 10%),
+        #{$button-type}-fg: lighten(map-get($dark-theme, $button-type), 10%),
+        #{$button-type}-hover: lighten(map-get($dark-theme, $button-type), 10%),
     )));
 }
 
