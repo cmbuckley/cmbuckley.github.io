@@ -13,7 +13,7 @@ jobs:
     outputs:
       workers: ${{ steps.get-workers.outputs.workers }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Get workers
         id: get-workers
         run: |
@@ -34,7 +34,7 @@ jobs:
               NETLIFY_GH_TOKEN
               NETLIFY_JWS_SECRET
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Deploy Cloudflare Worker (${{ matrix.worker }})
         uses: cloudflare/wrangler-action@v3
         with:
