@@ -58,8 +58,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // update the menu height if screen changes
+    // first update on window load to be sure CSS has applied
     window.addEventListener('resize', updateMenu);
-    updateMenu();
+    window.addEventListener('load', updateMenu);
 
     // loop through all elements and replace with breakpoint elements
     if (window.CSS && CSS.supports('display', 'none')) {
