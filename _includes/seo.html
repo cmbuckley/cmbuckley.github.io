@@ -53,13 +53,15 @@
     {% endif -%}
 
     {% if page.og_type == 'profile' -%}
+    <meta content="{{ site.data.global.profile.first_name }}" property="profile:first_name">
+    <meta content="{{ site.data.global.profile.last_name }}" property="profile:last_name">
     <script type="application/ld+json">{
       "@context": "https://schema.org",
       "@type": "ProfilePage",
       "primaryImageOfPage": "{{ site.url }}/assets/img/headshot.jpg",
       "mainEntity": {
         "@type": "Person",
-        "name": "Chris Buckley",
+        "name": "{{ site.data.global.profile.first_name }} {{ site.data.global.profile.last_name }}",
         "image": "{{ site.url }}/assets/img/headshot.jpg"
       }
     }</script>

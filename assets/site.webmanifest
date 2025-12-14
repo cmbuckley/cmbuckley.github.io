@@ -1,7 +1,7 @@
 ---
 ---
 {
-    "name": "Chris Buckley",
+    "name": "{{ site.data.global.profile.first_name }} {{ site.data.global.profile.last_name }}",
     "short_name": "Bux",
     "icons": [
         {

@@ -3,13 +3,16 @@ title: Contact Me
 description: Contact Chris Buckley via email or social media. Includes PGP keys for private messages.
 layout: page
 form_name: Contact Form
+og_type: website
 ---
 
 <div id="contact">
   <div class="contact__content">
     <dl class="vcard">
     <dt>Name:</dt>
-    <dd class="fn n"><span class="given-name">Christopher</span> <span class="additional-name">Mark</span> <span class="family-name">Buckley</span></dd>
+    <dd class="fn n"><span class="given-name">{{ site.data.global.profile.first_name }}</span>
+    <span class="additional-name">{{ site.data.global.profile.middle_name }}</span>
+    <span class="family-name">{{ site.data.global.profile.last_name }}</span></dd>
 
     <dt>Home page:</dt>
     <dd class="url">{{ site.url }}</dd>

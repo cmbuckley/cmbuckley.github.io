@@ -61,6 +61,6 @@ collections:
     permalink: /blog/category/:name/
 
 details:
-   location: Meanwood
-   company: SmartSearch
-   role: Head of Engineering
+  location: Meanwood
+  company: SmartSearch
+  role: Head of Engineering
