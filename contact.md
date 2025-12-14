@@ -3,6 +3,7 @@ title: Contact Me
 description: Contact Chris Buckley via email or social media. Includes PGP keys for private messages.
 layout: page
 form_name: Contact Form
+og_type: website
 ---
 
 <div id="contact">
