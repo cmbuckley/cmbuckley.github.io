@@ -1,0 +1,14 @@
+{%- assign id = include.id | split: '.' -%}
+{%- if site.data.global[id[0]] -%}
+  {{ site.data.global.social[id[0]][id[1]] }}
+{%- else -%}
+  {%- assign file = id[0] | append: '.yml' -%}
+  {%- capture data -%}
+  {%- include {{ file }} -%}
+  {%- endcapture -%}
+  {%- capture newline %}
+{% endcapture -%}
+
+  {%- assign item = data | split: newline | where_exp: 'i', 'i contains id[1]' | first -%}
+  {{ item | split: ': ' | last | strip }}
+{%- endif -%}
