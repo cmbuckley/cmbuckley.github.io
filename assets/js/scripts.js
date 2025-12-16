@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // create span with the appropriate text
                 span = document.createElement('span');
                 span.className = {xs: 'hide-s-up', sUp: 'hide-xs'}[key];
+                span.setAttribute('aria-hidden', true);
                 span.textContent = el.dataset[key];
                 el.parentNode.insertBefore(span, el);
             }
