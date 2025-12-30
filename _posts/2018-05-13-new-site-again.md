@@ -2,6 +2,7 @@
 title: New Site (Again)
 categories:
   - Computing
+last_modified_at: 2025-12-30 10:25 +0000
 ---
 
 This isn't the first time I've moved my personal site; the [first post I still have]({% post_url 2006-08-03-back-up-running %}) was after I lost some old blog posts, and I [moved to WordPress]({% post_url 2012-04-19-everything-changes %}) in 2012 to avoid supporting a separate blog and page builder. However, it was still running on my VPS, and I've been trying to remove all production content from there for a while.
@@ -26,7 +27,7 @@ The few comments I had were exported using [WordPress Comments Import & Export](
 
 I added an XML site map for Google, and a [more human-readable version](/site-map/) for everyone else. I started off using the [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) plugin, but that did not pull any GitHub project pages, which meant my [CV page](/cv/) wasn't included - I have a separate project for that and decided to keep them separate for now. So I copied the layout from the plugin and [added my own section]({{ site.github.repository_url }}/blob/v2.0/sitemap.xml#L30-L36) for the showcase, using [github-metadata](https://github.com/jekyll/github-metadata) instead.
 
-I've seen some rather messy solutions for category/tag pages including using query string parameters / JavaScript to manipulate a page, but [found a nice solution](http://www.minddust.com/post/alternative-tags-and-categories-on-github-pages/) using collections instead.
+I've seen some rather messy solutions for category/tag pages including using query string parameters / JavaScript to manipulate a page, but {% include archive.html text="found a nice solution" url="http://www.minddust.com/post/alternative-tags-and-categories-on-github-pages/" %} using collections instead.
 
 ## Comments
 
@@ -36,4 +37,4 @@ Instead I found [Hacker News](https://news.ycombinator.com/item?id=14170041) to 
 
 ## Summary
 
-I'm pretty happy that, with everything else going on, this was a nice way to do some digital housekeeping and I'm happy with the output after a couple of weeks. I'm sure I will keep working on it though --- maybe I will finish the [interests section](/interests/) after {% include archive.html date="2008-03-24 19:57:33" url="http://cmbuckley.co.uk/interests/computing/" text="10 years" %})...
+I'm pretty happy that, with everything else going on, this was a nice way to do some digital housekeeping and I'm happy with the output after a couple of weeks. I'm sure I will keep working on it though --- maybe I will finish the [interests section](/interests/) after {% include archive.html date="2008-03-24 19:57:33" url="http://cmbuckley.co.uk/interests/computing/" text="10 years" %}...
