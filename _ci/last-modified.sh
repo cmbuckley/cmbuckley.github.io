@@ -8,7 +8,7 @@ $0 ~ "---" && ++count == 2 {
 !/^last_modified_at:/{print}
 '
 
-date="$(date +'%Y-%m-%d %H:%M %:z')"
+date="$(date +'%Y-%m-%d %H:%M %z')"
 awk 2>&1 | grep -q includefile && inplace=1 || inplace=0
 
 while read -d $'\0' file; do
