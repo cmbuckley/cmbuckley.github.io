@@ -1,11 +1,3 @@
-@media (max-width: 599px) {
-    .hide-xs { display: none; }
-}
-
-@media (min-width: 600px) {
-    .hide-s-up { display: none; }
-}
-
 @media print {
     main a[href^="http"]::after {
         font-style: normal;

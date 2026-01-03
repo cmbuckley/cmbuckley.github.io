@@ -63,6 +63,14 @@ samp {
     margin-right: auto;
 }
 
+.break-text::before {
+  content: attr(data-xs);
+}
+
+.break-text__inner {
+    display: none;
+}
+
 
 /***************
 MENU STYLING

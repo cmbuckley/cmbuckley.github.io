@@ -62,25 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', updateMenu);
     window.addEventListener('load', updateMenu);
 
-    // loop through all elements and replace with breakpoint elements
-    if (window.CSS && CSS.supports('display', 'none')) {
-        document.querySelectorAll('.break-text').forEach(function (el) {
-            var span;
-
-            for (var key in el.dataset) {
-                // create span with the appropriate text
-                span = document.createElement('span');
-                span.className = {xs: 'hide-s-up', sUp: 'hide-xs'}[key];
-                span.setAttribute('aria-hidden', true);
-                span.textContent = el.dataset[key];
-                el.parentNode.insertBefore(span, el);
-            }
-
-            // now remove the default element
-            el.parentNode.removeChild(el);
-        });
-    }
-
     // add an interacted class to forms to highlight required fields
     document.querySelectorAll('[type="submit"]').forEach(function (el) {
         el.addEventListener('click', function () {
