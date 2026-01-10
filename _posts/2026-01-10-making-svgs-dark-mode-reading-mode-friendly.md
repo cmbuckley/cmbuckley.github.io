@@ -5,6 +5,11 @@ description: >
 date: 2026-01-10 20:53 +0000
 categories:
   - Computing
+image:
+  meta:
+    src: /files/2026/01/flowchart.png
+    alt: A diagram in light and dark modes
+last_modified_at: 2026-01-10 23:41 +0000
 ---
 
 I use Scalable Vector Graphics (SVGs) on this site as they're an effective format for diagrams; they can be easily modified, styled, animated and localised.
