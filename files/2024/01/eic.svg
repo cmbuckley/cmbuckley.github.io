@@ -2,6 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="503px" height="311px" viewBox="-0.5 -0.5 503 311">
 <style>
+    @media (scripting: enabled) { .bg { fill: none !important; } }
     @media (prefers-color-scheme: dark) {
         .cloud__border, .arrow {
             stroke: #d1d1d1;
@@ -21,6 +22,7 @@
     }
 </style>
 <defs/>
+<rect class="bg" height="100%" width="100%" style="fill:white" />
 <g>
 <path class="cloud__border" d="M 91 0 L 501 0 L 501 310 L 91 310 Z" fill="none" stroke="#232f3e" stroke-miterlimit="10" pointer-events="all"/>
 <path class="cloud" d="M 101.73 6.89 C 99.19 6.86 97.05 9.34 97.28 11.84 C 95.63 12.3 94.58 14.09 94.93 15.76 C 95.17 17.45 96.84 18.8 98.55 18.58 C 102.3 18.56 106.05 18.61 109.79 18.55 C 111.71 18.38 113.05 16.29 112.58 14.45 C 112.34 13.13 111.21 11.98 109.87 11.81 C 109.86 10.3 108.26 8.82 106.79 9.6 C 105.97 10.39 105.82 8.44 105.02 8.13 C 104.14 7.28 102.95 6.82 101.73 6.89 Z M 101.75 7.63 C 103.68 7.51 105.32 9.05 105.91 10.79 C 106.31 11.19 106.67 10.52 106.97 10.34 C 108.25 9.57 109.21 11.17 109.23 12.29 C 109.58 12.77 110.39 12.38 110.77 12.91 C 112.21 13.93 112.3 16.3 110.88 17.37 C 109.9 18.09 108.63 17.75 107.5 17.83 C 104.28 17.82 101.06 17.84 97.84 17.82 C 96.2 17.58 95.19 15.69 95.79 14.17 C 96.07 13.16 97.05 12.67 97.94 12.36 C 98.19 11.62 97.85 10.71 98.33 9.99 C 98.92 8.65 100.25 7.61 101.75 7.63 Z M 91 25 C 91 16.67 91 8.33 91 0 C 99.33 0 107.67 0 116 0 C 116 8.33 116 16.67 116 25 C 107.67 25 99.33 25 91 25 Z" fill="#232f3e" stroke="none" pointer-events="all"/>
