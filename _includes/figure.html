@@ -16,6 +16,7 @@
   </video>
 {%- elsif include.img or include.object %}
   {% if include.url %}<a href="{{ include.url }}">{%- endif -%}
+
     {%- if include.img %}<img src="{{ include.img }}"
     {%- else %}<object role="img" data="{{ include.object }}"
     {%- endif %}
@@ -24,7 +25,12 @@
         {%- if include.alt %}{{ include.alt }}
         {%- elsif include.url %}{{ include.caption | default: 'View larger image' }}
         {%- endif -%}
-    ">{% if include.object %}</object>{%- endif %}
+    ">
+
+  {%- if include.object %}</object>
+  <img src="{{ include.object }}" alt="" class="rm-only" />
+  {%- endif -%}
+
   {%- if include.url %}</a>{% endif %}
 {%- endif %}
 {%- if include.caption %}
