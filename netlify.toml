@@ -1,5 +1,5 @@
 [context.branch-deploy]
-command = "printf \"url: %s\" \"$DEPLOY_PRIME_URL\" > _preview.yml; bundle exec jekyll build --config _config.yml,_preview.yml && rspec"
+command = "printf \"url: %s\" \"$DEPLOY_PRIME_URL\" > _preview.yml; bundle exec jekyll build --config _config.yml,_preview.yml && buncle exec rspec"
 
   [[context.branch-deploy.plugins]]
   package = "netlify-plugin-seo-lint"
@@ -8,7 +8,7 @@ command = "printf \"url: %s\" \"$DEPLOY_PRIME_URL\" > _preview.yml; bundle exec 
     internalLinksTrailingSlash = false
 
 [context.deploy-preview]
-command = "printf \"url: %s\" \"https://staging-$REVIEW_ID.cmbuckley.co.uk\" > _preview.yml; bundle exec jekyll build --config _config.yml,_preview.yml && rspec"
+command = "printf \"url: %s\" \"https://staging-$REVIEW_ID.cmbuckley.co.uk\" > _preview.yml; bundle exec jekyll build --config _config.yml,_preview.yml && bundle exec rspec"
 
   [[context.deploy-preview.plugins]]
   package = "netlify-plugin-seo-lint"
@@ -25,7 +25,7 @@ package = "netlify-plugin-seo-lint"
   internalLinksTrailingSlash = false
 
 [build]
-command = "bundle exec jekyll build --config _config.yml,_staging.yml && rspec"
+command = "bundle exec jekyll build --config _config.yml,_staging.yml && bundle exec rspec"
 
   [build.environment]
   RUBY_VERSION = "3.3.9"
