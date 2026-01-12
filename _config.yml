@@ -51,6 +51,10 @@ defaults:
     values:
       layout: category
   - scope:
+      type: test
+    values:
+      layout: default
+  - scope:
       path: blog/page
     values:
       sitemap: false
@@ -59,6 +63,8 @@ collections:
   blog_categories:
     output: true
     permalink: /blog/category/:name/
+  test:
+    permalink: /test/:name/
 
 details:
   location: Meanwood

@@ -1,2 +1,5 @@
 url: https://staging.cmbuckley.co.uk
 netlify_form: true
+collections:
+  test:
+    output: true
