@@ -28,6 +28,11 @@ mark {
     @extend %sr-only;
 }
 
+.rm-only {
+    @extend %rm-only;
+    left: 0.1px;
+}
+
 .search-results:empty {
     @extend %loading;
     margin: 0 auto 1.5em;

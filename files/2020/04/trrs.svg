@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1689 1200" width="100%" height="100%" version="1.0">
   <style>
+    @media (scripting: enabled) { .bg { fill: none !important; } }
     path {
       stroke: black;
       stroke-width: 8;
@@ -33,6 +34,7 @@
       <stop offset="1" style="stop-color:#ffea7a" />
     </linearGradient>
   </defs>
+  <rect class="bg" height="100%" width="100%" style="fill:white" />
   <path style="stroke:red" d="m 565,627 h 528" />
   <path style="stroke:red" d="m 565,509 h 528" />
   <path d="m 565,395 h 528" />
