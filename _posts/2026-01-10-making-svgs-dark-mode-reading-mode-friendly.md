@@ -9,7 +9,7 @@ image:
   meta:
     src: /files/2026/01/flowchart.png
     alt: A diagram in light and dark modes
-last_modified_at: 2026-01-10 23:41 +0000
+last_modified_at: 2026-01-12 22:39 +0000
 ---
 
 I use Scalable Vector Graphics (SVGs) on this site as they're an effective format for diagrams; they can be easily modified, styled, animated and localised.
@@ -48,7 +48,9 @@ There's no way to apply CSS to the reading mode view, so any background colour n
 </svg>
 ```
 
-Again, this isn't exactly a satisfying solution, but it does mean a single SVG can be used in all rendering contexts.
+Again, this isn't exactly a satisfying solution, but it does mean a single SVG can be used in all rendering contexts. Here's an example:
+
+{% include figure.html object="/files/2026/01/example.svg" alt="A rectangle labelled 'Hello world'" %}
 
 Have I missed a neater solution? Is there something I've not considered with this approach? Do other browsers run into the same (or different) problems?
 
