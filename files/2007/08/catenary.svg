@@ -1,18 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="330" height="98" version="1.1">
   <style>
     @media (scripting: enabled) { .bg { fill: none !important; } }
-    * {
-      fill: #111;
+    line, path, polygon {
       stroke: #111;
+    }
+    text, polygon {
+      fill: #111;
     }
     path {
       fill: none;
       stroke-width: 1.5;
     }
     @media(prefers-color-scheme: dark) {
-      * {
-        fill: #d1d1d1;
+      line, path, polygon {
         stroke: #d1d1d1;
+      }
+      text, polygon {
+        fill: #d1d1d1;
       }
     }
   </style>
