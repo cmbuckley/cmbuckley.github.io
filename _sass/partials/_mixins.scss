@@ -1,12 +1,6 @@
-// Screen reader only content
-%sr-only {
-    @extend %rm-only;
-    height: 1px;
-    clip-path: inset(50%);
-}
-
-// Reading mode only content
-%rm-only {
+// Content that's visually hidden but should still be part
+// of the flow - used for screen readers / reader mode
+%flow-hidden {
     position: absolute;
     margin: -1px 0 0 -1px;
     padding: 0;
