@@ -24,20 +24,6 @@ mark {
     color: inherit;
 }
 
-// screen reader only - totally clipped
-.sr-only {
-    @extend %flow-hidden;
-    height: 1px;
-    clip-path: inset(50%);
-}
-
-// reading mode - comply with Safari extraction logic
-.rm-only {
-    @extend %flow-hidden;
-    left: 0.1px;
-    height: 1.1px;
-}
-
 .search-results:empty {
     @extend %loading;
     margin: 0 auto 1.5em;
