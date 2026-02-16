@@ -1,5 +1,6 @@
 ---
 title: Test
+last_modified_at: 2026-02-16 22:50 +0000
 ---
 
 # Heading One
@@ -16,7 +17,7 @@ Some metadata
 
 This is some text with **bold**, *italic* and ***bold italic*** text[^1]. It also has a [link](https://cmbuckley.co.uk).
 
-There is also <ins>inserted text</ins> and <del>deleted text</del>. Search results get a <mark>highlight</mark> as well.
+There is also <ins>inserted text</ins> and <del>deleted text</del>. Search results get a <mark>highlight</mark> as well, and <abbr title="abbreviations">abbrs</abbr> are clear.
 
 ## Blockquote
 

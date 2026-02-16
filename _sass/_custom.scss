@@ -19,16 +19,11 @@
     font-size: 70%;
 }
 
-mark {
-    background-color: var(--color-mark);
-    color: inherit;
+abbr {
+    cursor: help;
 }
 
 .search-results:empty {
     @extend %loading;
     margin: 0 auto 1.5em;
-}
-
-.img--shadow {
-    filter: drop-shadow(0 0 0.25rem var(--color-fg));
 }
