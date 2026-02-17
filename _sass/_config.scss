@@ -66,6 +66,9 @@ $theme: (
 
         table-bg-alt: $offwhite,
         mark: rgba(90, 173, 128, 0.4), // @todo was this from the primary color?
+        kbd-border: #b4b4b4,
+        kbd-shadow: (0 1px 1px rgba(0, 0, 0, 0.2),
+                    0 2px 0 0 rgba(255, 255, 255, 0.7) inset),
 
         primary:   $primary-color,
         secondary: $secondary-color,
@@ -95,7 +98,7 @@ $theme: (
         btn-fg-hover: black,
         nav-separator: darken($dark-primary-color, 5%),
 
-        input-bg: #222,
+        input-bg: #333,
         input-fg: #999,
         loading: #222,
 
@@ -107,6 +110,9 @@ $theme: (
 
         table-bg-alt: #191a1c,
         mark: change-color($dark-primary-color, $alpha: 0.3),
+        kbd-border: #555,
+        kbd-shadow: (0 1px 1px rgba(127, 127, 127, 0.4),
+                    0 1px 0 0 rgba(255, 255, 255, 0.3) inset),
 
         primary:   $dark-primary-color,
         secondary: $dark-secondary-color,

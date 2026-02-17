@@ -49,10 +49,21 @@ code, kbd, samp {
     font-size: 0.9em;
 }
 
-samp {
+code:not(pre code) {
     border-radius: 3px;
     background-color: var(--color-input-bg);
     padding: 2px 3px 1px;
+}
+
+kbd:not(:has(kbd, samp)), kbd kbd {
+    background-color: var(--color-input-bg);
+    border: 1px solid var(--color-kbd-border);
+    box-shadow: var(--color-kbd-shadow);
+    display: inline-block;
+    border-radius: 3px;
+    line-height: 1;
+    padding: .15em .3em;
+    white-space: nowrap;
 }
 
 // Layout

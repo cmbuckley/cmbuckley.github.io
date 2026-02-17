@@ -1,6 +1,6 @@
 ---
 title: Test
-last_modified_at: 2026-02-16 22:50 +0000
+last_modified_at: 2026-02-17 15:14 +0000
 ---
 
 # Heading One
@@ -74,6 +74,8 @@ Some more text
 ### Inline code
 
 Some normal text with some `inline code` in it, plus <kbd>keyboard input</kbd> and <samp>sample output</samp>.
+
+You can copy text with <kbd><kbd>Ctrl</kbd>+<kbd>C</kbd></kbd>, or by clicking <kbd><samp>Edit</samp> > <samp>Copy</samp></kbd>.
 
 ### Block Code
 
