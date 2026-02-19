@@ -1,4 +1,3 @@
-{%- assign main_repo = site.github.public_repositories | where_exp:'r','r.name == site.github.repository_name' | first -%}
 {%- capture edit_link -%}{% github_edit_link "source" %}{%- endcapture -%}
 {%- if page.paginated and paginator.page > 1 -%}
   {%- assign first_page = site.pages | where_exp: 'p','p.paginated == true' | sort: 'path' | first -%}
@@ -7,7 +6,7 @@
 <footer>
     <div class="container">
         <p class="copy">
-            &copy; <a href="{{ main_repo.html_url | replace: 'http:','https:' }}#licence">{{ site.time | date: '%Y' }} {{ site.title }}</a>.
+            &copy; <a href="{{ site.github.owner_url }}/{{ site.github.owner_name }}.github.io#licence">{{ site.time | date: '%Y' }} {{ site.title }}</a>.
             <span class="powered">Powered by <a href="https://jekyllrb.com">Jekyll</a> / <a href="https://pages.github.com/">GitHub Pages</a>
             <span class="source-link">({{ edit_link | replace_first: '/edit/','/blob/' }})</span></span>
         </p>
