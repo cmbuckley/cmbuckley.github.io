@@ -25,10 +25,10 @@
                 {%- endfor -%}
               {%- endif -%}
 
-              {%- if page.layout == 'showcase' -%}
-                {%- assign showcase_prefix = '/projects' -%}
+              {%- if layout.nav_current or site.nav_current -%}
+                {%- assign url_prefix = layout.nav_current | default: site.nav_current | prepend: '/' -%}
               {%- endif -%}
-              {%- assign page_url = page.url | relative_url | prepend: showcase_prefix -%}
+              {%- assign page_url = page.url | relative_url | prepend: url_prefix -%}
 
               {%- for link in navigation -%}
                 {%- assign current = false -%}
