@@ -27,7 +27,8 @@ og_type: website
   </div>
   <form {% if site.netlify_form %}data-netlify="true" {% endif -%}
     name="{{ page.form_name }}" class="contact__form xhr" method="post" data-message-success="Thanks! Your message was sent." data-message-error="Sorry, your message could not be sent.">
-    {% unless site.formurl == 'netlify' -%}
+    {% unless site.netlify_form -%}
+      {% comment %} Since the production site is not built with Netlify, we need to inject this ourselves {% endcomment %}
       <input type="hidden" name="form-name" value="{{ page.form_name }}" />
     {% endunless -%}
 

@@ -1,5 +1,5 @@
 [context.branch-deploy]
-command = "printf \"url: %s\" \"$DEPLOY_PRIME_URL\" > _preview.yml; bundle exec jekyll build --config _config.yml,_preview.yml && buncle exec rspec"
+command = "printf \"url: %s\" \"$DEPLOY_PRIME_URL\" > _preview.yml; bundle exec jekyll build --config _config.yml,_preview.yml && bundle exec rspec"
 
   [[context.branch-deploy.plugins]]
   package = "netlify-plugin-seo-lint"
@@ -28,7 +28,7 @@ package = "netlify-plugin-seo-lint"
 command = "bundle exec jekyll build --config _config.yml,_staging.yml && bundle exec rspec"
 
   [build.environment]
-  RUBY_VERSION = "3.3.9"
+  RUBY_VERSION = "3.3.4"
 
 [[plugins]]
 package = "netlify-plugin-html-validate"
