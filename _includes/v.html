@@ -4,7 +4,7 @@
   {%- assign fingerprints = 'icons: 715715b9,maths: 5414f235,scripts: 5220ed99,search: b74b56ab,style: 476521a8' | split: ',' -%}
   {%- assign found = false -%}
 
-  {%- if jekyll.environment == 'production' -%}
+  {%- unless jekyll.environment == 'development' -%}
     {%- for fingerprint in fingerprints -%}
       {%- assign info = fingerprint | split: ': ' -%}
       {%- if info[0] == include.id -%}
@@ -12,7 +12,7 @@
         {{ info[1] }}
       {%- endif -%}
     {%- endfor -%}
-  {%- endif -%}
+  {%- endunless -%}
 
   {%- unless found -%}
     {%- if site.github -%}
