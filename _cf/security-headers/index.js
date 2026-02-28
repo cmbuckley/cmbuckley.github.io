@@ -92,11 +92,6 @@ const redirects = {
 function getSecurityHeaders(req) {
     const requestUrl = new URL(req.url)
 
-    if (requestUrl.hostname.match(/^staging-(\d+)\./)) {
-        csp['script-src'].push('https://netlify-cdp-loader.netlify.app');
-        csp['frame-src'].push('https://app.netlify.com');
-    }
-
     if (requestUrl.hostname == 'test.cmbuckley.co.uk') {
         ['default', 'script', 'style', 'img'].forEach(type => csp[`${type}-src`].push('https://cmbuckley.co.uk'));
     }
