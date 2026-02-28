@@ -115,6 +115,12 @@ async function handleRequest(req) {
         return addSecurity(req, requestUrl)
     }
 
+    if (match = requestUrl.hostname.match(/^cv-(staging|role)-([^.]+)\./)) {
+        const type = (match[1] == 'staging' ? 'deploy-preview' : 'role')
+        requestUrl.hostname = `${type}-${match[2]}--cmbuckley-cv.netlify.app`
+        return addSecurity(req, requestUrl)
+    }
+
     if (req.method == 'POST' && requestUrl.hostname == 'cmbuckley.co.uk') {
         requestUrl.hostname = 'cmbuckley.netlify.app'
         return addSecurity(req, requestUrl)
@@ -126,7 +132,7 @@ async function handleRequest(req) {
         return Response.redirect(dest, 302)
     }
 
-    if (requestUrl.hostname.match(/scripts\.cmbuckley\.co\.uk$/)) {
+    if (requestUrl.hostname.endsWith('scripts.cmbuckley.co.uk')) {
         return await fetch(req)
     }
 
@@ -136,7 +142,7 @@ async function handleRequest(req) {
 async function addSecurity(req, url) {
     const response = await fetch(url || req.url, req)
     const newHdrs = new Headers(response.headers)
-    const body = (req.method == 'POST' && url && !response.ok ? '' : response.body);
+    let body = (req.method == 'POST' && url && !response.ok ? '' : response.body);
 
     if (newHdrs.has('Content-Type') && !newHdrs.get('Content-Type').includes('text/html')) {
         return new Response(body, {
@@ -147,8 +153,6 @@ async function addSecurity(req, url) {
     }
 
     const setHeaders = Object.assign({}, getSecurityHeaders(req), sanitiseHeaders)
-    const newBody = (await response.text()).replace(/nonce=""/gm, `nonce="${nonce}"`)
-
     Object.keys(setHeaders).forEach(name => {
         if (!trustOrigin.includes(name) || !newHdrs.has(name)) {
             newHdrs.set(name, setHeaders[name])
@@ -159,7 +163,12 @@ async function addSecurity(req, url) {
         newHdrs.delete(name)
     })
 
-    return new Response(newBody, {
+    // only parse the body for non-altered URLs
+    if (!url) {
+        body = (await response.text()).replace(/nonce=""/gm, `nonce="${nonce}"`)
+    }
+
+    return new Response(body, {
         status:     response.status,
         statusText: response.statusText,
         headers:    newHdrs
