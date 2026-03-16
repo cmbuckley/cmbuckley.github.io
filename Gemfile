@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 ruby "~> 3.3"
 
-gem 'jekyll', '~> 3.10.0'
+gem 'jekyll', '~> 4.4.1'
 
 # liquid former stdlibs
 gem 'base64'
