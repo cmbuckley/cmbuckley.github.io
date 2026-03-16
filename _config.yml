@@ -47,6 +47,10 @@ kramdown:
 
 defaults:
   - scope:
+      type: posts
+    values:
+      layout: post
+  - scope:
       type: blog_categories
     values:
       layout: category
