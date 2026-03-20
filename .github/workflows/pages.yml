@@ -13,32 +13,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: true
-
-      - name: Set up Pages
-        uses: actions/configure-pages@v5
-
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ github.event.repository.homepage }}
-    steps:
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+  pages:
+    uses: cmbuckley/.github/.github/workflows/pages.yml@main
+    secrets: inherit
+    with:
+      environment_url: ${{ github.event.repository.homepage }}
