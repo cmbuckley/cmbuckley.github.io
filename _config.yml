@@ -45,6 +45,9 @@ sass:
 kramdown:
   auto_id_prefix: h-
 
+redirect_from:
+  json: false
+
 defaults:
   - scope:
       type: posts
