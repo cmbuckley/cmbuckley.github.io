@@ -20,7 +20,6 @@ include:
 
 exclude:
   - CNAME
-  - Gemfile
   - LICENCE
   - LICENCE-CODE
   - README.md
@@ -29,7 +28,6 @@ exclude:
   - package.json
   - staticman.yml
   - vendor
-  - node_modules
 
 plugins:
   - jekyll-github-metadata
