@@ -1,3 +1,5 @@
+@use "../config";
+
 /***************
 FORM STYLING
 ***************/
@@ -15,7 +17,7 @@ input[type=number],
 input[type=search],
 textarea {
     font-size: 18px;
-    font-family: $serif;
+    font-family: config.$serif;
     color: var(--color-input-fg);
     background: var(--color-input-bg);
     border: 1px solid var(--color-input-bg);
@@ -23,7 +25,7 @@ textarea {
     -webkit-appearance: none;
     padding: 5px;
     outline: none;
-    height: $line-height;
+    height: config.$line-height;
     width: 300px;
     margin-bottom: .5rem;
 
@@ -40,16 +42,16 @@ textarea {
     }
 }
 textarea {
-    height: $line-height * 3;
+    height: config.$line-height * 3;
 }
 
 form {
     @extend %screen-only;
-    margin-bottom: $padding;
+    margin-bottom: config.$padding;
 
     // Wrap each form input/element in a field div
     .field {
-        margin-bottom: $padding / 2;
+        margin-bottom: calc(config.$padding / 2);
     }
 
     // Notes go under the input fields

@@ -1,3 +1,5 @@
+@use "../config";
+
 // Text Selection Styling
 ::-moz-selection {
     background: var(--color-primary);
@@ -13,7 +15,7 @@
 body {
     background-color: var(--color-bg);
     color: var(--color-fg);
-    font-family: $serif;
+    font-family: config.$serif;
 }
 
 figure {
@@ -78,7 +80,7 @@ MENU STYLING
 }
 
 .nav-toggle {
-    font-family: $serif;
+    font-family: config.$serif;
     color: var(--color-btn-fg);
     background-color: var(--color-primary);
 
@@ -98,7 +100,7 @@ HEADER STYLING
     background-color: var(--color-primary);
 
     .logo {
-        font-family: $sans-serif;
+        font-family: config.$sans-serif;
         font-weight: 800;
         text-transform: uppercase;
 
@@ -139,7 +141,7 @@ POST STYLING
 }
 
 .date, .meta {
-    font-family: $sans-serif;
+    font-family: config.$sans-serif;
 }
 
 .img--shadow {
@@ -182,7 +184,7 @@ POST NAV STYLING
 ***************/
 .post__nav {
     .prev, .next {
-        font-family: $sans-serif;
+        font-family: config.$sans-serif;
         font-weight: 800;
 
         &.image {
