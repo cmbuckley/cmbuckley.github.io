@@ -95,12 +95,12 @@ $theme: (
     dark: (
         bg: $blackish,
         fg: color.scale($offwhite, $lightness: -15%),
-        meta: color.scale($silver, $lightness: 10%),
+        meta: color.scale($silver, $lightness: 20%),
         caption: #a1a1a1,
 
         btn-fg: $blackish,
         btn-fg-hover: black,
-        nav-separator: color.scale($dark-primary-color, $lightness: -5%),
+        nav-separator: color.scale($dark-primary-color, $lightness: -10%),
 
         input-bg: #333,
         input-fg: #999,
@@ -110,7 +110,7 @@ $theme: (
         comments-border: $dark-tertiary-color,
         comments-target: color.scale($dark-primary-color, $lightness: 75%),
         comments-author-bg: color.scale($dark-primary-color, $lightness: -80%),
-        comments-author-meta: color.scale($silver, $lightness: 10%),
+        comments-author-meta: color.scale($silver, $lightness: 20%),
 
         table-bg-alt: #191a1c,
         mark: color.change($dark-primary-color, $alpha: 0.3),
@@ -130,7 +130,9 @@ $theme: (
     $theme: map.deep-merge($theme, (default: (
         #{$message-type}-bg: color.change(map.get($default-theme, $message-type), $alpha: 0.08),
         #{$message-type}-highlight: color.change(map.get($default-theme, $message-type), $alpha: 0.5),
-        #{$message-type}-fg-hover: color.scale(map.get($default-theme, $message-type), $lightness: -15%),
+        #{$message-type}-fg-hover: color.scale(map.get($default-theme, $message-type), $lightness: -30%),
+    ), dark: (
+        #{$message-type}-fg-hover: color.scale(map.get($default-theme, $message-type), $lightness: 20%),
     )));
 }
 
@@ -139,11 +141,11 @@ $theme: (
     $dark-theme: map.get($theme, dark);
 
     $theme: map.deep-merge($theme, (default: (
-        #{$button-type}-fg: color.scale(map.get($default-theme, $button-type), $lightness: -10%),
-        #{$button-type}-hover: color.scale(map.get($default-theme, $button-type), $lightness: -10%),
+        #{$button-type}-fg: color.scale(map.get($default-theme, $button-type), $lightness: -30%),
+        #{$button-type}-hover: color.scale(map.get($default-theme, $button-type), $lightness: -30%),
     ), dark: (
-        #{$button-type}-fg: color.scale(map.get($dark-theme, $button-type), $lightness: 10%),
-        #{$button-type}-hover: color.scale(map.get($dark-theme, $button-type), $lightness: 10%),
+        #{$button-type}-fg: color.scale(map.get($dark-theme, $button-type), $lightness: 20%),
+        #{$button-type}-hover: color.scale(map.get($dark-theme, $button-type), $lightness: 20%),
     )));
 }
 
