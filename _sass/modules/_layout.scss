@@ -1,0 +1,100 @@
+/***************
+PAGE STYLES
+***************/
+@use "../partials/device";
+@use "../partials/mixins";
+
+.container {
+    max-width: 610px;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include device.min("desktop") {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 10px;
+    }
+
+    @include device.min("large-desktop") {
+        max-width: 990px;
+    }
+}
+
+.page__title {
+    margin: 1rem auto;
+    text-align: center;
+
+    @include device.min("tablet") {
+        margin: 2rem auto 1em;
+    }
+
+    @include device.min("desktop") {
+        .showcase & {
+            width: 85%;
+        }
+    }
+}
+
+.showcase-actions {
+    @include mixins.screen-only;
+    margin-bottom: 1em;
+    text-align: center;
+
+    @include device.min("tablet") {
+        margin-top: -2em;
+    }
+}
+
+.showcase__status {
+    display: block;
+}
+
+.content {
+    padding-top: 1em;
+
+    @include device.min("desktop") {
+        padding-top: 0;
+        position: relative;
+        z-index: 1;
+
+        &:after {
+            z-index: -1;
+            background: var(--color-bg);
+            content: "";
+            display: block;
+            width: 100%;
+            height: 10em;
+            position: absolute;
+            top: -2em;
+            left: 0;
+            transform: skewY(-2deg);
+            transform-origin: bottom left;
+        }
+    }
+}
+
+@include device.min("desktop") {
+    .posts, .page__title, .pagination {
+        width: 75%;
+        float: none;
+        margin: 0 auto 1.5em;
+    }
+}
+
+/***************
+BREAKPOINT TEXT
+***************/
+
+.break-text::before {
+    content: attr(data-xs);
+
+    @include device.min("tablet") {
+        content: attr(data-s-up);
+    }
+}
+
+.break-text__inner {
+    display: none;
+}

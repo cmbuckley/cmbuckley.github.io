@@ -1,5 +1,6 @@
 // Monokai high-contrast
 // Inspiration from https://maxchadwick.xyz/blog/syntax-highlighting-and-color-contrast-accessibility
+@use "../partials/device";
 
 pre.highlight {
     white-space: pre;
@@ -121,5 +122,15 @@ pre.highlight {
     .s1,  // Literal.String.Single
     .ss { // Literal.String.Symbol
         color: var(--color-code-string);
+    }
+
+    @include device.min("tablet") {
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+
+        .overflow & {
+            max-height: 30em;
+        }
     }
 }

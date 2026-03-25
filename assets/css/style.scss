@@ -1,31 +1,27 @@
 ---
 ---
 // Reset using Normalize
-@import "normalize";
+@forward "normalize";
 
-// Site configuration
-@import "config";
-
-// Import Partials
-@import "partials/typography";
-@import "partials/font";
-@import "partials/mixins";
+// forward Partials
+@forward "partials/font";
+@forward "partials/messages";
+@forward "partials/mixins";
+@forward "partials/typography";
 
 // Modules
-@import "modules/buttons";
-@import "modules/forms";
-@import "modules/gallery";
-@import "modules/messages";
-@import "modules/tables";
-@import "modules/syntax";
+@forward "modules/globals";
+@forward "modules/layout";
+@forward "modules/header";
+@forward "modules/menu";
+@forward "modules/footer";
 
-// Mobile up base styles
-@import "breakpoints/mobileup";
-@import "breakpoints/layout";
-
-// Import media queries
-@media only screen and (min-width: 600px) { @import "breakpoints/600up";}
-@media only screen and (min-width: 900px) { @import "breakpoints/900up";}
-@media only screen and (min-width: 1200px) { @import "breakpoints/1200up";}
-
-@import "custom";
+@forward "modules/buttons";
+@forward "modules/forms";
+@forward "modules/gallery";
+@forward "modules/lists";
+@forward "modules/media";
+@forward "modules/pagination";
+@forward "modules/posts";
+@forward "modules/syntax";
+@forward "modules/tables";

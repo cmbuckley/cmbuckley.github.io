@@ -1,0 +1,52 @@
+@use "sass:map";
+
+$devices: (
+    phone: 300px,
+    tablet: 600px,
+    desktop: 900px,
+    large-desktop: 1200px,
+);
+
+@mixin min($device: map.get($devices, "phone")) {
+    @if map.has-key($devices, $device) {
+        @media screen and (min-width: map.get($devices, $device)) {
+            @content;
+        }
+    }
+}
+
+@mixin max($device: map.get($devices, "phone")) {
+    @if map.has-key($devices, $device) {
+        @media screen and (max-width: map.get($devices, $device) - 1) {
+            @content;
+        }
+    }
+}
+
+@mixin only($device: map.get($devices, "phone")) {
+    @if map.has-key($devices, $device) {
+        $devices-length: length($devices);
+        $keys: map.keys($devices);
+
+        @if index($keys, $device) == $devices-length {
+            @include min($device) {
+                @content;
+            }
+        } @else {
+            $next-device-index: index($keys, $device) + 1;
+            $next-device-key: nth($keys, $next-device-index);
+
+            @media screen and (min-width: map.get($devices, $device)) and (max-width: map.get($devices, $next-device-key) - 1) {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin between($min-device: map.get($devices, "phone"), $max-device: map.get($devices, "tablet")) {
+    @if map.has-key($devices, $min-device) and map.has-key($devices, $max-device) {
+        @media screen and (min-width: map.get($devices, $min-device)) and (max-width: map.get($devices, $max-device) - 1) {
+            @content;
+        }
+    }
+}

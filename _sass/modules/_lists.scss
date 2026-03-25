@@ -1,0 +1,41 @@
+/***************
+LIST STYLING
+***************/
+@use "../partials/device";
+
+.list--inline {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+
+    @include device.min("desktop") {
+        margin: 0 auto 1.5em;
+    }
+}
+
+.list--flex {
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 0;
+    margin: 0;
+    gap: 2px;
+}
+
+dt {
+    margin-top: 1.5rem;
+
+    & + & {
+        margin-top: 0;
+    }
+}
+
+dd {
+    margin-left: 0;
+}
+
+.post ul ul,
+.post ul ol,
+.post ol ul,
+.post ol ol {
+    margin: 0;
+}

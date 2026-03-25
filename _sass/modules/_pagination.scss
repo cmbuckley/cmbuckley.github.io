@@ -1,0 +1,21 @@
+/***************
+PAGINATION STYLING
+***************/
+@use "../partials/mixins";
+
+.pagination {
+    @include mixins.screen-only;
+    padding-bottom: 3em;
+
+    .button--outline {
+        width: auto;
+    }
+
+    .next {
+        float: left;
+    }
+
+    .previous {
+        float: right;
+    }
+}

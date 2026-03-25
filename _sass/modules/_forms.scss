@@ -1,4 +1,6 @@
 @use "../config";
+@use "../partials/device";
+@use "../partials/mixins";
 
 /***************
 FORM STYLING
@@ -46,7 +48,7 @@ textarea {
 }
 
 form {
-    @extend %screen-only;
+    @include mixins.screen-only;
     margin-bottom: config.$padding;
 
     // Wrap each form input/element in a field div
@@ -93,6 +95,10 @@ form {
         border-bottom: 1px solid;
         border-radius: 0;
     }
+
+    @include device.min("tablet") {
+        margin: -2em auto 2em;
+    }
 }
 
 .grecaptcha-badge {
@@ -119,7 +125,25 @@ form {
     }
 
     .form--loading &::after {
-        @extend %loading;
+        @include mixins.loading;
         display: inline-block;
+    }
+}
+
+/***************
+CONTACT PAGE STYLING
+***************/
+@include device.min("desktop") {
+    .contact__content {
+        max-width: 48%;
+        margin-right: 2%;
+        float: left;
+    }
+
+    .contact__form {
+        max-width: 48%;
+        width: 48%;
+        float: right;
+        margin-right: 0;
     }
 }

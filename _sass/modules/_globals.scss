@@ -1,0 +1,71 @@
+/***************
+GLOBAL STYLES
+***************/
+
+@use "../partials/device";
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    line-height: 1.75;
+    overflow-x: hidden;
+    margin: 0;
+
+    p , ul {
+        margin: 0 0 2rem;
+    }
+
+    ul ul, ol ul, ol ol, ul ol {
+        margin-bottom: 0;
+    }
+
+    @include device.min("desktop") {
+        font-size: 125%;
+    }
+
+    @include device.min("large-desktop") {
+        font-size: 137.5%;
+    }
+}
+
+
+code, kbd, samp {
+    font-size: 0.9em;
+}
+
+code:not(pre code) {
+    border-radius: 3px;
+    background-color: var(--color-input-bg);
+    padding: 2px 3px 1px;
+}
+
+kbd:not(:has(kbd, samp)), kbd kbd {
+    background-color: var(--color-input-bg);
+    border: 1px solid var(--color-kbd-border);
+    box-shadow: var(--color-kbd-shadow);
+    display: inline-block;
+    border-radius: 3px;
+    line-height: 1;
+    padding: .15em .3em;
+    white-space: nowrap;
+}
+
+abbr {
+    cursor: help;
+}
+
+.nw {
+    white-space: nowrap;
+}
+
+.sitemap .last-modified {
+    color: var(--color-meta);
+    white-space: nowrap;
+    font-size: 70%;
+}

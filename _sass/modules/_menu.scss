@@ -1,0 +1,120 @@
+/***************
+MENU STYLING
+***************/
+@use "../partials/device";
+@use "../partials/mixins";
+
+.nav-toggle {
+    @include mixins.screen-only;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    touch-action: manipulation;
+    cursor: context-menu;
+    user-select: none;
+    line-height: 2em;
+    font-size: inherit;
+    margin-top: .5em;
+    border-width: 0;
+    border-radius: 4px;
+    padding: 0 .5em;
+    text-decoration: none;
+    position: absolute;
+    right: max(env(safe-area-inset-right, 0px), 2rem);
+
+    @media (prefers-reduced-motion: no-preference) {
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+.nav-collapse {
+    position: relative;
+    clear: both;
+    display: block;
+    width: 100%;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        list-style: none;
+
+        li {
+            width: 100%;
+            display: block;
+
+            a {
+                text-decoration: none;
+                display: block;
+                padding: 5px max(env(safe-area-inset-right, 0px), 2rem) 5px max(env(safe-area-inset-left, 0px), 2rem);
+            }
+        }
+    }
+}
+
+.js .nav-collapse {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    overflow: hidden;
+    zoom: 1;
+    z-index: 1;
+
+    @media (prefers-reduced-motion: no-preference) {
+        transition: max-height 260ms ease 0s;
+    }
+}
+
+.nav-toggle[aria-expanded="true"] + .nav-collapse {
+    max-height: 9999px;
+}
+
+.nav-collapse.open {
+    position: relative;
+}
+
+@include device.min("desktop") {
+    .header nav {
+        text-shadow: var(--color-overlay-shadow) 0px 0px 10px;
+        float: left;
+        clear: left;
+
+        ul {
+            margin: 0;
+
+            li {
+                display: inline;
+                line-height: 3em;
+                background: none;
+                padding: 0 5px;
+                border: none;
+
+                a {
+                    font-size: .9em;
+                    text-decoration: none;
+                    padding: 0 .25em;
+                }
+
+                // lack of support for :has
+                // &:has([aria-current])
+                &.current {
+                    padding-bottom: .25em;
+                    border-bottom: 4px solid var(--color-nav-active);
+                }
+            }
+        }
+    }
+
+    .nav-collapse, .js .nav-collapse {
+        position: relative;
+        max-height: none;
+
+        ul li a {
+            color: var(--color-overlay-fg);
+            display: inline-block;
+        }
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+}

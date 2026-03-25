@@ -1,6 +1,0 @@
-@media print {
-    main a[href^="http"]::after {
-        font-style: normal;
-        content: " (" attr(href) ")";
-    }
-}

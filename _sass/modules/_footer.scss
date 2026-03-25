@@ -1,0 +1,79 @@
+/***************
+FOOTER STYLING
+***************/
+@use "../partials/device";
+@use "../partials/mixins";
+
+footer {
+    text-align: center;
+    margin: 0 0 2rem;
+    clear: both;
+
+    .container {
+        border-top: 4px solid var(--color-separator);
+        padding: .5em 0;
+        max-width: 90%;
+
+        @include device.min("desktop") {
+            padding: 1rem 0;
+            max-width: 850px;
+        }
+
+        @include device.min("large-desktop") {
+            max-width: 940px;
+        }
+    }
+
+    .copy {
+        font-size: .8em;
+        margin-bottom: 1rem;
+
+        .powered {
+            @media screen {
+                display: block;
+            }
+
+            @include device.min("tablet") {
+                display: inline;
+            }
+        }
+
+        .source-link {
+            @include mixins.screen-only;
+        }
+
+        @include device.min("desktop") {
+            float: left;
+        }
+    }
+
+    .footer-links {
+        @include mixins.screen-only;
+        font-size: 1.3em;
+
+        ul {
+            text-align: center;
+            justify-content: center;
+
+            li {
+                display: inline-block;
+
+                a {
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+        }
+
+        @include device.min("desktop") {
+            float: right;
+            font-size: .8em;
+
+            ul li a {
+                margin: 0;
+            }
+        }
+    }
+}

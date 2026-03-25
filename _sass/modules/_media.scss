@@ -1,0 +1,57 @@
+/***************
+MEDIA STYLES
+***************/
+@use "../partials/device";
+
+img, video, audio, iframe, object {
+    max-width: 100%;
+}
+
+figure {
+    margin: 1rem auto;
+    text-align: center;
+
+    figcaption {
+        text-align: center;
+        font-size: .9em;
+    }
+
+    img {
+        margin: 0 auto;
+        display: block;
+    }
+
+    @include device.min("tablet") {
+        margin: 3rem auto;
+
+        &.fl-right {
+            clear: right;
+            float: right;
+            margin: 0 0 1em 40px;
+        }
+
+        &.fl-left {
+            float: left;
+            clear: left;
+            margin: 0 40px 1em 0;
+        }
+
+        &.fl-none.fig--std :is(img, object) {
+            max-width: 50%;
+        }
+
+        &.fl--small {
+            max-width: 240px;
+            font-size: 0.8em;
+        }
+    }
+}
+
+// YouTube videos
+.yt {
+    margin: 0 auto 1em;
+    display: block;
+    width: 560px;
+    height: 315px;
+    border: none;
+}
