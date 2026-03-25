@@ -1,5 +1,5 @@
 [context.branch-deploy]
-command = "printf \"url: %s\" \"$DEPLOY_PRIME_URL\" > _preview.yml; bundle exec jekyll build --config _config.yml,_preview.yml && bundle exec rspec"
+command = "sed -i \"s/url: .*$/url: $DEPLOY_PRIME_URL/\" _staging.yml; bundle exec jekyll build --config _config.yml,_staging.yml && bundle exec rspec"
 
   [[context.branch-deploy.plugins]]
   package = "netlify-plugin-seo-lint"
@@ -8,7 +8,7 @@ command = "printf \"url: %s\" \"$DEPLOY_PRIME_URL\" > _preview.yml; bundle exec 
     internalLinksTrailingSlash = false
 
 [context.deploy-preview]
-command = "printf \"url: %s\" \"https://staging-$REVIEW_ID.cmbuckley.co.uk\" > _preview.yml; bundle exec jekyll build --config _config.yml,_preview.yml && bundle exec rspec"
+command = "sed -i \"s/staging/&-$REVIEW_ID/\" _staging.yml; bundle exec jekyll build --config _config.yml,_staging.yml && bundle exec rspec"
 
   [[context.deploy-preview.plugins]]
   package = "netlify-plugin-seo-lint"
