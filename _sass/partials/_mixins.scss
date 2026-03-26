@@ -13,7 +13,7 @@
     outline: 0;
 }
 
-%loading {
+@mixin loading {
     content: "";
     width: 30px;
     height: 30px;
@@ -24,7 +24,7 @@
     display: block;
 }
 
-%screen-only {
+@mixin screen-only {
     @media print {
         display: none;
     }
@@ -37,10 +37,14 @@
 }
 
 // screen reader only - totally clipped
-.sr-only {
+@mixin sr-only {
     @extend %flow-hidden;
     height: 1px;
     clip-path: inset(50%);
+}
+
+.sr-only {
+    @include sr-only;
 }
 
 // reading mode - comply with Safari extraction logic

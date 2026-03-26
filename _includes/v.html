@@ -1,11 +1,10 @@
 {%- unless site.suppress_fingerprints -%}
   ?v=
 
-  {%- assign fingerprints = 'icons: 715715b9,maths: 5414f235,scripts: 5220ed99,search: b74b56ab,style: 1fcbb8ed' | split: ',' -%}
   {%- assign found = false -%}
 
   {%- unless jekyll.environment == 'development' -%}
-    {%- for fingerprint in fingerprints -%}
+    {%- for fingerprint in site.data.fingerprints -%}
       {%- assign info = fingerprint | split: ': ' -%}
       {%- if info[0] == include.id -%}
         {%- assign found = true -%}

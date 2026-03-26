@@ -1,3 +1,7 @@
+@use "../config";
+@use "../partials/device";
+@use "../partials/mixins";
+
 /***************
 FORM STYLING
 ***************/
@@ -15,7 +19,7 @@ input[type=number],
 input[type=search],
 textarea {
     font-size: 18px;
-    font-family: $serif;
+    font-family: config.$serif;
     color: var(--color-input-fg);
     background: var(--color-input-bg);
     border: 1px solid var(--color-input-bg);
@@ -23,7 +27,7 @@ textarea {
     -webkit-appearance: none;
     padding: 5px;
     outline: none;
-    height: $line-height;
+    height: config.$line-height;
     width: 300px;
     margin-bottom: .5rem;
 
@@ -40,16 +44,16 @@ textarea {
     }
 }
 textarea {
-    height: $line-height * 3;
+    height: config.$line-height * 3;
 }
 
 form {
-    @extend %screen-only;
-    margin-bottom: $padding;
+    @include mixins.screen-only;
+    margin-bottom: config.$padding;
 
     // Wrap each form input/element in a field div
     .field {
-        margin-bottom: $padding / 2;
+        margin-bottom: calc(config.$padding / 2);
     }
 
     // Notes go under the input fields
@@ -91,6 +95,10 @@ form {
         border-bottom: 1px solid;
         border-radius: 0;
     }
+
+    @include device.min("tablet") {
+        margin: -2em auto 2em;
+    }
 }
 
 .grecaptcha-badge {
@@ -117,7 +125,25 @@ form {
     }
 
     .form--loading &::after {
-        @extend %loading;
+        @include mixins.loading;
         display: inline-block;
+    }
+}
+
+/***************
+CONTACT PAGE STYLING
+***************/
+@include device.min("desktop") {
+    .contact__content {
+        max-width: 48%;
+        margin-right: 2%;
+        float: left;
+    }
+
+    .contact__form {
+        max-width: 48%;
+        width: 48%;
+        float: right;
+        margin-right: 0;
     }
 }

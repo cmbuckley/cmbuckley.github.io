@@ -1,0 +1,53 @@
+/***************
+HEADER STYLING
+***************/
+@use "../partials/device";
+
+.header {
+    background-image: url('../img/tiki-800w.jpg');
+    background-size: cover;
+    background-position: center 40%;
+    padding: 0;
+
+    .container {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .logo {
+        margin: 0;
+        float: left;
+        padding-left: max(env(safe-area-inset-left, 0px), 2rem);
+        font-size: 1em;
+        line-height: 3em;
+    }
+
+    .js & {
+        height: 3em;
+    }
+
+    @include device.min("desktop") {
+        background-image: url('../img/tiki.jpg');
+        position: relative;
+        padding-bottom: 2em;
+
+        &, .js & {
+            height: 15em;
+        }
+
+        .container {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 800px;
+            overflow: hidden;
+        }
+
+        .logo {
+            font-size: 3em;
+            line-height: 1;
+            letter-spacing: -3px;
+            padding-left: 0;
+        }
+    }
+}

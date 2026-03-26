@@ -20,6 +20,4 @@ for data in "${files[@]}"; do
     echo "$id: $(md5sum "_site/$file" | cut -c1-8)" >> $fingerprints
 done
 
-sed -i'' "s/fingerprints = '[^']*'/fingerprints = '$(grep -vF . $fingerprints | tr '\n' ',' | sed 's/,$//')'/" _includes/v.html
-
 git add $fingerprints _includes/v.html
