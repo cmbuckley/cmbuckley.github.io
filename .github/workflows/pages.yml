@@ -3,6 +3,8 @@ on:
   workflow_dispatch:
   push:
     branches: main
+  repository_dispatch:
+    types: [pages]
 
 permissions:
   contents: read
