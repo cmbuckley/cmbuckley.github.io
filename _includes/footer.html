@@ -1,14 +1,21 @@
-{%- capture edit_link -%}{% github_edit_link "source" %}{%- endcapture -%}
-{%- if page.paginated and paginator.page > 1 -%}
-  {%- assign first_page = site.pages | where_exp: 'p','p.paginated == true' | sort: 'path' | first -%}
-  {%- assign edit_link = edit_link | replace: page.path, first_page.path -%}
+{%- if site.git -%}
+  {%- comment %}If we have our git plugin, construct the source URL ourselves as we can be more sure of the branch{% endcomment -%}
+  {%- assign source_url = site.github.repository_url | append: '/blob/' | append: site.git.branch | append: '/' | append: page.path -%}
+{%- else -%}
+  {%- capture source_url -%}{% github_edit_link %}{%- endcapture -%}
+  {%- assign source_url = source_url | replace_first: '/edit/','/blob/' -%}
+
+  {%- if page.paginated and paginator.page > 1 -%}
+    {%- assign first_page = site.pages | where_exp: 'p','p.paginated == true' | sort: 'path' | first -%}
+    {%- assign source_url = source_url | replace: page.path, first_page.path -%}
+  {%- endif -%}
 {%- endif -%}
 <footer>
     <div class="container">
         <p class="copy">
             &copy; <a href="{{ site.github.owner_url }}/{{ site.github.owner_name }}.github.io#licence">{{ site.time | date: '%Y' }} {{ site.title }}</a>.
             <span class="powered">Powered by <a href="https://jekyllrb.com">Jekyll</a> / <a href="https://pages.github.com/">GitHub Pages</a>
-            <span class="source-link">({{ edit_link | replace_first: '/edit/','/blob/' }})</span></span>
+            <span class="source-link">(<a href="{{ source_url }}">source</a>)</span></span>
         </p>
 
         <div class="footer-links">
