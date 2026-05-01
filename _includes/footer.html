@@ -3,6 +3,9 @@
   {%- assign first_page = site.pages | where_exp: 'p','p.paginated == true' | sort: 'path' | first -%}
   {%- assign edit_link = edit_link | replace: page.path, first_page.path -%}
 {%- endif -%}
+{%- if page.source_path -%}
+  {%- assign edit_link = edit_link | replace: page.path, page.source_path -%}
+{%- endif -%}
 <footer>
     <div class="container">
         <p class="copy">
