@@ -37,7 +37,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Deploy Cloudflare Worker (${{ matrix.worker }})
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
