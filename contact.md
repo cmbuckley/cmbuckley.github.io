@@ -12,9 +12,6 @@ og_type: website
     <dt>Name:</dt>
     <dd class="fn n"><span class="given-name">Christopher</span> <span class="additional-name">Mark</span> <span class="family-name">Buckley</span></dd>
 
-    <dt>Home page:</dt>
-    <dd class="url">{{ site.url }}</dd>
-
     <dt>Email address / Google Talk:</dt>
     <dd class="email">{% include social.html id='email' %}</dd>
 
