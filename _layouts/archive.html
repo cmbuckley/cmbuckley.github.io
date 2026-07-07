@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<h1 class="page__title">{% include archive_date.html type=page.type date=page.date %}</h1>
+
+<ul class="posts list--inline" role="feed">
+  {%- for post in page.posts %}
+    {%- include post_excerpt.html %}
+  {%- endfor %}
+</ul>

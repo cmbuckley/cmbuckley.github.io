@@ -1,0 +1,7 @@
+{%- assign format = '%Y' %}
+{%- unless include.type == 'year' %}{% assign format = format | prepend: '%B ' %}{% endunless %}
+{%- if include.type == 'day' %}{% assign format = format | prepend: '%e ' %}{% endif -%}
+
+{{ include.date | date: format }}
+
+{%- comment %}Avoid trailing whitespace{% endcomment -%}

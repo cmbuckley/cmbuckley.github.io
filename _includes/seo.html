@@ -1,5 +1,11 @@
 {%- assign site_title = site.title | markdownify | strip_html | strip -%}
 {%- assign page_title = page.title | markdownify | strip_html | strip -%}
+{%- if page.layout == 'archive' -%}
+  {%- capture page_title %}
+    {%- include archive_date.html type=page.type date=page.date %}
+  {%- endcapture %}
+{%- endif %}
+
 {%- assign page_description = page.description | default: page.excerpt | markdownify | strip_html | strip | normalize_whitespace -%}
 {%- if page.layout == 'error' -%}
   {%- assign lines = page.content | normalize_whitespace | split: '. ' -%}
@@ -41,12 +47,12 @@
 {%- endcapture -%}
 
     <meta content="{{ page_description | default: site_description }}" name="description">
-    <title>{{ page_title | prepend: title_pagination }}{% unless page.supress_site_title %}{% if page.title %} • {% endif %}{{ site_title }}{% endunless %}</title>
+    <title>{{ page_title | prepend: title_pagination }}{% unless page.supress_site_title %}{% if page_title %} • {% endif %}{{ site_title }}{% endunless %}</title>
 
     <meta content="{{ site_title }}" property="og:site_name">
     <meta content="{{ page_title | default: site_title | prepend: title_pagination }}" property="og:title">
     <meta content="{{ include.locale }}" property="og:locale">
-    {% if page.title or page.og_type -%}
+    {% if page_title or page.og_type -%}
       <meta content="{{ page.og_type | default: 'article' }}" property="og:type">
     {% else -%}
       <meta content="website" property="og:type">
@@ -88,7 +94,7 @@
     {% if page.image.meta.large %}<meta content="summary_large_image" name="twitter:card">{% endif %}
     <meta content="@{% include social.html id='x' %}" name="twitter:site">
     <meta content="@{% include social.html id='x' %}" name="twitter:creator">
-    {% if page.title -%}
+    {% if page_title -%}
       <meta content="{{ page_title | prepend: title_pagination }}" name="twitter:title">
     {% else -%}
       <meta content="{{ site_title }}" name="twitter:title">

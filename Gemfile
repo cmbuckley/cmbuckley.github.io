@@ -8,6 +8,7 @@ gem 'base64'
 gem 'bigdecimal'
 
 group :jekyll_plugins do
+  gem 'jekyll-archives'
   gem 'jekyll-compose'
   gem 'jekyll-github-metadata'
   gem 'jekyll-include-cache'
