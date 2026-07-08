@@ -1,23 +1,13 @@
 {%- unless site.suppress_fingerprints -%}
   ?v=
 
-  {%- assign found = false -%}
-
-  {%- unless jekyll.environment == 'development' -%}
-    {%- for fingerprint in site.data.fingerprints -%}
-      {%- assign info = fingerprint | split: ': ' -%}
-      {%- if info[0] == include.id -%}
-        {%- assign found = true -%}
-        {{ info[1] }}
-      {%- endif -%}
-    {%- endfor -%}
-  {%- endunless -%}
-
-  {%- unless found -%}
+  {%- if jekyll.environment != 'development' and site.data.fingerprints[include.id] -%}
+    {{ site.data.fingerprints[include.id] }}
+  {%- else -%}
     {%- if site.github -%}
       r{{ site.github.build_revision | slice: 0,8 }}
     {%- else -%}
       {{ site.time | date: '%s' }}
     {%- endif -%}
-  {%- endunless -%}
+  {%- endif -%}
 {%- endunless -%}
