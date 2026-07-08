@@ -6,7 +6,7 @@ description: List of all pages on this site.
 
 <h2>Pages</h2>
 
-{%- assign pages = site.html_pages | where_exp:'p','p.layout!="error"' | where_exp:'p','p.layout!="redirect"' | sort:'url' %}
+{%- assign pages = site.html_pages | where_exp:'p','p.layout!="error"' | where_exp:'p','p.layout!="redirect"' | where_exp:'p','p.layout!="archive"' | sort:'url' %}
 {% include listing.html pages=pages prefix='/' %}
 
 {% include showcase.html %}
@@ -24,14 +24,14 @@ description: List of all pages on this site.
 
 {%- assign year = site.posts | map: 'date' | first | date: '%Y' -%}
 
-<h3>{{ year }}</h3>
+<h3><a href="/blog/{{ year }}/">{{ year }}</a></h3>
 <ul>
 {% for post in site.posts %}
 {%- assign newyear = post.date | date: '%Y' -%}
 {% if newyear != year %}
 </ul>
 
-<h3>{{ newyear }}</h3>
+<h3><a href="/blog/{{ newyear }}/">{{ newyear }}</a></h3>
 
 <ul>
 {% endif %}
