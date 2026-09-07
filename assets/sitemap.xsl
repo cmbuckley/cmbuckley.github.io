@@ -40,11 +40,11 @@
                         <xsl:variable name="lastModified">
                             <xsl:value-of select="sitemap:lastmod"/>
                         </xsl:variable>
-                        <span class="last-modified"> (<time datetime="{$lastModified}" title="{$lastModified}">
+                        <span class="modified"> (<time datetime="{$lastModified}" title="{$lastModified}">
                             <xsl:call-template name="format-date">
                                 <xsl:with-param name="datetime" select="$lastModified" />
                             </xsl:call-template>
-                        </time>)</span>
+                        </time>, <xsl:value-of select="sitemap:changefreq"/>, <xsl:value-of select="sitemap:priority"/>)</span>
                     </xsl:if>
                 </li>
             </xsl:for-each>
