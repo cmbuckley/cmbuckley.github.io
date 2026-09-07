@@ -44,7 +44,13 @@
                             <xsl:call-template name="format-date">
                                 <xsl:with-param name="datetime" select="$lastModified" />
                             </xsl:call-template>
-                        </time>, <xsl:value-of select="sitemap:changefreq"/>, <xsl:value-of select="sitemap:priority"/>)</span>
+                        </time>
+                        <xsl:if test="sitemap:changefreq">,
+                            <xsl:value-of select="sitemap:changefreq"/>
+                        </xsl:if>
+                        <xsl:if test="sitemap:priority">,
+                            <xsl:value-of select="sitemap:priority"/>
+                        </xsl:if>)</span>
                     </xsl:if>
                 </li>
             </xsl:for-each>
