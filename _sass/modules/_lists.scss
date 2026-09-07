@@ -33,9 +33,6 @@ dd {
     margin-left: 0;
 }
 
-.post ul ul,
-.post ul ol,
-.post ol ul,
-.post ol ol {
+.post :is(ul, ol) :is(ul, ol) {
     margin: 0;
 }
