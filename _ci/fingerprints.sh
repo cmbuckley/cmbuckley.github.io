@@ -10,7 +10,7 @@ files=(
     "style:assets/css/style.css"
 )
 
-bundle exec jekyll build
+bundle exec jekyll build --config _config.yml,_ci/sass_only.yml
 
 for data in "${files[@]}"; do
     id=${data%%:*}

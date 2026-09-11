@@ -1,0 +1,10 @@
+exclude:
+  - vendor
+  - "*.md"
+  - "*.html"
+  - "*.xml"
+  - "*.txt"
+  - "**/*.md"
+  - "**/*.html"
+  - "**/*.xml"
+  - "**/*.txt"
