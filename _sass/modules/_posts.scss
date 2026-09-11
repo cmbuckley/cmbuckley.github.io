@@ -270,7 +270,7 @@ POST LIST STYLING
         margin-bottom: 4rem;
         position: relative;
 
-        &:before {
+        &:nth-last-child(n+2):after {
             content: "";
             position: absolute;
             bottom: -2rem;
