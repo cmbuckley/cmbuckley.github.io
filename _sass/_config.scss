@@ -51,10 +51,11 @@ $theme: (
         caption: $grey,
 
         btn-fg: $white,
-        btn-fg-hover: color.scale($white, $lightness: -20%),
         overlay-fg: $white,
         overlay-shadow: black,
-        nav-active: color.change($white, $alpha: 0.4),
+        nav-fg: $white,
+        nav-hover: color.scale($white, $lightness: -20%),
+        nav-current: color.change($white, $alpha: 0.4),
         nav-separator: color.scale($primary-color, $lightness: 5%),
         separator: color.scale($white, $lightness: -15%),
 
@@ -99,7 +100,6 @@ $theme: (
         caption: #a1a1a1,
 
         btn-fg: $blackish,
-        btn-fg-hover: black,
         nav-separator: color.scale($dark-primary-color, $lightness: -10%),
 
         input-bg: #333,

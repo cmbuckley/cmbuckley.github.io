@@ -41,11 +41,24 @@ MENU STYLING
         li {
             width: 100%;
             display: block;
+            background: var(--color-primary);
+            border-bottom: 2px solid var(--color-nav-separator);
+
+            &:hover, &:has(:focus-visible) {
+                background: var(--color-primary-hover);
+            }
 
             a {
+                color: var(--color-nav-fg);
                 text-decoration: none;
                 display: block;
                 padding: 5px max(env(safe-area-inset-right, 0px), 2rem) 5px max(env(safe-area-inset-left, 0px), 2rem);
+
+                @include device.max("tablet") {
+                    &:focus {
+                        outline: none;
+                    }
+                }
             }
         }
     }
@@ -73,7 +86,7 @@ MENU STYLING
 }
 
 @include device.min("desktop") {
-    .header nav {
+    .nav-collapse {
         text-shadow: var(--color-overlay-shadow) 0px 0px 10px;
         float: left;
         clear: left;
@@ -84,21 +97,27 @@ MENU STYLING
             li {
                 display: inline;
                 line-height: 3em;
-                background: none;
                 padding: 0 5px;
                 border: none;
 
+                &, &:hover, &:has(:focus-visible) {
+                    background: none;
+                }
+
                 a {
+                    color: var(--color-overlay-fg);
                     font-size: .9em;
                     text-decoration: none;
                     padding: 0 .25em;
+
+                    &:hover {
+                        color: var(--color-nav-hover);
+                    }
                 }
 
-                // lack of support for :has
-                // &:has([aria-current])
-                &.current {
+                &:has([aria-current]) {
                     padding-bottom: .25em;
-                    border-bottom: 4px solid var(--color-nav-active);
+                    border-bottom: 4px solid var(--color-nav-current);
                 }
             }
         }
@@ -109,7 +128,6 @@ MENU STYLING
         max-height: none;
 
         ul li a {
-            color: var(--color-overlay-fg);
             display: inline-block;
         }
     }
