@@ -53,6 +53,8 @@ $theme: (
         btn-fg: $white,
         overlay-fg: $white,
         overlay-shadow: black,
+
+        nav-bg: $primary-color,
         nav-fg: $white,
         nav-hover: color.scale($white, $lightness: -20%),
         nav-current: color.change($white, $alpha: 0.4),
@@ -100,6 +102,7 @@ $theme: (
         caption: #a1a1a1,
 
         btn-fg: $blackish,
+        nav-bg: $dark-primary-color,
         nav-separator: color.scale($dark-primary-color, $lightness: -10%),
 
         input-bg: #333,

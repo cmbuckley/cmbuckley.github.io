@@ -41,7 +41,7 @@ MENU STYLING
         li {
             width: 100%;
             display: block;
-            background: var(--color-primary);
+            background: var(--color-nav-bg);
             border-bottom: 2px solid var(--color-nav-separator);
 
             &:hover, &:has(:focus-visible) {
