@@ -78,24 +78,13 @@ a {
 MENU STYLING
 ***************/
 
-.nav-collapse {
-    ul li {
-        background: var(--color-primary);
-        border-bottom: 2px solid var(--color-nav-separator);
-
-        a {
-            color: var(--color-btn-fg);
-        }
-    }
-}
-
 .nav-toggle {
     font-family: config.$serif;
-    color: var(--color-btn-fg);
+    color: var(--color-nav-fg);
     background-color: var(--color-primary);
 
     &:hover {
-        color: var(--color-btn-fg);
+        color: var(--color-nav-fg);
         background-color: var(--color-primary-hover);
     }
 }
@@ -117,14 +106,6 @@ HEADER STYLING
         a {
             color: var(--color-overlay-fg);
             text-decoration: none;
-        }
-    }
-
-    nav a {
-        color: var(--color-btn-fg);
-
-        &:hover {
-            color: var(--color-btn-fg-hover);
         }
     }
 }

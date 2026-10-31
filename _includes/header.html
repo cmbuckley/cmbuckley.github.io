@@ -28,7 +28,7 @@
                 {%- if page_url contains url and url != '/' or page_url == '/' -%}
                   {%- assign current = true -%}
                 {%- endif %}
-                <li class="element {%- if current %} current{% endif %}">
+                <li class="element">
                     <a href="{{ site.url }}{{ url }}"{% if current %} aria-current="page"{% endif %}>{{ title }}</a>
                 </li>
               {%- endfor %}
